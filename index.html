@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Marina Ribeiro  -  Bodywork specialist and personal trainer in Sydney. Somatic massage, Sensory Energetics, and Conscious Movement Personal Training. Release your body. Live an extraordinary life.">
+<meta name="description" content="Marina Ribeiro · Bodywork specialist and personal trainer in Sydney. Somatic massage, Sensory Energetics, and Conscious Movement Personal Training. 18+ years guiding women through movement, strength, and reconnection.">
 <meta property="og:title" content="Marina Bodywork  -  Sydney">
 <meta property="og:description" content="Release your body. Live an extraordinary life. Somatic massage, Sensory Energetics, and personal training in Sydney.">
-<meta property="og:image" content="marina-hero.webp">
+<meta property="og:image" content="hero.jpeg">
 <title>Marina Bodywork  -  Sydney</title>
 <link rel="icon" type="image/webp" href="marina-logo.webp">
 <link rel="apple-touch-icon" href="marina-logo.webp">
@@ -51,6 +51,7 @@
       "name": "Marina Ribeiro da Silva",
       "alternateName": "Marina Ribeiro",
       "jobTitle": "Bodywork Specialist & Personal Trainer",
+      "description": "Physical Education professional with 18+ years dedicated to movement, health, and women's well-being. Founder of the Mulheres Ativas program in Brazil and former trainer with the Movimenta Contagem initiative. Today based in Sydney, specialising in women's training across every stage of life including perimenopause, plus 10+ years of bodywork integrating her own fascial-release technique with breath, somatic awareness, and myofascial release.",
       "knowsLanguage": ["en", "pt"],
       "hasCredential": [
         { "@type": "EducationalOccupationalCredential", "name": "EQF Level 4 Personal Trainer", "credentialCategory": "certification" },
@@ -64,9 +65,10 @@
     {
       "@type": "Service",
       "name": "Somatic Massage Corporal",
+      "alternateName": "Somatic Release Massage",
       "provider": { "@id": "https://marinabodywork.com/#business" },
       "serviceType": "Therapeutic Massage",
-      "description": "60-minute integrative massage for chronic neck, back, hips and shoulder tension. Combines myofascial release, myo aponeurosis and somatic techniques.",
+      "description": "60-minute integrative massage built around Marina Ribeiro's Somatic Release Massage methodology. Combines Brazilian lymphatic drainage, myofascial release, breathwork, and deep-relaxation work to ease muscular tension, fluid retention, fascial rigidity, and accumulated stress. Regulates the nervous system, lowers cortisol, and reconnects body and mind.",
       "areaServed": { "@type": "City", "name": "Sydney" },
       "offers": { "@type": "Offer", "price": "125", "priceCurrency": "AUD", "url": "https://marinaribeirobodywork.as.me/bookmassage" }
     },
@@ -84,7 +86,7 @@
       "name": "Sensory Energetics",
       "provider": { "@id": "https://marinabodywork.com/#business" },
       "serviceType": "Somatic & Nervous-System Therapy",
-      "description": "90-minute signature session combining trigger-point work, guided breath, and nervous-system release for chronic, long-stored tension.",
+      "description": "90-minute signature session. An integrative methodology combining ancient Eastern techniques with breathwork, body stimuli, and somatic awareness to activate the central nervous system. Releases physical and emotional tension, regulates stress, lowers cortisol, and supports neurotransmitters tied to well-being, focus, and mental clarity (including dopamine).",
       "areaServed": { "@type": "City", "name": "Sydney" },
       "offers": { "@type": "Offer", "price": "305", "priceCurrency": "AUD", "url": "https://marinaribeirobodywork.as.me/bookmassage" }
     },
@@ -93,7 +95,7 @@
       "name": "Conscious Movement Personal Training",
       "provider": { "@id": "https://marinabodywork.com/#business" },
       "serviceType": "Personal Training",
-      "description": "Specialist 1-on-1 personal training at Snap Fitness Maroubra. Integrates bodywork qualifications (myofascial, TMJ, buccal) into each training session.",
+      "description": "Specialist 1-on-1 60-minute personal training at Snap Fitness Maroubra. Over 15 years guiding women through strength, mobility, hypertrophy, conditioning, posture, and perimenopause/menopause health. Each session integrates myofascial release, mobility work, goal-specific training, conditioning, and breathwork, and draws on Marina's bodywork qualifications (myofascial, TMJ, buccal, myo aponeurosis).",
       "areaServed": { "@type": "Place", "name": "Maroubra, Sydney" },
       "offers": { "@type": "Offer", "price": "75-99", "priceCurrency": "AUD", "url": "https://marinaribeirobodywork.as.me/BookPTlessons" }
     },
@@ -325,6 +327,14 @@ nav.scrolled { background: rgba(17,56,42,0.97); backdrop-filter: blur(12px); box
 .outcome-item { text-align: center; padding: 1rem; }
 .outcome-icon { font-size: 24px; margin-bottom: 0.5rem; }
 .outcome-label { font-size: 13px; color: var(--text-mid); font-weight: 500; }
+.method-paragraphs { margin: 1.5rem 0 0; }
+.method-paragraphs p { font-size: 16px; color: var(--text-mid); line-height: 1.7; margin-bottom: 0.9rem; max-width: 65ch; }
+.method-paragraphs p:last-child { margin-bottom: 0; }
+.method-benefits { background: var(--sage-pale); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem 1.75rem; margin: 1.5rem 0 0.5rem; }
+.method-benefits-title { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--forest); margin-bottom: 0.9rem; }
+.method-benefits-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem 1.5rem; }
+.method-benefits-list li { font-size: 14px; color: var(--text-mid); padding-left: 1.4rem; position: relative; line-height: 1.5; }
+.method-benefits-list li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
 .book-link { display: inline-block; margin-top: 2rem; }
 
 /* ─── PERSONAL TRAINING ─── */
@@ -350,6 +360,16 @@ nav.scrolled { background: rgba(17,56,42,0.97); backdrop-filter: blur(12px); box
 .addon-item { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 0.75rem 1.25rem; font-size: 14px; color: var(--text-mid); }
 .addon-price { font-weight: 500; color: var(--forest); }
 .all-plans-note { font-size: 14px; color: var(--text-mid); text-align: center; margin-top: 1.5rem; padding: 1rem; background: var(--surface); border-radius: var(--radius); }
+.session-structure { background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem 2.25rem; margin: 2.5rem 0 1.5rem; }
+.session-structure-title { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--forest); margin-bottom: 1.25rem; }
+.session-structure-list { list-style: none; counter-reset: phase; display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 2rem; }
+.session-structure-list li { counter-increment: phase; font-size: 15px; color: var(--text-mid); line-height: 1.55; padding-left: 2.5rem; position: relative; min-height: 30px; }
+.session-structure-list li::before { content: counter(phase); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--sage-pale); color: var(--forest); font-family: var(--font-display); font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+.specialties-block { margin: 1.5rem 0 2rem; }
+.specialties-title { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--forest); margin-bottom: 1rem; }
+.specialties-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem 1.5rem; }
+.specialties-list li { font-size: 15px; color: var(--text-mid); padding-left: 1.5rem; position: relative; line-height: 1.55; }
+.specialties-list li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 8px; height: 8px; background: var(--gold); border-radius: 50%; }
 
 /* ─── BODYWORK ─── */
 .bodywork-intro { max-width: 680px; margin: 1.5rem 0 3rem; font-size: 18px; color: var(--text-mid); }
@@ -379,7 +399,8 @@ nav.scrolled { background: rgba(17,56,42,0.97); backdrop-filter: blur(12px); box
 .about-photo { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3/4; }
 .about-photo img { width: 100%; height: 100%; object-fit: cover; }
 .about-content h2 { margin-bottom: 1.5rem; }
-.about-bio { font-size: 17px; color: var(--text-mid); margin-bottom: 2rem; }
+.about-bio { font-size: 17px; color: var(--text-mid); margin-bottom: 1.25rem; }
+.about-bio:last-of-type { margin-bottom: 2rem; }
 .credential-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
 .cred-tag { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; padding: 5px 12px; background: rgba(200,169,107,0.1); color: var(--gold); border: 1px solid rgba(200,169,107,0.3); border-radius: 99px; }
 .about-meta { font-size: 15px; color: var(--text-mid); }
@@ -459,7 +480,11 @@ footer { background: var(--forest); color: var(--text-on-dark); padding: 4rem 0 
   .techniques-grid { grid-template-columns: 1fr 1fr; }
   .service-block { grid-template-columns: 1fr; gap: 2rem; }
   .se-pricing { grid-template-columns: 1fr; }
+  .method-benefits-list { grid-template-columns: 1fr; }
   .goals-row { grid-template-columns: repeat(3, 1fr); }
+  .session-structure { padding: 1.5rem; }
+  .session-structure-list { grid-template-columns: 1fr; }
+  .specialties-list { grid-template-columns: 1fr; }
   .plans-grid { grid-template-columns: 1fr; }
   .pillars-grid { grid-template-columns: 1fr 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
@@ -1522,36 +1547,38 @@ a.authority-card:hover .authority-card-logo img {
   .hero-cta-big { display: block; margin: 0.4rem 0; padding: 0.95rem 1.5rem; }
 }
 
-/* 10j. BRAND PHOTO GRID — under hero */
+/* 10j. BRAND HERO PHOTO — under hero (single editorial image) */
 #photo-grid {
   background: var(--cream);
   padding: 1rem 0 5rem;
 }
-.pg-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 8px;
-  height: 540px;
-}
-.pg-cell {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-  background: var(--surface);
-}
-.pg-cell img {
+#photo-grid .container { padding: 0 1.5rem; }
+.hero-photo {
   width: 100%;
-  height: 100%;
+  max-height: 640px;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  object-position: center 30%;
+  border-radius: var(--radius-lg);
+  display: block;
+  box-shadow: 0 12px 40px rgba(17,56,42,0.12);
 }
-.pg-cell:hover img { transform: scale(1.04); }
-.pg-tall { grid-row: 1 / 3; }
 @media (max-width: 700px) {
-  .pg-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; height: 720px; }
-  .pg-tall { grid-row: 1 / 3; grid-column: 1 / 3; }
+  .hero-photo { max-height: 520px; }
+}
+
+/* Service feature photo — top of each service block */
+.service-photo {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-lg);
+  display: block;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 28px rgba(17,56,42,0.1);
+}
+@media (max-width: 768px) {
+  .service-photo { max-height: 340px; margin-bottom: 1.5rem; }
 }
 
 /* 10k. PROOF-POINTS STRIP — dark forest, gold bullets */
@@ -1750,7 +1777,6 @@ a.authority-card:hover .authority-card-logo img {
   .about-content { text-align: center; }
   .about-photo { max-width: 360px; margin: 0 auto; }
   .credential-tags { justify-content: center; }
-  .pg-grid img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 }
 
 /* 10b. HEADER — dark forest nav (logo blends with its native bg) */
@@ -1949,7 +1975,7 @@ body::before {
 <!-- HERO -->
 <section id="home">
   <div class="hero-content">
-    <p class="hero-eyebrow reveal stagger-1" data-i18n="hero.label"><span class="hero-eyebrow-dash">&mdash;</span> MARINA RIBEIRO &middot; FASCIA RELEASE SPECIALIST &middot; SYDNEY <span class="hero-eyebrow-dash">&mdash;</span></p>
+    <p class="hero-eyebrow reveal stagger-1" data-i18n="hero.label">MARINA RIBEIRO &middot; FASCIA RELEASE SPECIALIST &middot; SYDNEY</p>
     <h1 class="hero-h1 reveal stagger-2" data-i18n="hero.h1">Specialist Massage.<br>Personal Training.<br>Conscious Movement.</h1>
     <p class="hero-sub reveal stagger-3" data-i18n="hero.sub"><strong>Move. Release. Reconnect.</strong><br>Somatic &amp; myofascial massage, KSE Sensory Energetics&reg;, conscious-movement training. Sydney. EN + PT.</p>
     <div class="hero-pill reveal stagger-4">
@@ -1965,23 +1991,17 @@ body::before {
   </div>
 </section>
 
-<!-- BRAND PHOTO GRID -->
+<!-- BRAND HERO PHOTO -->
 <section id="photo-grid">
   <div class="container">
-    <div class="pg-grid">
-      <a href="#consult" class="pg-cell pg-tall"><img src="marina-hero-action.webp" alt="Marina ready for a session" loading="lazy"></a>
-      <a href="#about" class="pg-cell"><img src="marina-headshot.webp" alt="Marina Ribeiro" loading="lazy"></a>
-      <a href="#training" class="pg-cell"><img src="marina-pointing.webp" alt="Marina, personal trainer Sydney" loading="lazy"></a>
-      <a href="#consult" class="pg-cell"><img src="marina-consult.webp" alt="Marina on WhatsApp consult" loading="lazy"></a>
-      <a href="#diferencial" class="pg-cell"><img src="marina-portrait.webp" alt="Marina portrait" loading="lazy"></a>
-    </div>
+    <img class="hero-photo" src="hero.jpeg" alt="Marina Ribeiro at her bodywork studio in Sydney" loading="eager">
   </div>
 </section>
 
 <!-- THE METHOD -->
 <section id="method" class="section-pale">
   <div class="container">
-    <p class="label section-label reveal" data-i18n="method.label">&mdash; THE METHOD &mdash;</p>
+    <p class="label section-label reveal" data-i18n="method.label">THE METHOD</p>
     <h2 class="reveal" data-i18n="method.title">It&rsquo;s all fascia.</h2>
     <ul class="method-bullets reveal">
       <li data-i18n="method.b1">Connective tissue that wraps every muscle, organ and nerve.</li>
@@ -2195,11 +2215,31 @@ body::before {
     </div>
 
     <!-- Somatic Massage Corporal -->
+    <img class="service-photo reveal" src="atendimento.jpeg" alt="Marina performing somatic bodywork on a client" loading="lazy">
     <div class="service-block reveal">
       <div class="service-info">
         <h3 data-i18n="massage.c.name">Somatic Massage Corporal</h3>
         <p class="service-duration" data-i18n="massage.c.duration">60 minutes &middot; chronic neck, back, hips, shoulders</p>
         <p class="service-desc" data-i18n="massage.c.desc">Booked when standard remedial massage has not held. Sixty minutes addressing chronic neck and shoulder tension, lower-back compensation, hip-flexor lock, and the postural patterns making it all worse. Marina uses whichever of her five techniques your body responds to that day. You choose the regions. She builds the session around what she finds.</p>
+        <div class="method-paragraphs reveal">
+          <p data-i18n="massage.c.method.p1">Somatic Release Massage is a methodology developed by Marina Ribeiro, built from the integration of different therapeutic techniques with a focus on deep relaxation, body release, and nervous-system regulation.</p>
+          <p data-i18n="massage.c.method.p2">The technique combines Brazilian lymphatic drainage, myofascial release, breathwork, and deep-relaxation techniques into one complete experience of physical and mental well-being.</p>
+          <p data-i18n="massage.c.method.p3">The bodywork helps reduce muscular tension, fluid retention, accumulated physical stress, and fascial rigidity, improving circulation, mobility, body awareness, and the sense of lightness you leave with.</p>
+          <p data-i18n="massage.c.method.p4">Breathwork and deep-relaxation work regulate the central nervous system, lowering cortisol and improving well-being, relaxation, and body balance. More than a massage, Somatic Release Massage is an integrative experience that reconnects body and mind.</p>
+        </div>
+        <div class="method-benefits reveal">
+          <h4 class="method-benefits-title" data-i18n="massage.c.benefits.title">Benefits of the method</h4>
+          <ul class="method-benefits-list">
+            <li data-i18n="massage.c.benefits.b1">Release of muscular and fascial tension</li>
+            <li data-i18n="massage.c.benefits.b2">Reduced fluid retention</li>
+            <li data-i18n="massage.c.benefits.b3">Better circulation and mobility</li>
+            <li data-i18n="massage.c.benefits.b4">Sharper body awareness and sense of lightness</li>
+            <li data-i18n="massage.c.benefits.b5">Nervous-system regulation and lower cortisol</li>
+            <li data-i18n="massage.c.benefits.b6">Reduced accumulated physical and emotional stress</li>
+            <li data-i18n="massage.c.benefits.b7">Deep relaxation and improved well-being</li>
+            <li data-i18n="massage.c.benefits.b8">Integrative body-mind reconnection</li>
+          </ul>
+        </div>
         <div class="tags">
           <span class="tag" data-i18n="massage.c.tag1">Myofascial Release</span>
           <span class="tag" data-i18n="massage.c.tag2">Myo Aponeurosis</span>
@@ -2238,6 +2278,7 @@ body::before {
     <div class="combo-banner reveal" data-i18n="massage.combo">Book Body and Facial on the same day: 5% off your total. Two hours. One afternoon. A lot less tension.</div>
 
     <!-- Somatic Massage Facial -->
+    <img class="service-photo reveal" src="facial.jpeg" alt="Facial bodywork session, TMJ and jaw release" loading="lazy">
     <div class="service-block reveal">
       <div class="pricing-card">
         <h4 data-i18n="pricing.title">Pricing options</h4>
@@ -2283,6 +2324,11 @@ body::before {
         <h3 data-i18n="se.name">Sensory Energetics</h3>
         <p class="service-duration" data-i18n="se.duration">90 minutes &middot; for clients carrying years, not weeks</p>
         <p class="service-desc" data-i18n="se.desc">If standard massage hasn't held, this is the session built for what's underneath it. Sensory Energetics combines trigger-point work, guided breath, and nervous-system release to clear tension your body has stored for months or years. The kind that comes back three days after a regular treatment. Clients leave looser, sleep deeper that night, and most book again within the fortnight.</p>
+        <div class="method-paragraphs reveal">
+          <p data-i18n="se.method.p1">Sensory Energetics&reg; is an integrative methodology focused on the deep release of physical and emotional tension and the patterns the nervous system has accumulated. Inspired by ancient Eastern techniques and combined with breathwork, body stimuli, and somatic awareness, it reorganises body and mind by naturally activating the central nervous system.</p>
+          <p data-i18n="se.method.p2">During the session, the body may respond with involuntary tremors and natural neuromuscular reactions that help discharge stored tension, regulate stress, and reach deep relaxation. These responses lower cortisol and support the production of neurotransmitters tied to well-being, focus, motivation, and pleasure, including dopamine.</p>
+          <p data-i18n="se.method.p3">More than a body experience, Sensory Energetics&reg; works on the connection between body, emotion, and mind, leaving clients with lightness, mental clarity, emotional balance, and stronger body awareness.</p>
+        </div>
         <div class="outcomes-row">
           <div class="outcome-item">
             <div class="outcome-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></div>
@@ -2296,6 +2342,19 @@ body::before {
             <div class="outcome-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span></div>
             <div class="outcome-label" data-i18n="se.o3">Energy and lightness restored</div>
           </div>
+        </div>
+        <div class="method-benefits reveal">
+          <h4 class="method-benefits-title" data-i18n="se.benefits.title">Benefits of the method</h4>
+          <ul class="method-benefits-list">
+            <li data-i18n="se.benefits.b1">Nervous system regulation</li>
+            <li data-i18n="se.benefits.b2">Reduction of physical and emotional stress</li>
+            <li data-i18n="se.benefits.b3">Release of fascial and muscular tension</li>
+            <li data-i18n="se.benefits.b4">Improved mental clarity and decision-making</li>
+            <li data-i18n="se.benefits.b5">Greater sense of well-being and deep relaxation</li>
+            <li data-i18n="se.benefits.b6">Stimulation of creativity and bodily presence</li>
+            <li data-i18n="se.benefits.b7">Emotional balance and better sleep quality</li>
+            <li data-i18n="se.benefits.b8">Expansion, lightness, and reconnection with self</li>
+          </ul>
         </div>
         <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary book-link" data-i18n="massage.book">Book this session</a>
         <p class="cta-reassure" data-i18n="cta.reassure">First-session guarantee &middot; Cancel free up to 72 hours &middot; Pay at booking</p>
@@ -2324,7 +2383,7 @@ body::before {
     <p class="label section-label reveal" data-i18n="training.label">CONSCIOUS MOVEMENT PERSONAL TRAINING &middot; SNAP FITNESS MAROUBRA</p>
     <h2 class="reveal" data-i18n="training.title">Training that actually understands your body.</h2>
     <div class="integration-block reveal">
-      <p data-i18n="training.integration">Most trainers program your sessions. Marina brings her qualifications in myofascial therapy, TMJ massage, buccal massage, and myo aponeurosis training into every training session. If a fascial restriction is limiting your squat depth, she addresses it. If tension in your jaw is affecting your posture, she notices. You do not need a separate appointment to fix what is holding your training back.</p>
+      <p data-i18n="training.integration">Each session is 60 minutes, built around an integrated methodology focused on performance, body awareness, mobility, strength, and quality of life. Over 15 years guiding thousands of women across Brazil, now in Sydney, Marina helps clients build strength, confidence, autonomy, and well-being through movement. She brings her qualifications in myofascial therapy, TMJ massage, buccal massage, and myo aponeurosis training into every session. You do not need a separate appointment to fix what is holding your training back.</p>
     </div>
     <div class="goals-row reveal">
       <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14"/><path d="M18 5v14"/><path d="M2 9v6"/><path d="M22 9v6"/><rect x="4" y="7" width="4" height="10" rx="1"/><rect x="16" y="7" width="4" height="10" rx="1"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></div><div class="goal-label" data-i18n="training.g1">Mobility</div></div>
@@ -2332,6 +2391,27 @@ body::before {
       <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span></div><div class="goal-label" data-i18n="training.g3">Weight loss</div></div>
       <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span></div><div class="goal-label" data-i18n="training.g4">Muscle gain</div></div>
       <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span></div><div class="goal-label" data-i18n="training.g5">Conditioning</div></div>
+    </div>
+    <div class="session-structure reveal">
+      <h3 class="session-structure-title" data-i18n="training.structure.title">How each 60-minute session unfolds</h3>
+      <ol class="session-structure-list">
+        <li data-i18n="training.structure.s1">Stretching, muscle activation, and myofascial release techniques</li>
+        <li data-i18n="training.structure.s2">Mobility fundamentals and body awareness</li>
+        <li data-i18n="training.structure.s3">Specific training shaped around your goals</li>
+        <li data-i18n="training.structure.s4">Strengthening, stability, and conditioning work</li>
+        <li data-i18n="training.structure.s5">Muscle relaxation and breathwork</li>
+      </ol>
+    </div>
+    <div class="specialties-block reveal">
+      <h3 class="specialties-title" data-i18n="training.spec.title">Specialist in</h3>
+      <ul class="specialties-list">
+        <li data-i18n="training.spec.s1">Hypertrophy and muscle definition</li>
+        <li data-i18n="training.spec.s2">Physical conditioning</li>
+        <li data-i18n="training.spec.s3">Mobility and posture</li>
+        <li data-i18n="training.spec.s4">Body strengthening and stability</li>
+        <li data-i18n="training.spec.s5">Health and quality of life through perimenopause and menopause</li>
+        <li data-i18n="training.spec.s6">Body awareness and mind-body well-being</li>
+      </ul>
     </div>
     <p class="location-note reveal" data-i18n="training.location">All sessions take place at Snap Fitness Maroubra. Clients must hold an active Snap Fitness membership before their first session. Marina is an independent trainer. The gym carries no responsibility for PT services.</p>
     <p class="schedule-note reveal" data-i18n="training.schedule">Tue + Thu 8am to 6pm &nbsp;|&nbsp; Mon + Wed + Fri 8am to 11am</p>
@@ -2473,12 +2553,17 @@ body::before {
       <div class="about-content">
         <p class="label section-label reveal" data-i18n="about.label">ABOUT MARINA</p>
         <h2 class="reveal" data-i18n="about.title">The person behind the work.</h2>
-        <p class="about-bio reveal" data-i18n="about.bio">Marina Ribeiro da Silva is a European-trained personal trainer (EQF Level 4) and specialized bodywork practitioner based in Sydney. She holds qualifications in myofascial therapy, myo aponeurosis training (Vanoni Institute, 40 hours), TMJ massage mastery, buccal massage, and Sensory Energetics. Her approach brings all of these together into one integrated practice. Whether a client comes for training or bodywork, Marina works with the body as a connected system. She is Brazilian, works in English and Portuguese, and her clients range from 15 to 65.</p>
+        <p class="about-bio reveal" data-i18n="about.bio.p1">Marina Ribeiro da Silva is a Physical Education professional with over 18 years dedicated to movement, health, and women&rsquo;s well-being. Her path began through dance: at fifteen she was already teaching it, discovering early on how movement transforms lives, self-esteem, and the connection to one&rsquo;s own body. When she came of age, she chose to study Physical Education to turn that passion into a profession.</p>
+        <p class="about-bio reveal" data-i18n="about.bio.p2">In Brazil, Marina worked with the Minas Gerais government on Movimenta Contagem, recognised as the largest free outdoor physical-activity programme in the country. After the pandemic she founded Mulheres Ativas, a project built especially for women, particularly those over 40, mothers, and women who had never felt at home in traditional gyms. It grew into far more than a training space: a place of welcome, friendship, and emotional strengthening.</p>
+        <p class="about-bio reveal" data-i18n="about.bio.p3">Today she works in Sydney, specialised in supporting women across every stage of life, including perimenopause. Her sessions cover physical conditioning, hypertrophy, mobility, posture, body awareness, and quality of life, always with a humanised, individual approach.</p>
+        <p class="about-bio reveal" data-i18n="about.bio.p4">Alongside Physical Education, Marina has practised bodywork and massage for over 10 years. From that journey she developed her own fascial-release technique, combining body knowledge, breath, somatic awareness, and myofascial release to relieve physical and emotional tension and bring the body back into deep, balanced connection.</p>
         <div class="credential-tags reveal">
+          <span class="cred-tag" data-i18n="about.c0">18+ Years Experience</span>
           <span class="cred-tag" data-i18n="about.c1">EQF Level 4 Trained</span>
           <span class="cred-tag" data-i18n="about.c2">Vanoni Institute &middot; Myo Aponeurosis</span>
           <span class="cred-tag" data-i18n="about.c3">Myofascial + TMJ + Buccal</span>
           <span class="cred-tag">Sensory Energetics</span>
+          <span class="cred-tag" data-i18n="about.c4">Founder, Mulheres Ativas</span>
           <span class="cred-tag" data-i18n="about.c5">Bilingual EN + PT</span>
         </div>
         <p class="about-meta reveal" data-i18n="about.meta">Sydney, Australia &middot; English + Portugu&ecirc;s &middot; @marinaribeiropersonal</p>
@@ -2793,7 +2878,7 @@ const i18n = {
     'nav.results': 'Results',
     'nav.about': 'About',
     'nav.book': 'Book Now',
-    'hero.label': '\u2014 MARINA RIBEIRO \u00b7 FASCIA RELEASE SPECIALIST \u00b7 SYDNEY \u2014',
+    'hero.label': 'MARINA RIBEIRO \u00b7 FASCIA RELEASE SPECIALIST \u00b7 SYDNEY',
     'hero.h1': 'Specialist Massage.<br>Personal Training.<br>Conscious Movement.',
     'hero.sub': '<strong>Move. Release. Reconnect.</strong><br>Somatic & myofascial massage, KSE Sensory Energetics\u00ae, conscious-movement training. Sydney. EN + PT.',
     'hero.pill.price': 'From A$125',
@@ -2801,7 +2886,7 @@ const i18n = {
     'hero.cta1': 'Book a Massage',
     'hero.cta-pt': 'Book a PT Lesson',
     'hero.cta2': 'Talk to Marina. 15 min. Free. \u203a',
-    'method.label': '\u2014 THE METHOD \u2014',
+    'method.label': 'THE METHOD',
     'method.title': 'It\u2019s all fascia.',
     'method.b1': 'Connective tissue that wraps every muscle, organ and nerve.',
     'method.b2': 'When it tightens \u2192 chronic neck and back pain.',
@@ -2863,6 +2948,19 @@ const i18n = {
     'massage.c.name': 'Somatic Massage Corporal',
     'massage.c.duration': '60 minutes \u00b7 chronic neck, back, hips, shoulders',
     'massage.c.desc': "Booked when standard remedial massage has not held. Sixty minutes addressing chronic neck and shoulder tension, lower-back compensation, hip-flexor lock, and the postural patterns making it all worse. Marina uses whichever of her five techniques your body responds to that day. Not a fixed routine. You choose the regions. She builds the session around what she finds.",
+    'massage.c.method.p1': 'Somatic Release Massage is a methodology developed by Marina Ribeiro, built from the integration of different therapeutic techniques with a focus on deep relaxation, body release, and nervous-system regulation.',
+    'massage.c.method.p2': 'The technique combines Brazilian lymphatic drainage, myofascial release, breathwork, and deep-relaxation techniques into one complete experience of physical and mental well-being.',
+    'massage.c.method.p3': 'The bodywork helps reduce muscular tension, fluid retention, accumulated physical stress, and fascial rigidity, improving circulation, mobility, body awareness, and the sense of lightness you leave with.',
+    'massage.c.method.p4': 'Breathwork and deep-relaxation work regulate the central nervous system, lowering cortisol and improving well-being, relaxation, and body balance. More than a massage, Somatic Release Massage is an integrative experience that reconnects body and mind.',
+    'massage.c.benefits.title': 'Benefits of the method',
+    'massage.c.benefits.b1': 'Release of muscular and fascial tension',
+    'massage.c.benefits.b2': 'Reduced fluid retention',
+    'massage.c.benefits.b3': 'Better circulation and mobility',
+    'massage.c.benefits.b4': 'Sharper body awareness and sense of lightness',
+    'massage.c.benefits.b5': 'Nervous-system regulation and lower cortisol',
+    'massage.c.benefits.b6': 'Reduced accumulated physical and emotional stress',
+    'massage.c.benefits.b7': 'Deep relaxation and improved well-being',
+    'massage.c.benefits.b8': 'Integrative body-mind reconnection',
     'massage.c.tag1': 'Myofascial Release',
     'massage.c.tag2': 'Myo Aponeurosis',
     'massage.c.tag3': 'Somatic Release',
@@ -2889,6 +2987,18 @@ const i18n = {
     'se.name': 'Sensory Energetics',
     'se.duration': '90 minutes \u00b7 for clients carrying years, not weeks',
     'se.desc': 'If standard massage hasn\u2019t held, this is the session built for what\u2019s underneath it. Sensory Energetics combines trigger-point work, guided breath, and nervous-system release to clear tension your body has stored for months or years. The kind that comes back three days after a regular treatment. Clients leave looser, sleep deeper that night, and most book again within the fortnight.',
+    'se.method.p1': 'Sensory Energetics\u00ae is an integrative methodology focused on the deep release of physical and emotional tension and the patterns the nervous system has accumulated. Inspired by ancient Eastern techniques and combined with breathwork, body stimuli, and somatic awareness, it reorganises body and mind by naturally activating the central nervous system.',
+    'se.method.p2': 'During the session, the body may respond with involuntary tremors and natural neuromuscular reactions that help discharge stored tension, regulate stress, and reach deep relaxation. These responses lower cortisol and support the production of neurotransmitters tied to well-being, focus, motivation, and pleasure, including dopamine.',
+    'se.method.p3': 'More than a body experience, Sensory Energetics\u00ae works on the connection between body, emotion, and mind, leaving clients with lightness, mental clarity, emotional balance, and stronger body awareness.',
+    'se.benefits.title': 'Benefits of the method',
+    'se.benefits.b1': 'Nervous system regulation',
+    'se.benefits.b2': 'Reduction of physical and emotional stress',
+    'se.benefits.b3': 'Release of fascial and muscular tension',
+    'se.benefits.b4': 'Improved mental clarity and decision-making',
+    'se.benefits.b5': 'Greater sense of well-being and deep relaxation',
+    'se.benefits.b6': 'Stimulation of creativity and bodily presence',
+    'se.benefits.b7': 'Emotional balance and better sleep quality',
+    'se.benefits.b8': 'Expansion, lightness, and reconnection with self',
     'se.o1': 'Better sleep within 24 hours',
     'se.o2': 'Reduced anxiety + tension',
     'se.o3': 'Energy and lightness restored',
@@ -2898,7 +3008,20 @@ const i18n = {
     'se.p2.note': 'Fixed slot \u00b7 min 2 months \u00b7 results compound',
     'training.label': 'CONSCIOUS MOVEMENT PERSONAL TRAINING \u00b7 SNAP FITNESS MAROUBRA',
     'training.title': 'Training that actually understands your body.',
-    'training.integration': 'Most trainers program your sessions. Marina brings her qualifications in myofascial therapy, TMJ massage, buccal massage, and myo aponeurosis training into every training session. If a fascial restriction is limiting your squat depth, she addresses it. If tension in your jaw is affecting your posture, she notices. You do not need a separate appointment to fix what is holding your training back.',
+    'training.integration': 'Each session is 60 minutes, built around an integrated methodology focused on performance, body awareness, mobility, strength, and quality of life. Over 15 years guiding thousands of women across Brazil, now in Sydney, Marina helps clients build strength, confidence, autonomy, and well-being through movement. She brings her qualifications in myofascial therapy, TMJ massage, buccal massage, and myo aponeurosis training into every session. You do not need a separate appointment to fix what is holding your training back.',
+    'training.structure.title': 'How each 60-minute session unfolds',
+    'training.structure.s1': 'Stretching, muscle activation, and myofascial release techniques',
+    'training.structure.s2': 'Mobility fundamentals and body awareness',
+    'training.structure.s3': 'Specific training shaped around your goals',
+    'training.structure.s4': 'Strengthening, stability, and conditioning work',
+    'training.structure.s5': 'Muscle relaxation and breathwork',
+    'training.spec.title': 'Specialist in',
+    'training.spec.s1': 'Hypertrophy and muscle definition',
+    'training.spec.s2': 'Physical conditioning',
+    'training.spec.s3': 'Mobility and posture',
+    'training.spec.s4': 'Body strengthening and stability',
+    'training.spec.s5': 'Health and quality of life through perimenopause and menopause',
+    'training.spec.s6': 'Body awareness and mind-body well-being',
     'training.g1': 'Mobility',
     'training.g2': 'Endurance',
     'training.g3': 'Weight loss',
@@ -2951,10 +3074,15 @@ const i18n = {
     'results.instagram': 'Follow Marina\u2019s work \u00b7 @marinaribeiropersonal',
     'about.label': 'ABOUT MARINA',
     'about.title': 'The person behind the work.',
-    'about.bio': 'Marina Ribeiro da Silva is a European-trained personal trainer (EQF Level 4) and specialized bodywork practitioner based in Sydney. She holds qualifications in myofascial therapy, myo aponeurosis training (Vanoni Institute, 40 hours), TMJ massage mastery, buccal massage, and Sensory Energetics. Her approach brings all of these together into one integrated practice. Whether a client comes for training or bodywork, Marina works with the body as a connected system. She is Brazilian, works in English and Portuguese, and her clients range from 15 to 65.',
+    'about.bio.p1': 'Marina Ribeiro da Silva is a Physical Education professional with over 18 years dedicated to movement, health, and women\u2019s well-being. Her path began through dance: at fifteen she was already teaching it, discovering early on how movement transforms lives, self-esteem, and the connection to one\u2019s own body. When she came of age, she chose to study Physical Education to turn that passion into a profession.',
+    'about.bio.p2': 'In Brazil, Marina worked with the Minas Gerais government on Movimenta Contagem, recognised as the largest free outdoor physical-activity programme in the country. After the pandemic she founded Mulheres Ativas, a project built especially for women, particularly those over 40, mothers, and women who had never felt at home in traditional gyms. It grew into far more than a training space: a place of welcome, friendship, and emotional strengthening.',
+    'about.bio.p3': 'Today she works in Sydney, specialised in supporting women across every stage of life, including perimenopause. Her sessions cover physical conditioning, hypertrophy, mobility, posture, body awareness, and quality of life, always with a humanised, individual approach.',
+    'about.bio.p4': 'Alongside Physical Education, Marina has practised bodywork and massage for over 10 years. From that journey she developed her own fascial-release technique, combining body knowledge, breath, somatic awareness, and myofascial release to relieve physical and emotional tension and bring the body back into deep, balanced connection.',
+    'about.c0': '18+ Years Experience',
     'about.c1': 'EQF Level 4 Trained',
     'about.c2': 'Vanoni Institute \u00b7 Myo Aponeurosis',
     'about.c3': 'Myofascial + TMJ + Buccal',
+    'about.c4': 'Founder, Mulheres Ativas',
     'about.c5': 'Bilingual EN + PT',
     'about.meta': 'Sydney, Australia \u00b7 English + Portugu\u00eas \u00b7 @marinaribeiropersonal',
     'collabs.title': 'Where Marina trained, and where she works.',
@@ -3085,7 +3213,7 @@ const i18n = {
     'nav.results': 'Resultados',
     'nav.about': 'Sobre',
     'nav.book': 'Agendar',
-    'hero.label': '\u2014 MARINA RIBEIRO \u00b7 ESPECIALISTA EM LIBERA\u00c7\u00c3O FASCIAL \u00b7 SYDNEY \u2014',
+    'hero.label': 'MARINA RIBEIRO \u00b7 ESPECIALISTA EM LIBERA\u00c7\u00c3O FASCIAL \u00b7 SYDNEY',
     'hero.h1': 'Massagem Especializada.<br>Personal Training.<br>Movimento Consciente.',
     'hero.sub': '<strong>Mover. Liberar. Reconectar.</strong><br>Massagem som\u00e1tica e miofascial, KSE Sensory Energetics\u00ae, treino com movimento consciente. Sydney. EN + PT.',
     'hero.pill.price': 'A partir de A$125',
@@ -3093,7 +3221,7 @@ const i18n = {
     'hero.cta1': 'Agendar Massagem',
     'hero.cta-pt': 'Agendar Personal Training',
     'hero.cta2': 'Falar com Marina. 15 min. Gr\u00e1tis. \u203a',
-    'method.label': '\u2014 O M\u00c9TODO \u2014',
+    'method.label': 'O M\u00c9TODO',
     'method.title': '\u00c9 tudo f\u00e1scia.',
     'method.b1': 'Tecido conjuntivo que envolve todo m\u00fasculo, \u00f3rg\u00e3o e nervo.',
     'method.b2': 'Quando aperta \u2192 dor cr\u00f4nica no pesco\u00e7o e nas costas.',
@@ -3128,7 +3256,6 @@ const i18n = {
     'proof.bilingual': 'EN + PT bil\u00edngue',
     'proof.disclaimer': 'Bodywork \u00b7 N\u00e3o substitui orienta\u00e7\u00e3o m\u00e9dica',
     'hero.urgency': 'Garantia da primeira sess\u00e3o \u00b7 Vagas semanais limitadas \u00b7 Seg / Qua / Sex',
-    'hero.urgency': 'Garantia da primeira sess\u00e3o \u00b7 Vagas semanais limitadas \u00b7 Seg / Qua / Sex',
     'who.title': 'O que te trouxe aqui?',
     'who.left.title': 'Carrego tens\u00e3o que meu corpo n\u00e3o libera.',
     'who.left.body': 'Tens\u00e3o cr\u00f4nica, dor, sobrecarga do sistema nervoso, ou um corpo que parece desconectado. Os servi\u00e7os de massagem e trabalho corporal da Marina tratam o que voc\u00ea vem carregando.',
@@ -3156,6 +3283,19 @@ const i18n = {
     'massage.c.name': 'Somatic Massage Corporal',
     'massage.c.duration': '60 minutos \u00b7 pesco\u00e7o, costas, quadril e ombros cr\u00f4nicos',
     'massage.c.desc': 'Agendada quando massagem desportiva comum n\u00e3o est\u00e1 segurando. Sessenta minutos tratando tens\u00e3o cr\u00f4nica no pesco\u00e7o e ombros, compensa\u00e7\u00e3o na lombar, encurtamento do flexor do quadril, e os padr\u00f5es posturais que pioram tudo isso. Marina usa a combina\u00e7\u00e3o das cinco t\u00e9cnicas da Marina que o seu corpo responde naquele dia. N\u00e3o \u00e9 rotina fixa. Voc\u00ea escolhe as regi\u00f5es. Ela constr\u00f3i a sess\u00e3o em torno do que encontra.',
+    'massage.c.method.p1': 'Somatic Release Massage \u00e9 uma metodologia desenvolvida por Marina Ribeiro, criada atrav\u00e9s da integra\u00e7\u00e3o de diferentes t\u00e9cnicas terap\u00eauticas com foco em relaxamento profundo, libera\u00e7\u00e3o corporal e regula\u00e7\u00e3o do sistema nervoso.',
+    'massage.c.method.p2': 'A t\u00e9cnica combina drenagem linf\u00e1tica brasileira, libera\u00e7\u00e3o miofascial, breathwork e t\u00e9cnicas de relaxamento profundo, promovendo uma experi\u00eancia completa de bem-estar f\u00edsico e mental.',
+    'massage.c.method.p3': 'O trabalho corporal auxilia na redu\u00e7\u00e3o de tens\u00f5es musculares, reten\u00e7\u00e3o de l\u00edquidos, estresse f\u00edsico acumulado e rigidez da f\u00e1scia, melhorando a circula\u00e7\u00e3o, mobilidade, consci\u00eancia corporal e sensa\u00e7\u00e3o de leveza.',
+    'massage.c.method.p4': 'As t\u00e9cnicas respirat\u00f3rias e de relaxamento profundo favorecem a regula\u00e7\u00e3o do sistema nervoso central, auxiliando na redu\u00e7\u00e3o do estresse, diminui\u00e7\u00e3o do cortisol e melhora da sensa\u00e7\u00e3o de bem-estar, relaxamento e equil\u00edbrio corporal. Mais do que uma massagem, Somatic Release Massage proporciona uma experi\u00eancia integrativa que conecta corpo e mente.',
+    'massage.c.benefits.title': 'Benef\u00edcios da t\u00e9cnica',
+    'massage.c.benefits.b1': 'Libera\u00e7\u00e3o de tens\u00f5es musculares e fasciais',
+    'massage.c.benefits.b2': 'Redu\u00e7\u00e3o da reten\u00e7\u00e3o de l\u00edquidos',
+    'massage.c.benefits.b3': 'Melhora da circula\u00e7\u00e3o e da mobilidade',
+    'massage.c.benefits.b4': 'Mais consci\u00eancia corporal e sensa\u00e7\u00e3o de leveza',
+    'massage.c.benefits.b5': 'Regula\u00e7\u00e3o do sistema nervoso e diminui\u00e7\u00e3o do cortisol',
+    'massage.c.benefits.b6': 'Redu\u00e7\u00e3o do estresse f\u00edsico e emocional acumulado',
+    'massage.c.benefits.b7': 'Relaxamento profundo e melhora do bem-estar',
+    'massage.c.benefits.b8': 'Experi\u00eancia integrativa que reconecta corpo e mente',
     'massage.c.tag1': 'Libera\u00e7\u00e3o Miofascial',
     'massage.c.tag2': 'Mio Aponeurose',
     'massage.c.tag3': 'Libera\u00e7\u00e3o Som\u00e1tica',
@@ -3182,6 +3322,18 @@ const i18n = {
     'se.name': 'Sensory Energetics',
     'se.duration': '90 minutos \u00b7 para quem carrega anos, n\u00e3o semanas',
     'se.desc': 'Se a massagem comum n\u00e3o est\u00e1 segurando, esta \u00e9 a sess\u00e3o constru\u00edda para o que est\u00e1 por baixo. Sensory Energetics combina pontos-gatilho, respira\u00e7\u00e3o guiada e libera\u00e7\u00e3o do sistema nervoso para tirar tens\u00e3o que o seu corpo guardou por meses ou anos. Aquela que volta tr\u00eas dias depois de um tratamento comum. As clientes saem mais soltas, dormem mais profundo na mesma noite, e a maioria reagenda dentro da quinzena.',
+    'se.method.p1': 'Sensory Energetics\u00ae \u00e9 uma metodologia integrativa focada na libera\u00e7\u00e3o profunda de tens\u00f5es f\u00edsicas, emocionais e padr\u00f5es acumulados no sistema nervoso. Inspirada em t\u00e9cnicas orientais milenares, combinadas com breathwork, est\u00edmulos corporais e consci\u00eancia som\u00e1tica, a t\u00e9cnica promove uma reorganiza\u00e7\u00e3o do corpo e da mente atrav\u00e9s da ativa\u00e7\u00e3o natural do sistema nervoso central.',
+    'se.method.p2': 'Durante a sess\u00e3o, o corpo pode apresentar tremores involunt\u00e1rios e respostas neuromusculares naturais, que auxiliam na descarga de tens\u00e3o acumulada, regula\u00e7\u00e3o do estresse e relaxamento profundo. Esses est\u00edmulos favorecem a redu\u00e7\u00e3o dos n\u00edveis de cortisol, horm\u00f4nio relacionado ao estresse, e contribuem para a melhora da produ\u00e7\u00e3o de neurotransmissores ligados ao bem-estar, foco, motiva\u00e7\u00e3o e prazer, como a dopamina.',
+    'se.method.p3': 'Mais do que uma experi\u00eancia corporal, Sensory Energetics\u00ae atua diretamente na conex\u00e3o entre corpo, emo\u00e7\u00e3o e mente, promovendo sensa\u00e7\u00e3o de leveza, clareza mental, equil\u00edbrio emocional e melhora da consci\u00eancia corporal.',
+    'se.benefits.title': 'Benef\u00edcios da t\u00e9cnica',
+    'se.benefits.b1': 'Regula\u00e7\u00e3o do sistema nervoso',
+    'se.benefits.b2': 'Redu\u00e7\u00e3o do estresse f\u00edsico e emocional',
+    'se.benefits.b3': 'Libera\u00e7\u00e3o de tens\u00f5es fasciais e musculares',
+    'se.benefits.b4': 'Melhora da clareza mental e tomada de decis\u00f5es',
+    'se.benefits.b5': 'Aumento da sensa\u00e7\u00e3o de bem-estar e relaxamento profundo',
+    'se.benefits.b6': 'Est\u00edmulo da criatividade e presen\u00e7a corporal',
+    'se.benefits.b7': 'Maior equil\u00edbrio emocional e qualidade do sono',
+    'se.benefits.b8': 'Sensa\u00e7\u00e3o de expans\u00e3o, leveza e reconex\u00e3o consigo mesma',
     'se.o1': 'Melhor sono em 24 horas',
     'se.o2': 'Ansiedade e tens\u00e3o reduzidas',
     'se.o3': 'Energia e leveza restauradas',
@@ -3191,7 +3343,20 @@ const i18n = {
     'se.p2.note': 'Hor\u00e1rio fixo \u00b7 m\u00edn. 2 meses \u00b7 os resultados se acumulam',
     'training.label': 'PERSONAL TRAINING MOVIMENTO CONSCIENTE \u00b7 SNAP FITNESS MAROUBRA',
     'training.title': 'Um treino que realmente entende o seu corpo.',
-    'training.integration': 'A maioria dos treinadores programa as suas sess\u00f5es. Marina traz suas qualifica\u00e7\u00f5es em terapia miofascial, massagem de ATM, massagem bucal e treinamento de mio aponeurose para cada sess\u00e3o de treino. Se uma restri\u00e7\u00e3o fascial est\u00e1 limitando a profundidade do seu agachamento, ela trata. Se a tens\u00e3o na mand\u00edbula est\u00e1 afetando a sua postura, ela percebe. Voc\u00ea n\u00e3o precisa de uma consulta separada para resolver o que est\u00e1 travando o seu treino.',
+    'training.integration': 'Cada sess\u00e3o tem 60 minutos, desenvolvida atrav\u00e9s de uma metodologia integrada com foco em performance, consci\u00eancia corporal, mobilidade, fortalecimento muscular e qualidade de vida. Com mais de 15 anos de experi\u00eancia e milhares de mulheres atendidas no Brasil, agora em Sydney, Marina ajuda as alunas a desenvolverem for\u00e7a, confian\u00e7a, autonomia e bem-estar atrav\u00e9s do movimento. Ela traz suas qualifica\u00e7\u00f5es em terapia miofascial, massagem de ATM, massagem bucal e treinamento de mio aponeurose para cada sess\u00e3o. Voc\u00ea n\u00e3o precisa de uma consulta separada para resolver o que est\u00e1 travando o seu treino.',
+    'training.structure.title': 'Como cada sess\u00e3o de 60 minutos se desenvolve',
+    'training.structure.s1': 'Alongamento, ativa\u00e7\u00e3o muscular e t\u00e9cnicas de libera\u00e7\u00e3o miofascial',
+    'training.structure.s2': 'Fundamentos de mobilidade e consci\u00eancia corporal',
+    'training.structure.s3': 'Treino espec\u00edfico direcionado aos objetivos da aluna',
+    'training.structure.s4': 'Exerc\u00edcios para fortalecimento, estabilidade e condicionamento f\u00edsico',
+    'training.structure.s5': 'Relaxamento muscular e breathwork',
+    'training.spec.title': 'Especialista em',
+    'training.spec.s1': 'Hipertrofia e defini\u00e7\u00e3o muscular',
+    'training.spec.s2': 'Condicionamento f\u00edsico',
+    'training.spec.s3': 'Mobilidade e postura',
+    'training.spec.s4': 'Fortalecimento corporal e estabilidade',
+    'training.spec.s5': 'Sa\u00fade e qualidade de vida na perimenopausa e menopausa',
+    'training.spec.s6': 'Consci\u00eancia corporal e bem-estar f\u00edsico e mental',
     'training.g1': 'Mobilidade',
     'training.g2': 'Resist\u00eancia',
     'training.g3': 'Perda de peso',
@@ -3244,10 +3409,15 @@ const i18n = {
     'results.instagram': 'Acompanhe o trabalho da Marina \u00b7 @marinaribeiropersonal',
     'about.label': 'SOBRE MARINA',
     'about.title': 'A pessoa por tr\u00e1s do trabalho.',
-    'about.bio': 'Marina Ribeiro da Silva \u00e9 personal trainer com forma\u00e7\u00e3o europeia (EQF N\u00edvel 4) e praticante especializada em trabalho corporal, baseada em Sydney. Ela possui qualifica\u00e7\u00f5es em terapia miofascial, treinamento de mio aponeurose (Instituto Vanoni, 40 horas), dom\u00ednio de massagem de ATM, massagem bucal e Sensory Energetics. A sua abordagem une tudo isso em uma pr\u00e1tica integrada. Seja para treino ou trabalho corporal, Marina trabalha o corpo como um sistema conectado. Ela \u00e9 brasileira, atende em ingl\u00eas e portugu\u00eas, e suas clientes t\u00eam entre 15 e 65 anos.',
+    'about.bio.p1': 'Marina Ribeiro da Silva \u00e9 profissional de Educa\u00e7\u00e3o F\u00edsica h\u00e1 mais de 18 anos, dedicada ao movimento, \u00e0 sa\u00fade e ao bem-estar feminino. Sua trajet\u00f3ria come\u00e7ou pela dan\u00e7a: aos quinze anos j\u00e1 dava aulas, descobrindo cedo como o movimento transforma vidas, autoestima e a conex\u00e3o com o pr\u00f3prio corpo. Ao atingir a maioridade, escolheu cursar Educa\u00e7\u00e3o F\u00edsica para transformar essa paix\u00e3o em profiss\u00e3o.',
+    'about.bio.p2': 'No Brasil, Marina trabalhou na Prefeitura de Minas Gerais no programa Movimenta Contagem, reconhecido como o maior projeto gratuito de atividade f\u00edsica ao ar livre do pa\u00eds. Ap\u00f3s a pandemia, fundou o Mulheres Ativas, um projeto criado especialmente para mulheres, principalmente acima dos 40 anos, m\u00e3es e mulheres que nunca se sentiram \u00e0 vontade em academias tradicionais. O projeto se tornou muito mais do que um espa\u00e7o de exerc\u00edcios: um ambiente de acolhimento, amizade e fortalecimento emocional.',
+    'about.bio.p3': 'Hoje atua em Sydney, especializada no atendimento feminino em todas as fases da vida, incluindo a perimenopausa. Suas sess\u00f5es envolvem condicionamento f\u00edsico, hipertrofia, mobilidade, postura, consci\u00eancia corporal e qualidade de vida, sempre com uma abordagem humanizada e individualizada.',
+    'about.bio.p4': 'Al\u00e9m da Educa\u00e7\u00e3o F\u00edsica, Marina atua h\u00e1 mais de 10 anos com terapias corporais e massagem. Ao longo dessa jornada, desenvolveu sua pr\u00f3pria t\u00e9cnica de libera\u00e7\u00e3o fascial, unindo conhecimento corporal, respira\u00e7\u00e3o, consci\u00eancia som\u00e1tica e libera\u00e7\u00e3o miofascial para aliviar tens\u00f5es f\u00edsicas e emocionais e devolver ao corpo equil\u00edbrio, profundidade e reconex\u00e3o.',
+    'about.c0': '18+ Anos de Experi\u00eancia',
     'about.c1': 'Treinada EQF N\u00edvel 4',
     'about.c2': 'Instituto Vanoni \u00b7 Mio Aponeurose',
     'about.c3': 'Miofascial + ATM + Bucal',
+    'about.c4': 'Fundadora, Mulheres Ativas',
     'about.c5': 'Bil\u00edngue EN + PT',
     'about.meta': 'Sydney, Austr\u00e1lia \u00b7 English + Portugu\u00eas \u00b7 @marinaribeiropersonal',
     'collabs.title': 'Onde Marina se formou, e onde atende.',

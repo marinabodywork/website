@@ -13,7 +13,12 @@ Bilingual: English (default) + Brazilian Portuguese, switched client-side withou
 There is **no build system, no package manager, no framework, no test suite**. Everything ships as static files served as-is.
 
 - `index.html` — the entire site (~3,500 lines): inline `<style>`, inline `<script>`, and inline JSON-LD schema in the `<head>`.
-- `*.webp` / `*.jpeg` / `*.jpg` / `*.png` / `*.svg` — image assets live flat in the repo root and are referenced by bare filename from `index.html` (no `assets/` subfolder).
+- `*.webp` / `*.jpeg` / `*.jpg` / `*.png` / `*.svg` — image assets live flat in the repo root and are referenced by bare filename from `index.html` (no `assets/` subfolder). Currently in-use brand imagery:
+  - `hero.jpeg` — main brand portrait shown in `#photo-grid` directly under the hero text, and as `og:image`.
+  - `atendimento.jpeg` — Somatic Massage Corporal feature image (above the service block).
+  - `facial.jpeg` — Somatic Massage Facial feature image.
+  - `marina-hero.webp` — still used in the `#about` portrait slot.
+  - `marina-consult.webp`, `marina-logo.webp` — consult section and nav/footer logo.
 - `robots.txt`, `sitemap.xml` — SEO files at the root. The sitemap lists the home URL plus the in-page anchors (`#massagem`, `#training`, `#diagnostic`, `#consult`, `#about`, `#faq`, `#contact`).
 
 Loose `Screenshot *.jpg` / `WhatsApp Image *.jpeg` / `Untitled (...).png` files in the root are uploads, not referenced by the site — leave them alone unless the user asks otherwise.
@@ -70,6 +75,91 @@ WhatsApp links use `https://wa.me/61451021478?text=...`. If the phone, booking U
 
 The `<script type="application/ld+json">` block at the top of `<head>` declares `LocalBusiness`, `Person`, four `Service` entries (with `offers.price` in AUD), and `WebSite`. When prices, services, opening hours, area served, or credentials change in the visible copy, update the JSON-LD too — it's what Google reads.
 
+### 5a. Personal Training section content (`#training`)
+
+The training section needs to stay consistent with Marina's actual methodology. The source of truth:
+
+- **Session length:** 60 minutes.
+- **Experience pitch:** 15+ years of practice, thousands of women supported in Brazil, now practicing in Sydney. The integration block paragraph carries this.
+- **Methodology framing:** integrated — performance, body awareness, mobility, muscular strengthening, quality of life.
+- **5-phase session structure** (rendered via `.session-structure` + `data-i18n="training.structure.s1..s5"`):
+  1. Stretching, muscle activation, myofascial release
+  2. Mobility fundamentals + body awareness
+  3. Goal-specific training
+  4. Strengthening, stability, conditioning
+  5. Muscle relaxation + breathwork
+- **6 specialty areas** (rendered via `.specialties-block` + `data-i18n="training.spec.s1..s6"`):
+  1. Hypertrophy + muscle definition
+  2. Physical conditioning
+  3. Mobility + posture
+  4. Body strengthening + stability
+  5. Perimenopause + menopause health
+  6. Body awareness + mind-body well-being
+
+The five quick-chip `.goal-item` icons (`training.g1`..`g5`) are a separate visual outcomes row above the structure block — leave them in place, they're complementary, not duplicate.
+
+If any of the above changes, update **all** of: the visible markup in `#training`, both `i18n.en` + `i18n.pt`, and the `Conscious Movement Personal Training` `Service.description` in the JSON-LD graph.
+
+### 5b. Sensory Energetics section content (inside `#massagem`)
+
+Source of truth for the SE block (90-minute signature):
+
+- **Methodology framing:** integrative method focused on deep release of physical/emotional tension and patterns accumulated in the nervous system. Inspired by ancient Eastern techniques + breathwork + body stimuli + somatic awareness, activating the central nervous system.
+- **Body response (paragraph 2):** involuntary tremors and natural neuromuscular reactions are normal — they help discharge tension, regulate stress, and lower cortisol. The technique supports neurotransmitters tied to well-being, focus, motivation, and pleasure (dopamine).
+- **Mind-body framing (paragraph 3):** more than a body experience — works on the connection between body, emotion, and mind. Promotes lightness, mental clarity, emotional balance, body awareness.
+- **8 benefits** rendered via `.method-benefits` + `data-i18n="se.benefits.b1..b8"`:
+  1. Nervous-system regulation
+  2. Reduced physical + emotional stress
+  3. Release of fascial + muscular tension
+  4. Improved mental clarity + decision-making
+  5. Greater well-being + deep relaxation
+  6. Creativity + bodily presence
+  7. Emotional balance + sleep quality
+  8. Expansion, lightness, reconnection with self
+- The 3 existing `outcome-item` chips (better sleep, reduced anxiety, energy/lightness) stay — they're the visual punch.
+
+If any of the above changes, update **all** of: the visible markup in the SE service block, both `i18n.en` + `i18n.pt`, and the `Sensory Energetics` `Service.description` in the JSON-LD graph.
+
+### 5c. Somatic Release Massage content (`massage.c.*`, inside `#massagem`)
+
+The "Somatic Massage Corporal" service block is Marina's **Somatic Release Massage** methodology. Source of truth:
+
+- **Marina-developed methodology** integrating different therapeutic techniques: Brazilian lymphatic drainage, myofascial release, breathwork, and deep-relaxation work.
+- **What the bodywork addresses:** muscular tension, fluid retention, accumulated physical stress, fascial rigidity → improving circulation, mobility, body awareness, sense of lightness.
+- **Nervous-system layer:** breathwork + deep relaxation regulate the central nervous system, lowering cortisol and improving relaxation/balance.
+- **Positioning:** integrative experience that reconnects body and mind — not "just a massage."
+- **8 benefits** rendered via `.method-benefits` + `data-i18n="massage.c.benefits.b1..b8"`:
+  1. Release of muscular + fascial tension
+  2. Reduced fluid retention
+  3. Better circulation + mobility
+  4. Body awareness + sense of lightness
+  5. Nervous-system regulation + lower cortisol
+  6. Reduced accumulated physical + emotional stress
+  7. Deep relaxation + improved well-being
+  8. Integrative body-mind reconnection
+
+The existing `massage.c.desc` "stop paying three therapists for the same tension" voice still lives at the top of the block as the punchy lead-in; the new methodology paragraphs (`massage.c.method.p1..p4`) sit underneath it.
+
+If any of the above changes, update **all** of: the visible markup in the Somatic Massage Corporal service block, both `i18n.en` + `i18n.pt`, and the `Somatic Massage Corporal` `Service.description` (which also carries `alternateName: "Somatic Release Massage"`) in the JSON-LD graph.
+
+### 5d. About / Marina's biography (`#about`)
+
+The About section is the canonical biography. Rendered as four `<p class="about-bio">` paragraphs keyed `about.bio.p1`..`about.bio.p4` (EN + PT). Source of truth:
+
+- **Identity:** Marina Ribeiro da Silva, Physical Education professional, **18+ years** dedicated to movement, health, and women's well-being.
+- **Origin:** started through dance, teaching it from age 15. Studied Physical Education to professionalise the passion.
+- **Brazil career:** worked with the Minas Gerais government on **Movimenta Contagem** (the largest free outdoor physical-activity programme in Brazil). After the pandemic, founded **Mulheres Ativas**, a programme for women — particularly over 40, mothers, and those who never felt at home in traditional gyms.
+- **Sydney today:** specialises in women's training across all life stages, including perimenopause — conditioning, hypertrophy, mobility, posture, body awareness, quality of life.
+- **Bodywork:** 10+ years in body therapies and massage; developed her own **fascial-release technique** combining breath, somatic awareness, and myofascial release.
+
+Credential chips (`.cred-tag`, keys `about.c0`..`about.c5`): `18+ Years Experience`, `EQF Level 4 Trained`, `Vanoni Institute · Myo Aponeurosis`, `Myofascial + TMJ + Buccal`, `Sensory Energetics`, `Founder, Mulheres Ativas`, `Bilingual EN + PT`.
+
+If any of the above changes, update **all** of: the visible markup in `#about`, both `i18n.en` + `i18n.pt`, and the `Person` `description` in the JSON-LD graph.
+
+### 5e. Shared `.method-paragraphs` / `.method-benefits` styles
+
+Both the SE and Somatic Release Massage blocks (and any future "this is the methodology" + "benefits list" block) share `.method-paragraphs` and `.method-benefits` / `.method-benefits-title` / `.method-benefits-list` styles. Reuse those classes rather than introducing per-service variants.
+
 ### 6. Sitemap freshness
 
 `sitemap.xml` carries a `<lastmod>` on the home URL. Bump it when the page content changes meaningfully.
@@ -81,5 +171,5 @@ The `<script type="application/ld+json">` block at the top of `<head>` declares 
 
 ## Git workflow
 
-- Develop on the branch `claude/add-claude-documentation-m5v1t` (the assigned feature branch for this environment).
+- Develop on the feature branch assigned for the session.
 - Push with `git push -u origin <branch>` and open a draft PR against the default branch.
