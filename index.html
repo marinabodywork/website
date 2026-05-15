@@ -6,10 +6,10 @@
 <meta name="description" content="Marina Ribeiro  -  Bodywork specialist and personal trainer in Sydney. Somatic massage, Sensory Energetics, and Conscious Movement Personal Training. Release your body. Live an extraordinary life.">
 <meta property="og:title" content="Marina Bodywork  -  Sydney">
 <meta property="og:description" content="Release your body. Live an extraordinary life. Somatic massage, Sensory Energetics, and personal training in Sydney.">
-<meta property="og:image" content="marina-hero.jpg.jpeg">
+<meta property="og:image" content="marina-hero.webp">
 <title>Marina Bodywork  -  Sydney</title>
-<link rel="icon" type="image/jpeg" href="marina-logo.jpg.jpeg">
-<link rel="apple-touch-icon" href="marina-logo.jpg.jpeg">
+<link rel="icon" type="image/webp" href="marina-logo.webp">
+<link rel="apple-touch-icon" href="marina-logo.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1390,41 +1390,41 @@ a.authority-card:hover .authority-card-logo img {
   body { padding-bottom: 72px; }
 }
 
-/* 10b. BEBOLD-STYLE HEADER — cream nav with serif wordmark */
+/* 10b. HEADER — dark forest nav (logo blends with its native bg) */
 nav {
-  background: var(--cream) !important;
+  background: var(--forest) !important;
   padding: 0.85rem 2.5rem !important;
-  border-bottom: 1px solid rgba(200,169,107,0.35) !important;
-  box-shadow: 0 1px 0 rgba(17,56,42,0.04) !important;
+  border-bottom: 1px solid rgba(200,169,107,0.18) !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.15) !important;
   backdrop-filter: none !important;
 }
 nav.scrolled {
-  background: var(--cream) !important;
-  box-shadow: 0 2px 18px rgba(17,56,42,0.08) !important;
-  backdrop-filter: none !important;
+  background: rgba(17,56,42,0.98) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25) !important;
+  backdrop-filter: blur(8px) !important;
 }
-/* Logo image — Marina brand mark on cream nav */
+/* Logo image */
 .nav-logo { flex-direction: row !important; align-items: center !important; gap: 0 !important; }
 .nav-logo-img {
   display: block !important;
   height: 52px !important;
   width: auto !important;
   object-fit: contain !important;
-  border-radius: 8px;
-  box-shadow: 0 1px 6px rgba(17,56,42,0.12);
+  border-radius: 0;
+  box-shadow: none;
 }
 @media (max-width: 768px) {
-  .nav-logo-img { height: 42px !important; border-radius: 6px; }
+  .nav-logo-img { height: 42px !important; }
 }
-/* Nav links: refined uppercase, forest, gold underline on hover */
+/* Nav links: refined uppercase, cream-on-forest, gold underline on hover */
 .nav-links a {
   font-family: var(--font-body) !important;
   font-size: 13px !important;
   font-weight: 500 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.14em !important;
-  color: var(--forest) !important;
-  opacity: 1 !important;
+  color: var(--text-on-dark) !important;
+  opacity: 0.85 !important;
   position: relative;
 }
 .nav-links a:not(.nav-book)::after {
@@ -1439,20 +1439,19 @@ nav.scrolled {
 }
 .nav-links a:not(.nav-book):hover::after,
 .nav-links a:not(.nav-book).active::after { transform: scaleX(1); }
-.nav-links a:hover { color: var(--forest) !important; }
-/* Lang toggle: forest-on-cream variant */
+.nav-links a:hover { color: var(--gold-light) !important; opacity: 1 !important; }
+/* Lang toggle: light-on-dark */
 nav .lang-toggle {
-  background: rgba(17,56,42,0.05) !important;
-  border: 1px solid rgba(17,56,42,0.08);
+  background: rgba(255,255,255,0.08) !important;
+  border: 1px solid rgba(255,255,255,0.12);
 }
-nav .lang-btn { color: var(--forest) !important; opacity: 0.55; }
+nav .lang-btn { color: var(--text-on-dark) !important; opacity: 0.55; }
 nav .lang-btn.active {
-  background: rgba(200,169,107,0.18) !important;
-  border: 1px solid rgba(200,169,107,0.4) !important;
+  background: rgba(200,169,107,0.22) !important;
+  border: 1px solid rgba(200,169,107,0.45) !important;
   opacity: 1;
 }
-/* Hamburger lines: forest on cream */
-.hamburger span { background: var(--forest) !important; }
+.hamburger span { background: var(--text-on-dark) !important; }
 @media (max-width: 768px) {
   nav { padding: 0.75rem 1.25rem !important; }
 }
@@ -1562,7 +1561,7 @@ body::before {
 <!-- NAV -->
 <nav id="nav">
   <a href="#home" class="nav-logo" aria-label="Marina Bodywork home">
-    <img src="marina-logo.jpg.jpeg" alt="Marina Bodywork" class="nav-logo-img" onerror="this.style.display='none'">
+    <img src="marina-logo.webp" alt="Marina Bodywork" class="nav-logo-img" onerror="this.style.display='none'">
   </a>
   <div class="nav-links">
     <a href="#massagem" data-i18n="nav.services">Services</a>
@@ -1614,7 +1613,7 @@ body::before {
     <p class="urgency-note reveal stagger-5" data-i18n="hero.urgency">First-session guarantee &middot; Limited weekly slots &middot; Mon / Wed / Fri</p>
   </div>
   <div class="hero-right">
-    <img src="marina-hero-action.jpg" loading="eager" alt="Marina Ribeiro, bodywork specialist Sydney" onerror="this.src='marina-hero.jpg.jpeg'">
+    <img src="marina-hero-action.webp" loading="eager" alt="Marina Ribeiro, bodywork specialist Sydney" onerror="this.src='marina-hero.webp'">
   </div>
 </section>
 
@@ -2050,7 +2049,7 @@ body::before {
   <div class="container">
     <div class="about-grid">
       <div class="about-photo reveal">
-        <img src="marina-hero.jpg.jpeg" loading="eager" alt="Marina Ribeiro" onerror="this.src='marina-logo.jpg.jpeg'">
+        <img src="marina-hero.webp" loading="eager" alt="Marina Ribeiro" onerror="this.src='marina-logo.webp'">
       </div>
       <div class="about-content">
         <p class="label section-label reveal" data-i18n="about.label">ABOUT MARINA</p>
@@ -2186,6 +2185,27 @@ body::before {
         </button>
         <div class="faq-answer"><p data-i18n="faq.a9">If your first session is not what you expected, message Marina on WhatsApp within 24 hours. She will make it right &mdash; rework the next session, redirect you to a more appropriate specialist, or refund. No long forms. No back-and-forth.</p></div>
       </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="faq.q10">Where exactly do sessions happen, and is parking easy?</span>
+          <span class="faq-arrow">&#8964;</span>
+        </button>
+        <div class="faq-answer"><p data-i18n="faq.a10">Massage and bodywork sessions take place in Randwick. Personal training sessions are at Snap Fitness Maroubra. Both have free on-street parking within a 1&ndash;2 minute walk and are 15&ndash;20 minutes from Sydney CBD by car. Marina sends the exact address and parking notes in your booking confirmation.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="faq.q11">Are sessions claimable through private health insurance?</span>
+          <span class="faq-arrow">&#8964;</span>
+        </button>
+        <div class="faq-answer"><p data-i18n="faq.a11">Sessions are not claimable through standard private health rebates. Marina is a bodywork specialist and personal trainer, not a registered remedial massage therapist or physiotherapist. If insurance rebate is your priority, book with a registered remedial therapist instead &mdash; honesty matters more than the booking.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="faq.q12">Do you work with clients in early postpartum, pregnancy, or with specific medical conditions?</span>
+          <span class="faq-arrow">&#8964;</span>
+        </button>
+        <div class="faq-answer"><p data-i18n="faq.a12">Pregnancy, postpartum, recent surgery, acute injury, and specific medical conditions need a brief WhatsApp conversation first. Marina will tell you honestly what she can and cannot do for your situation, and refer you to the right specialist if bodywork is not appropriate. Message her before booking.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -2205,7 +2225,7 @@ body::before {
         </ol>
       </div>
       <div class="consult-card reveal">
-        <img src="marina-consult.jpg" alt="Marina ready to answer your questions" class="consult-photo" onerror="this.style.display='none'">
+        <img src="marina-consult.webp" alt="Marina ready to answer your questions" class="consult-photo" onerror="this.style.display='none'">
         <h3 data-i18n="consult.card.title">Talk to Marina.</h3>
         <p data-i18n="consult.card.sub">15 minutes. Free. On WhatsApp.</p>
         <a href="https://wa.me/61451021478?text=Hi%20Marina%2C%20I%27d%20like%20to%20talk%20briefly%20before%20I%20book." target="_blank" class="btn-primary" data-i18n="consult.card.btn">Message Marina on WhatsApp</a>
@@ -2298,7 +2318,7 @@ body::before {
       <div>
         <div class="footer-logo-name">MARINA BODYWORK</div>
         <p class="footer-tagline" data-i18n="footer.tagline">Release your body. Live an extraordinary life.</p>
-        <img src="marina-logo.jpg.jpeg" alt="Marina Ribeiro" style="width:60px;height:60px;border-radius:50%;object-fit:cover;margin-top:1rem" onerror="this.style.display='none'">
+        <img src="marina-logo.webp" alt="Marina Ribeiro" style="width:60px;height:60px;border-radius:50%;object-fit:cover;margin-top:1rem" onerror="this.style.display='none'">
       </div>
       <div>
         <div class="footer-heading" data-i18n="footer.links">Quick Links</div>
@@ -2493,6 +2513,12 @@ const i18n = {
     'faq.a8': 'Most clients notice looser movement and deeper sleep within 24 hours of the first session. Chronic tension that has been building for years usually shifts meaningfully across 3 to 5 sessions. Marina will tell you honestly after session one how many sessions she expects your body needs — and what it does not need.',
     'faq.q9': "What if it doesn't work for me?",
     'faq.a9': 'If your first session is not what you expected, message Marina on WhatsApp within 24 hours. She will make it right — rework the next session, redirect you to a more appropriate specialist, or refund. No long forms. No back-and-forth.',
+    'faq.q10': 'Where exactly do sessions happen, and is parking easy?',
+    'faq.a10': 'Massage and bodywork sessions take place in Randwick. Personal training sessions are at Snap Fitness Maroubra. Both have free on-street parking within a 1–2 minute walk and are 15–20 minutes from Sydney CBD by car. Marina sends the exact address and parking notes in your booking confirmation.',
+    'faq.q11': 'Are sessions claimable through private health insurance?',
+    'faq.a11': 'Sessions are not claimable through standard private health rebates. Marina is a bodywork specialist and personal trainer, not a registered remedial massage therapist or physiotherapist. If insurance rebate is your priority, book with a registered remedial therapist instead — honesty matters more than the booking.',
+    'faq.q12': 'Do you work with clients in early postpartum, pregnancy, or with specific medical conditions?',
+    'faq.a12': 'Pregnancy, postpartum, recent surgery, acute injury, and specific medical conditions need a brief WhatsApp conversation first. Marina will tell you honestly what she can and cannot do for your situation, and refer you to the right specialist if bodywork is not appropriate. Message her before booking.',
     'msc.book': 'Book a session',
     'msc.talk': 'Talk to Marina',
     'excl.label': 'A FAIR WARNING',
@@ -2745,6 +2771,12 @@ const i18n = {
     'faq.a8': 'A maioria das clientes nota movimento mais solto e sono mais profundo nas primeiras 24 horas ap\u00f3s a primeira sess\u00e3o. Tens\u00e3o cr\u00f4nica de anos costuma soltar de verdade entre 3 e 5 sess\u00f5es. Marina vai te dizer honestamente depois da primeira quantas sess\u00f5es ela acredita que o seu corpo precisa \u2014 e o que ele n\u00e3o precisa.',
     'faq.q9': 'E se n\u00e3o funcionar para mim?',
     'faq.a9': 'Se a sua primeira sess\u00e3o n\u00e3o for o que voc\u00ea esperava, mande mensagem para Marina no WhatsApp em 24 horas. Ela vai resolver \u2014 refaz a pr\u00f3xima sess\u00e3o, te encaminha para o especialista certo, ou devolve. Sem formul\u00e1rio. Sem burocracia.',
+    'faq.q10': 'Onde acontecem as sess\u00f5es e o estacionamento \u00e9 f\u00e1cil?',
+    'faq.a10': 'As sess\u00f5es de massagem e bodywork acontecem em Randwick. As sess\u00f5es de personal training s\u00e3o na Snap Fitness Maroubra. Os dois locais t\u00eam estacionamento gratuito na rua a 1\u20132 minutos a p\u00e9 e ficam a 15\u201320 minutos do CBD de carro. Marina envia o endere\u00e7o exato e dicas de estacionamento no email de confirma\u00e7\u00e3o.',
+    'faq.q11': 'As sess\u00f5es d\u00e3o direito a reembolso pelo plano de sa\u00fade?',
+    'faq.a11': 'As sess\u00f5es n\u00e3o d\u00e3o direito a reembolso pelo plano de sa\u00fade australiano. Marina \u00e9 bodywork specialist e personal trainer, n\u00e3o fisioterapeuta nem remedial massage therapist registrada. Se o reembolso \u00e9 prioridade pra voc\u00ea, agende com uma profissional registrada \u2014 honestidade vale mais do que a sess\u00e3o.',
+    'faq.q12': 'Voc\u00ea atende no p\u00f3s-parto, gestantes ou pessoas com condi\u00e7\u00f5es m\u00e9dicas espec\u00edficas?',
+    'faq.a12': 'Gesta\u00e7\u00e3o, p\u00f3s-parto, cirurgia recente, les\u00e3o aguda e condi\u00e7\u00f5es m\u00e9dicas espec\u00edficas precisam de uma conversa r\u00e1pida no WhatsApp antes. Marina vai te dizer honestamente o que pode e o que n\u00e3o pode fazer pra sua situa\u00e7\u00e3o, e te encaminha pro especialista certo se bodywork n\u00e3o for o caminho. Manda mensagem antes de agendar.',
     'msc.book': 'Agendar sess\u00e3o',
     'msc.talk': 'Falar com Marina',
     'excl.label': 'UM AVISO HONESTO',
