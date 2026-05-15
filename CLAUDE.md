@@ -70,6 +70,31 @@ WhatsApp links use `https://wa.me/61451021478?text=...`. If the phone, booking U
 
 The `<script type="application/ld+json">` block at the top of `<head>` declares `LocalBusiness`, `Person`, four `Service` entries (with `offers.price` in AUD), and `WebSite`. When prices, services, opening hours, area served, or credentials change in the visible copy, update the JSON-LD too — it's what Google reads.
 
+### 5a. Personal Training section content (`#training`)
+
+The training section needs to stay consistent with Marina's actual methodology. The source of truth:
+
+- **Session length:** 60 minutes.
+- **Experience pitch:** 15+ years of practice, thousands of women supported in Brazil, now practicing in Sydney. The integration block paragraph carries this.
+- **Methodology framing:** integrated — performance, body awareness, mobility, muscular strengthening, quality of life.
+- **5-phase session structure** (rendered via `.session-structure` + `data-i18n="training.structure.s1..s5"`):
+  1. Stretching, muscle activation, myofascial release
+  2. Mobility fundamentals + body awareness
+  3. Goal-specific training
+  4. Strengthening, stability, conditioning
+  5. Muscle relaxation + breathwork
+- **6 specialty areas** (rendered via `.specialties-block` + `data-i18n="training.spec.s1..s6"`):
+  1. Hypertrophy + muscle definition
+  2. Physical conditioning
+  3. Mobility + posture
+  4. Body strengthening + stability
+  5. Perimenopause + menopause health
+  6. Body awareness + mind-body well-being
+
+The five quick-chip `.goal-item` icons (`training.g1`..`g5`) are a separate visual outcomes row above the structure block — leave them in place, they're complementary, not duplicate.
+
+If any of the above changes, update **all** of: the visible markup in `#training`, both `i18n.en` + `i18n.pt`, and the `Conscious Movement Personal Training` `Service.description` in the JSON-LD graph.
+
 ### 6. Sitemap freshness
 
 `sitemap.xml` carries a `<lastmod>` on the home URL. Bump it when the page content changes meaningfully.
@@ -81,5 +106,5 @@ The `<script type="application/ld+json">` block at the top of `<head>` declares 
 
 ## Git workflow
 
-- Develop on the branch `claude/add-claude-documentation-m5v1t` (the assigned feature branch for this environment).
+- Develop on the feature branch assigned for the session.
 - Push with `git push -u origin <branch>` and open a draft PR against the default branch.

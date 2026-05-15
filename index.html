@@ -93,7 +93,7 @@
       "name": "Conscious Movement Personal Training",
       "provider": { "@id": "https://marinabodywork.com/#business" },
       "serviceType": "Personal Training",
-      "description": "Specialist 1-on-1 personal training at Snap Fitness Maroubra. Integrates bodywork qualifications (myofascial, TMJ, buccal) into each training session.",
+      "description": "Specialist 1-on-1 60-minute personal training at Snap Fitness Maroubra. Over 15 years guiding women through strength, mobility, hypertrophy, conditioning, posture, and perimenopause/menopause health. Each session integrates myofascial release, mobility work, goal-specific training, conditioning, and breathwork, and draws on Marina's bodywork qualifications (myofascial, TMJ, buccal, myo aponeurosis).",
       "areaServed": { "@type": "Place", "name": "Maroubra, Sydney" },
       "offers": { "@type": "Offer", "price": "75-99", "priceCurrency": "AUD", "url": "https://marinaribeirobodywork.as.me/BookPTlessons" }
     },
@@ -350,6 +350,16 @@ nav.scrolled { background: rgba(17,56,42,0.97); backdrop-filter: blur(12px); box
 .addon-item { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 0.75rem 1.25rem; font-size: 14px; color: var(--text-mid); }
 .addon-price { font-weight: 500; color: var(--forest); }
 .all-plans-note { font-size: 14px; color: var(--text-mid); text-align: center; margin-top: 1.5rem; padding: 1rem; background: var(--surface); border-radius: var(--radius); }
+.session-structure { background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem 2.25rem; margin: 2.5rem 0 1.5rem; }
+.session-structure-title { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--forest); margin-bottom: 1.25rem; }
+.session-structure-list { list-style: none; counter-reset: phase; display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 2rem; }
+.session-structure-list li { counter-increment: phase; font-size: 15px; color: var(--text-mid); line-height: 1.55; padding-left: 2.5rem; position: relative; min-height: 30px; }
+.session-structure-list li::before { content: counter(phase); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--sage-pale); color: var(--forest); font-family: var(--font-display); font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+.specialties-block { margin: 1.5rem 0 2rem; }
+.specialties-title { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--forest); margin-bottom: 1rem; }
+.specialties-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem 1.5rem; }
+.specialties-list li { font-size: 15px; color: var(--text-mid); padding-left: 1.5rem; position: relative; line-height: 1.55; }
+.specialties-list li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 8px; height: 8px; background: var(--gold); border-radius: 50%; }
 
 /* ─── BODYWORK ─── */
 .bodywork-intro { max-width: 680px; margin: 1.5rem 0 3rem; font-size: 18px; color: var(--text-mid); }
@@ -460,6 +470,9 @@ footer { background: var(--forest); color: var(--text-on-dark); padding: 4rem 0 
   .service-block { grid-template-columns: 1fr; gap: 2rem; }
   .se-pricing { grid-template-columns: 1fr; }
   .goals-row { grid-template-columns: repeat(3, 1fr); }
+  .session-structure { padding: 1.5rem; }
+  .session-structure-list { grid-template-columns: 1fr; }
+  .specialties-list { grid-template-columns: 1fr; }
   .plans-grid { grid-template-columns: 1fr; }
   .pillars-grid { grid-template-columns: 1fr 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
@@ -2324,7 +2337,7 @@ body::before {
     <p class="label section-label reveal" data-i18n="training.label">CONSCIOUS MOVEMENT PERSONAL TRAINING &middot; SNAP FITNESS MAROUBRA</p>
     <h2 class="reveal" data-i18n="training.title">Training that actually understands your body.</h2>
     <div class="integration-block reveal">
-      <p data-i18n="training.integration">Most trainers program your sessions. Marina brings her qualifications in myofascial therapy, TMJ massage, buccal massage, and myo aponeurosis training into every training session. If a fascial restriction is limiting your squat depth, she addresses it. If tension in your jaw is affecting your posture, she notices. You do not need a separate appointment to fix what is holding your training back.</p>
+      <p data-i18n="training.integration">Each session is 60 minutes, built around an integrated methodology focused on performance, body awareness, mobility, strength, and quality of life. Over 15 years guiding thousands of women across Brazil &mdash; now in Sydney &mdash; Marina helps clients build strength, confidence, autonomy, and well-being through movement. She brings her qualifications in myofascial therapy, TMJ massage, buccal massage, and myo aponeurosis training into every session. You do not need a separate appointment to fix what is holding your training back.</p>
     </div>
     <div class="goals-row reveal">
       <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14"/><path d="M18 5v14"/><path d="M2 9v6"/><path d="M22 9v6"/><rect x="4" y="7" width="4" height="10" rx="1"/><rect x="16" y="7" width="4" height="10" rx="1"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></div><div class="goal-label" data-i18n="training.g1">Mobility</div></div>
@@ -2332,6 +2345,27 @@ body::before {
       <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span></div><div class="goal-label" data-i18n="training.g3">Weight loss</div></div>
       <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span></div><div class="goal-label" data-i18n="training.g4">Muscle gain</div></div>
       <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span></div><div class="goal-label" data-i18n="training.g5">Conditioning</div></div>
+    </div>
+    <div class="session-structure reveal">
+      <h3 class="session-structure-title" data-i18n="training.structure.title">How each 60-minute session unfolds</h3>
+      <ol class="session-structure-list">
+        <li data-i18n="training.structure.s1">Stretching, muscle activation, and myofascial release techniques</li>
+        <li data-i18n="training.structure.s2">Mobility fundamentals and body awareness</li>
+        <li data-i18n="training.structure.s3">Specific training shaped around your goals</li>
+        <li data-i18n="training.structure.s4">Strengthening, stability, and conditioning work</li>
+        <li data-i18n="training.structure.s5">Muscle relaxation and breathwork</li>
+      </ol>
+    </div>
+    <div class="specialties-block reveal">
+      <h3 class="specialties-title" data-i18n="training.spec.title">Specialist in</h3>
+      <ul class="specialties-list">
+        <li data-i18n="training.spec.s1">Hypertrophy and muscle definition</li>
+        <li data-i18n="training.spec.s2">Physical conditioning</li>
+        <li data-i18n="training.spec.s3">Mobility and posture</li>
+        <li data-i18n="training.spec.s4">Body strengthening and stability</li>
+        <li data-i18n="training.spec.s5">Health and quality of life through perimenopause and menopause</li>
+        <li data-i18n="training.spec.s6">Body awareness and mind-body well-being</li>
+      </ul>
     </div>
     <p class="location-note reveal" data-i18n="training.location">All sessions take place at Snap Fitness Maroubra. Clients must hold an active Snap Fitness membership before their first session. Marina is an independent trainer. The gym carries no responsibility for PT services.</p>
     <p class="schedule-note reveal" data-i18n="training.schedule">Tue + Thu 8am to 6pm &nbsp;|&nbsp; Mon + Wed + Fri 8am to 11am</p>
@@ -2898,7 +2932,20 @@ const i18n = {
     'se.p2.note': 'Fixed slot \u00b7 min 2 months \u00b7 results compound',
     'training.label': 'CONSCIOUS MOVEMENT PERSONAL TRAINING \u00b7 SNAP FITNESS MAROUBRA',
     'training.title': 'Training that actually understands your body.',
-    'training.integration': 'Most trainers program your sessions. Marina brings her qualifications in myofascial therapy, TMJ massage, buccal massage, and myo aponeurosis training into every training session. If a fascial restriction is limiting your squat depth, she addresses it. If tension in your jaw is affecting your posture, she notices. You do not need a separate appointment to fix what is holding your training back.',
+    'training.integration': 'Each session is 60 minutes, built around an integrated methodology focused on performance, body awareness, mobility, strength, and quality of life. Over 15 years guiding thousands of women across Brazil — now in Sydney — Marina helps clients build strength, confidence, autonomy, and well-being through movement. She brings her qualifications in myofascial therapy, TMJ massage, buccal massage, and myo aponeurosis training into every session. You do not need a separate appointment to fix what is holding your training back.',
+    'training.structure.title': 'How each 60-minute session unfolds',
+    'training.structure.s1': 'Stretching, muscle activation, and myofascial release techniques',
+    'training.structure.s2': 'Mobility fundamentals and body awareness',
+    'training.structure.s3': 'Specific training shaped around your goals',
+    'training.structure.s4': 'Strengthening, stability, and conditioning work',
+    'training.structure.s5': 'Muscle relaxation and breathwork',
+    'training.spec.title': 'Specialist in',
+    'training.spec.s1': 'Hypertrophy and muscle definition',
+    'training.spec.s2': 'Physical conditioning',
+    'training.spec.s3': 'Mobility and posture',
+    'training.spec.s4': 'Body strengthening and stability',
+    'training.spec.s5': 'Health and quality of life through perimenopause and menopause',
+    'training.spec.s6': 'Body awareness and mind-body well-being',
     'training.g1': 'Mobility',
     'training.g2': 'Endurance',
     'training.g3': 'Weight loss',
@@ -3191,7 +3238,20 @@ const i18n = {
     'se.p2.note': 'Hor\u00e1rio fixo \u00b7 m\u00edn. 2 meses \u00b7 os resultados se acumulam',
     'training.label': 'PERSONAL TRAINING MOVIMENTO CONSCIENTE \u00b7 SNAP FITNESS MAROUBRA',
     'training.title': 'Um treino que realmente entende o seu corpo.',
-    'training.integration': 'A maioria dos treinadores programa as suas sess\u00f5es. Marina traz suas qualifica\u00e7\u00f5es em terapia miofascial, massagem de ATM, massagem bucal e treinamento de mio aponeurose para cada sess\u00e3o de treino. Se uma restri\u00e7\u00e3o fascial est\u00e1 limitando a profundidade do seu agachamento, ela trata. Se a tens\u00e3o na mand\u00edbula est\u00e1 afetando a sua postura, ela percebe. Voc\u00ea n\u00e3o precisa de uma consulta separada para resolver o que est\u00e1 travando o seu treino.',
+    'training.integration': 'Cada sess\u00e3o tem 60 minutos, desenvolvida atrav\u00e9s de uma metodologia integrada com foco em performance, consci\u00eancia corporal, mobilidade, fortalecimento muscular e qualidade de vida. Com mais de 15 anos de experi\u00eancia e milhares de mulheres atendidas no Brasil \u2014 agora em Sydney \u2014 Marina ajuda as alunas a desenvolverem for\u00e7a, confian\u00e7a, autonomia e bem-estar atrav\u00e9s do movimento. Ela traz suas qualifica\u00e7\u00f5es em terapia miofascial, massagem de ATM, massagem bucal e treinamento de mio aponeurose para cada sess\u00e3o. Voc\u00ea n\u00e3o precisa de uma consulta separada para resolver o que est\u00e1 travando o seu treino.',
+    'training.structure.title': 'Como cada sess\u00e3o de 60 minutos se desenvolve',
+    'training.structure.s1': 'Alongamento, ativa\u00e7\u00e3o muscular e t\u00e9cnicas de libera\u00e7\u00e3o miofascial',
+    'training.structure.s2': 'Fundamentos de mobilidade e consci\u00eancia corporal',
+    'training.structure.s3': 'Treino espec\u00edfico direcionado aos objetivos da aluna',
+    'training.structure.s4': 'Exerc\u00edcios para fortalecimento, estabilidade e condicionamento f\u00edsico',
+    'training.structure.s5': 'Relaxamento muscular e breathwork',
+    'training.spec.title': 'Especialista em',
+    'training.spec.s1': 'Hipertrofia e defini\u00e7\u00e3o muscular',
+    'training.spec.s2': 'Condicionamento f\u00edsico',
+    'training.spec.s3': 'Mobilidade e postura',
+    'training.spec.s4': 'Fortalecimento corporal e estabilidade',
+    'training.spec.s5': 'Sa\u00fade e qualidade de vida na perimenopausa e menopausa',
+    'training.spec.s6': 'Consci\u00eancia corporal e bem-estar f\u00edsico e mental',
     'training.g1': 'Mobilidade',
     'training.g2': 'Resist\u00eancia',
     'training.g3': 'Perda de peso',
