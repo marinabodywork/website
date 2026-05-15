@@ -142,7 +142,21 @@ The existing `massage.c.desc` "stop paying three therapists for the same tension
 
 If any of the above changes, update **all** of: the visible markup in the Somatic Massage Corporal service block, both `i18n.en` + `i18n.pt`, and the `Somatic Massage Corporal` `Service.description` (which also carries `alternateName: "Somatic Release Massage"`) in the JSON-LD graph.
 
-### 5d. Shared `.method-paragraphs` / `.method-benefits` styles
+### 5d. About / Marina's biography (`#about`)
+
+The About section is the canonical biography. Rendered as four `<p class="about-bio">` paragraphs keyed `about.bio.p1`..`about.bio.p4` (EN + PT). Source of truth:
+
+- **Identity:** Marina Ribeiro da Silva, Physical Education professional, **18+ years** dedicated to movement, health, and women's well-being.
+- **Origin:** started through dance, teaching it from age 15. Studied Physical Education to professionalise the passion.
+- **Brazil career:** worked with the Minas Gerais government on **Movimenta Contagem** (the largest free outdoor physical-activity programme in Brazil). After the pandemic, founded **Mulheres Ativas**, a programme for women — particularly over 40, mothers, and those who never felt at home in traditional gyms.
+- **Sydney today:** specialises in women's training across all life stages, including perimenopause — conditioning, hypertrophy, mobility, posture, body awareness, quality of life.
+- **Bodywork:** 10+ years in body therapies and massage; developed her own **fascial-release technique** combining breath, somatic awareness, and myofascial release.
+
+Credential chips (`.cred-tag`, keys `about.c0`..`about.c5`): `18+ Years Experience`, `EQF Level 4 Trained`, `Vanoni Institute · Myo Aponeurosis`, `Myofascial + TMJ + Buccal`, `Sensory Energetics`, `Founder, Mulheres Ativas`, `Bilingual EN + PT`.
+
+If any of the above changes, update **all** of: the visible markup in `#about`, both `i18n.en` + `i18n.pt`, and the `Person` `description` in the JSON-LD graph.
+
+### 5e. Shared `.method-paragraphs` / `.method-benefits` styles
 
 Both the SE and Somatic Release Massage blocks (and any future "this is the methodology" + "benefits list" block) share `.method-paragraphs` and `.method-benefits` / `.method-benefits-title` / `.method-benefits-list` styles. Reuse those classes rather than introducing per-service variants.
 
