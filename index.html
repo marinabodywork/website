@@ -935,6 +935,122 @@ img { image-rendering: -webkit-optimize-contrast; }
 .announce-icon svg { width: 14px; height: 14px; }
 .announce-arrow { color: var(--gold); margin-left: 2px; }
 
+/* 10e. EXCLUSION / FIT-CHECK SECTION */
+#not-for-everyone { padding: 5rem 0; background: var(--cream); }
+.exclusion-wrap { max-width: 820px; margin: 0 auto; }
+.exclusion-intro h2 { margin: 0.5rem 0 1rem; }
+.exclusion-intro p {
+  font-size: 17px; color: var(--text-mid); margin-bottom: 2rem;
+}
+.exclusion-list {
+  list-style: none; padding: 0; margin: 0 0 1.5rem;
+  display: grid; gap: 0.85rem;
+}
+.exclusion-list li {
+  background: white;
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.25rem;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--text);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(17,56,42,0.04);
+}
+.exclusion-list li strong { color: var(--forest); }
+.exclusion-closer {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--forest);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* 10f. AUTHORITY GRID */
+.authority-header { margin-bottom: 3rem; }
+.authority-intro {
+  max-width: 580px; margin: 1rem auto 0;
+  font-size: 17px; color: var(--text-mid);
+}
+.authority-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.authority-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  display: flex; flex-direction: column;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 1px 4px rgba(17,56,42,0.05), 0 0 0 0.5px rgba(17,56,42,0.06);
+  min-height: 220px;
+}
+a.authority-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(17,56,42,0.08), 0 0 0 0.5px rgba(200,169,107,0.3);
+}
+.authority-card-logo {
+  height: 56px;
+  display: flex; align-items: center; justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+.authority-card-logo img {
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.1);
+  opacity: 0.85;
+  transition: filter var(--transition), opacity var(--transition);
+}
+a.authority-card:hover .authority-card-logo img {
+  filter: none; opacity: 1;
+}
+.authority-card-fallback {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--forest);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+.authority-card-meta {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.authority-card-desc {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+@media (max-width: 768px) {
+  .authority-grid { grid-template-columns: 1fr 1fr; }
+  .authority-card { min-height: 200px; padding: 1.25rem; }
+}
+@media (max-width: 480px) {
+  .authority-grid { grid-template-columns: 1fr; }
+}
+
+/* 10g. CTA REASSURANCE MICROCOPY */
+.cta-reassure {
+  margin-top: 0.85rem;
+  font-size: 12px;
+  color: var(--text-mid);
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+.section-dark .cta-reassure,
+.research-section .cta-reassure {
+  color: var(--sage-light);
+  opacity: 0.75;
+}
+
 /* 10c. DISCOVERY / CONSULT SECTION */
 .consult-wrap {
   display: grid;
@@ -1384,6 +1500,26 @@ body::before {
   </div>
 </section>
 
+<!-- EXCLUSION / FIT-CHECK -->
+<section id="not-for-everyone">
+  <div class="container">
+    <div class="exclusion-wrap">
+      <div class="exclusion-intro">
+        <p class="label section-label reveal" data-i18n="excl.label">A FAIR WARNING</p>
+        <h2 class="reveal" data-i18n="excl.title">This work is not for everyone.</h2>
+        <p class="reveal" data-i18n="excl.intro">Marina takes a limited number of new clients each week and turns down work she is not the right person for. Some honest examples of when she is not your best option:</p>
+      </div>
+      <ul class="exclusion-list reveal">
+        <li data-i18n="excl.l1"><strong>If you want a one-off relaxation massage</strong>, book somewhere else. Marina works with bodies that need to actually change &mdash; not bodies that need an hour of pleasant pressure.</li>
+        <li data-i18n="excl.l2"><strong>If you need a medical diagnosis or licensed physiotherapy</strong>, she will refer you. Bodywork sits alongside medicine, not in place of it.</li>
+        <li data-i18n="excl.l3"><strong>If you are not willing to do a small amount of breath or movement work in-session</strong>, the results will not hold. The body needs to participate, not just receive.</li>
+        <li data-i18n="excl.l4"><strong>If you want tension held for ten years gone in a single visit</strong>, that is not what bodywork is. Plan for three to five sessions for chronic patterns.</li>
+      </ul>
+      <p class="exclusion-closer reveal" data-i18n="excl.closer">If none of that scared you off, you are probably in the right place.</p>
+    </div>
+  </div>
+</section>
+
 <!-- MASSAGE SERVICES -->
 <section id="massagem">
   <div class="container">
@@ -1397,8 +1533,8 @@ body::before {
     <div class="service-block reveal">
       <div class="service-info">
         <h3 data-i18n="massage.c.name">Somatic Massage Corporal</h3>
-        <p class="service-duration" data-i18n="massage.c.duration">60 minutes</p>
-        <p class="service-desc" data-i18n="massage.c.desc">You decide where you're holding it. Marina handles the rest. Each session draws from her full toolkit: myofascial release, myo aponeurosis, somatic techniques, or any combination that serves your body that day. Not a fixed routine. Not one technique applied to everyone. You choose the regions. She builds the session around what she finds.</p>
+        <p class="service-duration" data-i18n="massage.c.duration">60 minutes &middot; chronic neck, back, hips, shoulders</p>
+        <p class="service-desc" data-i18n="massage.c.desc">Booked when standard remedial massage has not held. Sixty minutes addressing chronic neck and shoulder tension, lower-back compensation, hip-flexor lock, and the postural patterns making it all worse &mdash; using whichever of Marina's five techniques your body responds to that day. Not a fixed routine. You choose the regions. She builds the session around what she finds.</p>
         <div class="tags">
           <span class="tag" data-i18n="massage.c.tag1">Myofascial Release</span>
           <span class="tag" data-i18n="massage.c.tag2">Myo Aponeurosis</span>
@@ -1406,6 +1542,7 @@ body::before {
           <span class="tag" data-i18n="massage.c.tag4">Custom Blend</span>
         </div>
         <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary book-link" data-i18n="massage.book">Book this session</a>
+        <p class="cta-reassure" data-i18n="cta.reassure">First-session guarantee &middot; Cancel free up to 72 hours &middot; Pay at booking</p>
       </div>
       <div class="pricing-card">
         <h4 data-i18n="pricing.title">Pricing options</h4>
@@ -1462,14 +1599,15 @@ body::before {
       </div>
       <div class="service-info">
         <h3 data-i18n="massage.f.name">Somatic Massage Facial</h3>
-        <p class="service-duration" data-i18n="massage.f.duration">60 minutes</p>
-        <p class="service-desc" data-i18n="massage.f.desc">Your face holds more than your expression. Shoulders, neck, chest, face: sixty minutes that start physical and arrive somewhere much quieter. Marina combines myofascial release, TMJ massage, and buccal techniques in each facial session, selecting the blend that serves what your body presents. Most clients say they did not realise how much they were carrying up there until it was gone.</p>
+        <p class="service-duration" data-i18n="massage.f.duration">60 minutes &middot; TMJ, jaw, tension headaches, sleep</p>
+        <p class="service-desc" data-i18n="massage.f.desc">For TMJ tension, tension headaches, jaw clenching, and the cumulative stress most people only notice once it is gone. Sixty minutes working through shoulders, neck, throat, jaw, and inside-mouth release using buccal and TMJ techniques most therapists in Sydney do not offer. Clients typically report deeper sleep that night and reduced jaw tension within 24 hours.</p>
         <div class="tags">
           <span class="tag" data-i18n="massage.f.tag1">Myofascial Release</span>
           <span class="tag" data-i18n="massage.f.tag2">Buccal Massage</span>
           <span class="tag" data-i18n="massage.f.tag3">TMJ Mastery</span>
         </div>
         <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary book-link" data-i18n="massage.book">Book this session</a>
+        <p class="cta-reassure" data-i18n="cta.reassure">First-session guarantee &middot; Cancel free up to 72 hours &middot; Pay at booking</p>
       </div>
     </div>
 
@@ -1495,6 +1633,7 @@ body::before {
           </div>
         </div>
         <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary book-link" data-i18n="massage.book">Book this session</a>
+        <p class="cta-reassure" data-i18n="cta.reassure">First-session guarantee &middot; Cancel free up to 72 hours &middot; Pay at booking</p>
       </div>
       <div class="reveal stagger-2">
         <div class="se-pricing">
@@ -1683,18 +1822,49 @@ body::before {
   </div>
 </section>
 
-<!-- COLLABS -->
+<!-- AUTHORITY / TRAINED-AT / PARTNERS -->
 <section id="collabs" class="section-pale">
-  <div class="container" style="text-align:center">
-    <p class="label section-label reveal" style="margin-bottom:0.5rem">COLLABORATIONS + PARTNERSHIPS</p>
-    <h2 class="reveal" data-i18n="collabs.title">Where you will find Marina.</h2>
-    <div class="collabs-logos">
-      <a href="https://bebold.au" target="_blank" rel="noopener" class="collab-card reveal stagger-1">
-        <img src="bebold-logo.png.svg" alt="Be Bold" onerror="this.style.opacity='0'">
+  <div class="container">
+    <div class="authority-header" style="text-align:center">
+      <p class="label section-label reveal" style="margin-bottom:0.5rem" data-i18n="auth.label">TRAINED AT &middot; PARTNERED WITH &middot; PRACTISES IN</p>
+      <h2 class="reveal" data-i18n="collabs.title">Where Marina trained, and where she works.</h2>
+      <p class="reveal authority-intro" data-i18n="auth.intro">A specialist practice is built on what's behind the practitioner. Here is what's behind Marina.</p>
+    </div>
+    <div class="authority-grid">
+      <a href="https://bebold.au" target="_blank" rel="noopener" class="authority-card reveal stagger-1">
+        <div class="authority-card-logo">
+          <img src="bebold-logo.png.svg" alt="Be Bold" onerror="this.parentElement.innerHTML='<span class=\'authority-card-fallback\'>BE&nbsp;BOLD</span>'">
+        </div>
+        <div class="authority-card-meta" data-i18n="auth.bebold.role">PARTNER &middot; SYDNEY</div>
+        <div class="authority-card-desc" data-i18n="auth.bebold.desc">Women's wellness collective where Marina runs workshops on somatic bodywork and nervous-system release.</div>
       </a>
-      <a href="https://www.snapfitness.com.au" target="_blank" rel="noopener" class="collab-card reveal stagger-2">
-        <img src="snapfitness-logo.png.png" alt="Snap Fitness Maroubra" onerror="this.style.opacity='0'">
+      <a href="https://www.snapfitness.com.au" target="_blank" rel="noopener" class="authority-card reveal stagger-2">
+        <div class="authority-card-logo">
+          <img src="snapfitness-logo.png.png" alt="Snap Fitness Maroubra" onerror="this.parentElement.innerHTML='<span class=\'authority-card-fallback\'>SNAP&nbsp;FITNESS</span>'">
+        </div>
+        <div class="authority-card-meta" data-i18n="auth.snap.role">TRAINING STUDIO &middot; MAROUBRA</div>
+        <div class="authority-card-desc" data-i18n="auth.snap.desc">Where Marina runs Conscious Movement personal training, Tuesday and Thursday all day, Monday/Wednesday/Friday mornings.</div>
       </a>
+      <div class="authority-card reveal stagger-3">
+        <div class="authority-card-logo"><span class="authority-card-fallback">VANONI<br>INSTITUTE</span></div>
+        <div class="authority-card-meta" data-i18n="auth.vanoni.role">CERTIFIED &middot; ITALY</div>
+        <div class="authority-card-desc" data-i18n="auth.vanoni.desc">40-hour specialist certification in Myo Aponeurosis &mdash; the connective layer between muscle and bone that holds chronic tension most therapists never reach.</div>
+      </div>
+      <div class="authority-card reveal stagger-4">
+        <div class="authority-card-logo"><span class="authority-card-fallback">EQF<br>LEVEL&nbsp;4</span></div>
+        <div class="authority-card-meta" data-i18n="auth.eqf.role">EUROPEAN FRAMEWORK</div>
+        <div class="authority-card-desc" data-i18n="auth.eqf.desc">European Qualifications Framework Level 4 personal trainer &mdash; the standard for regulated training practice across the EU.</div>
+      </div>
+      <div class="authority-card reveal stagger-5">
+        <div class="authority-card-logo"><span class="authority-card-fallback">SENSORY<br>ENERGETICS</span></div>
+        <div class="authority-card-meta" data-i18n="auth.se.role">METHOD CERTIFIED</div>
+        <div class="authority-card-desc" data-i18n="auth.se.desc">Certified in the Sensory Energetics method: trigger-point work, breath, and NLP combined to release tension the nervous system has been holding for years.</div>
+      </div>
+      <div class="authority-card reveal stagger-6">
+        <div class="authority-card-logo"><span class="authority-card-fallback">TMJ<br>+ BUCCAL</span></div>
+        <div class="authority-card-meta" data-i18n="auth.tmj.role">SPECIALIST QUALIFICATIONS</div>
+        <div class="authority-card-desc" data-i18n="auth.tmj.desc">Mastery-level training in TMJ and buccal (inside-mouth) massage &mdash; techniques most Sydney remedial therapists do not offer.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1958,8 +2128,8 @@ const i18n = {
     'massage.title': 'Stop paying three different therapists for the same tension.',
     'massage.quote': '"My clients usually book me after a physio, a remedial massage, and a chiropractor — and the tension still comes back. We work the system, not the symptom."',
     'massage.c.name': 'Somatic Massage Corporal',
-    'massage.c.duration': '60 minutes',
-    'massage.c.desc': 'You decide where you\u2019re holding it. Marina handles the rest. Each session draws from her full toolkit: myofascial release, myo aponeurosis, somatic techniques, or any combination that serves your body that day. Not a fixed routine. Not one technique applied to everyone. You choose the regions. She builds the session around what she finds.',
+    'massage.c.duration': '60 minutes \u00b7 chronic neck, back, hips, shoulders',
+    'massage.c.desc': "Booked when standard remedial massage has not held. Sixty minutes addressing chronic neck and shoulder tension, lower-back compensation, hip-flexor lock, and the postural patterns making it all worse \u2014 using whichever of Marina's five techniques your body responds to that day. Not a fixed routine. You choose the regions. She builds the session around what she finds.",
     'massage.c.tag1': 'Myofascial Release',
     'massage.c.tag2': 'Myo Aponeurosis',
     'massage.c.tag3': 'Somatic Release',
@@ -1977,8 +2147,8 @@ const i18n = {
     'pricing.m.invite': 'Membership by invitation after your first session.',
     'massage.combo': 'Book Body and Facial on the same day: 5% off your total. Two hours. One afternoon. A lot less tension.',
     'massage.f.name': 'Somatic Massage Facial',
-    'massage.f.duration': '60 minutes',
-    'massage.f.desc': 'Your face holds more than your expression. Shoulders, neck, chest, face: sixty minutes that start physical and arrive somewhere much quieter. Marina combines myofascial release, TMJ massage, and buccal techniques in each facial session, selecting the blend that serves what your body presents. Most clients say they did not realise how much they were carrying up there until it was gone.',
+    'massage.f.duration': '60 minutes · TMJ, jaw, tension headaches, sleep',
+    'massage.f.desc': 'For TMJ tension, tension headaches, jaw clenching, and the cumulative stress most people only notice once it is gone. Sixty minutes working through shoulders, neck, throat, jaw, and inside-mouth release using buccal and TMJ techniques most therapists in Sydney do not offer. Clients typically report deeper sleep that night and reduced jaw tension within 24 hours.',
     'massage.f.tag1': 'Myofascial Release',
     'massage.f.tag2': 'Buccal Massage',
     'massage.f.tag3': 'TMJ Mastery',
@@ -2077,6 +2247,29 @@ const i18n = {
     'faq.a9': 'If your first session is not what you expected, message Marina on WhatsApp within 24 hours. She will make it right — rework the next session, redirect you to a more appropriate specialist, or refund. No long forms. No back-and-forth.',
     'msc.book': 'Book a session',
     'msc.talk': 'Talk to Marina',
+    'excl.label': 'A FAIR WARNING',
+    'excl.title': 'This work is not for everyone.',
+    'excl.intro': 'Marina takes a limited number of new clients each week and turns down work she is not the right person for. Some honest examples of when she is not your best option:',
+    'excl.l1': '<strong>If you want a one-off relaxation massage</strong>, book somewhere else. Marina works with bodies that need to actually change &mdash; not bodies that need an hour of pleasant pressure.',
+    'excl.l2': '<strong>If you need a medical diagnosis or licensed physiotherapy</strong>, she will refer you. Bodywork sits alongside medicine, not in place of it.',
+    'excl.l3': '<strong>If you are not willing to do a small amount of breath or movement work in-session</strong>, the results will not hold. The body needs to participate, not just receive.',
+    'excl.l4': '<strong>If you want tension held for ten years gone in a single visit</strong>, that is not what bodywork is. Plan for three to five sessions for chronic patterns.',
+    'excl.closer': 'If none of that scared you off, you are probably in the right place.',
+    'auth.label': 'TRAINED AT · PARTNERED WITH · PRACTISES IN',
+    'auth.intro': "A specialist practice is built on what's behind the practitioner. Here is what's behind Marina.",
+    'auth.bebold.role': 'PARTNER · SYDNEY',
+    'auth.bebold.desc': "Women's wellness collective where Marina runs workshops on somatic bodywork and nervous-system release.",
+    'auth.snap.role': 'TRAINING STUDIO · MAROUBRA',
+    'auth.snap.desc': 'Where Marina runs Conscious Movement personal training, Tuesday and Thursday all day, Monday/Wednesday/Friday mornings.',
+    'auth.vanoni.role': 'CERTIFIED · ITALY',
+    'auth.vanoni.desc': '40-hour specialist certification in Myo Aponeurosis — the connective layer between muscle and bone that holds chronic tension most therapists never reach.',
+    'auth.eqf.role': 'EUROPEAN FRAMEWORK',
+    'auth.eqf.desc': 'European Qualifications Framework Level 4 personal trainer — the standard for regulated training practice across the EU.',
+    'auth.se.role': 'METHOD CERTIFIED',
+    'auth.se.desc': 'Certified in the Sensory Energetics method: trigger-point work, breath, and NLP combined to release tension the nervous system has been holding for years.',
+    'auth.tmj.role': 'SPECIALIST QUALIFICATIONS',
+    'auth.tmj.desc': 'Mastery-level training in TMJ and buccal (inside-mouth) massage — techniques most Sydney remedial therapists do not offer.',
+    'cta.reassure': 'First-session guarantee · Cancel free up to 72 hours · Pay at booking',
     'contact.label': 'BOOK A SESSION',
     'contact.title': 'Ready when you are.',
     'contact.intro': 'All bookings are online. Pick your service, choose a time, pay securely. Confirmation email and SMS reminder included. No back-and-forth needed.',
@@ -2176,8 +2369,8 @@ const i18n = {
     'massage.title': 'Pare de pagar tr\u00eas terapeutas diferentes pela mesma tens\u00e3o.',
     'massage.quote': '"As minhas clientes normalmente me procuram depois de fisio, massagem desportiva e quiropraxia \u2014 e a tens\u00e3o continua voltando. A gente trabalha o sistema, n\u00e3o o sintoma."',
     'massage.c.name': 'Somatic Massage Corporal',
-    'massage.c.duration': '60 minutos',
-    'massage.c.desc': 'Voc\u00ea decide onde est\u00e1 segurando. Marina cuida do resto. Cada sess\u00e3o usa o seu conjunto completo de t\u00e9cnicas: libera\u00e7\u00e3o miofascial, mio aponeurose, trabalho som\u00e1tico, ou qualquer combina\u00e7\u00e3o que sirva ao seu corpo naquele dia. N\u00e3o \u00e9 rotina fixa. N\u00e3o \u00e9 uma t\u00e9cnica aplicada em todo mundo. Voc\u00ea escolhe as regi\u00f5es. Ela constr\u00f3i a sess\u00e3o em torno do que encontra.',
+    'massage.c.duration': '60 minutos \u00b7 pesco\u00e7o, costas, quadril e ombros cr\u00f4nicos',
+    'massage.c.desc': 'Agendada quando massagem desportiva comum n\u00e3o est\u00e1 segurando. Sessenta minutos tratando tens\u00e3o cr\u00f4nica no pesco\u00e7o e ombros, compensa\u00e7\u00e3o na lombar, encurtamento do flexor do quadril, e os padr\u00f5es posturais que pioram tudo isso \u2014 usando a combina\u00e7\u00e3o das cinco t\u00e9cnicas da Marina que o seu corpo responde naquele dia. N\u00e3o \u00e9 rotina fixa. Voc\u00ea escolhe as regi\u00f5es. Ela constr\u00f3i a sess\u00e3o em torno do que encontra.',
     'massage.c.tag1': 'Libera\u00e7\u00e3o Miofascial',
     'massage.c.tag2': 'Mio Aponeurose',
     'massage.c.tag3': 'Libera\u00e7\u00e3o Som\u00e1tica',
@@ -2195,8 +2388,8 @@ const i18n = {
     'pricing.m.invite': 'Membership por convite ap\u00f3s a sua primeira sess\u00e3o.',
     'massage.combo': 'Agende Corporal e Facial no mesmo dia: 5% de desconto no total. Duas horas. Uma tarde. Muito menos tens\u00e3o.',
     'massage.f.name': 'Somatic Massage Facial',
-    'massage.f.duration': '60 minutos',
-    'massage.f.desc': 'Seu rosto guarda mais do que express\u00e3o. Ombros, pesco\u00e7o, peitoral, rosto: sessenta minutos que come\u00e7am f\u00edsicos e chegam a um lugar muito mais quieto. Marina combina libera\u00e7\u00e3o miofascial, massagem de ATM e t\u00e9cnicas bucais em cada sess\u00e3o facial, selecionando a combina\u00e7\u00e3o que serve ao que o seu corpo apresenta. A maioria das clientes diz que n\u00e3o sabia o quanto carregava ali at\u00e9 que foi embora.',
+    'massage.f.duration': '60 minutos \u00b7 ATM, mand\u00edbula, dores de cabe\u00e7a, sono',
+    'massage.f.desc': 'Para tens\u00e3o de ATM, dores de cabe\u00e7a tensionais, bruxismo, e o estresse acumulado que a maioria das pessoas s\u00f3 nota quando vai embora. Sessenta minutos passando por ombros, pesco\u00e7o, garganta, mand\u00edbula e libera\u00e7\u00e3o bucal usando t\u00e9cnicas de ATM e bucal que a maioria dos terapeutas em Sydney n\u00e3o oferece. As clientes geralmente relatam sono mais profundo na mesma noite e tens\u00e3o na mand\u00edbula reduzida em 24 horas.',
     'massage.f.tag1': 'Libera\u00e7\u00e3o Miofascial',
     'massage.f.tag2': 'Massagem Bucal',
     'massage.f.tag3': 'Dom\u00ednio ATM',
@@ -2295,6 +2488,29 @@ const i18n = {
     'faq.a9': 'Se a sua primeira sess\u00e3o n\u00e3o for o que voc\u00ea esperava, mande mensagem para Marina no WhatsApp em 24 horas. Ela vai resolver \u2014 refaz a pr\u00f3xima sess\u00e3o, te encaminha para o especialista certo, ou devolve. Sem formul\u00e1rio. Sem burocracia.',
     'msc.book': 'Agendar sess\u00e3o',
     'msc.talk': 'Falar com Marina',
+    'excl.label': 'UM AVISO HONESTO',
+    'excl.title': 'Este trabalho n\u00e3o \u00e9 para todo mundo.',
+    'excl.intro': 'Marina aceita um n\u00famero limitado de clientes novas por semana e recusa o trabalho para o qual ela n\u00e3o \u00e9 a pessoa certa. Alguns exemplos honestos de quando ela n\u00e3o \u00e9 a sua melhor op\u00e7\u00e3o:',
+    'excl.l1': '<strong>Se voc\u00ea quer uma massagem de relaxamento avulsa</strong>, agende em outro lugar. Marina trabalha com corpos que precisam realmente mudar &mdash; n\u00e3o com corpos que precisam de uma hora de press\u00e3o agrad\u00e1vel.',
+    'excl.l2': '<strong>Se voc\u00ea precisa de diagn\u00f3stico m\u00e9dico ou fisioterapia licenciada</strong>, ela vai te encaminhar. Bodywork acompanha a medicina, n\u00e3o substitui.',
+    'excl.l3': '<strong>Se voc\u00ea n\u00e3o est\u00e1 disposta a fazer um pouco de respira\u00e7\u00e3o ou movimento na sess\u00e3o</strong>, os resultados n\u00e3o v\u00e3o segurar. O corpo precisa participar, n\u00e3o s\u00f3 receber.',
+    'excl.l4': '<strong>Se voc\u00ea quer tirar em uma \u00fanica visita uma tens\u00e3o de dez anos</strong>, n\u00e3o \u00e9 isso que o bodywork faz. Planeje de tr\u00eas a cinco sess\u00f5es para padr\u00f5es cr\u00f4nicos.',
+    'excl.closer': 'Se nada disso te assustou, voc\u00ea provavelmente est\u00e1 no lugar certo.',
+    'auth.label': 'FORMADA EM \u00b7 EM PARCERIA COM \u00b7 ATENDE NA',
+    'auth.intro': 'Uma pr\u00e1tica especializada se constr\u00f3i sobre o que est\u00e1 por tr\u00e1s da pessoa. Isto \u00e9 o que est\u00e1 por tr\u00e1s de Marina.',
+    'auth.bebold.role': 'PARCERIA \u00b7 SYDNEY',
+    'auth.bebold.desc': 'Coletivo de bem-estar feminino onde Marina conduz workshops de bodywork som\u00e1tico e libera\u00e7\u00e3o do sistema nervoso.',
+    'auth.snap.role': 'STUDIO \u00b7 MAROUBRA',
+    'auth.snap.desc': 'Onde Marina conduz o Personal Training Movimento Consciente, ter\u00e7a e quinta o dia inteiro, segunda/quarta/sexta de manh\u00e3.',
+    'auth.vanoni.role': 'CERTIFICADA \u00b7 IT\u00c1LIA',
+    'auth.vanoni.desc': 'Certifica\u00e7\u00e3o especializada de 40 horas em Mio Aponeurose \u2014 a camada de tecido conjuntivo entre m\u00fasculo e osso que segura tens\u00e3o cr\u00f4nica que a maioria dos terapeutas nunca alcan\u00e7a.',
+    'auth.eqf.role': 'FRAMEWORK EUROPEU',
+    'auth.eqf.desc': 'Personal Trainer N\u00edvel 4 do European Qualifications Framework \u2014 o padr\u00e3o regulado para a pr\u00e1tica de treino na Uni\u00e3o Europeia.',
+    'auth.se.role': 'M\u00c9TODO CERTIFICADO',
+    'auth.se.desc': 'Certificada no m\u00e9todo Sensory Energetics: pontos-gatilho, respira\u00e7\u00e3o e PNL combinados para liberar tens\u00e3o que o sistema nervoso vem segurando h\u00e1 anos.',
+    'auth.tmj.role': 'QUALIFICA\u00c7\u00d5ES ESPECIALIZADAS',
+    'auth.tmj.desc': 'Treinamento de dom\u00ednio em ATM e massagem bucal (interna) \u2014 t\u00e9cnicas que a maioria dos terapeutas em Sydney n\u00e3o oferece.',
+    'cta.reassure': 'Garantia da primeira sess\u00e3o \u00b7 Cancele gr\u00e1tis com 72 horas \u00b7 Pago no agendamento',
     'contact.label': 'AGENDE UMA SESS\u00c3O',
     'contact.title': 'Pronta quando voc\u00ea estiver.',
     'contact.intro': 'Todos os agendamentos s\u00e3o online. Escolha o servi\u00e7o, selecione o hor\u00e1rio, pague com seguran\u00e7a. Email de confirma\u00e7\u00e3o e lembrete por SMS inclu\u00eddos. Sem vai-e-vem.',
