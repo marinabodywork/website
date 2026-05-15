@@ -6,7 +6,7 @@
 <meta name="description" content="Marina Ribeiro  -  Bodywork specialist and personal trainer in Sydney. Somatic massage, Sensory Energetics, and Conscious Movement Personal Training. Release your body. Live an extraordinary life.">
 <meta property="og:title" content="Marina Bodywork  -  Sydney">
 <meta property="og:description" content="Release your body. Live an extraordinary life. Somatic massage, Sensory Energetics, and personal training in Sydney.">
-<meta property="og:image" content="marina-hero.webp">
+<meta property="og:image" content="hero.jpeg">
 <title>Marina Bodywork  -  Sydney</title>
 <link rel="icon" type="image/webp" href="marina-logo.webp">
 <link rel="apple-touch-icon" href="marina-logo.webp">
@@ -1545,36 +1545,38 @@ a.authority-card:hover .authority-card-logo img {
   .hero-cta-big { display: block; margin: 0.4rem 0; padding: 0.95rem 1.5rem; }
 }
 
-/* 10j. BRAND PHOTO GRID — under hero */
+/* 10j. BRAND HERO PHOTO — under hero (single editorial image) */
 #photo-grid {
   background: var(--cream);
   padding: 1rem 0 5rem;
 }
-.pg-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 8px;
-  height: 540px;
-}
-.pg-cell {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-  background: var(--surface);
-}
-.pg-cell img {
+#photo-grid .container { padding: 0 1.5rem; }
+.hero-photo {
   width: 100%;
-  height: 100%;
+  max-height: 640px;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  object-position: center 30%;
+  border-radius: var(--radius-lg);
+  display: block;
+  box-shadow: 0 12px 40px rgba(17,56,42,0.12);
 }
-.pg-cell:hover img { transform: scale(1.04); }
-.pg-tall { grid-row: 1 / 3; }
 @media (max-width: 700px) {
-  .pg-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; height: 720px; }
-  .pg-tall { grid-row: 1 / 3; grid-column: 1 / 3; }
+  .hero-photo { max-height: 520px; }
+}
+
+/* Service feature photo — top of each service block */
+.service-photo {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-lg);
+  display: block;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 28px rgba(17,56,42,0.1);
+}
+@media (max-width: 768px) {
+  .service-photo { max-height: 340px; margin-bottom: 1.5rem; }
 }
 
 /* 10k. PROOF-POINTS STRIP — dark forest, gold bullets */
@@ -1773,7 +1775,6 @@ a.authority-card:hover .authority-card-logo img {
   .about-content { text-align: center; }
   .about-photo { max-width: 360px; margin: 0 auto; }
   .credential-tags { justify-content: center; }
-  .pg-grid img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 }
 
 /* 10b. HEADER — dark forest nav (logo blends with its native bg) */
@@ -1988,16 +1989,10 @@ body::before {
   </div>
 </section>
 
-<!-- BRAND PHOTO GRID -->
+<!-- BRAND HERO PHOTO -->
 <section id="photo-grid">
   <div class="container">
-    <div class="pg-grid">
-      <a href="#consult" class="pg-cell pg-tall"><img src="marina-hero-action.webp" alt="Marina ready for a session" loading="lazy"></a>
-      <a href="#about" class="pg-cell"><img src="marina-headshot.webp" alt="Marina Ribeiro" loading="lazy"></a>
-      <a href="#training" class="pg-cell"><img src="marina-pointing.webp" alt="Marina, personal trainer Sydney" loading="lazy"></a>
-      <a href="#consult" class="pg-cell"><img src="marina-consult.webp" alt="Marina on WhatsApp consult" loading="lazy"></a>
-      <a href="#diferencial" class="pg-cell"><img src="marina-portrait.webp" alt="Marina portrait" loading="lazy"></a>
-    </div>
+    <img class="hero-photo" src="hero.jpeg" alt="Marina Ribeiro at her bodywork studio in Sydney" loading="eager">
   </div>
 </section>
 
@@ -2218,6 +2213,7 @@ body::before {
     </div>
 
     <!-- Somatic Massage Corporal -->
+    <img class="service-photo reveal" src="atendimento.jpeg" alt="Marina performing somatic bodywork on a client" loading="lazy">
     <div class="service-block reveal">
       <div class="service-info">
         <h3 data-i18n="massage.c.name">Somatic Massage Corporal</h3>
@@ -2280,6 +2276,7 @@ body::before {
     <div class="combo-banner reveal" data-i18n="massage.combo">Book Body and Facial on the same day: 5% off your total. Two hours. One afternoon. A lot less tension.</div>
 
     <!-- Somatic Massage Facial -->
+    <img class="service-photo reveal" src="facial.jpeg" alt="Facial bodywork session — TMJ and jaw release" loading="lazy">
     <div class="service-block reveal">
       <div class="pricing-card">
         <h4 data-i18n="pricing.title">Pricing options</h4>

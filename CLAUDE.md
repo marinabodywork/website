@@ -13,7 +13,12 @@ Bilingual: English (default) + Brazilian Portuguese, switched client-side withou
 There is **no build system, no package manager, no framework, no test suite**. Everything ships as static files served as-is.
 
 - `index.html` — the entire site (~3,500 lines): inline `<style>`, inline `<script>`, and inline JSON-LD schema in the `<head>`.
-- `*.webp` / `*.jpeg` / `*.jpg` / `*.png` / `*.svg` — image assets live flat in the repo root and are referenced by bare filename from `index.html` (no `assets/` subfolder).
+- `*.webp` / `*.jpeg` / `*.jpg` / `*.png` / `*.svg` — image assets live flat in the repo root and are referenced by bare filename from `index.html` (no `assets/` subfolder). Currently in-use brand imagery:
+  - `hero.jpeg` — main brand portrait shown in `#photo-grid` directly under the hero text, and as `og:image`.
+  - `atendimento.jpeg` — Somatic Massage Corporal feature image (above the service block).
+  - `facial.jpeg` — Somatic Massage Facial feature image.
+  - `marina-hero.webp` — still used in the `#about` portrait slot.
+  - `marina-consult.webp`, `marina-logo.webp` — consult section and nav/footer logo.
 - `robots.txt`, `sitemap.xml` — SEO files at the root. The sitemap lists the home URL plus the in-page anchors (`#massagem`, `#training`, `#diagnostic`, `#consult`, `#about`, `#faq`, `#contact`).
 
 Loose `Screenshot *.jpg` / `WhatsApp Image *.jpeg` / `Untitled (...).png` files in the root are uploads, not referenced by the site — leave them alone unless the user asks otherwise.
