@@ -95,6 +95,52 @@ The five quick-chip `.goal-item` icons (`training.g1`..`g5`) are a separate visu
 
 If any of the above changes, update **all** of: the visible markup in `#training`, both `i18n.en` + `i18n.pt`, and the `Conscious Movement Personal Training` `Service.description` in the JSON-LD graph.
 
+### 5b. Sensory Energetics section content (inside `#massagem`)
+
+Source of truth for the SE block (90-minute signature):
+
+- **Methodology framing:** integrative method focused on deep release of physical/emotional tension and patterns accumulated in the nervous system. Inspired by ancient Eastern techniques + breathwork + body stimuli + somatic awareness, activating the central nervous system.
+- **Body response (paragraph 2):** involuntary tremors and natural neuromuscular reactions are normal — they help discharge tension, regulate stress, and lower cortisol. The technique supports neurotransmitters tied to well-being, focus, motivation, and pleasure (dopamine).
+- **Mind-body framing (paragraph 3):** more than a body experience — works on the connection between body, emotion, and mind. Promotes lightness, mental clarity, emotional balance, body awareness.
+- **8 benefits** rendered via `.method-benefits` + `data-i18n="se.benefits.b1..b8"`:
+  1. Nervous-system regulation
+  2. Reduced physical + emotional stress
+  3. Release of fascial + muscular tension
+  4. Improved mental clarity + decision-making
+  5. Greater well-being + deep relaxation
+  6. Creativity + bodily presence
+  7. Emotional balance + sleep quality
+  8. Expansion, lightness, reconnection with self
+- The 3 existing `outcome-item` chips (better sleep, reduced anxiety, energy/lightness) stay — they're the visual punch.
+
+If any of the above changes, update **all** of: the visible markup in the SE service block, both `i18n.en` + `i18n.pt`, and the `Sensory Energetics` `Service.description` in the JSON-LD graph.
+
+### 5c. Somatic Release Massage content (`massage.c.*`, inside `#massagem`)
+
+The "Somatic Massage Corporal" service block is Marina's **Somatic Release Massage** methodology. Source of truth:
+
+- **Marina-developed methodology** integrating different therapeutic techniques: Brazilian lymphatic drainage, myofascial release, breathwork, and deep-relaxation work.
+- **What the bodywork addresses:** muscular tension, fluid retention, accumulated physical stress, fascial rigidity → improving circulation, mobility, body awareness, sense of lightness.
+- **Nervous-system layer:** breathwork + deep relaxation regulate the central nervous system, lowering cortisol and improving relaxation/balance.
+- **Positioning:** integrative experience that reconnects body and mind — not "just a massage."
+- **8 benefits** rendered via `.method-benefits` + `data-i18n="massage.c.benefits.b1..b8"`:
+  1. Release of muscular + fascial tension
+  2. Reduced fluid retention
+  3. Better circulation + mobility
+  4. Body awareness + sense of lightness
+  5. Nervous-system regulation + lower cortisol
+  6. Reduced accumulated physical + emotional stress
+  7. Deep relaxation + improved well-being
+  8. Integrative body-mind reconnection
+
+The existing `massage.c.desc` "stop paying three therapists for the same tension" voice still lives at the top of the block as the punchy lead-in; the new methodology paragraphs (`massage.c.method.p1..p4`) sit underneath it.
+
+If any of the above changes, update **all** of: the visible markup in the Somatic Massage Corporal service block, both `i18n.en` + `i18n.pt`, and the `Somatic Massage Corporal` `Service.description` (which also carries `alternateName: "Somatic Release Massage"`) in the JSON-LD graph.
+
+### 5d. Shared `.method-paragraphs` / `.method-benefits` styles
+
+Both the SE and Somatic Release Massage blocks (and any future "this is the methodology" + "benefits list" block) share `.method-paragraphs` and `.method-benefits` / `.method-benefits-title` / `.method-benefits-list` styles. Reuse those classes rather than introducing per-service variants.
+
 ### 6. Sitemap freshness
 
 `sitemap.xml` carries a `<lastmod>` on the home URL. Bump it when the page content changes meaningfully.
