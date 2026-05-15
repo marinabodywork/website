@@ -169,21 +169,23 @@ section { padding: 6rem 0; }
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 1.25rem 2rem;
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; gap: 0.75rem;
   transition: background var(--transition), box-shadow var(--transition), backdrop-filter var(--transition);
 }
 nav.scrolled { background: rgba(17,56,42,0.97); backdrop-filter: blur(12px); box-shadow: 0 2px 20px rgba(0,0,0,0.2); }
 .nav-logo { display: flex; flex-direction: column; }
 .nav-logo-name { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text-on-dark); letter-spacing: 0.05em; }
 .nav-logo-sub { font-family: var(--font-body); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.15em; color: var(--sage-light); }
-.nav-links { display: flex; align-items: center; gap: 2rem; }
+.nav-links { display: flex; align-items: center; gap: 2rem; margin-left: auto; }
 .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-on-dark); opacity: 0.85; transition: opacity var(--transition); }
 .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--gold-light); }
 .nav-book { background: var(--gold); color: var(--forest); padding: 0.6rem 1.4rem; border-radius: var(--radius); font-size: 14px; font-weight: 500; transition: background var(--transition); }
 .nav-book:hover { background: var(--gold-light); opacity: 1; color: var(--forest); }
-.lang-toggle { display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 99px; padding: 4px; }
-.lang-btn { font-size: 18px; line-height: 1; color: var(--text-on-dark); padding: 4px 8px; border-radius: 99px; transition: background var(--transition), opacity var(--transition); opacity: 0.55; }
-.lang-btn.active { background: rgba(200,169,107,0.2); opacity: 1; border: 1px solid rgba(200,169,107,0.4); }
+.lang-toggle { display: flex; align-items: center; gap: 2px; background: rgba(255,255,255,0.08); border: 1px solid rgba(200,169,107,0.25); border-radius: 99px; padding: 3px; }
+.lang-btn { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; line-height: 1; color: var(--text-on-dark); padding: 6px 10px; border-radius: 99px; transition: background var(--transition), color var(--transition), opacity var(--transition); opacity: 0.6; min-height: 28px; }
+.lang-btn:hover { opacity: 1; }
+.lang-btn.active { background: var(--gold); color: var(--forest); opacity: 1; }
+.nav-lang { margin-left: auto; }
 .hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-on-dark); border-radius: 2px; transition: var(--transition); }
 .mobile-menu { display: none; position: fixed; inset: 0; background: var(--forest); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
@@ -475,6 +477,7 @@ footer { background: var(--forest); color: var(--text-on-dark); padding: 4rem 0 
   .hero-left { padding: 7rem 1.5rem 2rem; }
   nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
+  .nav-lang { margin-left: auto; }
   .hamburger { display: flex; }
   .who-grid { grid-template-columns: 1fr; }
   .techniques-grid { grid-template-columns: 1fr 1fr; }
@@ -707,7 +710,7 @@ body { font-size: 18px !important; }
 .btn-primary,
 .btn-outline,
 .btn-outline-forest { min-height: 50px !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; }
-.hamburger { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+.hamburger { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
 .wa-link { min-height: 44px; display: inline-flex; align-items: center; }
 .announce-close { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
 
@@ -1416,11 +1419,11 @@ a.authority-card:hover .authority-card-logo img {
   min-height: 44px;
   line-height: 1.2;
 }
-.mobile-sticky-cta .msc-book {
+.mobile-sticky-cta .msc-massage {
   background: var(--gold);
   color: var(--forest);
 }
-.mobile-sticky-cta .msc-talk {
+.mobile-sticky-cta .msc-pt {
   background: transparent;
   color: var(--gold);
   border: 1.5px solid var(--gold);
@@ -1456,7 +1459,6 @@ a.authority-card:hover .authority-card-logo img {
   gap: 0.85rem;
   opacity: 0.85;
 }
-.hero-eyebrow-dash { color: var(--gold); font-weight: 400; font-size: 14px; }
 .hero-h1 {
   font-family: var(--font-display) !important;
   font-size: clamp(44px, 8vw, 86px) !important;
@@ -1527,16 +1529,6 @@ a.authority-card:hover .authority-card-logo img {
   box-shadow: none;
 }
 .hero-cta-alt:hover { background: var(--forest); color: var(--text-on-dark) !important; }
-.hero-talk-link {
-  display: block;
-  margin-top: 1.5rem;
-  font-size: 15px;
-  color: var(--text-mid);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: rgba(17,56,42,0.3);
-}
-.hero-talk-link:hover { color: var(--forest); text-decoration-color: var(--forest); }
 
 @media (max-width: 600px) {
   #home { padding: 5.5rem 1rem 3rem !important; }
@@ -1941,17 +1933,17 @@ body::before {
 <!-- NAV -->
 <nav id="nav">
   <a href="#home" class="nav-logo" aria-label="Marina Bodywork home">
-    <img src="marina-logo.webp" alt="Marina Bodywork" class="nav-logo-img" onerror="this.style.display='none'">
+    <img src="marina-logo.png" alt="Marina Bodywork" class="nav-logo-img" onerror="this.style.display='none'">
   </a>
   <div class="nav-links">
     <a href="#massagem" data-i18n="nav.services">Services</a>
     <a href="#training" data-i18n="nav.training">Training</a>
     <a href="#results" data-i18n="nav.results">Results</a>
-    <div class="lang-toggle" role="group" aria-label="Language selector">
-      <button class="lang-btn active" data-lang="en" onclick="setLang('en')" aria-label="English" title="English">&#127462;&#127482;</button>
-      <button class="lang-btn" data-lang="pt" onclick="setLang('pt')" aria-label="Português" title="Português">&#127463;&#127479;</button>
-    </div>
     <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="nav-book" data-i18n="nav.book">Book Now</a>
+  </div>
+  <div class="lang-toggle nav-lang" role="group" aria-label="Language selector">
+    <button class="lang-btn active" data-lang="en" onclick="setLang('en')" aria-label="English" title="English">EN</button>
+    <button class="lang-btn" data-lang="pt" onclick="setLang('pt')" aria-label="Português" title="Português">PT</button>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -1965,10 +1957,6 @@ body::before {
   <a href="#training" onclick="toggleMenu()" data-i18n="nav.training">Training</a>
   <a href="#results" onclick="toggleMenu()" data-i18n="nav.results">Results</a>
   <a href="#about" onclick="toggleMenu()" data-i18n="nav.about">About</a>
-  <div class="lang-toggle" style="margin:1rem 0">
-    <button class="lang-btn active" data-lang="en" onclick="setLang('en');toggleMenu()">&#127462;&#127482;</button>
-    <button class="lang-btn" data-lang="pt" onclick="setLang('pt');toggleMenu()">&#127463;&#127479;</button>
-  </div>
   <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="nav-book" data-i18n="nav.book">Book Now</a>
 </div>
 
@@ -1984,10 +1972,9 @@ body::before {
       <span class="hero-pill-meta" data-i18n="hero.pill.meta">First-session guarantee &middot; Mon / Wed / Fri</span>
     </div>
     <div class="hero-cta-row reveal stagger-5">
-      <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="hero-cta-big" data-i18n="hero.cta1">Book a Massage</a>
-      <a href="https://marinaribeirobodywork.as.me/BookPTlessons" target="_blank" class="hero-cta-big hero-cta-alt" data-i18n="hero.cta-pt">Book a PT Lesson</a>
+      <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="hero-cta-big" data-i18n="hero.cta1">Book your Massage</a>
+      <a href="https://marinaribeirobodywork.as.me/BookPTlessons" target="_blank" class="hero-cta-big hero-cta-alt" data-i18n="hero.cta-pt">Book your PT Lessons</a>
     </div>
-    <a href="#consult" class="hero-talk-link reveal stagger-5" data-i18n="hero.cta2">Talk to Marina. 15 min. Free. &rsaquo;</a>
   </div>
 </section>
 
@@ -2865,8 +2852,8 @@ body::before {
 
 <!-- MOBILE STICKY CTA -->
 <div class="mobile-sticky-cta" aria-label="Quick actions">
-  <a href="https://wa.me/61451021478?text=Hi%20Marina%2C%20I%27d%20like%20to%20talk%20briefly%20before%20I%20book." target="_blank" class="msc-talk" data-i18n="msc.talk">Talk to Marina</a>
-  <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="msc-book" data-i18n="msc.book">Book a session</a>
+  <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="msc-massage" data-i18n="msc.massage">Book Massage</a>
+  <a href="https://marinaribeirobodywork.as.me/BookPTlessons" target="_blank" class="msc-pt" data-i18n="msc.pt">Book PT</a>
 </div>
 
 <script>
@@ -2883,9 +2870,8 @@ const i18n = {
     'hero.sub': '<strong>Move. Release. Reconnect.</strong><br>Somatic & myofascial massage, KSE Sensory Energetics\u00ae, conscious-movement training. Sydney. EN + PT.',
     'hero.pill.price': 'From A$125',
     'hero.pill.meta': 'First-session guarantee \u00b7 Mon / Wed / Fri',
-    'hero.cta1': 'Book a Massage',
-    'hero.cta-pt': 'Book a PT Lesson',
-    'hero.cta2': 'Talk to Marina. 15 min. Free. \u203a',
+    'hero.cta1': 'Book your Massage',
+    'hero.cta-pt': 'Book your PT Lessons',
     'method.label': 'THE METHOD',
     'method.title': 'It\u2019s all fascia.',
     'method.b1': 'Connective tissue that wraps every muscle, organ and nerve.',
@@ -3112,8 +3098,8 @@ const i18n = {
     'faq.a11': 'Sessions are not claimable through standard private health rebates. Marina is a bodywork specialist and personal trainer, not a registered remedial massage therapist or physiotherapist. If insurance rebate is your priority, book with a registered remedial therapist instead. Honesty matters more than the booking.',
     'faq.q12': 'Do you work with clients in early postpartum, pregnancy, or with specific medical conditions?',
     'faq.a12': 'Pregnancy, postpartum, recent surgery, acute injury, and specific medical conditions need a brief WhatsApp conversation first. Marina will tell you honestly what she can and cannot do for your situation, and refer you to the right specialist if bodywork is not appropriate. Message her before booking.',
-    'msc.book': 'Book a session',
-    'msc.talk': 'Talk to Marina',
+    'msc.massage': 'Book Massage',
+    'msc.pt': 'Book PT',
     'excl.label': 'A FAIR WARNING',
     'excl.title': 'This work is not for everyone.',
     'excl.intro': 'Marina takes a limited number of new clients each week and turns down work she is not the right person for. Some honest examples of when she is not your best option:',
@@ -3218,9 +3204,8 @@ const i18n = {
     'hero.sub': '<strong>Mover. Liberar. Reconectar.</strong><br>Massagem som\u00e1tica e miofascial, KSE Sensory Energetics\u00ae, treino com movimento consciente. Sydney. EN + PT.',
     'hero.pill.price': 'A partir de A$125',
     'hero.pill.meta': 'Garantia da primeira sess\u00e3o \u00b7 Seg / Qua / Sex',
-    'hero.cta1': 'Agendar Massagem',
-    'hero.cta-pt': 'Agendar Personal Training',
-    'hero.cta2': 'Falar com Marina. 15 min. Gr\u00e1tis. \u203a',
+    'hero.cta1': 'Reserve sua Massagem',
+    'hero.cta-pt': 'Reserve seu Personal Training',
     'method.label': 'O M\u00c9TODO',
     'method.title': '\u00c9 tudo f\u00e1scia.',
     'method.b1': 'Tecido conjuntivo que envolve todo m\u00fasculo, \u00f3rg\u00e3o e nervo.',
@@ -3447,8 +3432,8 @@ const i18n = {
     'faq.a11': 'As sess\u00f5es n\u00e3o d\u00e3o direito a reembolso pelo plano de sa\u00fade australiano. Marina \u00e9 bodywork specialist e personal trainer, n\u00e3o fisioterapeuta nem remedial massage therapist registrada. Se o reembolso \u00e9 prioridade pra voc\u00ea, agende com uma profissional registrada. Honestidade vale mais do que a sess\u00e3o.',
     'faq.q12': 'Voc\u00ea atende no p\u00f3s-parto, gestantes ou pessoas com condi\u00e7\u00f5es m\u00e9dicas espec\u00edficas?',
     'faq.a12': 'Gesta\u00e7\u00e3o, p\u00f3s-parto, cirurgia recente, les\u00e3o aguda e condi\u00e7\u00f5es m\u00e9dicas espec\u00edficas precisam de uma conversa r\u00e1pida no WhatsApp antes. Marina vai te dizer honestamente o que pode e o que n\u00e3o pode fazer pra sua situa\u00e7\u00e3o, e te encaminha pro especialista certo se bodywork n\u00e3o for o caminho. Manda mensagem antes de agendar.',
-    'msc.book': 'Agendar sess\u00e3o',
-    'msc.talk': 'Falar com Marina',
+    'msc.massage': 'Massagem',
+    'msc.pt': 'Personal Training',
     'excl.label': 'UM AVISO HONESTO',
     'excl.title': 'Este trabalho n\u00e3o \u00e9 para todo mundo.',
     'excl.intro': 'Marina aceita um n\u00famero limitado de clientes novas por semana e recusa o trabalho para o qual ela n\u00e3o \u00e9 a pessoa certa. Alguns exemplos honestos de quando ela n\u00e3o \u00e9 a sua melhor op\u00e7\u00e3o:',
