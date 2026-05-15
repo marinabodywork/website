@@ -8,6 +8,8 @@
 <meta property="og:description" content="Release your body. Live an extraordinary life. Somatic massage, Sensory Energetics, and personal training in Sydney.">
 <meta property="og:image" content="marina-hero.jpg.jpeg">
 <title>Marina Bodywork  -  Sydney</title>
+<link rel="icon" type="image/jpeg" href="marina-logo.jpg.jpeg">
+<link rel="apple-touch-icon" href="marina-logo.jpg.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -407,7 +409,8 @@ footer { background: var(--forest); color: var(--text-on-dark); padding: 4rem 0 
 
 
 /* ANNOUNCEMENT BAR */
-.announce-bar{background:var(--gold);color:var(--forest);font-size:13px;font-weight:500;text-align:center;padding:10px 2rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;position:relative;z-index:101}
+.announce-bar{background:var(--gold);color:var(--forest);font-size:13px;font-weight:500;text-align:center;padding:10px 2rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;position:relative;z-index:101;pointer-events:none}
+.announce-bar > *{pointer-events:auto}
 .announce-dot{width:5px;height:5px;background:var(--forest);border-radius:50%;opacity:0.4;flex-shrink:0}
 .announce-link{color:var(--forest);font-weight:600;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
 .announce-close{margin-left:auto;background:none;border:none;cursor:pointer;font-size:18px;color:var(--forest);opacity:0.6;padding:0 0.25rem;line-height:1;flex-shrink:0}
@@ -1187,26 +1190,18 @@ nav.scrolled {
   box-shadow: 0 2px 18px rgba(17,56,42,0.08) !important;
   backdrop-filter: none !important;
 }
-/* Text wordmark replaces image logo */
-.nav-logo-img { display: none !important; }
-.nav-logo { flex-direction: row !important; align-items: baseline !important; gap: 10px !important; }
-.nav-logo-mark {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 1;
-  color: var(--forest);
-  letter-spacing: 0.005em;
+/* Logo image — Marina brand mark on cream nav */
+.nav-logo { flex-direction: row !important; align-items: center !important; gap: 0 !important; }
+.nav-logo-img {
+  display: block !important;
+  height: 52px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(17,56,42,0.12);
 }
-.nav-logo-sub {
-  font-family: var(--font-body) !important;
-  font-size: 10px !important;
-  font-weight: 500 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.24em !important;
-  color: var(--gold) !important;
-  align-self: center;
+@media (max-width: 768px) {
+  .nav-logo-img { height: 42px !important; border-radius: 6px; }
 }
 /* Nav links: refined uppercase, forest, gold underline on hover */
 .nav-links a {
@@ -1247,8 +1242,6 @@ nav .lang-btn.active {
 .hamburger span { background: var(--forest) !important; }
 @media (max-width: 768px) {
   nav { padding: 0.75rem 1.25rem !important; }
-  .nav-logo-mark { font-size: 26px; }
-  .nav-logo-sub { font-size: 9px !important; letter-spacing: 0.2em !important; }
 }
 
 /* 11. STATS BAR — BOLDER */
@@ -1356,9 +1349,7 @@ body::before {
 <!-- NAV -->
 <nav id="nav">
   <a href="#home" class="nav-logo" aria-label="Marina Bodywork home">
-    <img src="marina-logo.jpg.jpeg" alt="" class="nav-logo-img" onerror="this.style.display='none'">
-    <span class="nav-logo-mark">Marina</span>
-    <span class="nav-logo-sub">Bodywork</span>
+    <img src="marina-logo.jpg.jpeg" alt="Marina Bodywork" class="nav-logo-img" onerror="this.style.display='none'">
   </a>
   <div class="nav-links">
     <a href="#massagem" data-i18n="nav.services">Services</a>
