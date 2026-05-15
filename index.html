@@ -1405,6 +1405,354 @@ a.authority-card:hover .authority-card-logo img {
   body { padding-bottom: 72px; }
 }
 
+/* 10i. BEBOLD-STYLE HERO — text-only, cream, big editorial type */
+#home {
+  display: block !important;
+  background: var(--cream) !important;
+  min-height: auto !important;
+  padding: 7rem 1.5rem 4rem !important;
+  text-align: center !important;
+  overflow: visible !important;
+}
+#home > .hero-bg, #home .hero-left, #home .hero-right { display: none !important; }
+#home::after, #home::before { display: none !important; }
+.hero-content { max-width: 760px; margin: 0 auto; }
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  opacity: 0.85;
+}
+.hero-eyebrow-dash { color: var(--gold); font-weight: 400; font-size: 14px; }
+.hero-h1 {
+  font-family: var(--font-display) !important;
+  font-size: clamp(44px, 8vw, 86px) !important;
+  font-weight: 600 !important;
+  color: var(--forest) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.015em !important;
+  margin: 0 auto 1.5rem !important;
+  text-shadow: none !important;
+  max-width: 720px;
+}
+.hero-sub {
+  font-family: var(--font-body) !important;
+  font-size: clamp(16px, 1.5vw, 18px) !important;
+  color: var(--text-mid) !important;
+  line-height: 1.55 !important;
+  max-width: 540px !important;
+  margin: 0 auto 2rem !important;
+  opacity: 1 !important;
+}
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: white;
+  border: 1px solid rgba(17,56,42,0.1);
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-size: 14.5px;
+  margin: 0 auto 1.75rem;
+  box-shadow: 0 2px 12px rgba(17,56,42,0.06);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hero-pill-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--forest);
+  flex-shrink: 0;
+}
+.hero-pill strong { color: var(--forest); font-weight: 700; }
+.hero-pill-meta { color: var(--text-mid); font-size: 13.5px; }
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 0 auto 1.25rem;
+}
+.hero-cta-big {
+  display: inline-block;
+  background: var(--forest);
+  color: var(--text-on-dark) !important;
+  padding: 1.05rem 2.25rem;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background var(--transition), transform var(--transition);
+  box-shadow: 0 8px 24px rgba(17,56,42,0.18);
+  border: none;
+}
+.hero-cta-big:hover { background: var(--forest-mid); transform: translateY(-1px); }
+.hero-cta-alt {
+  background: white !important;
+  color: var(--forest) !important;
+  border: 1.5px solid var(--forest);
+  box-shadow: none;
+}
+.hero-cta-alt:hover { background: var(--forest); color: var(--text-on-dark) !important; }
+.hero-talk-link {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 15px;
+  color: var(--text-mid);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(17,56,42,0.3);
+}
+.hero-talk-link:hover { color: var(--forest); text-decoration-color: var(--forest); }
+
+@media (max-width: 600px) {
+  #home { padding: 5.5rem 1rem 3rem !important; }
+  .hero-h1 { font-size: clamp(36px, 11vw, 56px) !important; }
+  .hero-sub { font-size: 16px !important; }
+  .hero-pill { font-size: 13.5px; padding: 0.65rem 1.1rem; gap: 0.45rem; }
+  .hero-pill-meta { font-size: 12.5px; width: 100%; text-align: center; }
+  .hero-cta-big { display: block; margin: 0.4rem 0; padding: 0.95rem 1.5rem; }
+}
+
+/* 10j. BRAND PHOTO GRID — under hero */
+#photo-grid {
+  background: var(--cream);
+  padding: 1rem 0 5rem;
+}
+.pg-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  height: 540px;
+}
+.pg-cell {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--surface);
+}
+.pg-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.pg-cell:hover img { transform: scale(1.04); }
+.pg-tall { grid-row: 1 / 3; }
+@media (max-width: 700px) {
+  .pg-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; height: 720px; }
+  .pg-tall { grid-row: 1 / 3; grid-column: 1 / 3; }
+}
+
+/* 10k. PROOF-POINTS STRIP — dark forest, gold bullets */
+.proof-strip {
+  background: var(--forest);
+  color: var(--text-on-dark);
+  padding: 3rem 1.5rem;
+}
+.proof-strip-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem 2.5rem;
+  text-align: center;
+}
+.proof-item {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-on-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.proof-item::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: inline-block;
+}
+.proof-item:first-child::before { display: none; }
+.proof-item .g-stars { color: var(--gold); letter-spacing: 0.05em; }
+.proof-disclaimer {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  opacity: 0.7;
+  text-align: center;
+  font-style: italic;
+}
+
+/* 10l. FLOATING WHATSAPP BUTTON */
+.float-wa {
+  position: fixed;
+  right: 18px;
+  bottom: 90px;
+  z-index: 90;
+  background: #25D366;
+  color: white;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.float-wa:hover { transform: scale(1.08); box-shadow: 0 8px 28px rgba(0,0,0,0.3); }
+.float-wa svg { width: 28px; height: 28px; fill: white; }
+@media (min-width: 769px) {
+  .float-wa { bottom: 24px; right: 24px; width: 60px; height: 60px; }
+  .float-wa svg { width: 30px; height: 30px; }
+}
+
+/* 10m. METHOD SECTION — bullets, 4 modality cards */
+#method { padding: 5rem 0; text-align: center; }
+#method .label { text-align: center !important; display: block !important; }
+#method h2 {
+  text-align: center;
+  font-size: clamp(36px, 4.5vw, 52px);
+  margin: 0.75rem 0 2rem;
+}
+.method-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 2rem;
+  max-width: 640px;
+}
+.method-bullets li {
+  position: relative;
+  padding: 0.55rem 0 0.55rem 1.75rem;
+  font-size: 17px;
+  color: var(--text);
+  line-height: 1.5;
+}
+.method-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 1rem;
+  width: 8px; height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+.method-pivot {
+  text-align: center;
+  font-size: 18px;
+  color: var(--forest);
+  max-width: 540px;
+  margin: 0 auto 3rem;
+  line-height: 1.55;
+}
+.method-pivot strong {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--gold);
+  font-size: 22px;
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+.method-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+.method-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(17,56,42,0.06);
+  position: relative;
+  text-align: left;
+}
+.method-num {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.18em;
+  margin-bottom: 0.5rem;
+}
+.method-card h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--forest);
+  margin-bottom: 0.85rem;
+  line-height: 1.15;
+}
+.method-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.method-card li {
+  position: relative;
+  padding: 0.3rem 0 0.3rem 1.1rem;
+  font-size: 14.5px;
+  color: var(--text-mid);
+  line-height: 1.45;
+}
+.method-card li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.7rem;
+  width: 5px; height: 5px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.method-tagline {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-style: italic;
+  color: var(--forest);
+  margin-top: 1rem;
+}
+@media (max-width: 700px) {
+  .method-grid { grid-template-columns: 1fr; }
+  #method h2 { font-size: clamp(30px, 7vw, 40px); }
+}
+
+/* 10n. PHOTO ALIGNMENT — ensure all imagery is centered + aligned */
+.about-photo, .about-photo img,
+.consult-photo,
+.collab-card img, .authority-card-logo img,
+.footer-grid img,
+.testimonial-card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-grid { align-items: center; }
+.about-photo img { object-fit: cover; }
+.consult-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.consult-photo { margin-left: auto; margin-right: auto; }
+@media (max-width: 768px) {
+  .about-grid { text-align: center; }
+  .about-content { text-align: center; }
+  .about-photo { max-width: 360px; margin: 0 auto; }
+  .credential-tags { justify-content: center; }
+  .pg-grid img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+}
+
 /* 10b. HEADER — dark forest nav (logo blends with its native bg) */
 nav {
   background: var(--forest) !important;
@@ -1600,26 +1948,91 @@ body::before {
 
 <!-- HERO -->
 <section id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-left">
-    <p class="label section-label reveal stagger-1" data-i18n="hero.label">FOR SYDNEY PROFESSIONALS WHO HAVE TRIED EVERYTHING ELSE</p>
-    <h1 class="hero-h1 reveal stagger-2" data-i18n="hero.h1">The tension you keep paying other therapists to release.<br>This time it stays gone.</h1>
-    <p class="hero-sub reveal stagger-3" data-i18n="hero.sub">Five specialist techniques in one Sydney session. Chronic neck and back tension, jaw and TMJ pain, stress held in the nervous system, and the movement patterns making it all worse. One hour, not four appointments.</p>
-    <div class="trust-row reveal stagger-4">
-      <span class="trust-badge" data-i18n="hero.badge1">Chronic neck + back</span>
-      <span class="trust-badge" data-i18n="hero.badge2">TMJ + jaw tension</span>
-      <span class="trust-badge" data-i18n="hero.badge3">Stress + sleep + nervous system</span>
-      <span class="trust-badge">Post-injury mobility</span>
-      <span class="trust-badge">EN + PT</span>
+  <div class="hero-content">
+    <p class="hero-eyebrow reveal stagger-1" data-i18n="hero.label"><span class="hero-eyebrow-dash">&mdash;</span> MARINA RIBEIRO &middot; FASCIA RELEASE SPECIALIST &middot; SYDNEY <span class="hero-eyebrow-dash">&mdash;</span></p>
+    <h1 class="hero-h1 reveal stagger-2" data-i18n="hero.h1">Specialist Massage.<br>Personal Training.<br>Conscious Movement.</h1>
+    <p class="hero-sub reveal stagger-3" data-i18n="hero.sub"><strong>Move. Release. Reconnect.</strong><br>Somatic &amp; myofascial massage, KSE Sensory Energetics&reg;, conscious-movement training. Sydney. EN + PT.</p>
+    <div class="hero-pill reveal stagger-4">
+      <span class="hero-pill-dot" aria-hidden="true"></span>
+      <strong data-i18n="hero.pill.price">From A$125</strong>
+      <span class="hero-pill-meta" data-i18n="hero.pill.meta">First-session guarantee &middot; Mon / Wed / Fri</span>
     </div>
-    <div class="hero-ctas reveal stagger-5">
-      <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary" data-i18n="hero.cta1">Book your first session</a>
-      <a href="#consult" class="btn-outline" data-i18n="hero.cta2">Talk to Marina first</a>
+    <div class="hero-cta-row reveal stagger-5">
+      <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="hero-cta-big" data-i18n="hero.cta1">Book a Massage</a>
+      <a href="https://marinaribeirobodywork.as.me/BookPTlessons" target="_blank" class="hero-cta-big hero-cta-alt" data-i18n="hero.cta-pt">Book a PT Lesson</a>
     </div>
-    <p class="urgency-note reveal stagger-5" data-i18n="hero.urgency">First-session guarantee &middot; Limited weekly slots &middot; Mon / Wed / Fri</p>
+    <a href="#consult" class="hero-talk-link reveal stagger-5" data-i18n="hero.cta2">Talk to Marina. 15 min. Free. &rsaquo;</a>
   </div>
-  <div class="hero-right">
-    <img src="marina-hero.webp" loading="eager" alt="Marina Ribeiro, bodywork specialist Sydney" onerror="this.src='marina-hero.jpg.jpeg'">
+</section>
+
+<!-- BRAND PHOTO GRID -->
+<section id="photo-grid">
+  <div class="container">
+    <div class="pg-grid">
+      <a href="#consult" class="pg-cell pg-tall"><img src="marina-hero-action.webp" alt="Marina ready for a session" loading="lazy"></a>
+      <a href="#about" class="pg-cell"><img src="marina-headshot.webp" alt="Marina Ribeiro" loading="lazy"></a>
+      <a href="#training" class="pg-cell"><img src="marina-pointing.webp" alt="Marina, personal trainer Sydney" loading="lazy"></a>
+      <a href="#consult" class="pg-cell"><img src="marina-consult.webp" alt="Marina on WhatsApp consult" loading="lazy"></a>
+      <a href="#diferencial" class="pg-cell"><img src="marina-portrait.webp" alt="Marina portrait" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<!-- THE METHOD -->
+<section id="method" class="section-pale">
+  <div class="container">
+    <p class="label section-label reveal" data-i18n="method.label">&mdash; THE METHOD &mdash;</p>
+    <h2 class="reveal" data-i18n="method.title">It&rsquo;s all fascia.</h2>
+    <ul class="method-bullets reveal">
+      <li data-i18n="method.b1">Connective tissue that wraps every muscle, organ and nerve.</li>
+      <li data-i18n="method.b2">When it tightens &rarr; chronic neck and back pain.</li>
+      <li data-i18n="method.b3">When it shortens &rarr; jaw clenching, recurring headaches.</li>
+      <li data-i18n="method.b4">When it loses its slide &rarr; squats stuck, shoulders limited, breath shallow.</li>
+    </ul>
+    <p class="method-pivot reveal" data-i18n="method.pivot">Most therapists work on muscle. Marina works on fascia.<br><strong>Four modalities. One system.</strong></p>
+    <div class="method-grid">
+      <div class="method-card reveal stagger-1">
+        <div class="method-num">01</div>
+        <h3 data-i18n="method.m1.name">Somatic &amp; Myofascial Massage</h3>
+        <ul>
+          <li data-i18n="method.m1.b1">Hands-on release from the outside</li>
+          <li data-i18n="method.m1.b2">Chronic neck, back, hip tension</li>
+          <li data-i18n="method.m1.b3">Jaw, TMJ, postural patterns</li>
+          <li data-i18n="method.m1.b4">60 min &middot; shaped around your body</li>
+        </ul>
+      </div>
+      <div class="method-card reveal stagger-2">
+        <div class="method-num">02</div>
+        <h3 data-i18n="method.m2.name">KSE Sensory Energetics<sup>&reg;</sup></h3>
+        <ul>
+          <li data-i18n="method.m2.b1">Releases fascia held by the nervous system</li>
+          <li data-i18n="method.m2.b2">Trigger-point work + guided breath</li>
+          <li data-i18n="method.m2.b3">For tension stored for months or years</li>
+          <li data-i18n="method.m2.b4">90 min &middot; deeper sleep that night</li>
+        </ul>
+      </div>
+      <div class="method-card reveal stagger-3">
+        <div class="method-num">03</div>
+        <h3 data-i18n="method.m3.name">Conscious Movement</h3>
+        <ul>
+          <li data-i18n="method.m3.b1">Releases fascia through movement</li>
+          <li data-i18n="method.m3.b2">Dance and breathwork</li>
+          <li data-i18n="method.m3.b3">Reaches what hands cannot</li>
+          <li data-i18n="method.m3.b4">Restores fascial slide</li>
+        </ul>
+      </div>
+      <div class="method-card reveal stagger-4">
+        <div class="method-num">04</div>
+        <h3 data-i18n="method.m4.name">Personal Training</h3>
+        <ul>
+          <li data-i18n="method.m4.b1">Strength in functional fascial chains</li>
+          <li data-i18n="method.m4.b2">Mobility, hypertrophy, conditioning</li>
+          <li data-i18n="method.m4.b3">Breathwork programmed in</li>
+          <li data-i18n="method.m4.b4">EQF Level 4 certified</li>
+        </ul>
+      </div>
+    </div>
+    <p class="method-tagline reveal" data-i18n="method.tagline">Move &middot; Release &middot; Reconnect</p>
   </div>
 </section>
 
@@ -2271,6 +2684,18 @@ body::before {
   </div>
 </section>
 
+<!-- PROOF-POINTS STRIP -->
+<section class="proof-strip" aria-label="Credibility highlights">
+  <div class="proof-strip-inner">
+    <span class="proof-item" data-i18n="proof.vanoni">Vanoni Institute Certified</span>
+    <span class="proof-item"><span class="g-stars">G&nbsp;★★★★★</span> <span data-i18n="proof.google">Google reviews · Sydney</span></span>
+    <span class="proof-item" data-i18n="proof.eqf">EQF Level 4 Personal Trainer</span>
+    <span class="proof-item" data-i18n="proof.techniques">5 specialist techniques</span>
+    <span class="proof-item" data-i18n="proof.bilingual">EN + PT bilingual</span>
+  </div>
+  <span class="proof-disclaimer" data-i18n="proof.disclaimer">Bodywork &middot; Not a substitute for medical advice</span>
+</section>
+
 <!-- POLICIES ACCORDION -->
 <section id="policies">
   <div class="container">
@@ -2368,14 +2793,48 @@ const i18n = {
     'nav.results': 'Results',
     'nav.about': 'About',
     'nav.book': 'Book Now',
-    'hero.label': 'FOR SYDNEY PROFESSIONALS WHO HAVE TRIED EVERYTHING ELSE',
-    'hero.h1': 'The tension you keep paying other therapists to release.<br>This time it stays gone.',
-    'hero.sub': 'Five specialist techniques in one Sydney session. Chronic neck and back tension, jaw and TMJ pain, stress held in the nervous system, and the movement patterns making it all worse. One hour, not four appointments.',
-    'hero.badge1': 'Chronic neck + back',
-    'hero.badge2': 'TMJ + jaw tension',
-    'hero.badge3': 'Stress + sleep + nervous system',
-    'hero.cta1': 'Book your first session',
-    'hero.cta2': 'Talk to Marina first',
+    'hero.label': '\u2014 MARINA RIBEIRO \u00b7 FASCIA RELEASE SPECIALIST \u00b7 SYDNEY \u2014',
+    'hero.h1': 'Specialist Massage.<br>Personal Training.<br>Conscious Movement.',
+    'hero.sub': '<strong>Move. Release. Reconnect.</strong><br>Somatic & myofascial massage, KSE Sensory Energetics\u00ae, conscious-movement training. Sydney. EN + PT.',
+    'hero.pill.price': 'From A$125',
+    'hero.pill.meta': 'First-session guarantee \u00b7 Mon / Wed / Fri',
+    'hero.cta1': 'Book a Massage',
+    'hero.cta-pt': 'Book a PT Lesson',
+    'hero.cta2': 'Talk to Marina. 15 min. Free. \u203a',
+    'method.label': '\u2014 THE METHOD \u2014',
+    'method.title': 'It\u2019s all fascia.',
+    'method.b1': 'Connective tissue that wraps every muscle, organ and nerve.',
+    'method.b2': 'When it tightens \u2192 chronic neck and back pain.',
+    'method.b3': 'When it shortens \u2192 jaw clenching, recurring headaches.',
+    'method.b4': 'When it loses its slide \u2192 squats stuck, shoulders limited, breath shallow.',
+    'method.pivot': 'Most therapists work on muscle. Marina works on fascia.<br><strong>Four modalities. One system.</strong>',
+    'method.m1.name': 'Somatic & Myofascial Massage',
+    'method.m1.b1': 'Hands-on release from the outside',
+    'method.m1.b2': 'Chronic neck, back, hip tension',
+    'method.m1.b3': 'Jaw, TMJ, postural patterns',
+    'method.m1.b4': '60 min \u00b7 shaped around your body',
+    'method.m2.name': 'KSE Sensory Energetics<sup>\u00ae</sup>',
+    'method.m2.b1': 'Releases fascia held by the nervous system',
+    'method.m2.b2': 'Trigger-point work + guided breath',
+    'method.m2.b3': 'For tension stored for months or years',
+    'method.m2.b4': '90 min \u00b7 deeper sleep that night',
+    'method.m3.name': 'Conscious Movement',
+    'method.m3.b1': 'Releases fascia through movement',
+    'method.m3.b2': 'Dance and breathwork',
+    'method.m3.b3': 'Reaches what hands cannot',
+    'method.m3.b4': 'Restores fascial slide',
+    'method.m4.name': 'Personal Training',
+    'method.m4.b1': 'Strength in functional fascial chains',
+    'method.m4.b2': 'Mobility, hypertrophy, conditioning',
+    'method.m4.b3': 'Breathwork programmed in',
+    'method.m4.b4': 'EQF Level 4 certified',
+    'method.tagline': 'Move \u00b7 Release \u00b7 Reconnect',
+    'proof.vanoni': 'Vanoni Institute Certified',
+    'proof.google': 'Google reviews \u00b7 Sydney',
+    'proof.eqf': 'EQF Level 4 Personal Trainer',
+    'proof.techniques': '5 specialist techniques',
+    'proof.bilingual': 'EN + PT bilingual',
+    'proof.disclaimer': 'Bodywork \u00b7 Not a substitute for medical advice',
     'hero.urgency': 'First-session guarantee \u00b7 Limited weekly slots \u00b7 Mon / Wed / Fri',
     'who.title': 'What brought you here?',
     'who.left.title': 'I carry tension my body won\u2019t release.',
@@ -2626,14 +3085,49 @@ const i18n = {
     'nav.results': 'Resultados',
     'nav.about': 'Sobre',
     'nav.book': 'Agendar',
-    'hero.label': 'PARA PROFISSIONAIS DE SYDNEY QUE J\u00c1 TENTARAM DE TUDO',
-    'hero.h1': 'A tens\u00e3o pela qual voc\u00ea continua pagando outros terapeutas.<br>Desta vez, ela n\u00e3o volta.',
-    'hero.sub': 'Cinco t\u00e9cnicas especializadas em uma sess\u00e3o em Sydney. Tens\u00e3o cr\u00f4nica no pesco\u00e7o e costas, dor na mand\u00edbula e ATM, estresse acumulado no sistema nervoso e os padr\u00f5es de movimento que pioram tudo isso. Uma hora, n\u00e3o quatro consultas.',
-    'hero.badge1': 'Pesco\u00e7o + costas cr\u00f4nicos',
-    'hero.badge2': 'ATM + tens\u00e3o na mand\u00edbula',
-    'hero.badge3': 'Estresse + sono + sistema nervoso',
-    'hero.cta1': 'Agendar primeira sess\u00e3o',
-    'hero.cta2': 'Falar com Marina antes',
+    'hero.label': '\u2014 MARINA RIBEIRO \u00b7 ESPECIALISTA EM LIBERA\u00c7\u00c3O FASCIAL \u00b7 SYDNEY \u2014',
+    'hero.h1': 'Massagem Especializada.<br>Personal Training.<br>Movimento Consciente.',
+    'hero.sub': '<strong>Mover. Liberar. Reconectar.</strong><br>Massagem som\u00e1tica e miofascial, KSE Sensory Energetics\u00ae, treino com movimento consciente. Sydney. EN + PT.',
+    'hero.pill.price': 'A partir de A$125',
+    'hero.pill.meta': 'Garantia da primeira sess\u00e3o \u00b7 Seg / Qua / Sex',
+    'hero.cta1': 'Agendar Massagem',
+    'hero.cta-pt': 'Agendar Personal Training',
+    'hero.cta2': 'Falar com Marina. 15 min. Gr\u00e1tis. \u203a',
+    'method.label': '\u2014 O M\u00c9TODO \u2014',
+    'method.title': '\u00c9 tudo f\u00e1scia.',
+    'method.b1': 'Tecido conjuntivo que envolve todo m\u00fasculo, \u00f3rg\u00e3o e nervo.',
+    'method.b2': 'Quando aperta \u2192 dor cr\u00f4nica no pesco\u00e7o e nas costas.',
+    'method.b3': 'Quando encurta \u2192 bruxismo, dores de cabe\u00e7a que voltam.',
+    'method.b4': 'Quando perde o deslize \u2192 agachamento travado, ombro limitado, respira\u00e7\u00e3o curta.',
+    'method.pivot': 'A maioria dos terapeutas trabalha o m\u00fasculo. Marina trabalha a f\u00e1scia.<br><strong>Quatro modalidades. Um sistema.</strong>',
+    'method.m1.name': 'Massagem Som\u00e1tica e Miofascial',
+    'method.m1.b1': 'Libera\u00e7\u00e3o manual da f\u00e1scia',
+    'method.m1.b2': 'Tens\u00e3o cr\u00f4nica no pesco\u00e7o, costas, quadril',
+    'method.m1.b3': 'Mand\u00edbula, ATM, padr\u00f5es posturais',
+    'method.m1.b4': '60 min \u00b7 constru\u00edda em torno do seu corpo',
+    'method.m2.name': 'KSE Sensory Energetics<sup>\u00ae</sup>',
+    'method.m2.b1': 'Libera a f\u00e1scia presa pelo sistema nervoso',
+    'method.m2.b2': 'Pontos-gatilho + respira\u00e7\u00e3o guiada',
+    'method.m2.b3': 'Para tens\u00e3o guardada por meses ou anos',
+    'method.m2.b4': '90 min \u00b7 sono mais profundo na mesma noite',
+    'method.m3.name': 'Movimento Consciente',
+    'method.m3.b1': 'Libera a f\u00e1scia atrav\u00e9s do movimento',
+    'method.m3.b2': 'Dan\u00e7a e respira\u00e7\u00e3o',
+    'method.m3.b3': 'Alcan\u00e7a o que as m\u00e3os n\u00e3o alcan\u00e7am',
+    'method.m3.b4': 'Restaura o deslize fascial',
+    'method.m4.name': 'Personal Training',
+    'method.m4.b1': 'For\u00e7a nas cadeias funcionais da f\u00e1scia',
+    'method.m4.b2': 'Mobilidade, hipertrofia, condicionamento',
+    'method.m4.b3': 'Respira\u00e7\u00e3o programada na sess\u00e3o',
+    'method.m4.b4': 'Certificada EQF N\u00edvel 4',
+    'method.tagline': 'Mover \u00b7 Liberar \u00b7 Reconectar',
+    'proof.vanoni': 'Certificada pelo Instituto Vanoni',
+    'proof.google': 'Avalia\u00e7\u00f5es Google \u00b7 Sydney',
+    'proof.eqf': 'Personal Trainer EQF N\u00edvel 4',
+    'proof.techniques': '5 t\u00e9cnicas especializadas',
+    'proof.bilingual': 'EN + PT bil\u00edngue',
+    'proof.disclaimer': 'Bodywork \u00b7 N\u00e3o substitui orienta\u00e7\u00e3o m\u00e9dica',
+    'hero.urgency': 'Garantia da primeira sess\u00e3o \u00b7 Vagas semanais limitadas \u00b7 Seg / Qua / Sex',
     'hero.urgency': 'Garantia da primeira sess\u00e3o \u00b7 Vagas semanais limitadas \u00b7 Seg / Qua / Sex',
     'who.title': 'O que te trouxe aqui?',
     'who.left.title': 'Carrego tens\u00e3o que meu corpo n\u00e3o libera.',
@@ -3004,8 +3498,8 @@ function togglePolicies() {
 // ─── INIT ────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   setLang(currentLang);
-  // Hero stagger animation
-  document.querySelectorAll('.hero-left .reveal').forEach(el => {
+  // Hero stagger animation — force-show reveals in the hero immediately
+  document.querySelectorAll('#home .reveal').forEach(el => {
     setTimeout(() => el.classList.add('visible'), 100);
   });
 });
