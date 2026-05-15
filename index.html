@@ -62,6 +62,7 @@ section { padding: 6rem 0; }
 .stagger-3 { transition-delay: 0.3s; }
 .stagger-4 { transition-delay: 0.4s; }
 .stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
 
 /* ─── NAV ─── */
 nav {
@@ -352,8 +353,6 @@ footer { background: var(--forest); color: var(--text-on-dark); padding: 4rem 0 
   section { padding: 4rem 0; }
   #home { grid-template-columns: 1fr; }
   .hero-left { padding: 7rem 1.5rem 2rem; }
-  .hero-right { height: 50vh; }
-  .hero-right img { height: 50vh; object-fit: cover; }
   nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
@@ -408,7 +407,7 @@ footer { background: var(--forest); color: var(--text-on-dark); padding: 4rem 0 
 
 
 /* ANNOUNCEMENT BAR */
-.announce-bar{background:var(--gold);color:var(--forest);font-size:13px;font-weight:500;text-align:center;padding:10px 2rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;position:sticky;top:0;z-index:101}
+.announce-bar{background:var(--gold);color:var(--forest);font-size:13px;font-weight:500;text-align:center;padding:10px 2rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;position:relative;z-index:101}
 .announce-dot{width:5px;height:5px;background:var(--forest);border-radius:50%;opacity:0.4;flex-shrink:0}
 .announce-link{color:var(--forest);font-weight:600;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
 .announce-close{margin-left:auto;background:none;border:none;cursor:pointer;font-size:18px;color:var(--forest);opacity:0.6;padding:0 0.25rem;line-height:1;flex-shrink:0}
@@ -1045,8 +1044,8 @@ body::before {
     <a href="#training" data-i18n="nav.training">Training</a>
     <a href="#results" data-i18n="nav.results">Results</a>
     <div class="lang-toggle" role="group" aria-label="Language selector">
-      <button class="lang-btn active" id="btn-en" onclick="setLang('en')" aria-label="English" title="English">&#127462;&#127482;</button>
-      <button class="lang-btn" id="btn-pt" onclick="setLang('pt')" aria-label="Português" title="Português">&#127463;&#127479;</button>
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')" aria-label="English" title="English">&#127462;&#127482;</button>
+      <button class="lang-btn" data-lang="pt" onclick="setLang('pt')" aria-label="Português" title="Português">&#127463;&#127479;</button>
     </div>
     <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="nav-book" data-i18n="nav.book">Book Now</a>
   </div>
@@ -1063,8 +1062,8 @@ body::before {
   <a href="#results" onclick="toggleMenu()" data-i18n="nav.results">Results</a>
   <a href="#about" onclick="toggleMenu()" data-i18n="nav.about">About</a>
   <div class="lang-toggle" style="margin:1rem 0">
-    <button class="lang-btn active" onclick="setLang('en');toggleMenu()">&#127462;&#127482;</button>
-    <button class="lang-btn" onclick="setLang('pt');toggleMenu()">&#127463;&#127479;</button>
+    <button class="lang-btn active" data-lang="en" onclick="setLang('en');toggleMenu()">&#127462;&#127482;</button>
+    <button class="lang-btn" data-lang="pt" onclick="setLang('pt');toggleMenu()">&#127463;&#127479;</button>
   </div>
   <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="nav-book" data-i18n="nav.book">Book Now</a>
 </div>
@@ -1384,7 +1383,7 @@ body::before {
       <div class="pillar-card reveal stagger-3"><div class="pillar-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></span></div><div class="pillar-name" data-i18n="bw.p3.name">Breathwork</div><div class="pillar-desc" data-i18n="bw.p3.desc">Your nervous system resets through breath.</div></div>
       <div class="pillar-card reveal stagger-4"><div class="pillar-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span></div><div class="pillar-name" data-i18n="bw.p4.name">Postural Reorganization</div><div class="pillar-desc" data-i18n="bw.p4.desc">Stand differently. Feel different.</div></div>
       <div class="pillar-card reveal stagger-5"><div class="pillar-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-1.96-3 2.5 2.5 0 0 1-1.32-4.24 3 3 0 0 1 .34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.18-1.9z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 1.96-3 2.5 2.5 0 0 0 1.32-4.24 3 3 0 0 0-.34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.18-1.9z"/></svg></span></div><div class="pillar-name" data-i18n="bw.p5.name">Mind-Body Reconnection</div><div class="pillar-desc" data-i18n="bw.p5.desc">When you stop ignoring your body, it stops shouting.</div></div>
-      <div class="pillar-card reveal stagger-1"><div class="pillar-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span></div><div class="pillar-name" data-i18n="bw.p6.name">Somatic Release</div><div class="pillar-desc" data-i18n="bw.p6.desc">Let the body complete what it started.</div></div>
+      <div class="pillar-card reveal stagger-6"><div class="pillar-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span></div><div class="pillar-name" data-i18n="bw.p6.name">Somatic Release</div><div class="pillar-desc" data-i18n="bw.p6.desc">Let the body complete what it started.</div></div>
     </div>
   </div>
 </section>
@@ -1762,7 +1761,7 @@ const i18n = {
     'plan.popular': 'Most Popular',
     'plan.value': 'Best Value',
     'training.allplans': 'All plans: minimum 2 months commitment \u00b7 Cancel with 1 week written notice',
-    'addon.single': 'Single Session A$99',
+    'addon.single': 'Single Session <span class="addon-price">A$99</span>',
     'training.book': 'Choose your plan',
     'bw.label': 'BODYWORK THERAPY',
     'bw.title': 'Refine how your body moves. Release what it has been storing.',
@@ -1972,7 +1971,7 @@ const i18n = {
     'plan.popular': 'Mais Popular',
     'plan.value': 'Melhor Custo',
     'training.allplans': 'Todos os planos: m\u00ednimo 2 meses \u00b7 Cancele com 1 semana de aviso por escrito',
-    'addon.single': 'Sess\u00e3o avulsa A$99',
+    'addon.single': 'Sess\u00e3o avulsa <span class="addon-price">A$99</span>',
     'training.book': 'Escolher plano',
     'bw.label': 'TERAPIA CORPORAL',
     'bw.title': 'Refine como o seu corpo se move. Libere o que ele vem guardando.',
@@ -2055,34 +2054,34 @@ const i18n = {
     'footer.book': 'Agendar Massagem',
     'footer.book.pt': 'Agendar PT',
 
-    'announce.text': 'Preco de lancamento do Sensory Energetics termina em junho de 2025. Economize 20% antes.',
+    'announce.text': 'Preço de lançamento do Sensory Energetics termina em junho de 2025. Economize 20% antes.',
     'announce.cta': 'Agendar agora',
-    'stat.techniques': 'Tecnicas certificadas',
-    'stat.cert': 'Certificacao europeia',
-    'stat.ages': 'Faixa etaria dos clientes',
-    'stat.bilingual': 'Sessoes bilingues',
-    'stat.reviews': 'Avaliacoes Google',
+    'stat.techniques': 'Técnicas certificadas',
+    'stat.cert': 'Certificação europeia',
+    'stat.ages': 'Faixa etária dos clientes',
+    'stat.bilingual': 'Sessões bilíngues',
+    'stat.reviews': 'Avaliações Google',
     'research.label': 'O QUE A PESQUISA DIZ',
-    'research.title': 'Nada disso e inevitavel.',
-    'research.intro': 'Quatro numeros que a maioria das pessoas nao conhece. O musculo por tras de cada um responde com a abordagem certa.',
-    'research.s1.desc': 'Dos adultos terao dor significativa no pescoco ou nas costas em algum momento da vida.',
-    'research.s2.desc': 'Dos adultos tem disturbios da ATM afetando postura, mandibula, cabeca e sono.',
-    'research.s3.desc': 'Dos pacientes em clinicas de dor mostram sinais de sindrome de dor miofascial.',
-    'research.s4.desc': 'Dos adultos relatam que o estresse cronico e guardado fisicamente no corpo como tensao persistente.',
-    'research.cta.text': 'O corpo responde. A tecnica certa, no lugar certo, na profundidade certa. E isso que Marina constroi em cada sessao.',
+    'research.title': 'Nada disso é inevitável.',
+    'research.intro': 'Quatro números que a maioria das pessoas não conhece. O músculo por trás de cada um responde com a abordagem certa.',
+    'research.s1.desc': 'Dos adultos terão dor significativa no pescoço ou nas costas em algum momento da vida.',
+    'research.s2.desc': 'Dos adultos têm distúrbios da ATM afetando postura, mandíbula, cabeça e sono.',
+    'research.s3.desc': 'Dos pacientes em clínicas de dor mostram sinais de síndrome de dor miofascial.',
+    'research.s4.desc': 'Dos adultos relatam que o estresse crônico é guardado fisicamente no corpo como tensão persistente.',
+    'research.cta.text': 'O corpo responde. A técnica certa, no lugar certo, na profundidade certa. É isso que Marina constrói em cada sessão.',
     'research.cta.btn': 'Ver como funciona',
-    'consult.badge': 'GRATIS - 15 MINUTOS',
-    'consult.title': 'Nao tem certeza de qual servico e certo para voce?',
-    'consult.text': 'Fale com Marina no WhatsApp antes de agendar. Sem pressao. Sem pitch. So uma conversa honesta sobre o que o seu corpo precisa e o que vai ajudar de verdade.',
-    'consult.step1': 'Mande uma mensagem para Marina com uma breve descricao do que voce esta enfrentando.',
+    'consult.badge': 'GRÁTIS · 15 MINUTOS',
+    'consult.title': 'Não tem certeza de qual serviço é certo para você?',
+    'consult.text': 'Fale com Marina no WhatsApp antes de agendar. Sem pressão. Sem pitch. Só uma conversa honesta sobre o que o seu corpo precisa e o que vai ajudar de verdade.',
+    'consult.step1': 'Mande uma mensagem para Marina com uma breve descrição do que você está enfrentando.',
     'consult.step2': 'Marina responde em 24 horas e sugere o ponto de partida certo para o seu corpo.',
-    'consult.step3': 'Agende a sessao que faz sentido. Sem chute. Sem porta errada.',
+    'consult.step3': 'Agende a sessão que faz sentido. Sem chute. Sem porta errada.',
     'consult.card.title': 'Fala com Marina.',
-    'consult.card.sub': '15 minutos. Gratis. No WhatsApp.',
+    'consult.card.sub': '15 minutos. Grátis. No WhatsApp.',
     'consult.card.btn': 'Mensagem para Marina no WhatsApp',
-    'consult.card.note': 'Marina responde em 24 horas. Sem obrigacao de agendar.',
-    'risk.title': 'Garantia da primeira sessao.',
-    'risk.text': 'Se a sua primeira sessao nao foi o que voce esperava, mande uma mensagem para Marina no WhatsApp em 24 horas. Ela vai resolver. Sem processo complicado.',
+    'consult.card.note': 'Marina responde em 24 horas. Sem obrigação de agendar.',
+    'risk.title': 'Garantia da primeira sessão.',
+    'risk.text': 'Se a sua primeira sessão não foi o que você esperava, mande uma mensagem para Marina no WhatsApp em 24 horas. Ela vai resolver. Sem processo complicado.',
   }
 };
 
@@ -2102,8 +2101,9 @@ function setLang(lang) {
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
     document.body.classList.remove('lang-switching');
   }, 150);
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
 }
 
 // ─── NAV SCROLL ─────────────────────────────────────────────
