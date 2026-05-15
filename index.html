@@ -790,7 +790,21 @@ img { image-rendering: -webkit-optimize-contrast; }
   height: 100% !important;
   object-fit: cover !important;
   object-position: center top !important;
-  filter: brightness(0.55) !important;
+  filter: brightness(0.7) !important;
+}
+.hero-right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, var(--forest) 0%, rgba(17,56,42,0.85) 35%, rgba(17,56,42,0.35) 60%, transparent 85%);
+  z-index: 1;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .hero-right img { filter: brightness(0.5) !important; }
+  .hero-right::after {
+    background: linear-gradient(180deg, rgba(17,56,42,0.9) 0%, rgba(17,56,42,0.7) 40%, rgba(17,56,42,0.55) 70%, rgba(17,56,42,0.4) 100%);
+  }
 }
 .hero-right-placeholder {
   width: 100% !important;
@@ -801,15 +815,16 @@ img { image-rendering: -webkit-optimize-contrast; }
 .hero-left {
   position: relative !important;
   z-index: 2 !important;
-  max-width: 800px !important;
-  padding: 10rem 4rem 5rem !important;
+  max-width: 720px !important;
+  padding: 8rem 3rem 4rem 4rem !important;
   grid-column: unset !important;
 }
 .hero-h1 {
-  font-size: clamp(48px, 7vw, 88px) !important;
+  font-size: clamp(38px, 4.6vw, 60px) !important;
   color: white !important;
   text-shadow: 0 2px 40px rgba(0,0,0,0.3) !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.25rem !important;
+  letter-spacing: -0.01em !important;
 }
 .hero-sub {
   font-size: 20px !important;
@@ -1589,7 +1604,7 @@ body::before {
   <div class="hero-left">
     <p class="label section-label reveal stagger-1" data-i18n="hero.label">FOR SYDNEY PROFESSIONALS WHO HAVE TRIED EVERYTHING ELSE</p>
     <h1 class="hero-h1 reveal stagger-2" data-i18n="hero.h1">The tension you keep paying other therapists to release.<br>This time it stays gone.</h1>
-    <p class="hero-sub reveal stagger-3" data-i18n="hero.sub">Five specialist techniques. One Sydney bodyworker. Built into a single session that addresses chronic neck and back tension, jaw and TMJ pain, stress held in the nervous system, and the movement patterns making it all worse &mdash; in one hour, not four appointments.</p>
+    <p class="hero-sub reveal stagger-3" data-i18n="hero.sub">Five specialist techniques in one Sydney session. Chronic neck and back tension, jaw and TMJ pain, stress held in the nervous system, and the movement patterns making it all worse. One hour, not four appointments.</p>
     <div class="trust-row reveal stagger-4">
       <span class="trust-badge" data-i18n="hero.badge1">Chronic neck + back</span>
       <span class="trust-badge" data-i18n="hero.badge2">TMJ + jaw tension</span>
@@ -1599,7 +1614,7 @@ body::before {
     </div>
     <div class="hero-ctas reveal stagger-5">
       <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary" data-i18n="hero.cta1">Book your first session</a>
-      <a href="#consult" class="btn-outline" data-i18n="hero.cta2">Talk to Marina first &mdash; free</a>
+      <a href="#consult" class="btn-outline" data-i18n="hero.cta2">Talk to Marina first</a>
     </div>
     <p class="urgency-note reveal stagger-5" data-i18n="hero.urgency">First-session guarantee &middot; Limited weekly slots &middot; Mon / Wed / Fri</p>
   </div>
@@ -1662,7 +1677,7 @@ body::before {
   <div class="container">
     <p class="label section-label reveal" data-i18n="diag.label">FREE 10-SECOND DIAGNOSTIC</p>
     <h2 class="reveal" data-i18n="diag.title">Where is your body asking for help?</h2>
-    <p class="diag-intro reveal" data-i18n="diag.intro">Pick what is bothering you the most. Marina will tell you which session is the right starting point &mdash; and which techniques you actually need.</p>
+    <p class="diag-intro reveal" data-i18n="diag.intro">Pick what is bothering you the most. Marina will tell you which session is the right starting point, and which techniques you actually need.</p>
     <div class="diag-grid" id="diagGrid">
       <button type="button" class="diag-tile" data-area="neck">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v3a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M6 22v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M9 11l-2 4M15 11l2 4"/></svg>
@@ -1747,7 +1762,7 @@ body::before {
         <p class="reveal" data-i18n="excl.intro">Marina takes a limited number of new clients each week and turns down work she is not the right person for. Some honest examples of when she is not your best option:</p>
       </div>
       <ul class="exclusion-list reveal">
-        <li data-i18n="excl.l1"><strong>If you want a one-off relaxation massage</strong>, book somewhere else. Marina works with bodies that need to actually change &mdash; not bodies that need an hour of pleasant pressure.</li>
+        <li data-i18n="excl.l1"><strong>If you want a one-off relaxation massage</strong>, book somewhere else. Marina works with bodies that need to actually change, not bodies that need an hour of pleasant pressure.</li>
         <li data-i18n="excl.l2"><strong>If you need a medical diagnosis or licensed physiotherapy</strong>, she will refer you. Bodywork sits alongside medicine, not in place of it.</li>
         <li data-i18n="excl.l3"><strong>If you are not willing to do a small amount of breath or movement work in-session</strong>, the results will not hold. The body needs to participate, not just receive.</li>
         <li data-i18n="excl.l4"><strong>If you want tension held for ten years gone in a single visit</strong>, that is not what bodywork is. Plan for three to five sessions for chronic patterns.</li>
@@ -1763,7 +1778,7 @@ body::before {
     <div class="section-header">
       <p class="label section-label reveal" data-i18n="massage.label">INTEGRATIVE THERAPEUTIC MASSAGE &middot; MON / WED / FRI &middot; 1PM TO 6PM</p>
       <h2 class="reveal" data-i18n="massage.title">Stop paying three different therapists for the same tension.</h2>
-      <p class="marina-quote reveal" data-i18n="massage.quote">"My clients usually book me after a physio, a remedial massage, and a chiropractor &mdash; and the tension still comes back. We work the system, not the symptom."</p>
+      <p class="marina-quote reveal" data-i18n="massage.quote">"My clients usually book me after a physio, a remedial massage, and a chiropractor. The tension still comes back. We work the system, not the symptom."</p>
     </div>
 
     <!-- Somatic Massage Corporal -->
@@ -1771,7 +1786,7 @@ body::before {
       <div class="service-info">
         <h3 data-i18n="massage.c.name">Somatic Massage Corporal</h3>
         <p class="service-duration" data-i18n="massage.c.duration">60 minutes &middot; chronic neck, back, hips, shoulders</p>
-        <p class="service-desc" data-i18n="massage.c.desc">Booked when standard remedial massage has not held. Sixty minutes addressing chronic neck and shoulder tension, lower-back compensation, hip-flexor lock, and the postural patterns making it all worse &mdash; using whichever of Marina's five techniques your body responds to that day. Not a fixed routine. You choose the regions. She builds the session around what she finds.</p>
+        <p class="service-desc" data-i18n="massage.c.desc">Booked when standard remedial massage has not held. Sixty minutes addressing chronic neck and shoulder tension, lower-back compensation, hip-flexor lock, and the postural patterns making it all worse. Marina uses whichever of her five techniques your body responds to that day. You choose the regions. She builds the session around what she finds.</p>
         <div class="tags">
           <span class="tag" data-i18n="massage.c.tag1">Myofascial Release</span>
           <span class="tag" data-i18n="massage.c.tag2">Myo Aponeurosis</span>
@@ -1854,7 +1869,7 @@ body::before {
         <span class="se-badge" data-i18n="se.badge">SIGNATURE 90-MINUTE SESSION</span>
         <h3 data-i18n="se.name">Sensory Energetics</h3>
         <p class="service-duration" data-i18n="se.duration">90 minutes &middot; for clients carrying years, not weeks</p>
-        <p class="service-desc" data-i18n="se.desc">If standard massage hasn't held, this is the session built for what's underneath it. Sensory Energetics combines trigger-point work, guided breath, and nervous-system release to clear tension your body has stored for months or years &mdash; the kind that comes back three days after a regular treatment. Clients leave looser, sleep deeper that night, and most book again within the fortnight.</p>
+        <p class="service-desc" data-i18n="se.desc">If standard massage hasn't held, this is the session built for what's underneath it. Sensory Energetics combines trigger-point work, guided breath, and nervous-system release to clear tension your body has stored for months or years. The kind that comes back three days after a regular treatment. Clients leave looser, sleep deeper that night, and most book again within the fortnight.</p>
         <div class="outcomes-row">
           <div class="outcome-item">
             <div class="outcome-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></div>
@@ -2085,12 +2100,12 @@ body::before {
       <div class="authority-card reveal stagger-3">
         <div class="authority-card-logo"><span class="authority-card-fallback">VANONI<br>INSTITUTE</span></div>
         <div class="authority-card-meta" data-i18n="auth.vanoni.role">CERTIFIED &middot; ITALY</div>
-        <div class="authority-card-desc" data-i18n="auth.vanoni.desc">40-hour specialist certification in Myo Aponeurosis &mdash; the connective layer between muscle and bone that holds chronic tension most therapists never reach.</div>
+        <div class="authority-card-desc" data-i18n="auth.vanoni.desc">40-hour specialist certification in Myo Aponeurosis: the connective layer between muscle and bone that holds chronic tension most therapists never reach.</div>
       </div>
       <div class="authority-card reveal stagger-4">
         <div class="authority-card-logo"><span class="authority-card-fallback">EQF<br>LEVEL&nbsp;4</span></div>
         <div class="authority-card-meta" data-i18n="auth.eqf.role">EUROPEAN FRAMEWORK</div>
-        <div class="authority-card-desc" data-i18n="auth.eqf.desc">European Qualifications Framework Level 4 personal trainer &mdash; the standard for regulated training practice across the EU.</div>
+        <div class="authority-card-desc" data-i18n="auth.eqf.desc">European Qualifications Framework Level 4 personal trainer. The standard for regulated training practice across the EU.</div>
       </div>
       <div class="authority-card reveal stagger-5">
         <div class="authority-card-logo"><span class="authority-card-fallback">SENSORY<br>ENERGETICS</span></div>
@@ -2100,7 +2115,7 @@ body::before {
       <div class="authority-card reveal stagger-6">
         <div class="authority-card-logo"><span class="authority-card-fallback">TMJ<br>+ BUCCAL</span></div>
         <div class="authority-card-meta" data-i18n="auth.tmj.role">SPECIALIST QUALIFICATIONS</div>
-        <div class="authority-card-desc" data-i18n="auth.tmj.desc">Mastery-level training in TMJ and buccal (inside-mouth) massage &mdash; techniques most Sydney remedial therapists do not offer.</div>
+        <div class="authority-card-desc" data-i18n="auth.tmj.desc">Mastery-level training in TMJ and buccal (inside-mouth) massage. Techniques most Sydney remedial therapists do not offer.</div>
       </div>
     </div>
   </div>
@@ -2167,14 +2182,14 @@ body::before {
           <span data-i18n="faq.q8">How soon will I feel a difference?</span>
           <span class="faq-arrow">&#8964;</span>
         </button>
-        <div class="faq-answer"><p data-i18n="faq.a8">Most clients notice looser movement and deeper sleep within 24 hours of the first session. Chronic tension that has been building for years usually shifts meaningfully across 3 to 5 sessions. Marina will tell you honestly after session one how many sessions she expects your body needs &mdash; and what it does not need.</p></div>
+        <div class="faq-answer"><p data-i18n="faq.a8">Most clients notice looser movement and deeper sleep within 24 hours of the first session. Chronic tension that has been building for years usually shifts meaningfully across 3 to 5 sessions. After session one, Marina will tell you honestly how many sessions she expects your body needs, and what it does not need.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           <span data-i18n="faq.q9">What if it doesn't work for me?</span>
           <span class="faq-arrow">&#8964;</span>
         </button>
-        <div class="faq-answer"><p data-i18n="faq.a9">If your first session is not what you expected, message Marina on WhatsApp within 24 hours. She will make it right &mdash; rework the next session, redirect you to a more appropriate specialist, or refund. No long forms. No back-and-forth.</p></div>
+        <div class="faq-answer"><p data-i18n="faq.a9">If your first session is not what you expected, message Marina on WhatsApp within 24 hours. She will make it right. Rework the next session, redirect you to a more appropriate specialist, or refund. No long forms. No back-and-forth.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
@@ -2188,7 +2203,7 @@ body::before {
           <span data-i18n="faq.q11">Are sessions claimable through private health insurance?</span>
           <span class="faq-arrow">&#8964;</span>
         </button>
-        <div class="faq-answer"><p data-i18n="faq.a11">Sessions are not claimable through standard private health rebates. Marina is a bodywork specialist and personal trainer, not a registered remedial massage therapist or physiotherapist. If insurance rebate is your priority, book with a registered remedial therapist instead &mdash; honesty matters more than the booking.</p></div>
+        <div class="faq-answer"><p data-i18n="faq.a11">Sessions are not claimable through standard private health rebates. Marina is a bodywork specialist and personal trainer, not a registered remedial massage therapist or physiotherapist. If insurance rebate is your priority, book with a registered remedial therapist instead. Honesty matters more than the booking.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
@@ -2208,7 +2223,7 @@ body::before {
       <div class="consult-text">
         <span class="consult-badge" data-i18n="consult.badge">FREE · 15 MINUTES · NO PITCH</span>
         <h2 class="reveal" data-i18n="consult.title">Not sure which service is right for you?</h2>
-        <p class="reveal" data-i18n="consult.text">A $125&ndash;$305 session is not a decision you should make from a homepage. Talk to Marina on WhatsApp before you book. She'll ask what you're dealing with, what you've already tried, and tell you honestly whether she's the right person &mdash; or who is.</p>
+        <p class="reveal" data-i18n="consult.text">A $125 to $305 session is not a decision you should make from a homepage. Talk to Marina on WhatsApp before you book. She'll ask what you're dealing with, what you've already tried, and tell you honestly whether she's the right person, or who is.</p>
         <ol class="consult-steps reveal">
           <li data-i18n="consult.step1">Message Marina with a brief description of what you are dealing with.</li>
           <li data-i18n="consult.step2">Marina responds within 24 hours and suggests the right starting point for your body.</li>
@@ -2355,12 +2370,12 @@ const i18n = {
     'nav.book': 'Book Now',
     'hero.label': 'FOR SYDNEY PROFESSIONALS WHO HAVE TRIED EVERYTHING ELSE',
     'hero.h1': 'The tension you keep paying other therapists to release.<br>This time it stays gone.',
-    'hero.sub': 'Five specialist techniques. One Sydney bodyworker. Built into a single session that addresses chronic neck and back tension, jaw and TMJ pain, stress held in the nervous system, and the movement patterns making it all worse \u2014 in one hour, not four appointments.',
+    'hero.sub': 'Five specialist techniques in one Sydney session. Chronic neck and back tension, jaw and TMJ pain, stress held in the nervous system, and the movement patterns making it all worse. One hour, not four appointments.',
     'hero.badge1': 'Chronic neck + back',
     'hero.badge2': 'TMJ + jaw tension',
     'hero.badge3': 'Stress + sleep + nervous system',
     'hero.cta1': 'Book your first session',
-    'hero.cta2': 'Talk to Marina first \u2014 free',
+    'hero.cta2': 'Talk to Marina first',
     'hero.urgency': 'First-session guarantee \u00b7 Limited weekly slots \u00b7 Mon / Wed / Fri',
     'who.title': 'What brought you here?',
     'who.left.title': 'I carry tension my body won\u2019t release.',
@@ -2385,10 +2400,10 @@ const i18n = {
     'diff.closing': 'Every session is a custom blend. Never the same twice.',
     'massage.label': 'INTEGRATIVE THERAPEUTIC MASSAGE \u00b7 MON / WED / FRI \u00b7 1PM TO 6PM',
     'massage.title': 'Stop paying three different therapists for the same tension.',
-    'massage.quote': '"My clients usually book me after a physio, a remedial massage, and a chiropractor — and the tension still comes back. We work the system, not the symptom."',
+    'massage.quote': '"My clients usually book me after a physio, a remedial massage, and a chiropractor. The tension still comes back. We work the system, not the symptom."',
     'massage.c.name': 'Somatic Massage Corporal',
     'massage.c.duration': '60 minutes \u00b7 chronic neck, back, hips, shoulders',
-    'massage.c.desc': "Booked when standard remedial massage has not held. Sixty minutes addressing chronic neck and shoulder tension, lower-back compensation, hip-flexor lock, and the postural patterns making it all worse \u2014 using whichever of Marina's five techniques your body responds to that day. Not a fixed routine. You choose the regions. She builds the session around what she finds.",
+    'massage.c.desc': "Booked when standard remedial massage has not held. Sixty minutes addressing chronic neck and shoulder tension, lower-back compensation, hip-flexor lock, and the postural patterns making it all worse. Marina uses whichever of her five techniques your body responds to that day. Not a fixed routine. You choose the regions. She builds the session around what she finds.",
     'massage.c.tag1': 'Myofascial Release',
     'massage.c.tag2': 'Myo Aponeurosis',
     'massage.c.tag3': 'Somatic Release',
@@ -2414,7 +2429,7 @@ const i18n = {
     'se.badge': 'SIGNATURE 90-MINUTE SESSION',
     'se.name': 'Sensory Energetics',
     'se.duration': '90 minutes \u00b7 for clients carrying years, not weeks',
-    'se.desc': 'If standard massage hasn\u2019t held, this is the session built for what\u2019s underneath it. Sensory Energetics combines trigger-point work, guided breath, and nervous-system release to clear tension your body has stored for months or years \u2014 the kind that comes back three days after a regular treatment. Clients leave looser, sleep deeper that night, and most book again within the fortnight.',
+    'se.desc': 'If standard massage hasn\u2019t held, this is the session built for what\u2019s underneath it. Sensory Energetics combines trigger-point work, guided breath, and nervous-system release to clear tension your body has stored for months or years. The kind that comes back three days after a regular treatment. Clients leave looser, sleep deeper that night, and most book again within the fortnight.',
     'se.o1': 'Better sleep within 24 hours',
     'se.o2': 'Reduced anxiety + tension',
     'se.o3': 'Energy and lightness restored',
@@ -2474,7 +2489,7 @@ const i18n = {
     'results.o2': 'Energy + vitality',
     'results.o3': 'Strength at every age',
     'results.o4': 'Body reconnection',
-    'results.instagram': 'Follow Marina\u2019s work \u2014 @marinaribeiropersonal',
+    'results.instagram': 'Follow Marina\u2019s work \u00b7 @marinaribeiropersonal',
     'about.label': 'ABOUT MARINA',
     'about.title': 'The person behind the work.',
     'about.bio': 'Marina Ribeiro da Silva is a European-trained personal trainer (EQF Level 4) and specialized bodywork practitioner based in Sydney. She holds qualifications in myofascial therapy, myo aponeurosis training (Vanoni Institute, 40 hours), TMJ massage mastery, buccal massage, and Sensory Energetics. Her approach brings all of these together into one integrated practice. Whether a client comes for training or bodywork, Marina works with the body as a connected system. She is Brazilian, works in English and Portuguese, and her clients range from 15 to 65.',
@@ -2483,7 +2498,7 @@ const i18n = {
     'about.c3': 'Myofascial + TMJ + Buccal',
     'about.c5': 'Bilingual EN + PT',
     'about.meta': 'Sydney, Australia \u00b7 English + Portugu\u00eas \u00b7 @marinaribeiropersonal',
-    'collabs.title': 'Where you will find Marina.',
+    'collabs.title': 'Where Marina trained, and where she works.',
     'faq.label': 'FAQ',
     'faq.title': 'Questions before you book.',
     'faq.q1': 'Why does Marina combine personal training with massage and bodywork?',
@@ -2501,13 +2516,13 @@ const i18n = {
     'faq.q7': 'A$125 is more than a standard remedial massage. Why?',
     'faq.a7': 'Because you are not getting a standard remedial massage. Each session draws from five specialist techniques most therapists never combine. Clients who used to book physio (~A$160), remedial massage (~A$130), and a movement assessment separately get the same work in one hour. If you need a single relaxation massage, Marina is not the right choice. If you need tension that actually shifts, she is.',
     'faq.q8': 'How soon will I feel a difference?',
-    'faq.a8': 'Most clients notice looser movement and deeper sleep within 24 hours of the first session. Chronic tension that has been building for years usually shifts meaningfully across 3 to 5 sessions. Marina will tell you honestly after session one how many sessions she expects your body needs — and what it does not need.',
+    'faq.a8': 'Most clients notice looser movement and deeper sleep within 24 hours of the first session. Chronic tension that has been building for years usually shifts meaningfully across 3 to 5 sessions. After session one, Marina will tell you honestly how many sessions she expects your body needs, and what it does not need.',
     'faq.q9': "What if it doesn't work for me?",
-    'faq.a9': 'If your first session is not what you expected, message Marina on WhatsApp within 24 hours. She will make it right — rework the next session, redirect you to a more appropriate specialist, or refund. No long forms. No back-and-forth.',
+    'faq.a9': 'If your first session is not what you expected, message Marina on WhatsApp within 24 hours. She will make it right. Rework the next session, redirect you to a more appropriate specialist, or refund. No long forms. No back-and-forth.',
     'faq.q10': 'Where exactly do sessions happen, and is parking easy?',
     'faq.a10': 'Massage and bodywork sessions take place in Randwick. Personal training sessions are at Snap Fitness Maroubra. Both have free on-street parking within a 1–2 minute walk and are 15–20 minutes from Sydney CBD by car. Marina sends the exact address and parking notes in your booking confirmation.',
     'faq.q11': 'Are sessions claimable through private health insurance?',
-    'faq.a11': 'Sessions are not claimable through standard private health rebates. Marina is a bodywork specialist and personal trainer, not a registered remedial massage therapist or physiotherapist. If insurance rebate is your priority, book with a registered remedial therapist instead — honesty matters more than the booking.',
+    'faq.a11': 'Sessions are not claimable through standard private health rebates. Marina is a bodywork specialist and personal trainer, not a registered remedial massage therapist or physiotherapist. If insurance rebate is your priority, book with a registered remedial therapist instead. Honesty matters more than the booking.',
     'faq.q12': 'Do you work with clients in early postpartum, pregnancy, or with specific medical conditions?',
     'faq.a12': 'Pregnancy, postpartum, recent surgery, acute injury, and specific medical conditions need a brief WhatsApp conversation first. Marina will tell you honestly what she can and cannot do for your situation, and refer you to the right specialist if bodywork is not appropriate. Message her before booking.',
     'msc.book': 'Book a session',
@@ -2515,7 +2530,7 @@ const i18n = {
     'excl.label': 'A FAIR WARNING',
     'excl.title': 'This work is not for everyone.',
     'excl.intro': 'Marina takes a limited number of new clients each week and turns down work she is not the right person for. Some honest examples of when she is not your best option:',
-    'excl.l1': '<strong>If you want a one-off relaxation massage</strong>, book somewhere else. Marina works with bodies that need to actually change &mdash; not bodies that need an hour of pleasant pressure.',
+    'excl.l1': '<strong>If you want a one-off relaxation massage</strong>, book somewhere else. Marina works with bodies that need to actually change, not bodies that need an hour of pleasant pressure.',
     'excl.l2': '<strong>If you need a medical diagnosis or licensed physiotherapy</strong>, she will refer you. Bodywork sits alongside medicine, not in place of it.',
     'excl.l3': '<strong>If you are not willing to do a small amount of breath or movement work in-session</strong>, the results will not hold. The body needs to participate, not just receive.',
     'excl.l4': '<strong>If you want tension held for ten years gone in a single visit</strong>, that is not what bodywork is. Plan for three to five sessions for chronic patterns.',
@@ -2527,17 +2542,17 @@ const i18n = {
     'auth.snap.role': 'TRAINING STUDIO · MAROUBRA',
     'auth.snap.desc': 'Where Marina runs Conscious Movement personal training, Tuesday and Thursday all day, Monday/Wednesday/Friday mornings.',
     'auth.vanoni.role': 'CERTIFIED · ITALY',
-    'auth.vanoni.desc': '40-hour specialist certification in Myo Aponeurosis — the connective layer between muscle and bone that holds chronic tension most therapists never reach.',
+    'auth.vanoni.desc': '40-hour specialist certification in Myo Aponeurosis: the connective layer between muscle and bone that holds chronic tension most therapists never reach.',
     'auth.eqf.role': 'EUROPEAN FRAMEWORK',
-    'auth.eqf.desc': 'European Qualifications Framework Level 4 personal trainer — the standard for regulated training practice across the EU.',
+    'auth.eqf.desc': 'European Qualifications Framework Level 4 personal trainer. The standard for regulated training practice across the EU.',
     'auth.se.role': 'METHOD CERTIFIED',
     'auth.se.desc': 'Certified in the Sensory Energetics method: trigger-point work, breath, and NLP combined to release tension the nervous system has been holding for years.',
     'auth.tmj.role': 'SPECIALIST QUALIFICATIONS',
-    'auth.tmj.desc': 'Mastery-level training in TMJ and buccal (inside-mouth) massage — techniques most Sydney remedial therapists do not offer.',
+    'auth.tmj.desc': 'Mastery-level training in TMJ and buccal (inside-mouth) massage. Techniques most Sydney remedial therapists do not offer.',
     'cta.reassure': 'First-session guarantee · Cancel free up to 72 hours · Pay at booking',
     'diag.label': 'FREE 10-SECOND DIAGNOSTIC',
     'diag.title': 'Where is your body asking for help?',
-    'diag.intro': 'Pick what is bothering you the most. Marina will tell you which session is the right starting point — and which techniques you actually need.',
+    'diag.intro': 'Pick what is bothering you the most. Marina will tell you which session is the right starting point, and which techniques you actually need.',
     'diag.neck': 'Neck, shoulders, upper back',
     'diag.jaw': 'Jaw, TMJ, tension headaches',
     'diag.back': 'Lower back & hips',
@@ -2613,12 +2628,12 @@ const i18n = {
     'nav.book': 'Agendar',
     'hero.label': 'PARA PROFISSIONAIS DE SYDNEY QUE J\u00c1 TENTARAM DE TUDO',
     'hero.h1': 'A tens\u00e3o pela qual voc\u00ea continua pagando outros terapeutas.<br>Desta vez, ela n\u00e3o volta.',
-    'hero.sub': 'Cinco t\u00e9cnicas especializadas. Uma bodyworker em Sydney. Combinadas em uma \u00fanica sess\u00e3o que trata tens\u00e3o cr\u00f4nica no pesco\u00e7o e costas, dor na mand\u00edbula e ATM, estresse acumulado no sistema nervoso e os padr\u00f5es de movimento que pioram tudo isso \u2014 em uma hora, n\u00e3o em quatro consultas.',
+    'hero.sub': 'Cinco t\u00e9cnicas especializadas em uma sess\u00e3o em Sydney. Tens\u00e3o cr\u00f4nica no pesco\u00e7o e costas, dor na mand\u00edbula e ATM, estresse acumulado no sistema nervoso e os padr\u00f5es de movimento que pioram tudo isso. Uma hora, n\u00e3o quatro consultas.',
     'hero.badge1': 'Pesco\u00e7o + costas cr\u00f4nicos',
     'hero.badge2': 'ATM + tens\u00e3o na mand\u00edbula',
     'hero.badge3': 'Estresse + sono + sistema nervoso',
     'hero.cta1': 'Agendar primeira sess\u00e3o',
-    'hero.cta2': 'Falar com Marina antes \u2014 gr\u00e1tis',
+    'hero.cta2': 'Falar com Marina antes',
     'hero.urgency': 'Garantia da primeira sess\u00e3o \u00b7 Vagas semanais limitadas \u00b7 Seg / Qua / Sex',
     'who.title': 'O que te trouxe aqui?',
     'who.left.title': 'Carrego tens\u00e3o que meu corpo n\u00e3o libera.',
@@ -2643,10 +2658,10 @@ const i18n = {
     'diff.closing': 'Cada sess\u00e3o \u00e9 uma combina\u00e7\u00e3o personalizada. Nunca igual duas vezes.',
     'massage.label': 'MASSAGEM TERAP\u00caUTICA INTEGRATIVA \u00b7 SEG / QUA / SEX \u00b7 13H \u00c0S 18H',
     'massage.title': 'Pare de pagar tr\u00eas terapeutas diferentes pela mesma tens\u00e3o.',
-    'massage.quote': '"As minhas clientes normalmente me procuram depois de fisio, massagem desportiva e quiropraxia \u2014 e a tens\u00e3o continua voltando. A gente trabalha o sistema, n\u00e3o o sintoma."',
+    'massage.quote': '"As minhas clientes normalmente me procuram depois de fisio, massagem desportiva e quiropraxia. A tens\u00e3o continua voltando. A gente trabalha o sistema, n\u00e3o o sintoma."',
     'massage.c.name': 'Somatic Massage Corporal',
     'massage.c.duration': '60 minutos \u00b7 pesco\u00e7o, costas, quadril e ombros cr\u00f4nicos',
-    'massage.c.desc': 'Agendada quando massagem desportiva comum n\u00e3o est\u00e1 segurando. Sessenta minutos tratando tens\u00e3o cr\u00f4nica no pesco\u00e7o e ombros, compensa\u00e7\u00e3o na lombar, encurtamento do flexor do quadril, e os padr\u00f5es posturais que pioram tudo isso \u2014 usando a combina\u00e7\u00e3o das cinco t\u00e9cnicas da Marina que o seu corpo responde naquele dia. N\u00e3o \u00e9 rotina fixa. Voc\u00ea escolhe as regi\u00f5es. Ela constr\u00f3i a sess\u00e3o em torno do que encontra.',
+    'massage.c.desc': 'Agendada quando massagem desportiva comum n\u00e3o est\u00e1 segurando. Sessenta minutos tratando tens\u00e3o cr\u00f4nica no pesco\u00e7o e ombros, compensa\u00e7\u00e3o na lombar, encurtamento do flexor do quadril, e os padr\u00f5es posturais que pioram tudo isso. Marina usa a combina\u00e7\u00e3o das cinco t\u00e9cnicas da Marina que o seu corpo responde naquele dia. N\u00e3o \u00e9 rotina fixa. Voc\u00ea escolhe as regi\u00f5es. Ela constr\u00f3i a sess\u00e3o em torno do que encontra.',
     'massage.c.tag1': 'Libera\u00e7\u00e3o Miofascial',
     'massage.c.tag2': 'Mio Aponeurose',
     'massage.c.tag3': 'Libera\u00e7\u00e3o Som\u00e1tica',
@@ -2672,7 +2687,7 @@ const i18n = {
     'se.badge': 'SESS\u00c3O ASSINATURA \u00b7 90 MINUTOS',
     'se.name': 'Sensory Energetics',
     'se.duration': '90 minutos \u00b7 para quem carrega anos, n\u00e3o semanas',
-    'se.desc': 'Se a massagem comum n\u00e3o est\u00e1 segurando, esta \u00e9 a sess\u00e3o constru\u00edda para o que est\u00e1 por baixo. Sensory Energetics combina pontos-gatilho, respira\u00e7\u00e3o guiada e libera\u00e7\u00e3o do sistema nervoso para tirar tens\u00e3o que o seu corpo guardou por meses ou anos \u2014 aquela que volta tr\u00eas dias depois de um tratamento comum. As clientes saem mais soltas, dormem mais profundo na mesma noite, e a maioria reagenda dentro da quinzena.',
+    'se.desc': 'Se a massagem comum n\u00e3o est\u00e1 segurando, esta \u00e9 a sess\u00e3o constru\u00edda para o que est\u00e1 por baixo. Sensory Energetics combina pontos-gatilho, respira\u00e7\u00e3o guiada e libera\u00e7\u00e3o do sistema nervoso para tirar tens\u00e3o que o seu corpo guardou por meses ou anos. Aquela que volta tr\u00eas dias depois de um tratamento comum. As clientes saem mais soltas, dormem mais profundo na mesma noite, e a maioria reagenda dentro da quinzena.',
     'se.o1': 'Melhor sono em 24 horas',
     'se.o2': 'Ansiedade e tens\u00e3o reduzidas',
     'se.o3': 'Energia e leveza restauradas',
@@ -2732,7 +2747,7 @@ const i18n = {
     'results.o2': 'Energia e vitalidade',
     'results.o3': 'For\u00e7a em qualquer idade',
     'results.o4': 'Reconex\u00e3o com o corpo',
-    'results.instagram': 'Acompanhe o trabalho da Marina \u2014 @marinaribeiropersonal',
+    'results.instagram': 'Acompanhe o trabalho da Marina \u00b7 @marinaribeiropersonal',
     'about.label': 'SOBRE MARINA',
     'about.title': 'A pessoa por tr\u00e1s do trabalho.',
     'about.bio': 'Marina Ribeiro da Silva \u00e9 personal trainer com forma\u00e7\u00e3o europeia (EQF N\u00edvel 4) e praticante especializada em trabalho corporal, baseada em Sydney. Ela possui qualifica\u00e7\u00f5es em terapia miofascial, treinamento de mio aponeurose (Instituto Vanoni, 40 horas), dom\u00ednio de massagem de ATM, massagem bucal e Sensory Energetics. A sua abordagem une tudo isso em uma pr\u00e1tica integrada. Seja para treino ou trabalho corporal, Marina trabalha o corpo como um sistema conectado. Ela \u00e9 brasileira, atende em ingl\u00eas e portugu\u00eas, e suas clientes t\u00eam entre 15 e 65 anos.',
@@ -2741,7 +2756,7 @@ const i18n = {
     'about.c3': 'Miofascial + ATM + Bucal',
     'about.c5': 'Bil\u00edngue EN + PT',
     'about.meta': 'Sydney, Austr\u00e1lia \u00b7 English + Portugu\u00eas \u00b7 @marinaribeiropersonal',
-    'collabs.title': 'Onde voc\u00ea encontra Marina.',
+    'collabs.title': 'Onde Marina se formou, e onde atende.',
     'faq.label': 'PERGUNTAS FREQUENTES',
     'faq.title': 'Perguntas antes de agendar.',
     'faq.q1': 'Por que Marina combina personal training com massagem e trabalho corporal?',
@@ -2759,13 +2774,13 @@ const i18n = {
     'faq.q7': 'A$125 \u00e9 mais caro do que uma massagem desportiva. Por qu\u00ea?',
     'faq.a7': 'Porque voc\u00ea n\u00e3o est\u00e1 levando uma massagem desportiva. Cada sess\u00e3o combina cinco t\u00e9cnicas que a maioria dos terapeutas n\u00e3o domina. Quem antes pagava fisio (~A$160), massagem desportiva (~A$130) e avalia\u00e7\u00e3o de movimento separadamente recebe o mesmo trabalho em uma hora. Se voc\u00ea quer apenas relaxar, Marina n\u00e3o \u00e9 a escolha certa. Se voc\u00ea quer tens\u00e3o que realmente solta, ela \u00e9.',
     'faq.q8': 'Em quanto tempo vou sentir diferen\u00e7a?',
-    'faq.a8': 'A maioria das clientes nota movimento mais solto e sono mais profundo nas primeiras 24 horas ap\u00f3s a primeira sess\u00e3o. Tens\u00e3o cr\u00f4nica de anos costuma soltar de verdade entre 3 e 5 sess\u00f5es. Marina vai te dizer honestamente depois da primeira quantas sess\u00f5es ela acredita que o seu corpo precisa \u2014 e o que ele n\u00e3o precisa.',
+    'faq.a8': 'A maioria das clientes nota movimento mais solto e sono mais profundo nas primeiras 24 horas ap\u00f3s a primeira sess\u00e3o. Tens\u00e3o cr\u00f4nica de anos costuma soltar de verdade entre 3 e 5 sess\u00f5es. Marina vai te dizer honestamente depois da primeira quantas sess\u00f5es ela acredita que o seu corpo precisa, e o que ele n\u00e3o precisa.',
     'faq.q9': 'E se n\u00e3o funcionar para mim?',
-    'faq.a9': 'Se a sua primeira sess\u00e3o n\u00e3o for o que voc\u00ea esperava, mande mensagem para Marina no WhatsApp em 24 horas. Ela vai resolver \u2014 refaz a pr\u00f3xima sess\u00e3o, te encaminha para o especialista certo, ou devolve. Sem formul\u00e1rio. Sem burocracia.',
+    'faq.a9': 'Se a sua primeira sess\u00e3o n\u00e3o for o que voc\u00ea esperava, mande mensagem para Marina no WhatsApp em 24 horas. Ela vai resolver. Refaz a pr\u00f3xima sess\u00e3o, te encaminha para o especialista certo, ou devolve. Sem formul\u00e1rio. Sem burocracia.',
     'faq.q10': 'Onde acontecem as sess\u00f5es e o estacionamento \u00e9 f\u00e1cil?',
     'faq.a10': 'As sess\u00f5es de massagem e bodywork acontecem em Randwick. As sess\u00f5es de personal training s\u00e3o na Snap Fitness Maroubra. Os dois locais t\u00eam estacionamento gratuito na rua a 1\u20132 minutos a p\u00e9 e ficam a 15\u201320 minutos do CBD de carro. Marina envia o endere\u00e7o exato e dicas de estacionamento no email de confirma\u00e7\u00e3o.',
     'faq.q11': 'As sess\u00f5es d\u00e3o direito a reembolso pelo plano de sa\u00fade?',
-    'faq.a11': 'As sess\u00f5es n\u00e3o d\u00e3o direito a reembolso pelo plano de sa\u00fade australiano. Marina \u00e9 bodywork specialist e personal trainer, n\u00e3o fisioterapeuta nem remedial massage therapist registrada. Se o reembolso \u00e9 prioridade pra voc\u00ea, agende com uma profissional registrada \u2014 honestidade vale mais do que a sess\u00e3o.',
+    'faq.a11': 'As sess\u00f5es n\u00e3o d\u00e3o direito a reembolso pelo plano de sa\u00fade australiano. Marina \u00e9 bodywork specialist e personal trainer, n\u00e3o fisioterapeuta nem remedial massage therapist registrada. Se o reembolso \u00e9 prioridade pra voc\u00ea, agende com uma profissional registrada. Honestidade vale mais do que a sess\u00e3o.',
     'faq.q12': 'Voc\u00ea atende no p\u00f3s-parto, gestantes ou pessoas com condi\u00e7\u00f5es m\u00e9dicas espec\u00edficas?',
     'faq.a12': 'Gesta\u00e7\u00e3o, p\u00f3s-parto, cirurgia recente, les\u00e3o aguda e condi\u00e7\u00f5es m\u00e9dicas espec\u00edficas precisam de uma conversa r\u00e1pida no WhatsApp antes. Marina vai te dizer honestamente o que pode e o que n\u00e3o pode fazer pra sua situa\u00e7\u00e3o, e te encaminha pro especialista certo se bodywork n\u00e3o for o caminho. Manda mensagem antes de agendar.',
     'msc.book': 'Agendar sess\u00e3o',
@@ -2773,7 +2788,7 @@ const i18n = {
     'excl.label': 'UM AVISO HONESTO',
     'excl.title': 'Este trabalho n\u00e3o \u00e9 para todo mundo.',
     'excl.intro': 'Marina aceita um n\u00famero limitado de clientes novas por semana e recusa o trabalho para o qual ela n\u00e3o \u00e9 a pessoa certa. Alguns exemplos honestos de quando ela n\u00e3o \u00e9 a sua melhor op\u00e7\u00e3o:',
-    'excl.l1': '<strong>Se voc\u00ea quer uma massagem de relaxamento avulsa</strong>, agende em outro lugar. Marina trabalha com corpos que precisam realmente mudar &mdash; n\u00e3o com corpos que precisam de uma hora de press\u00e3o agrad\u00e1vel.',
+    'excl.l1': '<strong>Se voc\u00ea quer uma massagem de relaxamento avulsa</strong>, agende em outro lugar. Marina trabalha com corpos que precisam realmente mudar, n\u00e3o com corpos que precisam de uma hora de press\u00e3o agrad\u00e1vel.',
     'excl.l2': '<strong>Se voc\u00ea precisa de diagn\u00f3stico m\u00e9dico ou fisioterapia licenciada</strong>, ela vai te encaminhar. Bodywork acompanha a medicina, n\u00e3o substitui.',
     'excl.l3': '<strong>Se voc\u00ea n\u00e3o est\u00e1 disposta a fazer um pouco de respira\u00e7\u00e3o ou movimento na sess\u00e3o</strong>, os resultados n\u00e3o v\u00e3o segurar. O corpo precisa participar, n\u00e3o s\u00f3 receber.',
     'excl.l4': '<strong>Se voc\u00ea quer tirar em uma \u00fanica visita uma tens\u00e3o de dez anos</strong>, n\u00e3o \u00e9 isso que o bodywork faz. Planeje de tr\u00eas a cinco sess\u00f5es para padr\u00f5es cr\u00f4nicos.',
@@ -2785,17 +2800,17 @@ const i18n = {
     'auth.snap.role': 'STUDIO \u00b7 MAROUBRA',
     'auth.snap.desc': 'Onde Marina conduz o Personal Training Movimento Consciente, ter\u00e7a e quinta o dia inteiro, segunda/quarta/sexta de manh\u00e3.',
     'auth.vanoni.role': 'CERTIFICADA \u00b7 IT\u00c1LIA',
-    'auth.vanoni.desc': 'Certifica\u00e7\u00e3o especializada de 40 horas em Mio Aponeurose \u2014 a camada de tecido conjuntivo entre m\u00fasculo e osso que segura tens\u00e3o cr\u00f4nica que a maioria dos terapeutas nunca alcan\u00e7a.',
+    'auth.vanoni.desc': 'Certifica\u00e7\u00e3o especializada de 40 horas em Mio Aponeurose: a camada de tecido conjuntivo entre m\u00fasculo e osso que segura tens\u00e3o cr\u00f4nica que a maioria dos terapeutas nunca alcan\u00e7a.',
     'auth.eqf.role': 'FRAMEWORK EUROPEU',
-    'auth.eqf.desc': 'Personal Trainer N\u00edvel 4 do European Qualifications Framework \u2014 o padr\u00e3o regulado para a pr\u00e1tica de treino na Uni\u00e3o Europeia.',
+    'auth.eqf.desc': 'Personal Trainer N\u00edvel 4 do European Qualifications Framework. O padr\u00e3o regulado para a pr\u00e1tica de treino na Uni\u00e3o Europeia.',
     'auth.se.role': 'M\u00c9TODO CERTIFICADO',
     'auth.se.desc': 'Certificada no m\u00e9todo Sensory Energetics: pontos-gatilho, respira\u00e7\u00e3o e PNL combinados para liberar tens\u00e3o que o sistema nervoso vem segurando h\u00e1 anos.',
     'auth.tmj.role': 'QUALIFICA\u00c7\u00d5ES ESPECIALIZADAS',
-    'auth.tmj.desc': 'Treinamento de dom\u00ednio em ATM e massagem bucal (interna) \u2014 t\u00e9cnicas que a maioria dos terapeutas em Sydney n\u00e3o oferece.',
+    'auth.tmj.desc': 'Treinamento de dom\u00ednio em ATM e massagem bucal (interna). T\u00e9cnicas que a maioria dos terapeutas em Sydney n\u00e3o oferece.',
     'cta.reassure': 'Garantia da primeira sess\u00e3o \u00b7 Cancele gr\u00e1tis com 72 horas \u00b7 Pago no agendamento',
     'diag.label': 'DIAGN\u00d3STICO R\u00c1PIDO \u00b7 10 SEGUNDOS',
     'diag.title': 'Onde o seu corpo est\u00e1 pedindo ajuda?',
-    'diag.intro': 'Escolha o que est\u00e1 te incomodando mais. Marina vai te dizer qual sess\u00e3o \u00e9 o ponto de partida certo \u2014 e quais t\u00e9cnicas voc\u00ea realmente precisa.',
+    'diag.intro': 'Escolha o que est\u00e1 te incomodando mais. Marina vai te dizer qual sess\u00e3o \u00e9 o ponto de partida certo, e quais t\u00e9cnicas voc\u00ea realmente precisa.',
     'diag.neck': 'Pesco\u00e7o, ombros, costas em cima',
     'diag.jaw': 'Mand\u00edbula, ATM, dores de cabe\u00e7a',
     'diag.back': 'Lombar e quadril',
@@ -2930,7 +2945,7 @@ const DIAG = {
     service: 'Somatic Massage Corporal',
     book: 'https://marinaribeirobodywork.as.me/bookmassage',
     target: '#massagem',
-    why: 'Chronic neck and shoulder tension typically lives in the fascial layer and the upper-back postural chain. Marina works it through myofascial release plus myo aponeurosis &mdash; the techniques that actually move stuck tissue, not just relax muscle.',
+    why: 'Chronic neck and shoulder tension typically lives in the fascial layer and the upper-back postural chain. Marina works it through myofascial release plus myo aponeurosis. The techniques that actually move stuck tissue, not just relax muscle.',
     tags: ['Myofascial Release', 'Myo Aponeurosis', 'Somatic Release']
   },
   jaw: {
@@ -2944,21 +2959,21 @@ const DIAG = {
     service: 'Somatic Massage Corporal',
     book: 'https://marinaribeirobodywork.as.me/bookmassage',
     target: '#massagem',
-    why: 'Lower-back and hip tension is rarely a back problem &mdash; it is usually hip-flexor lock, fascial restriction, and postural compensation. Marina addresses the whole chain, not just the spot that hurts.',
+    why: 'Lower-back and hip tension is rarely a back problem. It is usually hip-flexor lock, fascial restriction, and postural compensation. Marina addresses the whole chain, not just the spot that hurts.',
     tags: ['Myofascial Release', 'Myo Aponeurosis', 'Custom Blend']
   },
   stress: {
     service: 'Sensory Energetics',
     book: 'https://marinaribeirobodywork.as.me/bookmassage',
     target: '#massagem',
-    why: 'Whole-body stress that will not let go usually means the nervous system is stuck in alarm. Sensory Energetics is the 90-minute session built for exactly this &mdash; trigger-point work plus breath plus nervous-system release. Most clients sleep deeper that night.',
+    why: 'Whole-body stress that will not let go usually means the nervous system is stuck in alarm. Sensory Energetics is the 90-minute session built for exactly this. Trigger-point work plus breath plus nervous-system release. Most clients sleep deeper that night.',
     tags: ['Sensory Energetics', 'Breathwork', 'Somatic Release']
   },
   training: {
     service: 'Conscious Movement Personal Training',
     book: 'https://marinaribeirobodywork.as.me/BookPTlessons',
     target: '#training',
-    why: 'A training plateau is almost always a movement-quality plateau. Marina brings her bodywork qualifications into every training session &mdash; if fascial restriction is limiting your squat, she addresses it before she programs it.',
+    why: 'A training plateau is almost always a movement-quality plateau. Marina brings her bodywork qualifications into every training session. If fascial restriction is limiting your squat, she addresses it before she programs it.',
     tags: ['Mobility', 'Strength', 'Movement Quality']
   }
 };
