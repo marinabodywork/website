@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Marina Ribeiro  -  Bodywork specialist and personal trainer in Sydney. Somatic massage, Sensory Energetics, and Conscious Movement Personal Training. Release your body. Live an extraordinary life.">
+<meta property="og:title" content="Marina Bodywork  -  Sydney">
+<meta property="og:description" content="Release your body. Live an extraordinary life. Somatic massage, Sensory Energetics, and personal training in Sydney.">
+<meta property="og:image" content="marina-hero.jpg.jpeg">
+<title>Marina Bodywork  -  Sydney</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest: #11382A;
+  --forest-mid: #1E4D3A;
+  --sage: #4A8C72;
+  --sage-light: #8BB8A0;
+  --sage-pale: #EAF4EF;
+  --gold: #C8A96B;
+  --gold-light: #DFC08A;
+  --cream: #FAF8F3;
+  --surface: #F2EDE4;
+  --text: #0F1F16;
+  --text-mid: #3D5248;
+  --text-on-dark: #F5F0E6;
+  --border: #D4E4DA;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --radius: 4px;
+  --radius-lg: 12px;
+  --transition: 0.3s ease;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); font-size: 18px; line-height: 1.75; color: var(--text); background: var(--cream); overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: var(--font-body); border: none; background: none; }
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.1; }
+h1 { font-size: clamp(40px, 6vw, 68px); }
+h2 { font-size: clamp(28px, 4vw, 48px); }
+h3 { font-size: clamp(22px, 3vw, 32px); }
+.label { font-family: var(--font-body); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; }
+.section-label { color: var(--gold); }
+
+/* LAYOUT */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+section { padding: 6rem 0; }
+.section-dark { background: var(--forest); color: var(--text-on-dark); }
+.section-pale { background: var(--sage-pale); }
+.section-surface { background: var(--surface); }
+
+/* ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.25rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background var(--transition), box-shadow var(--transition), backdrop-filter var(--transition);
+}
+nav.scrolled { background: rgba(17,56,42,0.97); backdrop-filter: blur(12px); box-shadow: 0 2px 20px rgba(0,0,0,0.2); }
+.nav-logo { display: flex; flex-direction: column; }
+.nav-logo-name { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text-on-dark); letter-spacing: 0.05em; }
+.nav-logo-sub { font-family: var(--font-body); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.15em; color: var(--sage-light); }
+.nav-links { display: flex; align-items: center; gap: 2rem; }
+.nav-links a { font-size: 14px; font-weight: 500; color: var(--text-on-dark); opacity: 0.85; transition: opacity var(--transition); }
+.nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--gold-light); }
+.nav-book { background: var(--gold); color: var(--forest); padding: 0.6rem 1.4rem; border-radius: var(--radius); font-size: 14px; font-weight: 500; transition: background var(--transition); }
+.nav-book:hover { background: var(--gold-light); opacity: 1; color: var(--forest); }
+.lang-toggle { display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 99px; padding: 4px; }
+.lang-btn { font-size: 18px; line-height: 1; color: var(--text-on-dark); padding: 4px 8px; border-radius: 99px; transition: background var(--transition), opacity var(--transition); opacity: 0.55; }
+.lang-btn.active { background: rgba(200,169,107,0.2); opacity: 1; border: 1px solid rgba(200,169,107,0.4); }
+.hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text-on-dark); border-radius: 2px; transition: var(--transition); }
+.mobile-menu { display: none; position: fixed; inset: 0; background: var(--forest); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-family: var(--font-display); font-size: 32px; color: var(--text-on-dark); }
+.mobile-menu .nav-book { font-family: var(--font-body); font-size: 16px; }
+.mobile-close { position: absolute; top: 1.5rem; right: 2rem; font-size: 28px; color: var(--text-on-dark); background: none; border: none; cursor: pointer; }
+
+/* ─── HERO ─── */
+#home {
+  min-height: 100vh;
+  background: var(--forest);
+  display: grid;
+  grid-template-columns: 55% 45%;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 20% 50%, rgba(74,140,114,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 80% at 70% 80%, rgba(200,169,107,0.05) 0%, transparent 60%);
+  animation: heroBg 8s ease-in-out infinite alternate;
+}
+@keyframes heroBg { from { opacity: 0.5; } to { opacity: 1; } }
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 3rem 4rem 4rem;
+  position: relative; z-index: 1;
+}
+.hero-label { color: var(--gold); margin-bottom: 1.5rem; }
+.hero-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5.5vw, 68px);
+  line-height: 1.05;
+  color: var(--text-on-dark);
+  margin-bottom: 1.5rem;
+}
+.hero-sub { font-size: 18px; color: var(--text-on-dark); opacity: 0.85; max-width: 520px; margin-bottom: 2rem; }
+.trust-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; }
+.trust-badge {
+  font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 5px 10px; border: 1px solid rgba(200,169,107,0.3); border-radius: 99px;
+  color: var(--gold-light); background: rgba(200,169,107,0.08);
+}
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.btn-primary { background: var(--gold); color: var(--forest); padding: 0.9rem 2rem; border-radius: var(--radius); font-size: 15px; font-weight: 500; transition: background var(--transition); }
+.btn-primary:hover { background: var(--gold-light); }
+.btn-outline { border: 1.5px solid var(--text-on-dark); color: var(--text-on-dark); padding: 0.9rem 2rem; border-radius: var(--radius); font-size: 15px; font-weight: 500; opacity: 0.8; transition: opacity var(--transition); }
+.btn-outline:hover { opacity: 1; }
+.btn-outline-forest { border: 1.5px solid var(--forest); color: var(--forest); padding: 0.9rem 2rem; border-radius: var(--radius); font-size: 15px; font-weight: 500; transition: background var(--transition), color var(--transition); }
+.btn-outline-forest:hover { background: var(--forest); color: var(--text-on-dark); }
+.urgency-note { font-size: 13px; color: var(--gold); font-weight: 500; }
+.hero-right { position: relative; overflow: hidden; }
+.hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero-right-placeholder {
+  width: 100%; height: 100%; min-height: 100vh;
+  background: linear-gradient(180deg, var(--forest-mid) 0%, var(--sage) 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.3); font-size: 14px; text-align: center; padding: 2rem;
+}
+
+/* ─── WHO THIS IS FOR ─── */
+.who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+.who-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  cursor: pointer;
+}
+.who-card:hover { border-color: var(--gold); box-shadow: 0 8px 32px rgba(17,56,42,0.08); transform: translateY(-2px); }
+.who-icon { font-size: 32px; margin-bottom: 1rem; }
+.who-card h3 { font-family: var(--font-display); font-size: 26px; color: var(--text); margin-bottom: 1rem; }
+.who-card p { font-size: 16px; color: var(--text-mid); margin-bottom: 1.5rem; }
+.who-cta { color: var(--sage); font-weight: 500; font-size: 14px; display: flex; align-items: center; gap: 6px; }
+.who-cta::after { content: '→'; transition: transform var(--transition); }
+.who-card:hover .who-cta::after { transform: translateX(4px); }
+
+/* ─── DIFFERENTIATOR ─── */
+.diff-intro { max-width: 680px; margin: 1.5rem auto 3rem; font-size: 18px; color: var(--text-mid); text-align: center; }
+.techniques-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 3rem; }
+.technique-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.technique-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.technique-icon { font-size: 28px; margin-bottom: 0.75rem; }
+.technique-name { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--forest); margin-bottom: 0.5rem; }
+.technique-desc { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
+.diff-closing { text-align: center; font-family: var(--font-display); font-size: 28px; font-weight: 600; color: var(--forest); }
+
+/* ─── MASSAGE SERVICES ─── */
+.section-header { margin-bottom: 1rem; }
+.marina-quote { font-size: 17px; color: var(--text-mid); font-style: italic; margin: 1rem 0 3rem; }
+.service-block { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid var(--border); }
+.service-block:last-child { border-bottom: none; margin-bottom: 0; }
+.service-info h3 { font-family: var(--font-display); font-size: 32px; color: var(--text); margin-bottom: 0.25rem; }
+.service-duration { font-size: 13px; color: var(--sage); font-weight: 500; margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.service-desc { font-size: 17px; color: var(--text-mid); margin-bottom: 1.5rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+.tag { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; padding: 5px 12px; background: rgba(200,169,107,0.1); color: var(--gold); border: 1px solid rgba(200,169,107,0.3); border-radius: 99px; }
+.pricing-card { background: var(--forest); border-radius: var(--radius-lg); padding: 2rem; }
+.pricing-card h4 { font-family: var(--font-body); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sage-light); margin-bottom: 1.25rem; }
+.price-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+.price-option { }
+.price-type { font-size: 12px; color: var(--sage-light); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+.price-amount { font-family: var(--font-display); font-size: 36px; font-weight: 600; color: var(--gold); }
+.price-sub { font-size: 12px; color: var(--sage-light); }
+.price-divider { width: 1px; background: rgba(255,255,255,0.1); }
+.membership-details { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.25rem; }
+.membership-detail { font-size: 13px; color: var(--text-on-dark); opacity: 0.8; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.membership-detail::before { content: '✓'; color: var(--gold); font-size: 12px; }
+.membership-invite { font-size: 12px; color: var(--gold-light); font-style: italic; margin-top: 0.75rem; }
+.combo-banner {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--forest);
+  padding: 1.25rem 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 2rem 0;
+}
+.se-badge { display: inline-block; background: var(--gold); color: var(--forest); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; padding: 5px 12px; border-radius: 99px; margin-bottom: 1.5rem; }
+.se-pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+.se-price-card { background: var(--forest); border-radius: var(--radius-lg); padding: 2rem; }
+.se-price-card.featured { border: 2px solid var(--gold); }
+.se-price-card h4 { font-size: 11px; color: var(--sage-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.se-price-old { font-size: 14px; color: var(--sage-light); text-decoration: line-through; margin-bottom: 0.25rem; }
+.se-price-amount { font-family: var(--font-display); font-size: 44px; font-weight: 600; color: var(--gold); }
+.se-price-note { font-size: 12px; color: var(--sage-light); margin-top: 0.25rem; }
+.outcomes-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+.outcome-item { text-align: center; padding: 1rem; }
+.outcome-icon { font-size: 24px; margin-bottom: 0.5rem; }
+.outcome-label { font-size: 13px; color: var(--text-mid); font-weight: 500; }
+.book-link { display: inline-block; margin-top: 2rem; }
+
+/* ─── PERSONAL TRAINING ─── */
+.integration-block { background: var(--forest); border-radius: var(--radius-lg); padding: 2.5rem; margin: 2rem 0 3rem; }
+.integration-block p { font-size: 18px; color: var(--text-on-dark); line-height: 1.7; }
+.goals-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin: 2rem 0; }
+.goal-item { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1rem 0.75rem; }
+.goal-icon { font-size: 24px; margin-bottom: 0.5rem; }
+.goal-label { font-size: 13px; color: var(--text-mid); font-weight: 500; }
+.location-note { font-size: 15px; color: var(--text-mid); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+.schedule-note { font-size: 15px; color: var(--sage); font-weight: 500; margin-bottom: 2rem; }
+.plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+.plan-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; position: relative; }
+.plan-card.featured { border-color: var(--gold); border-width: 2px; }
+.plan-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--forest); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 14px; border-radius: 99px; white-space: nowrap; }
+.plan-name { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sage); margin-bottom: 0.5rem; }
+.plan-price { font-family: var(--font-display); font-size: 40px; font-weight: 600; color: var(--forest); }
+.plan-per { font-size: 13px; color: var(--text-mid); margin-bottom: 1rem; }
+.plan-details { list-style: none; }
+.plan-details li { font-size: 14px; color: var(--text-mid); padding: 4px 0; display: flex; align-items: flex-start; gap: 8px; }
+.plan-details li::before { content: '✓'; color: var(--gold); font-size: 12px; margin-top: 4px; flex-shrink: 0; }
+.addons-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.addon-item { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 0.75rem 1.25rem; font-size: 14px; color: var(--text-mid); }
+.addon-price { font-weight: 500; color: var(--forest); }
+.all-plans-note { font-size: 14px; color: var(--text-mid); text-align: center; margin-top: 1.5rem; padding: 1rem; background: var(--surface); border-radius: var(--radius); }
+
+/* ─── BODYWORK ─── */
+.bodywork-intro { max-width: 680px; margin: 1.5rem 0 3rem; font-size: 18px; color: var(--text-mid); }
+.pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.pillar-card { background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.75rem; transition: transform var(--transition), box-shadow var(--transition); }
+.pillar-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(17,56,42,0.07); }
+.pillar-icon { font-size: 28px; margin-bottom: 0.75rem; }
+.pillar-name { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--forest); margin-bottom: 0.5rem; }
+.pillar-desc { font-size: 15px; color: var(--text-mid); line-height: 1.6; }
+
+/* ─── RESULTS ─── */
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0 2rem; }
+.testimonial-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(200,169,107,0.2); border-radius: var(--radius-lg); padding: 2rem; position: relative; }
+.testimonial-card::before { content: '"'; font-family: var(--font-display); font-size: 80px; color: var(--gold); opacity: 0.3; position: absolute; top: -10px; left: 1.5rem; line-height: 1; }
+.testimonial-quote { font-family: var(--font-display); font-size: 19px; color: var(--text-on-dark); line-height: 1.5; margin-bottom: 1.5rem; padding-top: 1rem; }
+.testimonial-name { font-size: 13px; color: var(--gold); font-weight: 500; }
+.outcomes-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
+.outcome-card { background: rgba(255,255,255,0.05); border-radius: var(--radius); padding: 1.25rem; text-align: center; }
+.outcome-card-icon { font-size: 28px; margin-bottom: 0.5rem; }
+.outcome-card-label { font-size: 14px; color: var(--text-on-dark); opacity: 0.8; font-weight: 500; }
+.instagram-cta { text-align: center; margin-top: 1rem; }
+.instagram-link { display: inline-flex; align-items: center; gap: 8px; color: var(--gold-light); font-weight: 500; font-size: 15px; border: 1px solid rgba(200,169,107,0.3); padding: 0.7rem 1.5rem; border-radius: 99px; transition: background var(--transition); }
+.instagram-link:hover { background: rgba(200,169,107,0.1); }
+
+/* ─── ABOUT ─── */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.about-photo { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3/4; }
+.about-photo img { width: 100%; height: 100%; object-fit: cover; }
+.about-content h2 { margin-bottom: 1.5rem; }
+.about-bio { font-size: 17px; color: var(--text-mid); margin-bottom: 2rem; }
+.credential-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+.cred-tag { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; padding: 5px 12px; background: rgba(200,169,107,0.1); color: var(--gold); border: 1px solid rgba(200,169,107,0.3); border-radius: 99px; }
+.about-meta { font-size: 15px; color: var(--text-mid); }
+
+/* ─── COLLABS ─── */
+#collabs { padding: 4rem 0; }
+.collabs-logos { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+.collab-card { width: 200px; height: 90px; background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; align-items: center; justify-content: center; transition: transform var(--transition), box-shadow var(--transition); }
+.collab-card:hover { transform: scale(1.03); box-shadow: 0 4px 16px rgba(17,56,42,0.08); }
+.collab-card img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+/* ─── FAQ ─── */
+.faq-list { max-width: 780px; margin: 2.5rem auto 0; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question {
+  width: 100%; text-align: left; padding: 1.5rem 0;
+  font-family: var(--font-body); font-size: 17px; font-weight: 500; color: var(--text);
+  display: flex; justify-content: space-between; align-items: center;
+  background: none; border: none; cursor: pointer;
+}
+.faq-question:hover { color: var(--sage); }
+.faq-arrow { font-size: 20px; transition: transform var(--transition); color: var(--gold); flex-shrink: 0; }
+.faq-item.open .faq-arrow { transform: rotate(180deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+.faq-item.open .faq-answer { max-height: 300px; }
+.faq-answer p { font-size: 16px; color: var(--text-mid); padding-bottom: 1.5rem; line-height: 1.7; }
+
+/* ─── CONTACT ─── */
+.contact-intro { font-size: 18px; color: var(--text-mid); max-width: 560px; margin: 1.5rem 0 3rem; }
+.booking-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+.contact-extras { display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; }
+.wa-link { display: inline-flex; align-items: center; gap: 8px; color: var(--sage); font-weight: 500; font-size: 15px; }
+.wa-icon { width: 20px; height: 20px; }
+.email-link { color: var(--text-mid); font-size: 15px; }
+.email-link:hover { color: var(--sage); }
+
+/* ─── POLICIES ─── */
+#policies { background: var(--surface); padding: 4rem 0; }
+.policies-toggle { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 0; cursor: pointer; }
+.policies-toggle h2 { font-size: 20px; }
+.policies-toggle-icon { font-size: 20px; transition: transform var(--transition); color: var(--gold); }
+.policies-toggle.open .policies-toggle-icon { transform: rotate(180deg); }
+.policies-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+.policies-content.open { max-height: 2000px; }
+.policies-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; padding-top: 2rem; }
+.policy-card { background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem; }
+.policy-title { font-family: var(--font-display); font-size: 18px; color: var(--forest); margin-bottom: 0.75rem; }
+.policy-body { font-size: 15px; color: var(--text-mid); line-height: 1.65; }
+
+/* ─── FOOTER ─── */
+footer { background: var(--forest); color: var(--text-on-dark); padding: 4rem 0 2rem; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; }
+.footer-logo-name { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--text-on-dark); margin-bottom: 0.25rem; }
+.footer-tagline { font-size: 14px; color: var(--sage-light); margin-bottom: 1rem; line-height: 1.5; }
+.footer-heading { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 1rem; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-links a { font-size: 15px; color: var(--text-on-dark); opacity: 0.75; transition: opacity var(--transition); }
+.footer-links a:hover { opacity: 1; color: var(--gold-light); }
+.footer-contact-item { font-size: 15px; color: var(--text-on-dark); opacity: 0.75; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; }
+.footer-contact-item a { color: inherit; opacity: 1; transition: color var(--transition); }
+.footer-contact-item a:hover { color: var(--gold-light); }
+.footer-bottom { text-align: center; font-size: 13px; color: var(--text-on-dark); opacity: 0.4; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .techniques-grid { grid-template-columns: repeat(3, 1fr); }
+  .plans-grid { gap: 1rem; }
+}
+@media (max-width: 768px) {
+  section { padding: 4rem 0; }
+  #home { grid-template-columns: 1fr; }
+  .hero-left { padding: 7rem 1.5rem 2rem; }
+  .hero-right { height: 50vh; }
+  .hero-right img { height: 50vh; object-fit: cover; }
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .who-grid { grid-template-columns: 1fr; }
+  .techniques-grid { grid-template-columns: 1fr 1fr; }
+  .service-block { grid-template-columns: 1fr; gap: 2rem; }
+  .se-pricing { grid-template-columns: 1fr; }
+  .goals-row { grid-template-columns: repeat(3, 1fr); }
+  .plans-grid { grid-template-columns: 1fr; }
+  .pillars-grid { grid-template-columns: 1fr 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .outcomes-grid { grid-template-columns: 1fr 1fr; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-photo { aspect-ratio: 4/3; max-height: 400px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .policies-grid { grid-template-columns: 1fr; }
+  .container { padding: 0 1.25rem; }
+  h2 { font-size: clamp(26px, 6vw, 40px); }
+}
+@media (max-width: 480px) {
+  .techniques-grid { grid-template-columns: 1fr; }
+  .goals-row { grid-template-columns: 1fr 1fr; }
+  .pillars-grid { grid-template-columns: 1fr; }
+  .outcomes-grid { grid-template-columns: 1fr 1fr; }
+  .hero-ctas { flex-direction: column; }
+  .booking-buttons { flex-direction: column; }
+  .price-row { grid-template-columns: 1fr; }
+}
+
+
+/* ICONS */
+.icon-wrap svg { display: inline-block; vertical-align: middle; }
+.icon-wrap { display: flex; align-items: center; justify-content: center; color: var(--sage); }
+.who-icon .icon-wrap svg { width: 36px; height: 36px; }
+.who-icon .icon-wrap { color: var(--gold); }
+.technique-icon .icon-wrap svg { width: 32px; height: 32px; }
+.technique-icon .icon-wrap { color: var(--sage); }
+.outcome-icon .icon-wrap svg { width: 28px; height: 28px; }
+.outcome-icon .icon-wrap { color: var(--gold); }
+.pillar-icon .icon-wrap svg { width: 28px; height: 28px; }
+.pillar-icon .icon-wrap { color: var(--sage); }
+.outcome-card-icon .icon-wrap svg { width: 32px; height: 32px; }
+.outcome-card-icon .icon-wrap { color: var(--gold-light); }
+.goal-icon .icon-wrap svg { width: 24px; height: 24px; }
+.goal-icon .icon-wrap { color: var(--sage); }
+.footer-contact-item .icon-wrap svg { width: 16px; height: 16px; flex-shrink: 0; }
+.footer-contact-item .icon-wrap { color: var(--sage-light); }
+/* Nav logo image */
+.nav-logo-img { height: 40px; width: auto; object-fit: contain; }
+/* Flag icons */
+.flag-icon { font-size: 18px; }
+
+
+/* ANNOUNCEMENT BAR */
+.announce-bar{background:var(--gold);color:var(--forest);font-size:13px;font-weight:500;text-align:center;padding:10px 2rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;position:sticky;top:0;z-index:101}
+.announce-dot{width:5px;height:5px;background:var(--forest);border-radius:50%;opacity:0.4;flex-shrink:0}
+.announce-link{color:var(--forest);font-weight:600;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+.announce-close{margin-left:auto;background:none;border:none;cursor:pointer;font-size:18px;color:var(--forest);opacity:0.6;padding:0 0.25rem;line-height:1;flex-shrink:0}
+.announce-close:hover{opacity:1}
+@media(max-width:768px){.announce-bar{font-size:12px;padding:8px 1rem;gap:1rem}}
+
+/* STATS BAR */
+.stats-bar{background:var(--forest-mid);border-top:1px solid rgba(200,169,107,0.15);border-bottom:1px solid rgba(200,169,107,0.15)}
+.stats-bar-inner{display:flex;align-items:stretch;justify-content:center;flex-wrap:wrap}
+.stat-item{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.25rem 2.5rem;border-right:1px solid rgba(255,255,255,0.08);text-align:center}
+.stat-item:last-child{border-right:none}
+.stat-number{font-family:var(--font-display);font-size:28px;font-weight:600;color:var(--gold);line-height:1}
+.stat-label{font-size:11px;color:var(--sage-light);margin-top:4px;text-transform:uppercase;letter-spacing:0.06em;font-weight:500}
+@media(max-width:768px){.stat-item{padding:1rem 1.25rem;flex:0 0 50%}.stat-item:nth-child(2){border-right:none}.stat-item:nth-child(even){border-right:none}}
+
+/* RESEARCH STATS */
+.research-section{background:var(--forest);padding:5rem 0}
+.research-intro{font-size:18px;color:rgba(245,240,230,0.75);max-width:600px;margin:1rem auto 3rem;text-align:center}
+.research-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:2.5rem}
+.research-card{background:var(--forest);padding:2rem 1.5rem;text-align:center}
+.research-card:hover{background:var(--forest-mid)}
+.research-stat{font-family:var(--font-display);font-size:52px;font-weight:600;color:var(--gold);line-height:1;margin-bottom:0.5rem}
+.research-desc{font-size:14px;color:var(--text-on-dark);opacity:0.75;line-height:1.5;margin-bottom:0.5rem}
+.research-source{font-size:11px;color:var(--sage-light);font-style:italic}
+.research-cta-text{text-align:center;font-size:17px;color:var(--text-on-dark);opacity:0.85;max-width:540px;margin:0 auto 2rem}
+.research-cta-text strong{color:var(--gold);font-weight:500}
+@media(max-width:768px){.research-grid{grid-template-columns:1fr 1fr}.research-stat{font-size:40px}}
+@media(max-width:480px){.research-grid{grid-template-columns:1fr}}
+
+/* RISK REVERSAL */
+.risk-block{background:rgba(255,255,255,0.05);border:1px solid rgba(200,169,107,0.2);border-radius:var(--radius-lg);padding:1.5rem 2rem;margin-top:2rem;display:flex;align-items:center;gap:1.5rem}
+.risk-icon{width:48px;height:48px;border-radius:50%;background:rgba(200,169,107,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.risk-icon svg{width:24px;height:24px;stroke:var(--gold)}
+.risk-text h4{font-family:var(--font-display);font-size:20px;color:var(--text-on-dark);margin-bottom:0.25rem}
+.risk-text p{font-size:15px;color:rgba(245,240,230,0.75)}
+@media(max-width:600px){.risk-block{flex-direction:column;text-align:center}}
+
+/* i18n fade */
+[data-i18n] { transition: opacity 0.25s ease; }
+.lang-switching [data-i18n] { opacity: 0; }
+
+/* ─── APPLE HIG IMPROVEMENTS ─── */
+
+/* 1. PILL CTAs — Apple uses fully rounded primary buttons */
+.btn-primary {
+  border-radius: 999px !important;
+  padding: 0.85rem 2.2rem !important;
+  font-size: 15px !important;
+  letter-spacing: 0.01em;
+}
+.btn-outline {
+  border-radius: 999px !important;
+  padding: 0.85rem 2.2rem !important;
+}
+.btn-outline-forest {
+  border-radius: 999px !important;
+  padding: 0.85rem 2.2rem !important;
+}
+.nav-book { border-radius: 999px !important; }
+.mob-cta { border-radius: 999px !important; }
+.mob-book-btn { border-radius: 999px !important; }
+.se-badge { border-radius: 999px !important; }
+.consult-badge { border-radius: 999px !important; }
+.plan-badge { border-radius: 999px !important; }
+.book-link { border-radius: 999px !important; }
+.instagram-link { border-radius: 999px !important; }
+
+/* 2. REMOVE CARD BORDERS — Apple uses depth not outlines */
+.who-card {
+  border: none !important;
+  box-shadow: 0 2px 12px rgba(17,56,42,0.06), 0 0 0 0.5px rgba(17,56,42,0.06) !important;
+}
+.who-card:hover {
+  box-shadow: 0 8px 32px rgba(17,56,42,0.1), 0 0 0 0.5px rgba(200,169,107,0.3) !important;
+}
+.technique-card {
+  border: none !important;
+  box-shadow: 0 1px 4px rgba(17,56,42,0.05), 0 0 0 0.5px rgba(17,56,42,0.05) !important;
+}
+.technique-card:hover {
+  box-shadow: 0 6px 20px rgba(17,56,42,0.08), 0 0 0 0.5px rgba(200,169,107,0.25) !important;
+}
+.pillar-card {
+  border: none !important;
+  box-shadow: 0 1px 4px rgba(17,56,42,0.05), 0 0 0 0.5px rgba(17,56,42,0.06) !important;
+}
+.pillar-card:hover {
+  box-shadow: 0 6px 20px rgba(17,56,42,0.08) !important;
+}
+.plan-card {
+  border: none !important;
+  box-shadow: 0 2px 12px rgba(17,56,42,0.06), 0 0 0 0.5px rgba(17,56,42,0.06) !important;
+}
+.plan-card.featured {
+  box-shadow: 0 4px 24px rgba(200,169,107,0.2), 0 0 0 1.5px var(--gold) !important;
+}
+.collab-card {
+  border: none !important;
+  box-shadow: 0 2px 12px rgba(17,56,42,0.06), 0 0 0 0.5px rgba(17,56,42,0.06) !important;
+}
+.policy-card {
+  border: none !important;
+  box-shadow: 0 1px 4px rgba(17,56,42,0.05), 0 0 0 0.5px rgba(17,56,42,0.05) !important;
+}
+.location-note {
+  border: none !important;
+  box-shadow: 0 1px 4px rgba(17,56,42,0.05), 0 0 0 0.5px rgba(17,56,42,0.06) !important;
+}
+.addon-item {
+  border: none !important;
+  box-shadow: 0 1px 3px rgba(17,56,42,0.05), 0 0 0 0.5px rgba(17,56,42,0.06) !important;
+}
+.pricing-card { box-shadow: 0 4px 24px rgba(0,0,0,0.15) !important; }
+.se-price-card { box-shadow: 0 4px 24px rgba(0,0,0,0.15) !important; }
+.se-price-card.featured { box-shadow: 0 4px 24px rgba(200,169,107,0.25), 0 0 0 1.5px var(--gold) !important; }
+.integration-block { box-shadow: 0 4px 24px rgba(0,0,0,0.1) !important; }
+.testimonial-card {
+  box-shadow: 0 0 0 0.5px rgba(200,169,107,0.2) !important;
+}
+.risk-block {
+  border: none !important;
+  box-shadow: 0 0 0 0.5px rgba(200,169,107,0.2) !important;
+}
+
+/* 3. CONSISTENT BORDER-RADIUS — 8px small, 16px card, 999px pill */
+:root {
+  --radius: 8px;
+  --radius-lg: 16px;
+}
+
+/* 4. FONT SCALE — Simplify to 5 sizes + display */
+/* Remove many micro-sizes, consolidate to clean scale */
+.label { font-size: 11px !important; }
+.service-duration { font-size: 13px !important; }
+.service-desc { font-size: 17px !important; line-height: 1.7 !important; }
+.integration-block p { font-size: 18px !important; line-height: 1.75 !important; }
+.about-bio { font-size: 17px !important; line-height: 1.75 !important; }
+.bodywork-intro { font-size: 18px !important; }
+.contact-intro { font-size: 18px !important; }
+.faq-answer p { font-size: 17px !important; }
+.faq-question { font-size: 17px !important; }
+body { font-size: 18px !important; }
+
+/* 5. LINE LENGTH — Apple: optimal 45-75 chars, max ~65ch */
+.service-desc,
+.about-bio,
+.bodywork-intro,
+.contact-intro,
+.integration-block p,
+.research-intro,
+.consult-text,
+.diff-intro {
+  max-width: 65ch !important;
+}
+.hero-sub { max-width: 52ch !important; }
+
+/* 6. STATS NUMBERS — Apple gives key numbers cinematic scale */
+.stat-number {
+  font-size: 40px !important;
+  line-height: 1 !important;
+  letter-spacing: -0.02em !important;
+}
+.stat-label { font-size: 11px !important; margin-top: 6px !important; }
+.stat-item { padding: 1.5rem 2rem !important; }
+.research-stat { font-size: 64px !important; letter-spacing: -0.03em !important; }
+
+/* 7. TOUCH TARGETS — Apple minimum 44px all interactive elements */
+.nav-links a { min-height: 44px; display: inline-flex; align-items: center; }
+.nav-book { min-height: 44px !important; display: inline-flex !important; align-items: center !important; }
+.lang-btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.faq-question { min-height: 56px !important; }
+.btn-primary,
+.btn-outline,
+.btn-outline-forest { min-height: 50px !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; }
+.hamburger { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+.wa-link { min-height: 44px; display: inline-flex; align-items: center; }
+.announce-close { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+
+/* 8. FOCUS-VISIBLE — Apple: clear visible focus ring */
+*:focus { outline: none; }
+*:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: inherit;
+}
+
+/* 9. SECTION RHYTHM — Apple: varied, generous whitespace */
+section { padding: 7rem 0 !important; }
+.stats-bar { padding: 0 !important; }
+#collabs { padding: 4rem 0 !important; }
+#policies { padding: 3rem 0 !important; }
+
+/* 10. HERO TYPOGRAPHY — Stronger weight, tighter leading */
+.hero-h1 {
+  font-size: clamp(40px, 6vw, 76px) !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.02 !important;
+}
+
+/* 11. SECTION TITLE IMPROVEMENT */
+h2 { letter-spacing: -0.015em !important; }
+
+/* 12. ANNOUNCEMENT BAR — cleaner */
+.announce-bar { font-size: 14px !important; font-weight: 500 !important; }
+
+/* 13. FAQ — more breathing room */
+.faq-question { padding: 1.5rem 0 !important; }
+.faq-question span:first-child { text-align: left; line-height: 1.4; }
+
+/* 14. NAV LINKS — cleaner spacing */
+.nav-links { gap: 1.5rem !important; }
+
+/* 15. SMOOTH SCROLL — system-level */
+html { scroll-behavior: smooth !important; }
+
+/* 16. IMAGE QUALITY */
+img { image-rendering: -webkit-optimize-contrast; }
+
+/* 17. HERO PHOTO — cleaner display */
+.hero-right img {
+  object-fit: cover !important;
+  object-position: top center !important;
+}
+
+/* 18. RESEARCH GRID — remove inner borders */
+.research-grid {
+  border: none !important;
+  background: transparent !important;
+  gap: 1px !important;
+}
+.research-card {
+  box-shadow: 0 0 0 0.5px rgba(255,255,255,0.08) !important;
+}
+
+/* 19. TESTIMONIAL CARDS — more depth */
+.testimonial-card {
+  background: rgba(255,255,255,0.04) !important;
+}
+
+/* 20. MOBILE — ensure readable text sizes */
+@media (max-width: 768px) {
+  .stat-number { font-size: 28px !important; }
+  .research-stat { font-size: 44px !important; }
+  section { padding: 5rem 0 !important; }
+  .btn-primary, .btn-outline { min-height: 52px !important; font-size: 16px !important; }
+  .hero-h1 { letter-spacing: -0.015em !important; }
+  .service-desc, .about-bio, .bodywork-intro { max-width: 100% !important; }
+}
+
+
+/* ═══════════════════════════════════════════════
+   PREMIUM REDESIGN — Luxury editorial over template
+   ═══════════════════════════════════════════════ */
+
+/* 1. BACKGROUND SIMPLIFICATION — cream + forest only */
+.section-pale { background: var(--cream) !important; }
+.section-surface { background: var(--cream) !important; }
+#bodywork { background: var(--cream) !important; }
+#faq { background: var(--cream) !important; }
+#who-this-is-for { background: white !important; }
+#diferencial { background: white !important; }
+#collabs { background: white !important; }
+#training { background: var(--cream) !important; }
+#massagem { background: white !important; }
+
+/* 2. HERO — FULL BLEED CINEMATIC */
+#home {
+  display: block !important;
+  position: relative !important;
+  min-height: 100vh !important;
+  overflow: hidden !important;
+}
+.hero-right {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+}
+.hero-right img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  filter: brightness(0.55) !important;
+}
+.hero-right-placeholder {
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(135deg, #0a2319 0%, #11382A 50%, #1a4a35 100%) !important;
+}
+.hero-bg { z-index: 1 !important; }
+.hero-left {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 800px !important;
+  padding: 10rem 4rem 5rem !important;
+  grid-column: unset !important;
+}
+.hero-h1 {
+  font-size: clamp(48px, 7vw, 88px) !important;
+  color: white !important;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.3) !important;
+  margin-bottom: 1.5rem !important;
+}
+.hero-sub {
+  font-size: 20px !important;
+  color: rgba(255,255,255,0.85) !important;
+  max-width: 560px !important;
+  line-height: 1.65 !important;
+}
+.hero-label { color: var(--gold-light) !important; }
+.urgency-note { color: var(--gold-light) !important; }
+.trust-badge { 
+  border-color: rgba(255,255,255,0.25) !important;
+  background: rgba(255,255,255,0.08) !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* 3. TESTIMONIALS — EDITORIAL PULL-QUOTES, no cards */
+#results { background: var(--cream) !important; color: var(--text) !important; }
+.testimonials-grid {
+  display: block !important;
+  margin: 3rem 0 2rem !important;
+}
+.testimonial-card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 3rem 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: 80px 1fr !important;
+  gap: 2rem !important;
+  align-items: start !important;
+}
+.testimonial-card:last-child { border-bottom: none !important; }
+.testimonial-card::before {
+  content: '"' !important;
+  font-family: var(--font-display) !important;
+  font-size: 120px !important;
+  color: var(--gold) !important;
+  opacity: 0.3 !important;
+  position: static !important;
+  line-height: 0.7 !important;
+  margin-top: 1rem !important;
+}
+.testimonial-quote {
+  font-family: var(--font-display) !important;
+  font-size: clamp(22px, 3vw, 36px) !important;
+  color: var(--text) !important;
+  line-height: 1.3 !important;
+  font-style: italic !important;
+  padding-top: 0 !important;
+  margin-bottom: 1rem !important;
+}
+.testimonial-name {
+  font-size: 14px !important;
+  color: var(--sage) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  font-weight: 500 !important;
+}
+.outcomes-grid {
+  background: var(--sage-pale) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+.outcome-card { background: transparent !important; }
+.outcome-card-label { color: var(--text-mid) !important; }
+.outcome-card-icon .icon-wrap { color: var(--sage) !important; }
+.mock-s-title-light,.results-label-dark { color: var(--text) !important; }
+#results .label { color: var(--gold) !important; }
+#results h2 { color: var(--text) !important; }
+.instagram-link {
+  color: var(--sage) !important;
+  border-color: var(--border) !important;
+}
+.instagram-link:hover { background: var(--sage-pale) !important; }
+
+/* 4. TECHNIQUES — ELEGANT HORIZONTAL, not grid cards */
+.techniques-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  margin-bottom: 3rem !important;
+}
+.technique-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 2rem 0 !important;
+  display: grid !important;
+  grid-template-columns: 40px 200px 1fr !important;
+  align-items: center !important;
+  gap: 2rem !important;
+  transition: background var(--transition) !important;
+}
+.technique-card:last-child { border-bottom: none !important; }
+.technique-card:hover {
+  background: var(--sage-pale) !important;
+  box-shadow: none !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  margin: 0 -1rem !important;
+  width: calc(100% + 2rem) !important;
+}
+.technique-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.technique-icon .icon-wrap svg { width: 22px !important; height: 22px !important; }
+.technique-name {
+  font-family: var(--font-display) !important;
+  font-size: 24px !important;
+  color: var(--forest) !important;
+  font-weight: 600 !important;
+  margin-bottom: 0 !important;
+}
+.technique-desc { 
+  font-size: 16px !important;
+  color: var(--text-mid) !important;
+  line-height: 1.55 !important;
+}
+
+/* 5. PILLAR CARDS — CLEAN LIST, not cards */
+.pillars-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 0 !important;
+}
+.pillar-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 2rem 1.5rem 2rem 0 !important;
+  transition: padding var(--transition) !important;
+}
+.pillar-card:hover {
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+.pillar-card:nth-child(odd) { border-right: 1px solid var(--border) !important; padding-right: 2rem !important; }
+.pillar-name { font-size: 22px !important; }
+.pillar-desc { font-size: 15px !important; }
+
+/* 6. WHO CARDS — MORE EDITORIAL */
+.who-card {
+  background: white !important;
+  padding: 3rem !important;
+}
+.who-card h3 {
+  font-family: var(--font-display) !important;
+  font-size: 32px !important;
+  line-height: 1.15 !important;
+}
+
+/* 7. RESEARCH SECTION — DARK, MINIMAL */
+.research-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 0 !important;
+}
+.research-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 2.5rem 2rem !important;
+  border-right: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 0 !important;
+}
+.research-card:hover { background: var(--forest-mid) !important; }
+.research-card:last-child { border-right: none !important; }
+.research-stat {
+  font-size: 72px !important;
+  letter-spacing: -0.04em !important;
+  line-height: 0.9 !important;
+}
+.research-desc { font-size: 15px !important; margin-top: 1rem !important; }
+
+/* 8. POLICIES — MINIMAL ACCORDION, no cards */
+.policies-grid {
+  display: block !important;
+}
+.policy-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 1.5rem 0 !important;
+}
+.policy-card:last-child { border-bottom: none !important; }
+.policy-title {
+  font-family: var(--font-display) !important;
+  font-size: 22px !important;
+  margin-bottom: 0.5rem !important;
+}
+.policy-body { font-size: 16px !important; }
+
+/* 9. GOLD SECTION DIVIDER — premium touch */
+.gold-divider {
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1.5rem 0;
+  display: block;
+}
+
+/* 10. ANNOUNCEMENT BAR — PREMIUM */
+.announce-bar {
+  background: var(--forest) !important;
+  color: var(--text-on-dark) !important;
+  font-size: 13px !important;
+  padding: 12px 2rem !important;
+  border-bottom: 1px solid rgba(200,169,107,0.2) !important;
+}
+.announce-link { color: var(--gold) !important; }
+.announce-close { color: var(--text-on-dark) !important; }
+.announce-dot { background: rgba(200,169,107,0.4) !important; }
+
+/* 11. STATS BAR — BOLDER */
+.stats-bar { background: white !important; border-bottom: 1px solid var(--border) !important; border-top: none !important; }
+.stat-number { color: var(--forest) !important; font-size: 44px !important; }
+.stat-label { color: var(--text-mid) !important; }
+.stat-item { border-color: var(--border) !important; }
+.stats-bar-inner { justify-content: space-between !important; }
+
+/* 12. SERVICE SECTION — editorial layout improvements */
+.service-block {
+  padding-bottom: 5rem !important;
+  margin-bottom: 5rem !important;
+  gap: 4rem !important;
+}
+.service-info h3 {
+  font-size: 40px !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* 13. PLAN CARDS — more generous */
+.plans-grid { gap: 2rem !important; }
+.plan-card { padding: 2.5rem !important; }
+.plan-price { font-size: 52px !important; letter-spacing: -0.03em !important; }
+.plan-per { font-size: 14px !important; margin-bottom: 1.5rem !important; }
+.plan-details li { font-size: 15px !important; padding: 6px 0 !important; }
+
+/* 14. NAVY SUBTLE TEXTURE — cream backgrounds */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23FAF8F3'/%3E%3Crect x='0' y='0' width='1' height='1' fill='%23F0EBE3' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 4px 4px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* 15. HEADING GOLD ACCENT — section labels */
+.section-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+.section-label::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 24px !important;
+  height: 1.5px !important;
+  background: var(--gold) !important;
+  flex-shrink: 0 !important;
+}
+
+/* 16. BUTTON — premium gold shimmer */
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%) !important;
+  background-size: 200% 100% !important;
+  transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.btn-primary:hover {
+  background-position: 100% 0 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(200,169,107,0.35) !important;
+}
+
+/* 17. MOBILE HERO */
+@media(max-width: 768px) {
+  .hero-left { padding: 7rem 1.5rem 4rem !important; }
+  .hero-h1 { font-size: clamp(36px, 8vw, 56px) !important; }
+  .technique-card {
+    grid-template-columns: 32px 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 0.75rem 1rem !important;
+  }
+  .technique-name { grid-column: 2 !important; }
+  .technique-desc { grid-column: 1 / -1 !important; font-size: 15px !important; }
+  .testimonial-card { grid-template-columns: 50px 1fr !important; gap: 1rem !important; }
+  .testimonial-card::before { font-size: 80px !important; }
+  .testimonial-quote { font-size: 20px !important; }
+  .pillars-grid { grid-template-columns: 1fr !important; }
+  .pillar-card:nth-child(odd) { border-right: none !important; }
+  .research-grid { grid-template-columns: 1fr 1fr !important; }
+  .research-stat { font-size: 52px !important; }
+  .plan-price { font-size: 40px !important; }
+  .stat-number { font-size: 30px !important; }
+  .research-card { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce-bar" id="announceBar">
+  <span class="announce-dot"></span>
+  <span data-i18n="announce.text">Sensory Energetics launch price ends June 2025. Save 20% before it goes.</span>
+  <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="announce-link" data-i18n="announce.cta">Book now</a>
+  <span class="announce-dot"></span>
+  <button class="announce-close" onclick="document.getElementById('announceBar').style.display='none'" aria-label="Close">&times;</button>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#home" class="nav-logo" aria-label="Marina Bodywork home">
+    <img src="marina-logo.jpg.jpeg" alt="Marina Bodywork" class="nav-logo-img" onerror="this.style.display='none'">
+    <span class="nav-logo-sub">Sydney</span>
+  </a>
+  <div class="nav-links">
+    <a href="#massagem" data-i18n="nav.services">Services</a>
+    <a href="#training" data-i18n="nav.training">Training</a>
+    <a href="#results" data-i18n="nav.results">Results</a>
+    <div class="lang-toggle" role="group" aria-label="Language selector">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')" aria-label="English" title="English">&#127462;&#127482;</button>
+      <button class="lang-btn" id="btn-pt" onclick="setLang('pt')" aria-label="Português" title="Português">&#127463;&#127479;</button>
+    </div>
+    <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="nav-book" data-i18n="nav.book">Book Now</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">&times;</button>
+  <a href="#massagem" onclick="toggleMenu()" data-i18n="nav.services">Services</a>
+  <a href="#training" onclick="toggleMenu()" data-i18n="nav.training">Training</a>
+  <a href="#results" onclick="toggleMenu()" data-i18n="nav.results">Results</a>
+  <a href="#about" onclick="toggleMenu()" data-i18n="nav.about">About</a>
+  <div class="lang-toggle" style="margin:1rem 0">
+    <button class="lang-btn active" onclick="setLang('en');toggleMenu()">&#127462;&#127482;</button>
+    <button class="lang-btn" onclick="setLang('pt');toggleMenu()">&#127463;&#127479;</button>
+  </div>
+  <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="nav-book" data-i18n="nav.book">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-left">
+    <p class="label section-label reveal stagger-1" data-i18n="hero.label">EUROPEAN CERTIFIED PERSONAL TRAINER &middot; MYOFASCIAL SPECIALIST &middot; SYDNEY</p>
+    <h1 class="hero-h1 reveal stagger-2" data-i18n="hero.h1">Release your body. Live an extraordinary life.</h1>
+    <p class="hero-sub reveal stagger-3" data-i18n="hero.sub">Marina Ribeiro works where training meets bodywork. Conscious movement, specialized massage, and somatic therapy, integrated into one approach so your body can finally do what you have been asking it to do.</p>
+    <div class="trust-row reveal stagger-4">
+      <span class="trust-badge" data-i18n="hero.badge1">EQF Level 4 Trained</span>
+      <span class="trust-badge" data-i18n="hero.badge2">Myo Aponeurosis (40h)</span>
+      <span class="trust-badge" data-i18n="hero.badge3">Myofascial + TMJ + Buccal</span>
+      <span class="trust-badge">Sensory Energetics</span>
+      <span class="trust-badge">EN + PT</span>
+    </div>
+    <div class="hero-ctas reveal stagger-5">
+      <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary" data-i18n="hero.cta1">Book your session</a>
+      <a href="#who-this-is-for" class="btn-outline" data-i18n="hero.cta2">See services</a>
+    </div>
+    <p class="urgency-note reveal stagger-5" data-i18n="hero.urgency">Sensory Energetics launch price ends June 2025.</p>
+  </div>
+  <div class="hero-right">
+    <img src="marina-hero.jpg.jpeg" loading="eager" alt="Marina Ribeiro, bodywork specialist Sydney" onerror="this.parentElement.innerHTML='<div class=\'hero-right-placeholder\'><p>Marina Ribeiro<br>Bodywork Specialist<br>Sydney</p></div>'">
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-bar-inner container">
+    <div class="stat-item">
+      <div class="stat-number">5</div>
+      <div class="stat-label" data-i18n="stat.techniques">Certified techniques</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">EQF 4</div>
+      <div class="stat-label" data-i18n="stat.cert">European certification</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">15-65</div>
+      <div class="stat-label" data-i18n="stat.ages">Client age range</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">EN+PT</div>
+      <div class="stat-label" data-i18n="stat.bilingual">Bilingual sessions</div>
+    </div>
+    <div class="stat-item">
+      <a href="https://www.google.com/maps/search/Marina+Ribeiro+Bodywork+Sydney" target="_blank" style="text-decoration:none">
+        <div class="stat-number" style="color:var(--gold)">★★★★★</div>
+        <div class="stat-label" data-i18n="stat.reviews">Google reviews</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- WHO THIS IS FOR -->
+<section id="who-this-is-for">
+  <div class="container">
+    <h2 class="reveal" data-i18n="who.title">What brought you here?</h2>
+    <div class="who-grid">
+      <a href="#massagem" class="who-card reveal stagger-1">
+        <div class="who-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></span></div>
+        <h3 data-i18n="who.left.title">I carry tension my body won't release.</h3>
+        <p data-i18n="who.left.body">Chronic tension, pain, nervous system overload, or a body that feels disconnected. Marina's massage and bodywork services address what you have been carrying.</p>
+        <span class="who-cta" data-i18n="who.left.cta">See massage + bodywork</span>
+      </a>
+      <a href="#training" class="who-card reveal stagger-2">
+        <div class="who-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14"/><path d="M18 5v14"/><path d="M2 9v6"/><path d="M22 9v6"/><rect x="4" y="7" width="4" height="10" rx="1"/><rect x="16" y="7" width="4" height="10" rx="1"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></div>
+        <h3 data-i18n="who.right.title">I want to move, feel strong, and train with someone who understands my body.</h3>
+        <p data-i18n="who.right.body">Not just sets and reps. Conscious Movement Personal Training at Snap Fitness Maroubra, designed for how your body actually moves.</p>
+        <span class="who-cta" data-i18n="who.right.cta">See training plans</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY MARINA IS DIFFERENT -->
+<section id="diferencial" class="section-pale">
+  <div class="container">
+    <p class="label section-label reveal" data-i18n="diff.label">THE DIFFERENCE</p>
+    <h2 class="reveal" style="margin-top:0.5rem" data-i18n="diff.title">This is not a standard massage.</h2>
+    <p class="diff-intro reveal" data-i18n="diff.intro">Most therapists are trained in one technique and apply it to every client. Marina holds specialist qualifications in five distinct methods and builds each session from scratch around what your body needs that day.</p>
+    <div class="techniques-grid">
+      <div class="technique-card reveal stagger-1">
+        <div class="technique-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span></div>
+        <div class="technique-name" data-i18n="diff.t1.name">Myofascial Release</div>
+        <div class="technique-desc" data-i18n="diff.t1.desc">Releases restrictions in the connective tissue that holds muscle tension in place.</div>
+      </div>
+      <div class="technique-card reveal stagger-2">
+        <div class="technique-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span></div>
+        <div class="technique-name" data-i18n="diff.t2.name">TMJ Massage</div>
+        <div class="technique-desc" data-i18n="diff.t2.desc">Addresses jaw tension that affects posture, headaches, and neck pain.</div>
+      </div>
+      <div class="technique-card reveal stagger-3">
+        <div class="technique-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></span></div>
+        <div class="technique-name" data-i18n="diff.t3.name">Buccal Massage</div>
+        <div class="technique-desc" data-i18n="diff.t3.desc">Works the muscles inside the mouth to release deep facial and jaw tension.</div>
+      </div>
+      <div class="technique-card reveal stagger-4">
+        <div class="technique-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span></div>
+        <div class="technique-name" data-i18n="diff.t4.name">Myo Aponeurosis</div>
+        <div class="technique-desc" data-i18n="diff.t4.desc">Certified at Vanoni Institute (40 hours). Works the connective membrane between muscle and bone.</div>
+      </div>
+      <div class="technique-card reveal stagger-5">
+        <div class="technique-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span></div>
+        <div class="technique-name" data-i18n="diff.t5.name">Somatic Release</div>
+        <div class="technique-desc" data-i18n="diff.t5.desc">Integrates breathwork and body awareness to release tension patterns held in the nervous system.</div>
+      </div>
+    </div>
+    <p class="diff-closing reveal" data-i18n="diff.closing">Every session is a custom blend. Never the same twice.</p>
+  </div>
+</section>
+
+<!-- MASSAGE SERVICES -->
+<section id="massagem">
+  <div class="container">
+    <div class="section-header">
+      <p class="label section-label reveal" data-i18n="massage.label">INTEGRATIVE THERAPEUTIC MASSAGE &middot; MON / WED / FRI &middot; 1PM TO 6PM</p>
+      <h2 class="reveal" data-i18n="massage.title">Your body relaxes. Your nervous system slows down. Your energy reorganizes.</h2>
+      <p class="marina-quote reveal" data-i18n="massage.quote">"My work goes beyond the physical. It awakens energy, confidence, and presence in your body."</p>
+    </div>
+
+    <!-- Somatic Massage Corporal -->
+    <div class="service-block reveal">
+      <div class="service-info">
+        <h3 data-i18n="massage.c.name">Somatic Massage Corporal</h3>
+        <p class="service-duration" data-i18n="massage.c.duration">60 minutes</p>
+        <p class="service-desc" data-i18n="massage.c.desc">You decide where you're holding it. Marina handles the rest. Each session draws from her full toolkit: myofascial release, myo aponeurosis, somatic techniques, or any combination that serves your body that day. Not a fixed routine. Not one technique applied to everyone. You choose the regions. She builds the session around what she finds.</p>
+        <div class="tags">
+          <span class="tag" data-i18n="massage.c.tag1">Myofascial Release</span>
+          <span class="tag" data-i18n="massage.c.tag2">Myo Aponeurosis</span>
+          <span class="tag" data-i18n="massage.c.tag3">Somatic Release</span>
+          <span class="tag" data-i18n="massage.c.tag4">Custom Blend</span>
+        </div>
+        <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary book-link" data-i18n="massage.book">Book this session</a>
+      </div>
+      <div class="pricing-card">
+        <h4 data-i18n="pricing.title">Pricing options</h4>
+        <div class="price-row">
+          <div class="price-option">
+            <div class="price-type" data-i18n="pricing.individual">Individual</div>
+            <div class="price-amount">A$125</div>
+            <div class="price-sub" data-i18n="pricing.per.session">per session</div>
+          </div>
+          <div class="price-divider"></div>
+          <div class="price-option">
+            <div class="price-type" data-i18n="pricing.membership">Membership</div>
+            <div class="price-amount">A$100</div>
+            <div class="price-sub" data-i18n="pricing.per.week">per week</div>
+          </div>
+        </div>
+        <div class="membership-details">
+          <div class="membership-detail" data-i18n="pricing.m.slot">Fixed weekly slot, same day and time</div>
+          <div class="membership-detail" data-i18n="pricing.m.mfit">MFIT training app included</div>
+          <div class="membership-detail" data-i18n="pricing.m.min">Minimum 2 months commitment</div>
+          <div class="membership-detail" data-i18n="pricing.m.cancel">Cancel with 1 week written notice</div>
+          <p class="membership-invite" data-i18n="pricing.m.invite">Membership by invitation after your first session.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Combo Banner -->
+    <div class="combo-banner reveal" data-i18n="massage.combo">Book Body and Facial on the same day: 5% off your total. Two hours. One afternoon. A lot less tension.</div>
+
+    <!-- Somatic Massage Facial -->
+    <div class="service-block reveal">
+      <div class="pricing-card">
+        <h4 data-i18n="pricing.title">Pricing options</h4>
+        <div class="price-row">
+          <div class="price-option">
+            <div class="price-type" data-i18n="pricing.individual">Individual</div>
+            <div class="price-amount">A$125</div>
+            <div class="price-sub" data-i18n="pricing.per.session">per session</div>
+          </div>
+          <div class="price-divider"></div>
+          <div class="price-option">
+            <div class="price-type" data-i18n="pricing.membership">Membership</div>
+            <div class="price-amount">A$100</div>
+            <div class="price-sub" data-i18n="pricing.per.week">per week</div>
+          </div>
+        </div>
+        <div class="membership-details">
+          <div class="membership-detail" data-i18n="pricing.m.slot">Fixed weekly slot, same day and time</div>
+          <div class="membership-detail" data-i18n="pricing.m.mfit">MFIT training app included</div>
+          <div class="membership-detail" data-i18n="pricing.m.min">Minimum 2 months commitment</div>
+          <div class="membership-detail" data-i18n="pricing.m.cancel">Cancel with 1 week written notice</div>
+          <p class="membership-invite" data-i18n="pricing.m.invite">Membership by invitation after your first session.</p>
+        </div>
+      </div>
+      <div class="service-info">
+        <h3 data-i18n="massage.f.name">Somatic Massage Facial</h3>
+        <p class="service-duration" data-i18n="massage.f.duration">60 minutes</p>
+        <p class="service-desc" data-i18n="massage.f.desc">Your face holds more than your expression. Shoulders, neck, chest, face: sixty minutes that start physical and arrive somewhere much quieter. Marina combines myofascial release, TMJ massage, and buccal techniques in each facial session, selecting the blend that serves what your body presents. Most clients say they did not realise how much they were carrying up there until it was gone.</p>
+        <div class="tags">
+          <span class="tag" data-i18n="massage.f.tag1">Myofascial Release</span>
+          <span class="tag" data-i18n="massage.f.tag2">Buccal Massage</span>
+          <span class="tag" data-i18n="massage.f.tag3">TMJ Mastery</span>
+        </div>
+        <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary book-link" data-i18n="massage.book">Book this session</a>
+      </div>
+    </div>
+
+    <!-- Sensory Energetics -->
+    <div class="service-block" style="border-bottom:none;margin-bottom:0;padding-bottom:0">
+      <div class="service-info reveal">
+        <span class="se-badge" data-i18n="se.badge">LAUNCH SPECIAL  -  UNTIL JUNE</span>
+        <h3 data-i18n="se.name">Sensory Energetics</h3>
+        <p class="service-duration" data-i18n="se.duration">90 minutes</p>
+        <p class="service-desc" data-i18n="se.desc">Sensory Energetics is not a massage. It combines gentle trigger point stimulation, breathwork, and NLP to release what your body has been storing, sometimes for years. The nervous system calms. Energy moves again. Marina's clients often describe leaving in a state they hadn't felt in a long time.</p>
+        <div class="outcomes-row">
+          <div class="outcome-item">
+            <div class="outcome-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></div>
+            <div class="outcome-label" data-i18n="se.o1">Better sleep within 24 hours</div>
+          </div>
+          <div class="outcome-item">
+            <div class="outcome-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span></div>
+            <div class="outcome-label" data-i18n="se.o2">Reduced anxiety + tension</div>
+          </div>
+          <div class="outcome-item">
+            <div class="outcome-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span></div>
+            <div class="outcome-label" data-i18n="se.o3">Energy and lightness restored</div>
+          </div>
+        </div>
+        <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary book-link" data-i18n="massage.book">Book this session</a>
+      </div>
+      <div class="reveal stagger-2">
+        <div class="se-pricing">
+          <div class="se-price-card">
+            <h4 data-i18n="se.p1.title">Single session</h4>
+            <div class="se-price-old">A$305</div>
+            <div class="se-price-amount">A$244</div>
+            <div class="se-price-note" data-i18n="se.p1.note">20% off until June</div>
+          </div>
+          <div class="se-price-card featured">
+            <h4 data-i18n="se.p2.title">Membership</h4>
+            <div class="se-price-amount">A$231<span style="font-size:22px">.80</span></div>
+            <div class="se-price-note" data-i18n="se.p2.note">5% off until June, then A$288.80. Fixed slot. Min 2 months.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERSONAL TRAINING -->
+<section id="training" class="section-pale">
+  <div class="container">
+    <p class="label section-label reveal" data-i18n="training.label">CONSCIOUS MOVEMENT PERSONAL TRAINING &middot; SNAP FITNESS MAROUBRA</p>
+    <h2 class="reveal" data-i18n="training.title">Training that actually understands your body.</h2>
+    <div class="integration-block reveal">
+      <p data-i18n="training.integration">Most trainers program your sessions. Marina brings her qualifications in myofascial therapy, TMJ massage, buccal massage, and myo aponeurosis training into every training session. If a fascial restriction is limiting your squat depth, she addresses it. If tension in your jaw is affecting your posture, she notices. You do not need a separate appointment to fix what is holding your training back.</p>
+    </div>
+    <div class="goals-row reveal">
+      <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14"/><path d="M18 5v14"/><path d="M2 9v6"/><path d="M22 9v6"/><rect x="4" y="7" width="4" height="10" rx="1"/><rect x="16" y="7" width="4" height="10" rx="1"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></div><div class="goal-label" data-i18n="training.g1">Mobility</div></div>
+      <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span></div><div class="goal-label" data-i18n="training.g2">Endurance</div></div>
+      <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span></div><div class="goal-label" data-i18n="training.g3">Weight loss</div></div>
+      <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span></div><div class="goal-label" data-i18n="training.g4">Muscle gain</div></div>
+      <div class="goal-item"><div class="goal-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span></div><div class="goal-label" data-i18n="training.g5">Conditioning</div></div>
+    </div>
+    <p class="location-note reveal" data-i18n="training.location">All sessions take place at Snap Fitness Maroubra. Clients must hold an active Snap Fitness membership before their first session. Marina is an independent trainer. The gym carries no responsibility for PT services.</p>
+    <p class="schedule-note reveal" data-i18n="training.schedule">Tue + Thu 8am to 6pm &nbsp;|&nbsp; Mon + Wed + Fri 8am to 11am</p>
+    <div class="plans-grid">
+      <div class="plan-card reveal stagger-1">
+        <div class="plan-name">Basic</div>
+        <div class="plan-price">A$570</div>
+        <div class="plan-per" data-i18n="plan.basic.per">A$95/session &middot; 6 sessions &middot; 1x/week &middot; 45 days</div>
+        <ul class="plan-details">
+          <li data-i18n="plan.mfit">MFIT training app access</li>
+          <li data-i18n="plan.freeze1">Freeze 1 week (once per cycle)</li>
+          <li data-i18n="plan.renews45">Auto-renews every 45 days</li>
+        </ul>
+      </div>
+      <div class="plan-card featured reveal stagger-2">
+        <div class="plan-badge" data-i18n="plan.popular">Most Popular</div>
+        <div class="plan-name">Golden</div>
+        <div class="plan-price">A$1,020</div>
+        <div class="plan-per" data-i18n="plan.golden.per">A$85/session &middot; 12 sessions &middot; 2x/week &middot; 2 months</div>
+        <ul class="plan-details">
+          <li data-i18n="plan.mfit">MFIT training app access</li>
+          <li data-i18n="plan.freeze2">Freeze 2 weeks (once per cycle)</li>
+          <li data-i18n="plan.renews2m">Auto-renews every 2 months</li>
+        </ul>
+      </div>
+      <div class="plan-card reveal stagger-3">
+        <div class="plan-badge" style="background:var(--forest);color:var(--gold)" data-i18n="plan.value">Best Value</div>
+        <div class="plan-name">Diamond</div>
+        <div class="plan-price">A$1,800</div>
+        <div class="plan-per" data-i18n="plan.diamond.per">A$75/session &middot; 24 sessions &middot; 3x/week &middot; 3 months</div>
+        <ul class="plan-details">
+          <li data-i18n="plan.mfit">MFIT training app access</li>
+          <li data-i18n="plan.freeze3">Freeze 3 weeks (once per cycle)</li>
+          <li data-i18n="plan.renews3m">Auto-renews every 3 months</li>
+        </ul>
+      </div>
+    </div>
+    <p class="all-plans-note reveal" data-i18n="training.allplans">All plans: minimum 2 months commitment &middot; Cancel with 1 week written notice</p>
+    <div class="addons-row reveal" style="margin-top:1.5rem">
+      <div class="addon-item" data-i18n="addon.single">Single Session <span class="addon-price">A$99</span></div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem" class="reveal">
+      <a href="https://marinaribeirobodywork.as.me/BookPTlessons" target="_blank" class="btn-primary" data-i18n="training.book">Choose your plan</a>
+    </div>
+  </div>
+</section>
+
+<!-- BODYWORK -->
+<section id="bodywork">
+  <div class="container">
+    <p class="label section-label reveal" data-i18n="bw.label">BODYWORK THERAPY</p>
+    <h2 class="reveal" data-i18n="bw.title">Refine how your body moves. Release what it has been storing.</h2>
+    <p class="bodywork-intro reveal" data-i18n="bw.intro">Bodywork is a therapeutic approach that refines movement patterns and releases stored tension, promoting physical, mental, and emotional health. Marina works with the body as a complete system.</p>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal stagger-1"><div class="pillar-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span></div><div class="pillar-name" data-i18n="bw.p1.name">Joint Mobility</div><div class="pillar-desc" data-i18n="bw.p1.desc">Restore range without force.</div></div>
+      <div class="pillar-card reveal stagger-2"><div class="pillar-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span></div><div class="pillar-name" data-i18n="bw.p2.name">Anti-inflammatory Exercises</div><div class="pillar-desc" data-i18n="bw.p2.desc">Move your way out of inflammation.</div></div>
+      <div class="pillar-card reveal stagger-3"><div class="pillar-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></span></div><div class="pillar-name" data-i18n="bw.p3.name">Breathwork</div><div class="pillar-desc" data-i18n="bw.p3.desc">Your nervous system resets through breath.</div></div>
+      <div class="pillar-card reveal stagger-4"><div class="pillar-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span></div><div class="pillar-name" data-i18n="bw.p4.name">Postural Reorganization</div><div class="pillar-desc" data-i18n="bw.p4.desc">Stand differently. Feel different.</div></div>
+      <div class="pillar-card reveal stagger-5"><div class="pillar-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-1.96-3 2.5 2.5 0 0 1-1.32-4.24 3 3 0 0 1 .34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.18-1.9z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 1.96-3 2.5 2.5 0 0 0 1.32-4.24 3 3 0 0 0-.34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.18-1.9z"/></svg></span></div><div class="pillar-name" data-i18n="bw.p5.name">Mind-Body Reconnection</div><div class="pillar-desc" data-i18n="bw.p5.desc">When you stop ignoring your body, it stops shouting.</div></div>
+      <div class="pillar-card reveal stagger-1"><div class="pillar-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span></div><div class="pillar-name" data-i18n="bw.p6.name">Somatic Release</div><div class="pillar-desc" data-i18n="bw.p6.desc">Let the body complete what it started.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH STATS -->
+<section class="research-section">
+  <div class="container" style="text-align:center">
+    <p class="label reveal" style="color:var(--gold)" data-i18n="research.label">WHAT THE RESEARCH SAYS</p>
+    <h2 class="reveal" style="color:var(--text-on-dark)" data-i18n="research.title">None of this is inevitable.</h2>
+    <p class="research-intro reveal" data-i18n="research.intro">Four numbers most people do not know. The muscle behind each one responds to the right approach.</p>
+    <div class="research-grid">
+      <div class="research-card reveal stagger-1">
+        <div class="research-stat">8/10</div>
+        <div class="research-desc" data-i18n="research.s1.desc">Adults will experience significant neck or back pain at some point in their life.</div>
+        <div class="research-source">WHO Global Burden of Disease</div>
+      </div>
+      <div class="research-card reveal stagger-2">
+        <div class="research-stat">15%</div>
+        <div class="research-desc" data-i18n="research.s2.desc">Of adults have TMJ disorders affecting posture, jaw, headaches, and sleep.</div>
+        <div class="research-source">NIDCR, National Institutes of Health</div>
+      </div>
+      <div class="research-card reveal stagger-3">
+        <div class="research-stat">85%</div>
+        <div class="research-desc" data-i18n="research.s3.desc">Of patients at pain clinics show signs of myofascial pain syndrome.</div>
+        <div class="research-source">Gerwin, Journal of Pain Research, 2014</div>
+      </div>
+      <div class="research-card reveal stagger-4">
+        <div class="research-stat">1/3</div>
+        <div class="research-desc" data-i18n="research.s4.desc">Adults report that chronic stress is physically held in the body as persistent tension.</div>
+        <div class="research-source">APA Stress in America Survey</div>
+      </div>
+    </div>
+    <p class="research-cta-text reveal" data-i18n="research.cta.text">The body responds. <strong>The right technique, in the right place, at the right depth.</strong> That is what Marina builds every session around.</p>
+    <a href="#massagem" class="btn-primary reveal" data-i18n="research.cta.btn">See how it works</a>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results" class="section-dark">
+  <div class="container">
+    <p class="label reveal" style="color:var(--gold)" data-i18n="results.label">RESULTS</p>
+    <h2 class="reveal" data-i18n="results.title">Results from those who already started.</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal stagger-1">
+        <p class="testimonial-quote" data-i18n="results.t1.quote">My self-esteem changed in just a few weeks. With Marina and this method, I started feeling more confident, beautiful, and secure in my own body. Today I look in the mirror with pride.</p>
+        <div class="testimonial-name" data-i18n="results.t1.name">Camila, 15 years old</div>
+      </div>
+      <div class="testimonial-card reveal stagger-2">
+        <p class="testimonial-quote" data-i18n="results.t2.quote">I saw a huge difference in just 2 weeks. With Marina's method, my body felt lighter, my energy increased, and my confidence completely changed. Today I feel happier, more beautiful, and alive.</p>
+        <div class="testimonial-name" data-i18n="results.t2.name">Renata, 42 years old</div>
+      </div>
+      <div class="testimonial-card reveal stagger-3">
+        <p class="testimonial-quote" data-i18n="results.t3.quote">I thought I would lose strength with age, but the opposite happened. With Marina, I regained vitality, mobility, and energy to enjoy life again. I feel stronger than I have in years.</p>
+        <div class="testimonial-name" data-i18n="results.t3.name">Helena, 65 years old</div>
+      </div>
+    </div>
+    <div class="outcomes-grid reveal">
+      <div class="outcome-card"><div class="outcome-card-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div><div class="outcome-card-label" data-i18n="results.o1">Self-esteem + confidence</div></div>
+      <div class="outcome-card"><div class="outcome-card-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span></div><div class="outcome-card-label" data-i18n="results.o2">Energy + vitality</div></div>
+      <div class="outcome-card"><div class="outcome-card-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span></div><div class="outcome-card-label" data-i18n="results.o3">Strength at every age</div></div>
+      <div class="outcome-card"><div class="outcome-card-icon"><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span></div><div class="outcome-card-label" data-i18n="results.o4">Body reconnection</div></div>
+    </div>
+    <div class="instagram-cta reveal">
+      <a href="https://www.instagram.com/marinaribeiropersonal" target="_blank" class="instagram-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        <span data-i18n="results.instagram">Follow Marina's work  -  @marinaribeiropersonal</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <img src="marina-hero.jpg.jpeg" loading="eager" alt="Marina Ribeiro" onerror="this.src='marina-logo.jpg.jpeg'">
+      </div>
+      <div class="about-content">
+        <p class="label section-label reveal" data-i18n="about.label">ABOUT MARINA</p>
+        <h2 class="reveal" data-i18n="about.title">The person behind the work.</h2>
+        <p class="about-bio reveal" data-i18n="about.bio">Marina Ribeiro da Silva is a European-trained personal trainer (EQF Level 4) and specialized bodywork practitioner based in Sydney. She holds qualifications in myofascial therapy, myo aponeurosis training (Vanoni Institute, 40 hours), TMJ massage mastery, buccal massage, and Sensory Energetics. Her approach brings all of these together into one integrated practice. Whether a client comes for training or bodywork, Marina works with the body as a connected system. She is Brazilian, works in English and Portuguese, and her clients range from 15 to 65.</p>
+        <div class="credential-tags reveal">
+          <span class="cred-tag" data-i18n="about.c1">EQF Level 4 Trained</span>
+          <span class="cred-tag" data-i18n="about.c2">Vanoni Institute &middot; Myo Aponeurosis</span>
+          <span class="cred-tag" data-i18n="about.c3">Myofascial + TMJ + Buccal</span>
+          <span class="cred-tag">Sensory Energetics</span>
+          <span class="cred-tag" data-i18n="about.c5">Bilingual EN + PT</span>
+        </div>
+        <p class="about-meta reveal" data-i18n="about.meta">Sydney, Australia &middot; English + Portugu&ecirc;s &middot; @marinaribeiropersonal</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLABS -->
+<section id="collabs" class="section-pale">
+  <div class="container" style="text-align:center">
+    <p class="label section-label reveal" style="margin-bottom:0.5rem">COLLABORATIONS + PARTNERSHIPS</p>
+    <h2 class="reveal" data-i18n="collabs.title">Where you will find Marina.</h2>
+    <div class="collabs-logos">
+      <a href="https://bebold.au" target="_blank" rel="noopener" class="collab-card reveal stagger-1">
+        <img src="bebold-logo.png.svg" alt="Be Bold" onerror="this.style.opacity='0'">
+      </a>
+      <a href="https://www.snapfitness.com.au" target="_blank" rel="noopener" class="collab-card reveal stagger-2">
+        <img src="snapfitness-logo.png.png" alt="Snap Fitness Maroubra" onerror="this.style.opacity='0'">
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <p class="label section-label reveal" data-i18n="faq.label">FAQ</p>
+    <h2 class="reveal" data-i18n="faq.title">Questions before you book.</h2>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="faq.q1">Why does Marina combine personal training with massage and bodywork?</span>
+          <span class="faq-arrow">&#8964;</span>
+        </button>
+        <div class="faq-answer"><p data-i18n="faq.a1">Because they address the same system. Fascial tension limits movement. Movement restrictions reduce training results. Marina's specialist qualifications mean she addresses both in one session, without needing a separate appointment.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="faq.q2">Do I need to have a specific problem to book?</span>
+          <span class="faq-arrow">&#8964;</span>
+        </button>
+        <div class="faq-answer"><p data-i18n="faq.a2">No. Some clients come with chronic pain. Others come because they want more energy, better posture, or stronger training results. Marina works with all of it.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="faq.q3">What happens in the first session?</span>
+          <span class="faq-arrow">&#8964;</span>
+        </button>
+        <div class="faq-answer"><p data-i18n="faq.a3">Marina assesses how your body is moving and holding tension. She asks what brought you in, what you have tried before, and what you want to change. The session is shaped around that, not a fixed protocol.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="faq.q4">Is a gym membership required for personal training?</span>
+          <span class="faq-arrow">&#8964;</span>
+        </button>
+        <div class="faq-answer"><p data-i18n="faq.a4">Yes. All in-person sessions take place at Snap Fitness Maroubra and an active gym membership is required before your first session.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="faq.q5">Can I book for someone under 18?</span>
+          <span class="faq-arrow">&#8964;</span>
+        </button>
+        <div class="faq-answer"><p data-i18n="faq.a5">Yes. Marina works with clients from age 15. Clients under 18 require written parental or guardian consent before the first session. Contact Marina via WhatsApp to arrange this.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-i18n="faq.q6">Can I do both massage and personal training with Marina?</span>
+          <span class="faq-arrow">&#8964;</span>
+        </button>
+        <div class="faq-answer"><p data-i18n="faq.a6">Yes. Many clients do both, and the results are usually faster. The bodywork removes restrictions that the training then builds on.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-dark">
+  <div class="container">
+    <p class="label reveal" style="color:var(--gold)" data-i18n="contact.label">BOOK A SESSION</p>
+    <h2 class="reveal" data-i18n="contact.title">Ready when you are.</h2>
+    <p class="contact-intro reveal" data-i18n="contact.intro">All bookings are online. Pick your service, choose a time, pay securely. Confirmation email and SMS reminder included. No back-and-forth needed.</p>
+    <div class="booking-buttons reveal">
+      <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary" data-i18n="contact.book.massage">Book Massage or Bodywork</a>
+      <a href="https://marinaribeirobodywork.as.me/BookPTlessons" target="_blank" class="btn-outline" data-i18n="contact.book.pt">Book Personal Training</a>
+    </div>
+    <div class="contact-extras reveal">
+      <a href="https://wa.me/61451021478" target="_blank" class="wa-link">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-i18n="contact.whatsapp">Questions before booking? Message Marina on WhatsApp</span>
+      </a>
+      <a href="mailto:info@marinabodywork.com" class="email-link">info@marinabodywork.com</a>
+    </div>
+
+          <div class="risk-block reveal">
+            <div class="risk-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="risk-text">
+              <h4 data-i18n="risk.title">First session guarantee.</h4>
+              <p data-i18n="risk.text">If your first session is not what you expected, message Marina on WhatsApp within 24 hours. She will make it right. No complicated process.</p>
+            </div>
+          </div>
+  </div>
+</section>
+
+<!-- POLICIES ACCORDION -->
+<section id="policies">
+  <div class="container">
+    <div class="policies-toggle" id="policiesToggle" onclick="togglePolicies()">
+      <h2 style="font-size:20px;font-family:var(--font-body);font-weight:500" data-i18n="policies.title">Booking terms</h2>
+      <span class="policies-toggle-icon">&#8964;</span>
+    </div>
+    <div class="policies-content" id="policiesContent">
+      <div class="policies-grid">
+        <div class="policy-card">
+          <div class="policy-title" data-i18n="pol.payment.title">You pay when you book.</div>
+          <div class="policy-body" data-i18n="pol.payment.body">All sessions are paid in full at booking. Government taxes included. No payment needed on the day.</div>
+        </div>
+        <div class="policy-card">
+          <div class="policy-title" data-i18n="pol.reschedule.title">Changed your mind? 72 hours is all you need.</div>
+          <div class="policy-body" data-i18n="pol.reschedule.body">Cancel or reschedule at least 72 hours before your session through the website. No cost. Your slot opens for other clients.</div>
+        </div>
+        <div class="policy-card">
+          <div class="policy-title" data-i18n="pol.late.title">Less than 48 hours, no certificate.</div>
+          <div class="policy-body" data-i18n="pol.late.body">The session cannot be cancelled or rescheduled. It is charged in full.</div>
+        </div>
+        <div class="policy-card">
+          <div class="policy-title" data-i18n="pol.cert.title">Something came up? Bring the certificate.</div>
+          <div class="policy-body" data-i18n="pol.cert.body">With a valid medical certificate, you can cancel at any time and receive a replacement session.</div>
+        </div>
+        <div class="policy-card">
+          <div class="policy-title" data-i18n="pol.pt.title">PT sessions are not replaced without a certificate.</div>
+          <div class="policy-body" data-i18n="pol.pt.body">Personal training sessions cannot be made up without a medical certificate, regardless of notice.</div>
+        </div>
+        <div class="policy-card">
+          <div class="policy-title" data-i18n="pol.membership.title">Membership is a commitment to yourself.</div>
+          <div class="policy-body" data-i18n="pol.membership.body">Minimum 2 months. Cancel with 1 week written notice to info@marinabodywork.com. Auto-renews until cancelled. One freeze per cycle.</div>
+        </div>
+        <div class="policy-card">
+          <div class="policy-title" data-i18n="pol.latearrival.title">Maximum 15 minutes late arrival.</div>
+          <div class="policy-body" data-i18n="pol.latearrival.body">Please arrive on time. Sessions will not be extended due to late arrival. Arrivals more than 15 minutes late may result in the session being shortened or cancelled without refund.</div>
+        </div>
+        <div class="policy-card">
+          <div class="policy-title" data-i18n="pol.under18.title">Clients under 18.</div>
+          <div class="policy-body" data-i18n="pol.under18.body">Marina works with clients from age 15. Written parental or guardian consent is required before the first session. Contact Marina via WhatsApp to arrange this.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-name">MARINA BODYWORK</div>
+        <p class="footer-tagline" data-i18n="footer.tagline">Release your body. Live an extraordinary life.</p>
+        <img src="marina-logo.jpg.jpeg" alt="Marina Ribeiro" style="width:60px;height:60px;border-radius:50%;object-fit:cover;margin-top:1rem" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <div class="footer-heading" data-i18n="footer.links">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#massagem" data-i18n="nav.services">Services</a></li>
+          <li><a href="#training" data-i18n="nav.training">Training</a></li>
+          <li><a href="#diferencial" data-i18n="footer.why">Why Marina</a></li>
+          <li><a href="#results" data-i18n="nav.results">Results</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#policies" data-i18n="policies.title">Booking terms</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading" data-i18n="footer.contact">Contact</div>
+        <div class="footer-contact-item"><span><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span></span> Randwick, NSW</div>
+        <div class="footer-contact-item"><span><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span></span> <a href="tel:+61451021478">0451 021 478</a></div>
+        <div class="footer-contact-item"><span><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span></span> <a href="mailto:info@marinabodywork.com">info@marinabodywork.com</a></div>
+        <div class="footer-contact-item"><span><span class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span></span> <a href="https://instagram.com/marinaribeiropersonal" target="_blank">@marinaribeiropersonal</a></div>
+        <div class="footer-contact-item" style="margin-top:1rem">
+          <a href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" class="btn-primary" style="font-size:13px;padding:0.6rem 1.2rem" data-i18n="footer.book">Book Massage</a>
+          <a href="https://marinaribeirobodywork.as.me/BookPTlessons" target="_blank" class="btn-outline" style="font-size:13px;padding:0.6rem 1.2rem;margin-left:0.5rem" data-i18n="footer.book.pt">Book PT</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Marina Bodywork. All rights reserved. Sydney, Australia.</div>
+  </div>
+</footer>
+
+<script>
+// ─── i18n ───────────────────────────────────────────────────
+const i18n = {
+  en: {
+    'nav.services': 'Services',
+    'nav.training': 'Training',
+    'nav.results': 'Results',
+    'nav.about': 'About',
+    'nav.book': 'Book Now',
+    'hero.label': 'EUROPEAN CERTIFIED PERSONAL TRAINER \u00b7 MYOFASCIAL SPECIALIST \u00b7 SYDNEY',
+    'hero.h1': 'Release your body. Live an extraordinary life.',
+    'hero.sub': 'Marina Ribeiro works where training meets bodywork. Conscious movement, specialized massage, and somatic therapy, integrated into one approach so your body can finally do what you have been asking it to do.',
+    'hero.badge1': 'EQF Level 4 Trained',
+    'hero.badge2': 'Myo Aponeurosis (40h)',
+    'hero.badge3': 'Myofascial + TMJ + Buccal',
+    'hero.cta1': 'Book your session',
+    'hero.cta2': 'See services',
+    'hero.urgency': 'Sensory Energetics launch price ends June 2025.',
+    'who.title': 'What brought you here?',
+    'who.left.title': 'I carry tension my body won\u2019t release.',
+    'who.left.body': 'Chronic tension, pain, nervous system overload, or a body that feels disconnected. Marina\u2019s massage and bodywork services address what you have been carrying.',
+    'who.left.cta': 'See massage + bodywork',
+    'who.right.title': 'I want to move, feel strong, and train with someone who understands my body.',
+    'who.right.body': 'Not just sets and reps. Conscious Movement Personal Training at Snap Fitness Maroubra, designed for how your body actually moves.',
+    'who.right.cta': 'See training plans',
+    'diff.label': 'THE DIFFERENCE',
+    'diff.title': 'This is not a standard massage.',
+    'diff.intro': 'Most therapists are trained in one technique and apply it to every client. Marina holds specialist qualifications in five distinct methods and builds each session from scratch around what your body needs that day.',
+    'diff.t1.name': 'Myofascial Release',
+    'diff.t1.desc': 'Releases restrictions in the connective tissue that holds muscle tension in place.',
+    'diff.t2.name': 'TMJ Massage',
+    'diff.t2.desc': 'Addresses jaw tension that affects posture, headaches, and neck pain.',
+    'diff.t3.name': 'Buccal Massage',
+    'diff.t3.desc': 'Works the muscles inside the mouth to release deep facial and jaw tension.',
+    'diff.t4.name': 'Myo Aponeurosis',
+    'diff.t4.desc': 'Certified at Vanoni Institute (40 hours). Works the connective membrane between muscle and bone.',
+    'diff.t5.name': 'Somatic Release',
+    'diff.t5.desc': 'Integrates breathwork and body awareness to release tension patterns held in the nervous system.',
+    'diff.closing': 'Every session is a custom blend. Never the same twice.',
+    'massage.label': 'INTEGRATIVE THERAPEUTIC MASSAGE \u00b7 MON / WED / FRI \u00b7 1PM TO 6PM',
+    'massage.title': 'Your body relaxes. Your nervous system slows down. Your energy reorganizes.',
+    'massage.quote': '"My work goes beyond the physical. It awakens energy, confidence, and presence in your body."',
+    'massage.c.name': 'Somatic Massage Corporal',
+    'massage.c.duration': '60 minutes',
+    'massage.c.desc': 'You decide where you\u2019re holding it. Marina handles the rest. Each session draws from her full toolkit: myofascial release, myo aponeurosis, somatic techniques, or any combination that serves your body that day. Not a fixed routine. Not one technique applied to everyone. You choose the regions. She builds the session around what she finds.',
+    'massage.c.tag1': 'Myofascial Release',
+    'massage.c.tag2': 'Myo Aponeurosis',
+    'massage.c.tag3': 'Somatic Release',
+    'massage.c.tag4': 'Custom Blend',
+    'massage.book': 'Book this session',
+    'pricing.title': 'Pricing options',
+    'pricing.individual': 'Individual',
+    'pricing.membership': 'Membership',
+    'pricing.per.session': 'per session',
+    'pricing.per.week': 'per week',
+    'pricing.m.slot': 'Fixed weekly slot, same day and time',
+    'pricing.m.mfit': 'MFIT training app included',
+    'pricing.m.min': 'Minimum 2 months commitment',
+    'pricing.m.cancel': 'Cancel with 1 week written notice',
+    'pricing.m.invite': 'Membership by invitation after your first session.',
+    'massage.combo': 'Book Body and Facial on the same day: 5% off your total. Two hours. One afternoon. A lot less tension.',
+    'massage.f.name': 'Somatic Massage Facial',
+    'massage.f.duration': '60 minutes',
+    'massage.f.desc': 'Your face holds more than your expression. Shoulders, neck, chest, face: sixty minutes that start physical and arrive somewhere much quieter. Marina combines myofascial release, TMJ massage, and buccal techniques in each facial session, selecting the blend that serves what your body presents. Most clients say they did not realise how much they were carrying up there until it was gone.',
+    'massage.f.tag1': 'Myofascial Release',
+    'massage.f.tag2': 'Buccal Massage',
+    'massage.f.tag3': 'TMJ Mastery',
+    'se.badge': 'LAUNCH SPECIAL: UNTIL JUNE',
+    'se.name': 'Sensory Energetics',
+    'se.duration': '90 minutes',
+    'se.desc': 'Sensory Energetics is not a massage. It combines gentle trigger point stimulation, breathwork, and NLP to release what your body has been storing, sometimes for years. The nervous system calms. Energy moves again. Marina\u2019s clients often describe leaving in a state they hadn\u2019t felt in a long time.',
+    'se.o1': 'Better sleep within 24 hours',
+    'se.o2': 'Reduced anxiety + tension',
+    'se.o3': 'Energy and lightness restored',
+    'se.p1.title': 'Single session',
+    'se.p1.note': '20% off until June',
+    'se.p2.title': 'Membership',
+    'se.p2.note': '5% off until June, then A$288.80. Fixed slot. Min 2 months.',
+    'training.label': 'CONSCIOUS MOVEMENT PERSONAL TRAINING \u00b7 SNAP FITNESS MAROUBRA',
+    'training.title': 'Training that actually understands your body.',
+    'training.integration': 'Most trainers program your sessions. Marina brings her qualifications in myofascial therapy, TMJ massage, buccal massage, and myo aponeurosis training into every training session. If a fascial restriction is limiting your squat depth, she addresses it. If tension in your jaw is affecting your posture, she notices. You do not need a separate appointment to fix what is holding your training back.',
+    'training.g1': 'Mobility',
+    'training.g2': 'Endurance',
+    'training.g3': 'Weight loss',
+    'training.g4': 'Muscle gain',
+    'training.g5': 'Conditioning',
+    'training.location': 'All sessions take place at Snap Fitness Maroubra. Clients must hold an active Snap Fitness membership before their first session. Marina is an independent trainer. The gym carries no responsibility for PT services.',
+    'training.schedule': 'Tue + Thu 8am to 6pm \u00a0|\u00a0 Mon + Wed + Fri 8am to 11am',
+    'plan.basic.per': 'A$95/session \u00b7 6 sessions \u00b7 1x/week \u00b7 45 days',
+    'plan.golden.per': 'A$85/session \u00b7 12 sessions \u00b7 2x/week \u00b7 2 months',
+    'plan.diamond.per': 'A$75/session \u00b7 24 sessions \u00b7 3x/week \u00b7 3 months',
+    'plan.mfit': 'MFIT training app access',
+    'plan.freeze1': 'Freeze 1 week (once per cycle)',
+    'plan.freeze2': 'Freeze 2 weeks (once per cycle)',
+    'plan.freeze3': 'Freeze 3 weeks (once per cycle)',
+    'plan.renews45': 'Auto-renews every 45 days',
+    'plan.renews2m': 'Auto-renews every 2 months',
+    'plan.renews3m': 'Auto-renews every 3 months',
+    'plan.popular': 'Most Popular',
+    'plan.value': 'Best Value',
+    'training.allplans': 'All plans: minimum 2 months commitment \u00b7 Cancel with 1 week written notice',
+    'addon.single': 'Single Session A$99',
+    'training.book': 'Choose your plan',
+    'bw.label': 'BODYWORK THERAPY',
+    'bw.title': 'Refine how your body moves. Release what it has been storing.',
+    'bw.intro': 'Bodywork is a therapeutic approach that refines movement patterns and releases stored tension, promoting physical, mental, and emotional health. Marina works with the body as a complete system.',
+    'bw.p1.name': 'Joint Mobility',
+    'bw.p1.desc': 'Restore range without force.',
+    'bw.p2.name': 'Anti-inflammatory Exercises',
+    'bw.p2.desc': 'Move your way out of inflammation.',
+    'bw.p3.name': 'Breathwork',
+    'bw.p3.desc': 'Your nervous system resets through breath.',
+    'bw.p4.name': 'Postural Reorganization',
+    'bw.p4.desc': 'Stand differently. Feel different.',
+    'bw.p5.name': 'Mind-Body Reconnection',
+    'bw.p5.desc': 'When you stop ignoring your body, it stops shouting.',
+    'bw.p6.name': 'Somatic Release',
+    'bw.p6.desc': 'Let the body complete what it started.',
+    'results.label': 'RESULTS',
+    'results.title': 'Results from those who already started.',
+    'results.t1.quote': 'My self-esteem changed in just a few weeks. With Marina and this method, I started feeling more confident, beautiful, and secure in my own body. Today I look in the mirror with pride.',
+    'results.t1.name': 'Camila, 15 years old',
+    'results.t2.quote': 'I saw a huge difference in just 2 weeks. With Marina\u2019s method, my body felt lighter, my energy increased, and my confidence completely changed. Today I feel happier, more beautiful, and alive.',
+    'results.t2.name': 'Renata, 42 years old',
+    'results.t3.quote': 'I thought I would lose strength with age, but the opposite happened. With Marina, I regained vitality, mobility, and energy to enjoy life again. I feel stronger than I have in years.',
+    'results.t3.name': 'Helena, 65 years old',
+    'results.o1': 'Self-esteem + confidence',
+    'results.o2': 'Energy + vitality',
+    'results.o3': 'Strength at every age',
+    'results.o4': 'Body reconnection',
+    'results.instagram': 'Follow Marina\u2019s work \u2014 @marinaribeiropersonal',
+    'about.label': 'ABOUT MARINA',
+    'about.title': 'The person behind the work.',
+    'about.bio': 'Marina Ribeiro da Silva is a European-trained personal trainer (EQF Level 4) and specialized bodywork practitioner based in Sydney. She holds qualifications in myofascial therapy, myo aponeurosis training (Vanoni Institute, 40 hours), TMJ massage mastery, buccal massage, and Sensory Energetics. Her approach brings all of these together into one integrated practice. Whether a client comes for training or bodywork, Marina works with the body as a connected system. She is Brazilian, works in English and Portuguese, and her clients range from 15 to 65.',
+    'about.c1': 'EQF Level 4 Trained',
+    'about.c2': 'Vanoni Institute \u00b7 Myo Aponeurosis',
+    'about.c3': 'Myofascial + TMJ + Buccal',
+    'about.c5': 'Bilingual EN + PT',
+    'about.meta': 'Sydney, Australia \u00b7 English + Portugu\u00eas \u00b7 @marinaribeiropersonal',
+    'collabs.title': 'Where you will find Marina.',
+    'faq.label': 'FAQ',
+    'faq.title': 'Questions before you book.',
+    'faq.q1': 'Why does Marina combine personal training with massage and bodywork?',
+    'faq.a1': 'Because they address the same system. Fascial tension limits movement. Movement restrictions reduce training results. Marina\u2019s specialist qualifications mean she addresses both in one session, without needing a separate appointment.',
+    'faq.q2': 'Do I need to have a specific problem to book?',
+    'faq.a2': 'No. Some clients come with chronic pain. Others come because they want more energy, better posture, or stronger training results. Marina works with all of it.',
+    'faq.q3': 'What happens in the first session?',
+    'faq.a3': 'Marina assesses how your body is moving and holding tension. She asks what brought you in, what you have tried before, and what you want to change. The session is shaped around that, not a fixed protocol.',
+    'faq.q4': 'Is a gym membership required for personal training?',
+    'faq.a4': 'Yes. All in-person sessions take place at Snap Fitness Maroubra and an active gym membership is required before your first session.',
+    'faq.q5': 'Can I book for someone under 18?',
+    'faq.a5': 'Yes. Marina works with clients from age 15. Clients under 18 require written parental or guardian consent before the first session. Contact Marina via WhatsApp to arrange this.',
+    'faq.q6': 'Can I do both massage and personal training with Marina?',
+    'faq.a6': 'Yes. Many clients do both, and the results are usually faster. The bodywork removes restrictions that the training then builds on.',
+    'contact.label': 'BOOK A SESSION',
+    'contact.title': 'Ready when you are.',
+    'contact.intro': 'All bookings are online. Pick your service, choose a time, pay securely. Confirmation email and SMS reminder included. No back-and-forth needed.',
+    'contact.book.massage': 'Book Massage or Bodywork',
+    'contact.book.pt': 'Book Personal Training',
+    'contact.whatsapp': 'Questions before booking? Message Marina on WhatsApp',
+    'policies.title': 'Booking terms',
+    'pol.payment.title': 'You pay when you book.',
+    'pol.payment.body': 'All sessions are paid in full at booking. Government taxes included. No payment needed on the day.',
+    'pol.reschedule.title': 'Changed your mind? 72 hours is all you need.',
+    'pol.reschedule.body': 'Cancel or reschedule at least 72 hours before your session through the website. No cost. Your slot opens for other clients.',
+    'pol.late.title': 'Less than 48 hours, no certificate.',
+    'pol.late.body': 'The session cannot be cancelled or rescheduled. It is charged in full.',
+    'pol.cert.title': 'Something came up? Bring the certificate.',
+    'pol.cert.body': 'With a valid medical certificate, you can cancel at any time and receive a replacement session.',
+    'pol.pt.title': 'PT sessions are not replaced without a certificate.',
+    'pol.pt.body': 'Personal training sessions cannot be made up without a medical certificate, regardless of notice.',
+    'pol.membership.title': 'Membership is a commitment to yourself.',
+    'pol.membership.body': 'Minimum 2 months. Cancel with 1 week written notice to info@marinabodywork.com. Auto-renews until cancelled. One freeze per cycle.',
+    'pol.latearrival.title': 'Maximum 15 minutes late arrival.',
+    'pol.latearrival.body': 'Please arrive on time. Sessions will not be extended due to late arrival. Arrivals more than 15 minutes late may result in the session being shortened or cancelled without refund.',
+    'pol.under18.title': 'Clients under 18.',
+    'pol.under18.body': 'Marina works with clients from age 15. Written parental or guardian consent is required before the first session. Contact Marina via WhatsApp to arrange this.',
+    'footer.tagline': 'Release your body. Live an extraordinary life.',
+    'footer.links': 'Quick Links',
+    'footer.why': 'Why Marina',
+    'footer.contact': 'Contact',
+    'footer.book': 'Book Massage',
+    'footer.book.pt': 'Book PT',
+
+    'announce.text': 'Sensory Energetics launch price ends June 2025. Save 20% before it goes.',
+    'announce.cta': 'Book now',
+    'stat.techniques': 'Certified techniques',
+    'stat.cert': 'European certification',
+    'stat.ages': 'Client age range',
+    'stat.bilingual': 'Bilingual sessions',
+    'stat.reviews': 'Google reviews',
+    'research.label': 'WHAT THE RESEARCH SAYS',
+    'research.title': 'None of this is inevitable.',
+    'research.intro': 'Four numbers most people do not know. The body behind each one responds to the right approach.',
+    'research.s1.desc': 'Adults will experience significant neck or back pain at some point in their life.',
+    'research.s2.desc': 'Of adults have TMJ disorders affecting posture, jaw, headaches, and sleep.',
+    'research.s3.desc': 'Of patients at pain clinics show signs of myofascial pain syndrome.',
+    'research.s4.desc': 'Adults report chronic stress is physically held in the body as persistent tension.',
+    'research.cta.text': 'The body responds. The right technique, in the right place, at the right depth. That is what Marina builds every session around.',
+    'research.cta.btn': 'See how it works',
+    'consult.badge': 'FREE - 15 MINUTES',
+    'consult.title': 'Not sure which service is right for you?',
+    'consult.text': 'Talk to Marina on WhatsApp before you book. No pressure. No pitch. Just an honest conversation about what your body needs and what will actually help.',
+    'consult.step1': 'Message Marina with a brief description of what you are dealing with.',
+    'consult.step2': 'Marina responds within 24 hours and suggests the right starting point for your body.',
+    'consult.step3': 'Book the session that makes sense. No guessing. No wrong door.',
+    'consult.card.title': 'Talk to Marina.',
+    'consult.card.sub': '15 minutes. Free. On WhatsApp.',
+    'consult.card.btn': 'Message Marina on WhatsApp',
+    'consult.card.note': 'Marina responds within 24 hours. No obligation to book.',
+    'risk.title': 'First session guarantee.',
+    'risk.text': 'If your first session is not what you expected, message Marina on WhatsApp within 24 hours. She will make it right. No complicated process.',
+  },
+  pt: {
+    'nav.services': 'Servi\u00e7os',
+    'nav.training': 'Treino',
+    'nav.results': 'Resultados',
+    'nav.about': 'Sobre',
+    'nav.book': 'Agendar',
+    'hero.label': 'PERSONAL TRAINER CERTIFICADA PELA EUROPA \u00b7 ESPECIALISTA EM MIOFASCIAL \u00b7 SYDNEY',
+    'hero.h1': 'Destrave seu corpo. Viva uma vida extraordin\u00e1ria.',
+    'hero.sub': 'Marina Ribeiro trabalha onde o treino encontra o trabalho corporal. Movimento consciente, massagem especializada e terapia som\u00e1tica integrados em uma \u00fanica abordagem para que o seu corpo finalmente fa\u00e7a o que voc\u00ea pede a ele.',
+    'hero.badge1': 'Treinada EQF N\u00edvel 4',
+    'hero.badge2': 'Mio Aponeurose (40h)',
+    'hero.badge3': 'Miofascial + ATM + Bucal',
+    'hero.cta1': 'Agendar sess\u00e3o',
+    'hero.cta2': 'Ver servi\u00e7os',
+    'hero.urgency': 'Pre\u00e7o de lan\u00e7amento do Sensory Energetics termina em junho de 2025.',
+    'who.title': 'O que te trouxe aqui?',
+    'who.left.title': 'Carrego tens\u00e3o que meu corpo n\u00e3o libera.',
+    'who.left.body': 'Tens\u00e3o cr\u00f4nica, dor, sobrecarga do sistema nervoso, ou um corpo que parece desconectado. Os servi\u00e7os de massagem e trabalho corporal da Marina tratam o que voc\u00ea vem carregando.',
+    'who.left.cta': 'Ver massagem + trabalho corporal',
+    'who.right.title': 'Quero me mover, me sentir forte e treinar com algu\u00e9m que entende meu corpo.',
+    'who.right.body': 'N\u00e3o apenas s\u00e9ries e repeti\u00e7\u00f5es. Personal Training Movimento Consciente na Snap Fitness Maroubra, projetado para como o seu corpo realmente se move.',
+    'who.right.cta': 'Ver planos de treino',
+    'diff.label': 'A DIFEREN\u00c7A',
+    'diff.title': 'Isso n\u00e3o \u00e9 uma massagem padr\u00e3o.',
+    'diff.intro': 'A maioria dos terapeutas \u00e9 treinada em uma t\u00e9cnica e a aplica em todos os clientes. Marina possui qualifica\u00e7\u00f5es especializadas em cinco m\u00e9todos distintos e constr\u00f3i cada sess\u00e3o do zero, em torno do que o seu corpo precisa naquele dia.',
+    'diff.t1.name': 'Libera\u00e7\u00e3o Miofascial',
+    'diff.t1.desc': 'Libera restri\u00e7\u00f5es no tecido conjuntivo que mant\u00e9m a tens\u00e3o muscular.',
+    'diff.t2.name': 'Massagem de ATM',
+    'diff.t2.desc': 'Trata a tens\u00e3o na mand\u00edbula que afeta postura, dores de cabe\u00e7a e pesco\u00e7o.',
+    'diff.t3.name': 'Massagem Bucal',
+    'diff.t3.desc': 'Trabalha os m\u00fasculos internos da boca para liberar tens\u00e3o facial e mandibular profunda.',
+    'diff.t4.name': 'Mio Aponeurose',
+    'diff.t4.desc': 'Certificada pelo Instituto Vanoni (40 horas). Trabalha a membrana conectiva entre m\u00fasculo e osso.',
+    'diff.t5.name': 'Libera\u00e7\u00e3o Som\u00e1tica',
+    'diff.t5.desc': 'Integra respira\u00e7\u00e3o e consci\u00eancia corporal para liberar padr\u00f5es de tens\u00e3o no sistema nervoso.',
+    'diff.closing': 'Cada sess\u00e3o \u00e9 uma combina\u00e7\u00e3o personalizada. Nunca igual duas vezes.',
+    'massage.label': 'MASSAGEM TERAP\u00caUTICA INTEGRATIVA \u00b7 SEG / QUA / SEX \u00b7 13H \u00c0S 18H',
+    'massage.title': 'Seu corpo relaxa. Seu sistema nervoso desacelera. Sua energia se reorganiza.',
+    'massage.quote': '"O meu trabalho vai al\u00e9m do f\u00edsico. Ele desperta energia, confian\u00e7a e presen\u00e7a no seu corpo."',
+    'massage.c.name': 'Somatic Massage Corporal',
+    'massage.c.duration': '60 minutos',
+    'massage.c.desc': 'Voc\u00ea decide onde est\u00e1 segurando. Marina cuida do resto. Cada sess\u00e3o usa o seu conjunto completo de t\u00e9cnicas: libera\u00e7\u00e3o miofascial, mio aponeurose, trabalho som\u00e1tico, ou qualquer combina\u00e7\u00e3o que sirva ao seu corpo naquele dia. N\u00e3o \u00e9 rotina fixa. N\u00e3o \u00e9 uma t\u00e9cnica aplicada em todo mundo. Voc\u00ea escolhe as regi\u00f5es. Ela constr\u00f3i a sess\u00e3o em torno do que encontra.',
+    'massage.c.tag1': 'Libera\u00e7\u00e3o Miofascial',
+    'massage.c.tag2': 'Mio Aponeurose',
+    'massage.c.tag3': 'Libera\u00e7\u00e3o Som\u00e1tica',
+    'massage.c.tag4': 'Combina\u00e7\u00e3o Personalizada',
+    'massage.book': 'Agendar sess\u00e3o',
+    'pricing.title': 'Op\u00e7\u00f5es de pre\u00e7o',
+    'pricing.individual': 'Avulso',
+    'pricing.membership': 'Membership',
+    'pricing.per.session': 'por sess\u00e3o',
+    'pricing.per.week': 'por semana',
+    'pricing.m.slot': 'Hor\u00e1rio fixo semanal, mesmo dia e hora',
+    'pricing.m.mfit': 'App de treino MFIT inclu\u00eddo',
+    'pricing.m.min': 'M\u00ednimo 2 meses de compromisso',
+    'pricing.m.cancel': 'Cancele com 1 semana de aviso por escrito',
+    'pricing.m.invite': 'Membership por convite ap\u00f3s a sua primeira sess\u00e3o.',
+    'massage.combo': 'Agende Corporal e Facial no mesmo dia: 5% de desconto no total. Duas horas. Uma tarde. Muito menos tens\u00e3o.',
+    'massage.f.name': 'Somatic Massage Facial',
+    'massage.f.duration': '60 minutos',
+    'massage.f.desc': 'Seu rosto guarda mais do que express\u00e3o. Ombros, pesco\u00e7o, peitoral, rosto: sessenta minutos que come\u00e7am f\u00edsicos e chegam a um lugar muito mais quieto. Marina combina libera\u00e7\u00e3o miofascial, massagem de ATM e t\u00e9cnicas bucais em cada sess\u00e3o facial, selecionando a combina\u00e7\u00e3o que serve ao que o seu corpo apresenta. A maioria das clientes diz que n\u00e3o sabia o quanto carregava ali at\u00e9 que foi embora.',
+    'massage.f.tag1': 'Libera\u00e7\u00e3o Miofascial',
+    'massage.f.tag2': 'Massagem Bucal',
+    'massage.f.tag3': 'Dom\u00ednio ATM',
+    'se.badge': 'ESPECIAL DE LAN\u00c7AMENTO: AT\u00c9 JUNHO',
+    'se.name': 'Sensory Energetics',
+    'se.duration': '90 minutos',
+    'se.desc': 'Sensory Energetics n\u00e3o \u00e9 uma massagem. Combina estimula\u00e7\u00e3o suave nos pontos-gatilho, respira\u00e7\u00e3o e PNL para liberar o que o seu corpo guardou, \u00e0s vezes por anos. O sistema nervoso acalma. A energia volta a circular. As clientes de Marina frequentemente descrevem sair em um estado que n\u00e3o sentiam h\u00e1 muito tempo.',
+    'se.o1': 'Melhor sono em 24 horas',
+    'se.o2': 'Ansiedade e tens\u00e3o reduzidas',
+    'se.o3': 'Energia e leveza restauradas',
+    'se.p1.title': 'Sess\u00e3o avulsa',
+    'se.p1.note': '20% off at\u00e9 junho',
+    'se.p2.title': 'Membership',
+    'se.p2.note': '5% off at\u00e9 junho, depois A$288,80. Hor\u00e1rio fixo. M\u00edn. 2 meses.',
+    'training.label': 'PERSONAL TRAINING MOVIMENTO CONSCIENTE \u00b7 SNAP FITNESS MAROUBRA',
+    'training.title': 'Um treino que realmente entende o seu corpo.',
+    'training.integration': 'A maioria dos treinadores programa as suas sess\u00f5es. Marina traz suas qualifica\u00e7\u00f5es em terapia miofascial, massagem de ATM, massagem bucal e treinamento de mio aponeurose para cada sess\u00e3o de treino. Se uma restri\u00e7\u00e3o fascial est\u00e1 limitando a profundidade do seu agachamento, ela trata. Se a tens\u00e3o na mand\u00edbula est\u00e1 afetando a sua postura, ela percebe. Voc\u00ea n\u00e3o precisa de uma consulta separada para resolver o que est\u00e1 travando o seu treino.',
+    'training.g1': 'Mobilidade',
+    'training.g2': 'Resist\u00eancia',
+    'training.g3': 'Perda de peso',
+    'training.g4': 'Ganho muscular',
+    'training.g5': 'Condicionamento',
+    'training.location': 'Todas as sess\u00f5es acontecem na Snap Fitness Maroubra. Os alunos precisam ter matr\u00edcula ativa na academia antes da primeira sess\u00e3o. Marina \u00e9 treinadora independente. A academia n\u00e3o tem responsabilidade pelos servi\u00e7os de personal training.',
+    'training.schedule': 'Ter + Qui 8h \u00e0s 18h \u00a0|\u00a0 Seg + Qua + Sex 8h \u00e0s 11h',
+    'plan.basic.per': 'A$95/sess\u00e3o \u00b7 6 sess\u00f5es \u00b7 1x/semana \u00b7 45 dias',
+    'plan.golden.per': 'A$85/sess\u00e3o \u00b7 12 sess\u00f5es \u00b7 2x/semana \u00b7 2 meses',
+    'plan.diamond.per': 'A$75/sess\u00e3o \u00b7 24 sess\u00f5es \u00b7 3x/semana \u00b7 3 meses',
+    'plan.mfit': 'Acesso ao app de treino MFIT',
+    'plan.freeze1': 'Congelamento 1 semana (uma vez por ciclo)',
+    'plan.freeze2': 'Congelamento 2 semanas (uma vez por ciclo)',
+    'plan.freeze3': 'Congelamento 3 semanas (uma vez por ciclo)',
+    'plan.renews45': 'Renova automaticamente a cada 45 dias',
+    'plan.renews2m': 'Renova automaticamente a cada 2 meses',
+    'plan.renews3m': 'Renova automaticamente a cada 3 meses',
+    'plan.popular': 'Mais Popular',
+    'plan.value': 'Melhor Custo',
+    'training.allplans': 'Todos os planos: m\u00ednimo 2 meses \u00b7 Cancele com 1 semana de aviso por escrito',
+    'addon.single': 'Sess\u00e3o avulsa A$99',
+    'training.book': 'Escolher plano',
+    'bw.label': 'TERAPIA CORPORAL',
+    'bw.title': 'Refine como o seu corpo se move. Libere o que ele vem guardando.',
+    'bw.intro': 'O trabalho corporal \u00e9 uma abordagem terap\u00eautica que refina os padr\u00f5es de movimento e libera a tens\u00e3o acumulada, promovendo sa\u00fade f\u00edsica, mental e emocional. Marina trabalha o corpo como um sistema completo.',
+    'bw.p1.name': 'Mobilidade Articular',
+    'bw.p1.desc': 'Restaure a amplitude sem for\u00e7a.',
+    'bw.p2.name': 'Exerc\u00edcios Anti-inflamat\u00f3rios',
+    'bw.p2.desc': 'Mova-se para sair da inflama\u00e7\u00e3o.',
+    'bw.p3.name': 'Respira\u00e7\u00e3o Consciente',
+    'bw.p3.desc': 'Seu sistema nervoso se reinicia pela respira\u00e7\u00e3o.',
+    'bw.p4.name': 'Reorganiza\u00e7\u00e3o Postural',
+    'bw.p4.desc': 'Fique de p\u00e9 diferente. Sinta diferente.',
+    'bw.p5.name': 'Reconex\u00e3o Mente-Corpo',
+    'bw.p5.desc': 'Quando voc\u00ea para de ignorar seu corpo, ele para de gritar.',
+    'bw.p6.name': 'Libera\u00e7\u00e3o Som\u00e1tica',
+    'bw.p6.desc': 'Deixe o corpo completar o que come\u00e7ou.',
+    'results.label': 'RESULTADOS',
+    'results.title': 'Resultados de quem j\u00e1 come\u00e7ou.',
+    'results.t1.quote': 'Minha autoestima mudou em poucas semanas. Com Marina e esse m\u00e9todo, comecei a me sentir mais confiante, bonita e segura no meu pr\u00f3prio corpo. Hoje olho no espelho com orgulho.',
+    'results.t1.name': 'Camila, 15 anos',
+    'results.t2.quote': 'Vi uma diferen\u00e7a enorme em apenas 2 semanas. Com o m\u00e9todo da Marina, meu corpo ficou mais leve, minha energia aumentou e minha confian\u00e7a mudou completamente. Hoje me sinto mais feliz, mais bonita e viva.',
+    'results.t2.name': 'Renata, 42 anos',
+    'results.t3.quote': 'Achei que perderia for\u00e7a com a idade, mas aconteceu o contr\u00e1rio. Com Marina, recuperei vitalidade, mobilidade e energia para aproveitar a vida novamente. Me sinto mais forte do que j\u00e1 me senti em anos.',
+    'results.t3.name': 'Helena, 65 anos',
+    'results.o1': 'Autoestima e confian\u00e7a',
+    'results.o2': 'Energia e vitalidade',
+    'results.o3': 'For\u00e7a em qualquer idade',
+    'results.o4': 'Reconex\u00e3o com o corpo',
+    'results.instagram': 'Acompanhe o trabalho da Marina \u2014 @marinaribeiropersonal',
+    'about.label': 'SOBRE MARINA',
+    'about.title': 'A pessoa por tr\u00e1s do trabalho.',
+    'about.bio': 'Marina Ribeiro da Silva \u00e9 personal trainer com forma\u00e7\u00e3o europeia (EQF N\u00edvel 4) e praticante especializada em trabalho corporal, baseada em Sydney. Ela possui qualifica\u00e7\u00f5es em terapia miofascial, treinamento de mio aponeurose (Instituto Vanoni, 40 horas), dom\u00ednio de massagem de ATM, massagem bucal e Sensory Energetics. A sua abordagem une tudo isso em uma pr\u00e1tica integrada. Seja para treino ou trabalho corporal, Marina trabalha o corpo como um sistema conectado. Ela \u00e9 brasileira, atende em ingl\u00eas e portugu\u00eas, e suas clientes t\u00eam entre 15 e 65 anos.',
+    'about.c1': 'Treinada EQF N\u00edvel 4',
+    'about.c2': 'Instituto Vanoni \u00b7 Mio Aponeurose',
+    'about.c3': 'Miofascial + ATM + Bucal',
+    'about.c5': 'Bil\u00edngue EN + PT',
+    'about.meta': 'Sydney, Austr\u00e1lia \u00b7 English + Portugu\u00eas \u00b7 @marinaribeiropersonal',
+    'collabs.title': 'Onde voc\u00ea encontra Marina.',
+    'faq.label': 'PERGUNTAS FREQUENTES',
+    'faq.title': 'Perguntas antes de agendar.',
+    'faq.q1': 'Por que Marina combina personal training com massagem e trabalho corporal?',
+    'faq.a1': 'Porque elas tratam o mesmo sistema. A tens\u00e3o fascial limita o movimento. As restri\u00e7\u00f5es de movimento reduzem os resultados do treino. As qualifica\u00e7\u00f5es especializadas de Marina significam que ela trata ambos em uma \u00fanica sess\u00e3o, sem necessidade de consulta separada.',
+    'faq.q2': 'Preciso ter um problema espec\u00edfico para agendar?',
+    'faq.a2': 'N\u00e3o. Algumas clientes chegam com dor cr\u00f4nica. Outras chegam porque querem mais energia, melhor postura ou melhores resultados no treino. Marina trabalha com tudo isso.',
+    'faq.q3': 'O que acontece na primeira sess\u00e3o?',
+    'faq.a3': 'Marina avalia como o seu corpo est\u00e1 se movendo e segurando tens\u00e3o. Ela pergunta o que te trouxe, o que voc\u00ea j\u00e1 tentou antes e o que quer mudar. A sess\u00e3o \u00e9 moldada em torno disso, n\u00e3o de um protocolo fixo.',
+    'faq.q4': 'A matr\u00edcula na academia \u00e9 obrigat\u00f3ria para o personal training?',
+    'faq.a4': 'Sim. Todas as sess\u00f5es presenciais acontecem na Snap Fitness Maroubra e a matr\u00edcula ativa na academia \u00e9 necess\u00e1ria antes da primeira sess\u00e3o.',
+    'faq.q5': 'Posso agendar para algu\u00e9m menor de 18 anos?',
+    'faq.a5': 'Sim. Marina atende clientes a partir dos 15 anos. Clientes menores de 18 anos precisam de consentimento escrito dos pais ou respons\u00e1vel antes da primeira sess\u00e3o. Entre em contato com Marina via WhatsApp.',
+    'faq.q6': 'Posso fazer massagem e personal training com Marina?',
+    'faq.a6': 'Sim. Muitas clientes fazem os dois, e os resultados costumam ser mais r\u00e1pidos. O trabalho corporal remove restri\u00e7\u00f5es que o treino depois desenvolve.',
+    'contact.label': 'AGENDE UMA SESS\u00c3O',
+    'contact.title': 'Pronta quando voc\u00ea estiver.',
+    'contact.intro': 'Todos os agendamentos s\u00e3o online. Escolha o servi\u00e7o, selecione o hor\u00e1rio, pague com seguran\u00e7a. Email de confirma\u00e7\u00e3o e lembrete por SMS inclu\u00eddos. Sem vai-e-vem.',
+    'contact.book.massage': 'Agendar Massagem ou Bodywork',
+    'contact.book.pt': 'Agendar Personal Training',
+    'contact.whatsapp': 'D\u00favidas antes de agendar? Fala com Marina no WhatsApp',
+    'policies.title': 'Termos de agendamento',
+    'pol.payment.title': 'Voc\u00ea paga quando agenda.',
+    'pol.payment.body': 'Todas as sess\u00f5es s\u00e3o pagas integralmente no agendamento. Impostos inclu\u00edos. Sem pagamento necess\u00e1rio no dia.',
+    'pol.reschedule.title': 'Mudou de ideia? 72 horas \u00e9 tudo que voc\u00ea precisa.',
+    'pol.reschedule.body': 'Cancele ou reagende com pelo menos 72 horas de anteced\u00eancia pelo site. Sem custo. Seu hor\u00e1rio fica dispon\u00edvel para outras clientes.',
+    'pol.late.title': 'Menos de 48 horas, sem atestado.',
+    'pol.late.body': 'A sess\u00e3o n\u00e3o pode ser cancelada nem reagendada. \u00c9 cobrada integralmente.',
+    'pol.cert.title': 'Surgiu algo? Traga o atestado.',
+    'pol.cert.body': 'Com atestado m\u00e9dico v\u00e1lido, voc\u00ea pode cancelar a qualquer momento e receber uma sess\u00e3o de reposi\u00e7\u00e3o.',
+    'pol.pt.title': 'Sess\u00f5es de PT n\u00e3o s\u00e3o repostas sem atestado.',
+    'pol.pt.body': 'Sess\u00f5es de personal training n\u00e3o s\u00e3o repostas sem atestado m\u00e9dico, independente do aviso.',
+    'pol.membership.title': 'Membership \u00e9 um compromisso com voc\u00ea mesma.',
+    'pol.membership.body': 'M\u00ednimo de 2 meses. Cancele com 1 semana de aviso por escrito para info@marinabodywork.com. Renova automaticamente at\u00e9 cancelamento. Um congelamento por ciclo.',
+    'pol.latearrival.title': 'Atraso m\u00e1ximo de 15 minutos.',
+    'pol.latearrival.body': 'Por favor, chegue no hor\u00e1rio. As sess\u00f5es n\u00e3o ser\u00e3o estendidas por conta de atrasos. Chegadas com mais de 15 minutos de atraso podem resultar em sess\u00e3o encurtada ou cancelada sem reembolso.',
+    'pol.under18.title': 'Clientes menores de 18 anos.',
+    'pol.under18.body': 'Marina atende clientes a partir dos 15 anos. Consentimento escrito dos pais ou respons\u00e1vel \u00e9 necess\u00e1rio antes da primeira sess\u00e3o. Entre em contato com Marina via WhatsApp.',
+    'footer.tagline': 'Destrave seu corpo. Viva uma vida extraordin\u00e1ria.',
+    'footer.links': 'Links R\u00e1pidos',
+    'footer.why': 'Por que Marina',
+    'footer.contact': 'Contato',
+    'footer.book': 'Agendar Massagem',
+    'footer.book.pt': 'Agendar PT',
+
+    'announce.text': 'Preco de lancamento do Sensory Energetics termina em junho de 2025. Economize 20% antes.',
+    'announce.cta': 'Agendar agora',
+    'stat.techniques': 'Tecnicas certificadas',
+    'stat.cert': 'Certificacao europeia',
+    'stat.ages': 'Faixa etaria dos clientes',
+    'stat.bilingual': 'Sessoes bilingues',
+    'stat.reviews': 'Avaliacoes Google',
+    'research.label': 'O QUE A PESQUISA DIZ',
+    'research.title': 'Nada disso e inevitavel.',
+    'research.intro': 'Quatro numeros que a maioria das pessoas nao conhece. O musculo por tras de cada um responde com a abordagem certa.',
+    'research.s1.desc': 'Dos adultos terao dor significativa no pescoco ou nas costas em algum momento da vida.',
+    'research.s2.desc': 'Dos adultos tem disturbios da ATM afetando postura, mandibula, cabeca e sono.',
+    'research.s3.desc': 'Dos pacientes em clinicas de dor mostram sinais de sindrome de dor miofascial.',
+    'research.s4.desc': 'Dos adultos relatam que o estresse cronico e guardado fisicamente no corpo como tensao persistente.',
+    'research.cta.text': 'O corpo responde. A tecnica certa, no lugar certo, na profundidade certa. E isso que Marina constroi em cada sessao.',
+    'research.cta.btn': 'Ver como funciona',
+    'consult.badge': 'GRATIS - 15 MINUTOS',
+    'consult.title': 'Nao tem certeza de qual servico e certo para voce?',
+    'consult.text': 'Fale com Marina no WhatsApp antes de agendar. Sem pressao. Sem pitch. So uma conversa honesta sobre o que o seu corpo precisa e o que vai ajudar de verdade.',
+    'consult.step1': 'Mande uma mensagem para Marina com uma breve descricao do que voce esta enfrentando.',
+    'consult.step2': 'Marina responde em 24 horas e sugere o ponto de partida certo para o seu corpo.',
+    'consult.step3': 'Agende a sessao que faz sentido. Sem chute. Sem porta errada.',
+    'consult.card.title': 'Fala com Marina.',
+    'consult.card.sub': '15 minutos. Gratis. No WhatsApp.',
+    'consult.card.btn': 'Mensagem para Marina no WhatsApp',
+    'consult.card.note': 'Marina responde em 24 horas. Sem obrigacao de agendar.',
+    'risk.title': 'Garantia da primeira sessao.',
+    'risk.text': 'Se a sua primeira sessao nao foi o que voce esperava, mande uma mensagem para Marina no WhatsApp em 24 horas. Ela vai resolver. Sem processo complicado.',
+  }
+};
+
+let currentLang = localStorage.getItem('marineLang') || 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('marineLang', lang);
+  document.body.classList.add('lang-switching');
+  setTimeout(() => {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (i18n[lang][key] !== undefined) {
+        el.innerHTML = i18n[lang][key];
+      }
+    });
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    document.body.classList.remove('lang-switching');
+  }, 150);
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+}
+
+// ─── NAV SCROLL ─────────────────────────────────────────────
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+  updateActiveNav();
+}, { passive: true });
+
+function updateActiveNav() {
+  const sections = document.querySelectorAll('section[id]');
+  const scrollPos = window.scrollY + 100;
+  sections.forEach(s => {
+    const top = s.offsetTop;
+    const bottom = top + s.offsetHeight;
+    const link = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+    if (link) link.classList.toggle('active', scrollPos >= top && scrollPos < bottom);
+  });
+}
+
+// ─── MOBILE MENU ────────────────────────────────────────────
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+  document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
+}
+
+// ─── SCROLL REVEAL ──────────────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ─── FAQ ACCORDION ──────────────────────────────────────────
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// ─── POLICIES ACCORDION ─────────────────────────────────────
+function togglePolicies() {
+  const toggle = document.getElementById('policiesToggle');
+  const content = document.getElementById('policiesContent');
+  toggle.classList.toggle('open');
+  content.classList.toggle('open');
+}
+
+// ─── INIT ────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  setLang(currentLang);
+  // Hero stagger animation
+  document.querySelectorAll('.hero-left .reveal').forEach(el => {
+    setTimeout(() => el.classList.add('visible'), 100);
+  });
+});
+</script>
+</body>
+</html>
