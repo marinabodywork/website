@@ -112,6 +112,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 .section--dark .eyebrow { color: var(--sand); }
 .section--pale { background: var(--cream-warm); }
 .section--cream { background: var(--cream); }
+.section--surface {
+  background: var(--cream-warm);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 .container { max-width: var(--container); margin: 0 auto; }
 .container--narrow { max-width: var(--container-narrow); margin: 0 auto; }
 .container--reading { max-width: var(--container-reading); margin: 0 auto; }

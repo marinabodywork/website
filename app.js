@@ -78,7 +78,7 @@
       'home.svc.s3.name': 'Training',
       'home.svc.s3.meta': '60 min · From A$75/session on plan',
       'home.svc.s3.p': 'Conscious-movement personal training. Strength built on a body that can actually move. Snap Fitness Maroubra.',
-      'home.svc.s3.cta': 'See training plans',
+      'home.svc.s3.cta': 'Book PT Lesson',
 
       // ─── Diagnostic ───
       'diag.label': 'Diagnostic',
@@ -494,7 +494,7 @@
       'home.svc.s3.name': 'Treino',
       'home.svc.s3.meta': '60 min · A partir de A$75/sessão no plano',
       'home.svc.s3.p': 'Treino personalizado de movimento consciente. Força construída num corpo que consegue realmente se mover. Snap Fitness Maroubra.',
-      'home.svc.s3.cta': 'Ver planos de treino',
+      'home.svc.s3.cta': 'Agendar Aula de PT',
 
       // Diagnostic
       'diag.label': 'Diagnóstico',
