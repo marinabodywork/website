@@ -3,6 +3,8 @@
    FAQ accordion, diagnostic widget, PT plan selector.
 */
 
+document.documentElement.classList.add('js-on');
+
 (function () {
   'use strict';
 
@@ -152,7 +154,8 @@
       'nf.h1': 'This page took a different route.',
       'nf.sub': 'It might have moved, or never existed. Either way, the work is still here.',
       'nf.cta.home': 'Back to home',
-      'nf.cta.book': 'Book a session',
+      'nf.cta.book': 'Book Massage',
+      'nf.next': 'Where to next?',
       'home.faq.h2': 'The questions Marina hears every week.',
       'home.faq.q1': 'Why does Marina combine bodywork with personal training?',
       'home.faq.a1': 'Because they work on the same system. Fascial restriction limits movement. Limited movement caps training results. Marina\'s qualifications mean she addresses both in one session, without a separate appointment for each.',
@@ -577,7 +580,8 @@
       'nf.h1': 'Esta página tomou outro caminho.',
       'nf.sub': 'Pode ter mudado de lugar, ou nunca ter existido. De qualquer forma, o trabalho continua aqui.',
       'nf.cta.home': 'Voltar para o início',
-      'nf.cta.book': 'Agendar uma sessão',
+      'nf.cta.book': 'Agendar Massagem',
+      'nf.next': 'Para onde agora?',
       'home.faq.h2': 'As perguntas que a Marina escuta toda semana.',
       'home.faq.q1': 'Por que a Marina combina terapia corporal com treino personalizado?',
       'home.faq.a1': 'Porque os dois trabalham no mesmo sistema. A restrição fascial limita o movimento. Movimento limitado limita resultados de treino. As qualificações da Marina permitem que ela trabalhe os dois em uma sessão, sem ter que marcar dois atendimentos separados.',
