@@ -144,6 +144,15 @@
 
       // ─── FAQ ───
       'home.faq.label': 'FAQ',
+      'faq.search.placeholder': 'Search the questions',
+      'faq.search.empty': 'No questions match. Try a different term.',
+      'a11y.skip': 'Skip to main content',
+      'about.bio.pullquote': 'Most fitness spaces are not built for the bodies and lives most women actually have.',
+      'nf.label': 'Page not found',
+      'nf.h1': 'This page took a different route.',
+      'nf.sub': 'It might have moved, or never existed. Either way, the work is still here.',
+      'nf.cta.home': 'Back to home',
+      'nf.cta.book': 'Book a session',
       'home.faq.h2': 'The questions Marina hears every week.',
       'home.faq.q1': 'Why does Marina combine bodywork with personal training?',
       'home.faq.a1': 'Because they work on the same system. Fascial restriction limits movement. Limited movement caps training results. Marina\'s qualifications mean she addresses both in one session, without a separate appointment for each.',
@@ -560,6 +569,15 @@
 
       // FAQ
       'home.faq.label': 'Perguntas frequentes',
+      'faq.search.placeholder': 'Buscar nas perguntas',
+      'faq.search.empty': 'Nenhuma pergunta corresponde. Tente outro termo.',
+      'a11y.skip': 'Ir para o conteúdo principal',
+      'about.bio.pullquote': 'A maioria dos espaços de treino não foi construída para os corpos e as vidas que as mulheres realmente têm.',
+      'nf.label': 'Página não encontrada',
+      'nf.h1': 'Esta página tomou outro caminho.',
+      'nf.sub': 'Pode ter mudado de lugar, ou nunca ter existido. De qualquer forma, o trabalho continua aqui.',
+      'nf.cta.home': 'Voltar para o início',
+      'nf.cta.book': 'Agendar uma sessão',
       'home.faq.h2': 'As perguntas que a Marina escuta toda semana.',
       'home.faq.q1': 'Por que a Marina combina terapia corporal com treino personalizado?',
       'home.faq.a1': 'Porque os dois trabalham no mesmo sistema. A restrição fascial limita o movimento. Movimento limitado limita resultados de treino. As qualificações da Marina permitem que ela trabalhe os dois em uma sessão, sem ter que marcar dois atendimentos separados.',
@@ -1040,13 +1058,76 @@
   }
 
   // ─────────────────────────────────────────────
+  // Hero parallax + service-block image reveal
+  // ─────────────────────────────────────────────
+  function initParallax() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const targets = document.querySelectorAll('.hero__media');
+    if (!targets.length) return;
+    let ticking = false;
+    function update() {
+      targets.forEach(function (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        const y = rect.top * -0.08;
+        el.style.transform = 'translate3d(0,' + y.toFixed(2) + 'px,0)';
+      });
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    update();
+  }
+
+  function initMediaReveal() {
+    if (!('IntersectionObserver' in window)) return;
+    const blocks = document.querySelectorAll('.service-block');
+    if (!blocks.length) return;
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.18 });
+    blocks.forEach(function (b) { io.observe(b); });
+  }
+
+  // ─────────────────────────────────────────────
+  // FAQ search filter
+  // ─────────────────────────────────────────────
+  function initFaqSearch() {
+    document.querySelectorAll('.faq').forEach(function (faq) {
+      const input = faq.querySelector('.faq__search input');
+      if (!input) return;
+      const items = faq.querySelectorAll('.faq__item');
+      input.addEventListener('input', function () {
+        const q = input.value.trim().toLowerCase();
+        let visible = 0;
+        items.forEach(function (item) {
+          const text = item.textContent.toLowerCase();
+          const match = !q || text.indexOf(q) !== -1;
+          item.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+        faq.classList.toggle('is-empty', visible === 0 && q.length > 0);
+      });
+    });
+  }
+
+  // ─────────────────────────────────────────────
   // Boot
   // ─────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', function () {
     initLang();
     initNav();
     initFaq();
+    initFaqSearch();
     initDiag();
     initReveal();
+    initParallax();
+    initMediaReveal();
   });
 })();

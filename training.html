@@ -15,6 +15,8 @@
 <link rel="icon" type="image/webp" href="marina-logo.webp">
 <link rel="apple-touch-icon" href="marina-logo.webp">
 
+<link rel="preload" as="image" href="marina-logo.png">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,10 +53,12 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
 <nav class="nav" aria-label="Primary">
   <div class="nav__inner">
     <a class="nav__logo" href="index.html" aria-label="Marina Bodywork home">
-      <img src="marina-logo.png" alt="" width="88" height="88">
+      <img src="marina-logo.png" alt="" width="88" height="88" decoding="async">
     </a>
     <div class="nav__links">
       <a href="method.html" data-i18n="nav.method">Method</a>
@@ -83,7 +87,7 @@
   <a class="btn btn--sand" href="https://marinaribeirobodywork.as.me/BookPTlessons" target="_blank" rel="noopener" data-i18n="nav.bookTraining">Book PT Lesson</a>
 </div>
 
-<header class="page-hero">
+<header class="page-hero" id="main" tabindex="-1">
   <div class="container">
     <span class="eyebrow reveal" data-i18n="tr.hero.label">Personal training</span>
     <h1 class="reveal stagger-1" data-i18n="tr.hero.h1">Training that understands your body.</h1>
@@ -237,7 +241,7 @@
   <div class="footer__inner">
     <div class="footer__top">
       <div class="footer__brand">
-        <img src="marina-logo.png" alt="Marina Bodywork" width="120" height="120">
+        <img src="marina-logo.png" alt="Marina Bodywork" width="120" height="120" loading="lazy" decoding="async">
         <p class="footer__tag" data-i18n="footer.tag">Release your body. Live an extraordinary life.</p>
       </div>
       <div>

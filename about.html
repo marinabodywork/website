@@ -15,6 +15,9 @@
 <link rel="icon" type="image/webp" href="marina-logo.webp">
 <link rel="apple-touch-icon" href="marina-logo.webp">
 
+<link rel="preload" as="image" href="marina-hero.webp" fetchpriority="high">
+<link rel="preload" as="image" href="marina-logo.png">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,10 +54,12 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
 <nav class="nav" aria-label="Primary">
   <div class="nav__inner">
     <a class="nav__logo" href="index.html" aria-label="Marina Bodywork home">
-      <img src="marina-logo.png" alt="" width="88" height="88">
+      <img src="marina-logo.png" alt="" width="88" height="88" decoding="async">
     </a>
     <div class="nav__links">
       <a href="method.html" data-i18n="nav.method">Method</a>
@@ -83,9 +88,9 @@
   <a class="btn btn--sand" href="https://marinaribeirobodywork.as.me/BookPTlessons" target="_blank" rel="noopener" data-i18n="nav.bookTraining">Book PT Lesson</a>
 </div>
 
-<header class="about-hero">
+<header class="about-hero" id="main" tabindex="-1">
   <div class="about-hero__bg">
-    <img src="marina-hero.webp" alt="Marina Ribeiro da Silva, Sydney" width="1600" height="1200" fetchpriority="high">
+    <img src="marina-hero.webp" alt="Marina Ribeiro da Silva, Sydney" width="1600" height="1200" fetchpriority="high" decoding="async">
   </div>
   <div class="about-hero__overlay">
     <div class="about-hero__inner reveal">
@@ -105,6 +110,7 @@
     <div class="about-bio reveal">
       <p data-i18n="about.bio.p1">Marina Ribeiro da Silva is a Physical Education professional with more than eighteen years dedicated to movement, health, and women's well-being. Movement and bodywork are not two careers. They are two sides of how a body changes.</p>
       <p data-i18n="about.bio.p2">She started through dance, teaching from age fifteen. She studied Physical Education to professionalise what she had been doing intuitively since childhood. In Brazil she worked with the Minas Gerais government on Movimenta Contagem, the largest free outdoor physical-activity programme in the country.</p>
+      <blockquote class="pull-quote reveal" data-i18n="about.bio.pullquote">Most fitness spaces are not built for the bodies and lives most women actually have.</blockquote>
       <p data-i18n="about.bio.p3">After the pandemic she founded Mulheres Ativas, a programme for women: particularly women over forty, mothers, and those who had never felt at home in a traditional gym. That line is the heart of her work. Most fitness spaces are not built for the bodies and lives most women actually have.</p>
       <p data-i18n="about.bio.p4">In Sydney she specialises in women's training across every stage of life, including perimenopause: conditioning, hypertrophy, mobility, posture, body awareness, quality of life. Across ten plus years of bodywork she developed her own fascial-release technique combining breath, somatic awareness, and myofascial release. It is the foundation of every session she runs.</p>
     </div>
@@ -144,7 +150,7 @@
     </div>
 
     <div class="partner-strip reveal">
-      <img src="be-bold-logo.png" alt="Be Bold Sydney" width="120" height="56">
+      <img src="be-bold-logo.png" alt="Be Bold Sydney" width="120" height="56" loading="lazy" decoding="async">
       <div>
         <h4 data-i18n="about.partner.label">Be Bold Sydney</h4>
         <p data-i18n="about.partner.p">Marina's clients get <strong>2 months of free exclusive access to the Be Bold app</strong>, plus <strong>10% off any Be Bold work</strong>.</p>
@@ -185,7 +191,7 @@
   <div class="footer__inner">
     <div class="footer__top">
       <div class="footer__brand">
-        <img src="marina-logo.png" alt="Marina Bodywork" width="120" height="120">
+        <img src="marina-logo.png" alt="Marina Bodywork" width="120" height="120" loading="lazy" decoding="async">
         <p class="footer__tag" data-i18n="footer.tag">Release your body. Live an extraordinary life.</p>
       </div>
       <div>

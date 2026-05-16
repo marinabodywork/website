@@ -15,6 +15,9 @@
 <link rel="icon" type="image/webp" href="marina-logo.webp">
 <link rel="apple-touch-icon" href="marina-logo.webp">
 
+<link rel="preload" as="image" href="hero.jpeg" fetchpriority="high">
+<link rel="preload" as="image" href="marina-logo.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap">
@@ -128,10 +131,12 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
 <nav class="nav" aria-label="Primary">
   <div class="nav__inner">
     <a class="nav__logo" href="index.html" aria-label="Marina Bodywork home">
-      <img src="marina-logo.png" alt="" width="88" height="88">
+      <img src="marina-logo.png" alt="" width="88" height="88" decoding="async">
     </a>
     <div class="nav__links">
       <a href="method.html" data-i18n="nav.method">Method</a>
@@ -160,7 +165,7 @@
   <a class="btn btn--sand" href="https://marinaribeirobodywork.as.me/BookPTlessons" target="_blank" rel="noopener" data-i18n="nav.bookTraining">Book PT Lesson</a>
 </div>
 
-<header class="hero">
+<header class="hero" id="main" tabindex="-1">
   <div class="hero__inner">
     <div class="hero__text">
       <span class="eyebrow reveal" data-i18n="home.hero.label">Marina Ribeiro · Fascia release specialist · Sydney</span>
@@ -179,7 +184,7 @@
     </div>
     <div class="hero__media reveal stagger-6">
       <picture>
-        <img src="hero.jpeg" alt="Marina Ribeiro, bodywork specialist and personal trainer" width="2048" height="1723" fetchpriority="high">
+        <img src="hero.jpeg" alt="Marina Ribeiro, bodywork specialist and personal trainer" width="2048" height="1723" fetchpriority="high" decoding="async">
       </picture>
     </div>
   </div>
@@ -373,7 +378,7 @@
         </div>
       </div>
       <div class="consult__media reveal">
-        <img src="marina-consult.webp" alt="Marina Ribeiro at her practice in Sydney" width="540" height="675" loading="lazy">
+        <img src="marina-consult.webp" alt="Marina Ribeiro at her practice in Sydney" width="540" height="675" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -386,6 +391,10 @@
       <h2 class="h2" data-i18n="home.faq.h2">The questions Marina hears every week.</h2>
     </div>
     <div class="faq reveal">
+      <div class="faq__search">
+        <input type="search" data-i18n-attr="placeholder:faq.search.placeholder" placeholder="Search the questions" aria-label="Search FAQ">
+      </div>
+      <p class="faq__empty" data-i18n="faq.search.empty">No questions match. Try a different term.</p>
       <div class="faq__item">
         <button class="faq__q" type="button" aria-expanded="false"><span data-i18n="home.faq.q1">Why does Marina combine bodywork with personal training?</span><span class="faq__icon" aria-hidden="true"></span></button>
         <div class="faq__a"><div data-i18n="home.faq.a1">Because they work on the same system. Fascial restriction limits movement. Limited movement caps training results. Marina's qualifications mean she addresses both in one session, without a separate appointment for each.</div></div>
@@ -426,7 +435,7 @@
   <div class="footer__inner">
     <div class="footer__top">
       <div class="footer__brand">
-        <img src="marina-logo.png" alt="Marina Bodywork" width="120" height="120">
+        <img src="marina-logo.png" alt="Marina Bodywork" width="120" height="120" loading="lazy" decoding="async">
         <p class="footer__tag" data-i18n="footer.tag">Release your body. Live an extraordinary life.</p>
       </div>
       <div>
