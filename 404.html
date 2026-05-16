@@ -3,6 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  try {
+    var __l = localStorage.getItem('marinaLang');
+    if (__l === 'pt') {
+      document.documentElement.lang = 'pt-BR';
+      document.documentElement.classList.add('lang-pending');
+      setTimeout(function () { document.documentElement.classList.remove('lang-pending'); }, 800);
+    }
+  } catch (e) {}
+</script>
 <title>Page not found · Marina Bodywork</title>
 <meta name="description" content="The page you were looking for could not be found. Marina Bodywork — somatic massage, Sensory Energetics, and conscious-movement personal training in Sydney.">
 <meta name="robots" content="noindex">

@@ -3,6 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  try {
+    var __l = localStorage.getItem('marinaLang');
+    if (__l === 'pt') {
+      document.documentElement.lang = 'pt-BR';
+      document.documentElement.classList.add('lang-pending');
+      setTimeout(function () { document.documentElement.classList.remove('lang-pending'); }, 800);
+    }
+  } catch (e) {}
+</script>
 <title>Personal Training · Marina Bodywork</title>
 <meta name="description" content="Specialist 1-on-1 personal training with Marina Ribeiro at Snap Fitness Maroubra. Plans from A$75/session. Bodywork qualifications inside every PT session.">
 <meta name="theme-color" content="#1C3A2B">
@@ -93,6 +103,10 @@
     <h1 class="reveal stagger-1" data-i18n="tr.hero.h1">Training that understands your body.</h1>
     <p class="page-hero__sub reveal stagger-2" data-i18n="tr.hero.sub">Specialist 1-on-1 personal training at Snap Fitness Maroubra. Each 60-minute session is built around what Marina sees in your movement, and what her bodywork qualifications let her address in the same hour.</p>
     <p class="reveal stagger-3" style="color: var(--sand); font-size: 15px; letter-spacing: 0.04em;" data-i18n="tr.hero.loc">Snap Fitness Maroubra · Tue + Thu 8am-6pm · Mon/Wed/Fri 8am-11am · Active Snap Fitness membership required</p>
+    <div class="btn-row reveal stagger-4" style="margin-top: var(--s-3);">
+      <a class="btn btn--sand btn--lg" href="#plans" data-i18n="tr.hero.cta.plans">See training plans →</a>
+      <a class="btn--link" href="https://wa.me/61451021478?text=Hi%20Marina%2C%20I%27d%20like%20to%20talk%20briefly%20before%20I%20book." target="_blank" rel="noopener" data-i18n="tr.hero.cta.talk">Talk to Marina first →</a>
+    </div>
   </div>
 </header>
 

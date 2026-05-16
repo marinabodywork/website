@@ -3,6 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  try {
+    var __l = localStorage.getItem('marinaLang');
+    if (__l === 'pt') {
+      document.documentElement.lang = 'pt-BR';
+      document.documentElement.classList.add('lang-pending');
+      setTimeout(function () { document.documentElement.classList.remove('lang-pending'); }, 800);
+    }
+  } catch (e) {}
+</script>
 <title>The Method · Marina Bodywork</title>
 <meta name="description" content="It is all fascia. Marina Ribeiro's method: why standard massage and training miss the same tissue, and what changes when fascia is the focus.">
 <meta name="theme-color" content="#1C3A2B">
@@ -101,6 +111,10 @@
     <span class="eyebrow reveal" data-i18n="method.hero.label">The method</span>
     <h1 class="reveal stagger-1" data-i18n="method.hero.h1">It is all fascia.</h1>
     <p class="page-hero__sub reveal stagger-2" data-i18n="method.hero.sub">Fascia is the tissue around every muscle, organ, and nerve in your body. Think cling wrap, layered over everything. When one part of it tightens, everything attached to it tightens too. Most therapists work on the muscle and miss the fascia. That is why the tension keeps coming back.</p>
+    <div class="btn-row reveal stagger-3" style="margin-top: var(--s-3);">
+      <a class="btn btn--sand btn--lg" href="https://marinaribeirobodywork.as.me/bookmassage" target="_blank" rel="noopener" data-i18n="method.cta.book">Book Massage</a>
+      <a class="btn--link" href="https://wa.me/61451021478?text=Hi%20Marina%2C%20I%27d%20like%20to%20talk%20briefly%20before%20I%20book." target="_blank" rel="noopener" data-i18n="method.cta.talk">Talk to Marina first →</a>
+    </div>
   </div>
 </header>
 

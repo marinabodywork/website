@@ -111,7 +111,7 @@ document.documentElement.classList.add('js-on');
       'diag.training.name': 'Conscious Movement Personal Training',
       'diag.training.why': 'A training plateau that does not respond to programming changes is usually a tissue problem. Fascial restriction limits the range you can train in, which caps strength gains. Marina brings her bodywork qualifications into every PT session, addressing the restriction and training the cleared range in the same hour.',
       'diag.training.tags': 'Fascial Chain Training · Mobility · Breathwork in Session',
-      'diag.training.cta': 'Book Training',
+      'diag.training.cta': 'See training plans →',
 
       // ─── Social proof ───
       'home.proof.label': 'What clients say',
@@ -324,6 +324,8 @@ document.documentElement.classList.add('js-on');
       'tr.hero.h1': 'Training that understands your body.',
       'tr.hero.sub': 'Specialist 1-on-1 personal training at Snap Fitness Maroubra. Each 60-minute session is built around what Marina sees in your movement, and what her bodywork qualifications let her address in the same hour.',
       'tr.hero.loc': 'Snap Fitness Maroubra · Tue + Thu 8am-6pm · Mon/Wed/Fri 8am-11am · Active Snap Fitness membership required',
+      'tr.hero.cta.plans': 'See training plans →',
+      'tr.hero.cta.talk': 'Talk to Marina first →',
 
       'tr.diff.label': 'What makes this different',
       'tr.diff.h2': 'Most trainers cannot see what is holding you back.<br>Marina can.',
@@ -405,7 +407,7 @@ document.documentElement.classList.add('js-on');
       'about.bio.h2': 'Eighteen years, two continents, one practice.',
       'about.bio.p1': 'Marina Ribeiro da Silva is a Physical Education professional with more than eighteen years dedicated to movement, health, and women\'s well-being. Movement and bodywork are not two careers. They are two sides of how a body changes.',
       'about.bio.p2': 'She started through dance, teaching from age fifteen. She studied Physical Education to professionalise what she had been doing intuitively since childhood. In Brazil she worked with the Minas Gerais government on Movimenta Contagem, the largest free outdoor physical-activity programme in the country.',
-      'about.bio.p3': 'After the pandemic she founded Mulheres Ativas, a programme for women: particularly women over forty, mothers, and those who had never felt at home in a traditional gym. That line is the heart of her work. Most fitness spaces are not built for the bodies and lives most women actually have.',
+      'about.bio.p3': 'After the pandemic she founded Mulheres Ativas, a programme for women: particularly women over forty, mothers, and those who had never felt at home in a traditional gym. That line is the heart of her work.',
       'about.bio.p4': 'In Sydney she specialises in women\'s training across every stage of life, including perimenopause: conditioning, hypertrophy, mobility, posture, body awareness, quality of life. Across ten plus years of bodywork she developed her own fascial-release technique combining breath, somatic awareness, and myofascial release. It is the foundation of every session she runs.',
 
       'about.creds.label': 'Credentials',
@@ -538,7 +540,7 @@ document.documentElement.classList.add('js-on');
       'diag.training.name': 'Treino de Movimento Consciente',
       'diag.training.why': 'Quando o platô não muda nem mudando o treino, geralmente é problema de tecido. A fáscia travada reduz a amplitude que o seu corpo tem disponível, e isso trava o ganho de força. A Marina traz toda a formação dela em terapia corporal pra cada sessão de PT — solta o que está travado e já treina a amplitude liberada, na mesma hora.',
       'diag.training.tags': 'Treino em Cadeias Fasciais · Mobilidade · Respiração na Sessão',
-      'diag.training.cta': 'Agendar Treino',
+      'diag.training.cta': 'Ver planos de treino →',
 
       // Social proof
       'home.proof.label': 'O que dizem as clientes',
@@ -748,6 +750,8 @@ document.documentElement.classList.add('js-on');
       'tr.hero.h1': 'Treino que entende o seu corpo.',
       'tr.hero.sub': 'Personal training individual e especializado na Snap Fitness Maroubra. Cada sessão de 60 minutos é construída a partir do que a Marina vê no seu movimento — e do que a formação dela em terapia corporal permite trabalhar dentro da mesma hora.',
       'tr.hero.loc': 'Snap Fitness Maroubra · Ter + Qui 8h-18h · Seg/Qua/Sex 8h-11h · Você precisa ter matrícula ativa na Snap Fitness',
+      'tr.hero.cta.plans': 'Ver planos de treino →',
+      'tr.hero.cta.talk': 'Falar com a Marina primeiro →',
 
       'tr.diff.label': 'O que muda aqui',
       'tr.diff.h2': 'A maioria dos personal trainers não enxerga o que está te travando.<br>A Marina enxerga.',
@@ -829,7 +833,7 @@ document.documentElement.classList.add('js-on');
       'about.bio.h2': 'Dezoito anos, dois continentes, uma prática.',
       'about.bio.p1': 'Marina Ribeiro da Silva é profissional de Educação Física, com mais de dezoito anos dedicados ao movimento, à saúde e ao bem-estar das mulheres. Pra ela, movimento e terapia corporal não são duas carreiras. São dois lados de como um corpo muda.',
       'about.bio.p2': 'Começou pela dança, dando aulas desde os quinze anos. Estudou Educação Física pra profissionalizar o que já fazia intuitivamente desde criança. No Brasil, trabalhou com o governo de Minas Gerais no Movimenta Contagem — o maior programa gratuito de atividade física ao ar livre do país.',
-      'about.bio.p3': 'Depois da pandemia fundou o Mulheres Ativas, um programa para mulheres — especialmente mulheres acima dos quarenta, mães, e as que nunca se sentiram em casa numa academia tradicional. Essa ideia é o coração do trabalho dela: a maioria dos espaços de fitness não foi feita pros corpos e pras vidas que a maioria das mulheres realmente tem.',
+      'about.bio.p3': 'Depois da pandemia fundou o Mulheres Ativas, um programa para mulheres — especialmente mulheres acima dos quarenta, mães, e as que nunca se sentiram em casa numa academia tradicional. Essa ideia é o coração do trabalho dela.',
       'about.bio.p4': 'Em Sydney, ela é especialista em treino feminino em todas as fases da vida, incluindo perimenopausa: condicionamento, hipertrofia, mobilidade, postura, consciência corporal, qualidade de vida. Em mais de dez anos de terapia corporal, ela desenvolveu a própria técnica de liberação fascial, combinando respiração, consciência somática e liberação miofascial. É a base de cada sessão que ela conduz.',
 
       'about.creds.label': 'Credenciais',
@@ -876,7 +880,10 @@ document.documentElement.classList.add('js-on');
   }
 
   function applyLang(lang) {
-    if (!i18n[lang]) return;
+    if (!i18n[lang]) {
+      document.documentElement.classList.remove('lang-pending');
+      return;
+    }
     currentLang = lang;
     localStorage.setItem(LANG_KEY, lang);
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
@@ -907,6 +914,15 @@ document.documentElement.classList.add('js-on');
     if (result && result.classList.contains('is-open') && result.dataset.area) {
       renderDiag(result.dataset.area);
     }
+
+    // Recompute open FAQ heights — translated text may be a different length
+    requestAnimationFrame(function () {
+      document.querySelectorAll('.faq__item.is-open .faq__a').forEach(function (a) {
+        a.style.maxHeight = a.scrollHeight + 'px';
+      });
+    });
+
+    document.documentElement.classList.remove('lang-pending');
   }
 
   function initLang() {
@@ -1023,7 +1039,7 @@ document.documentElement.classList.add('js-on');
     jaw: 'https://marinaribeirobodywork.as.me/SomaticMassageFacial',
     back: 'https://marinaribeirobodywork.as.me/SomaticMassageCorporal',
     stress: 'https://marinaribeirobodywork.as.me/SensoryEnergetics',
-    training: 'training.html'
+    training: 'training.html#plans'
   };
 
   function renderDiag(area) {

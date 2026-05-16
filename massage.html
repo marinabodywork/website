@@ -3,6 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  try {
+    var __l = localStorage.getItem('marinaLang');
+    if (__l === 'pt') {
+      document.documentElement.lang = 'pt-BR';
+      document.documentElement.classList.add('lang-pending');
+      setTimeout(function () { document.documentElement.classList.remove('lang-pending'); }, 800);
+    }
+  } catch (e) {}
+</script>
 <title>Massage Services · Marina Bodywork</title>
 <meta name="description" content="Somatic Massage Corporal, Somatic Massage Facial, and Sensory Energetics with Marina Ribeiro. Five specialist techniques in one session. Sydney.">
 <meta name="theme-color" content="#1C3A2B">
