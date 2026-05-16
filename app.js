@@ -67,7 +67,7 @@
       'home.svc.label': 'Services',
       'home.svc.h2': 'Three ways the work shows up.',
       'home.svc.s1.name': 'Single massage sessions',
-      'home.svc.s1.meta': '60–90 min · From A$125',
+      'home.svc.s1.meta': '60-90 min · From A$125',
       'home.svc.s1.p': 'Somatic Massage Corporal or Facial, or the 90-minute Sensory Energetics signature work. One-off bookings, no commitment.',
       'home.svc.s1.cta': 'Book Massage',
       'home.svc.s2.name': 'Memberships',
@@ -310,7 +310,7 @@
       'tr.hero.label': 'Personal training',
       'tr.hero.h1': 'Training that understands your body.',
       'tr.hero.sub': 'Specialist 1-on-1 personal training at Snap Fitness Maroubra. Each 60-minute session is built around what Marina sees in your movement, and what her bodywork qualifications let her address in the same hour.',
-      'tr.hero.loc': 'Snap Fitness Maroubra · Tue + Thu 8am–6pm · Mon/Wed/Fri 8am–11am · Active Snap Fitness membership required',
+      'tr.hero.loc': 'Snap Fitness Maroubra · Tue + Thu 8am-6pm · Mon/Wed/Fri 8am-11am · Active Snap Fitness membership required',
 
       'tr.diff.label': 'What makes this different',
       'tr.diff.h2': 'Most trainers cannot see what is holding you back. Marina can.',
@@ -448,8 +448,8 @@
       'footer.copy': '© 2026 Marina Bodywork. Sydney, Austrália.',
 
       // Sticky CTA
-      'sticky.massage': 'Massagem',
-      'sticky.pt': 'Aula de PT',
+      'sticky.massage': 'Agendar Massagem',
+      'sticky.pt': 'Agendar Aula de PT',
       'wa.float': 'Falar com a Marina no WhatsApp',
 
       // Home: hero
@@ -483,7 +483,7 @@
       'home.svc.label': 'Serviços',
       'home.svc.h2': 'Três formas de o trabalho aparecer.',
       'home.svc.s1.name': 'Sessões avulsas de massagem',
-      'home.svc.s1.meta': '60–90 min · A partir de A$125',
+      'home.svc.s1.meta': '60-90 min · A partir de A$125',
       'home.svc.s1.p': 'Massagem Somática Corporal ou Facial, ou a sessão assinatura Sensory Energetics de 90 min. Agendamentos avulsos, sem compromisso.',
       'home.svc.s1.cta': 'Agendar Massagem',
       'home.svc.s2.name': 'Membership',
@@ -723,7 +723,7 @@
       'tr.hero.label': 'Personal training',
       'tr.hero.h1': 'Treino que entende o seu corpo.',
       'tr.hero.sub': 'Personal training especializado 1-a-1 na Snap Fitness Maroubra. Cada sessão de 60 minutos é construída a partir do que a Marina vê no seu movimento e do que as qualificações em terapia corporal dela permitem trabalhar na mesma hora.',
-      'tr.hero.loc': 'Snap Fitness Maroubra · Ter + Qui 8h–18h · Seg/Qua/Sex 8h–11h · Necessário ter matrícula ativa na Snap Fitness',
+      'tr.hero.loc': 'Snap Fitness Maroubra · Ter + Qui 8h-18h · Seg/Qua/Sex 8h-11h · Necessário ter matrícula ativa na Snap Fitness',
 
       'tr.diff.label': 'O que muda aqui',
       'tr.diff.h2': 'A maioria dos trainers não enxerga o que está te travando. A Marina enxerga.',
