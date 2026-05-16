@@ -12,12 +12,14 @@ Bilingual: English (default) + Brazilian Portuguese, switched client-side withou
 
 There is **no build system, no package manager, no framework, no test suite**. Everything ships as static files served as-is.
 
-- `index.html` — the entire site (~3,500 lines): inline `<style>`, inline `<script>`, and inline JSON-LD schema in the `<head>`.
+- Five HTML pages at the root: `index.html` (home), `massage.html`, `training.html`, `method.html`, `about.html`. Each carries the same `<nav>` + drawer markup, its own `<head>` (meta, OG, JSON-LD), and the same trailing `<script src="app.js" defer>`.
+- `styles.css` — single shared stylesheet for all pages.
+- `app.js` — single shared script holding the i18n table (`en` + `pt` flat key maps), `setLang`, scroll/reveal/nav behaviour, hamburger drawer, and the diagnostic widget. **All translations live here, not inline.**
 - `*.webp` / `*.jpeg` / `*.jpg` / `*.png` / `*.svg` — image assets live flat in the repo root and are referenced by bare filename from `index.html` (no `assets/` subfolder). Currently in-use brand imagery:
-  - `hero.jpeg` — main brand portrait shown in `#photo-grid` directly under the hero text, and as `og:image`.
+  - `hero.jpeg` — main brand portrait used as the home page hero image (`hero.hero__media`), `og:image` for `index.html` and `method.html`, and the `LocalBusiness.image` in JSON-LD.
   - `atendimento.jpeg` — Somatic Massage Corporal feature image (above the service block).
   - `facial.jpeg` — Somatic Massage Facial feature image.
-  - `marina-hero.webp` — still used in the `#about` portrait slot.
+  - `marina-hero.webp` — used as the `about.html` hero portrait + `og:image`.
   - `marina-logo.png` — **transparent-background** version of the brand mark, used in the nav so the gold mark + wordmark float directly on the dark forest nav with no boxed sticker effect. Generated from `marina-logo.webp` via a luminance-based alpha mask.
   - `marina-consult.webp`, `marina-logo.webp` — consult section, footer thumbnail, and favicon/`apple-touch-icon` (the WebP keeps a solid forest bg, which is fine because favicons need an opaque colour).
 - `robots.txt`, `sitemap.xml` — SEO files at the root. The sitemap lists the home URL plus the in-page anchors (`#massagem`, `#training`, `#diagnostic`, `#consult`, `#about`, `#faq`, `#contact`).
@@ -37,28 +39,23 @@ python3 -m http.server 8000
 
 There are no lint, build, or test commands.
 
-## Big-picture architecture inside `index.html`
+## Big-picture architecture
 
-The file is structured top-to-bottom as: `<head>` (meta + JSON-LD + Google Fonts + one giant `<style>` block) → `<body>` (nav, mobile menu, ~17 `<section>` blocks, mobile sticky CTA) → one `<script>` block at the end.
+Each HTML page is structured top-to-bottom as: `<head>` (meta + per-page JSON-LD + Google Fonts + `<link rel="stylesheet" href="styles.css">`) → `<body>` (shared nav, mobile drawer, page-specific `<section>` blocks, mobile sticky CTA on most pages) → `<script src="app.js" defer>`. Shared CSS lives in `styles.css`; shared behaviour and the i18n table live in `app.js`.
 
 Things worth knowing before editing:
 
-### 1. Two-pass CSS with intentional `!important` overrides
+### 1. Design system in `styles.css`
 
-The `<style>` block is split into two phases:
+CSS custom properties in `:root` — `--forest`, `--sand`, `--cream`, `--ink`, etc.; fonts `Cormorant Garamond` for display + `DM Sans` for body; spacing scale `--s-1`..`--s-7`; radius scale `--r`/`--r-lg`. Section background variants (`section--dark` / `section--pale` / `section--surface` / `section--cream`) drive vertical rhythm; respect them when adding sections.
 
-1. The original design system (CSS custom properties in `:root` — `--forest`, `--sage`, `--gold`, `--cream`; fonts `Cormorant Garamond` for display + `DM Sans` for body; `--radius`, `--radius-lg`, `--transition`).
-2. An **"APPLE HIG IMPROVEMENTS"** section (search for that heading) that re-declares variables and pins radii, paddings, font sizes, shadows, and touch targets with `!important`. This is intentional — when tweaking buttons/cards/spacing, edit the HIG block (or the cascade will silently lose).
+### 2. Client-side i18n via `data-i18n` keys (in `app.js`)
 
-Section background variants (`section-dark` / `section-pale` / `section-surface`) are how visual rhythm is set; respect them when adding sections.
-
-### 2. Client-side i18n via `data-i18n` keys
-
-- A single `const i18n = { en: {...}, pt: {...} }` object in the trailing `<script>` holds all translatable strings, keyed by dotted paths like `hero.h1`, `method.m2.b3`, `pricing.m.cancel`.
+- `app.js` exports a single `const i18n = { en: {...}, pt: {...} }` table with **flat** dotted-path keys (e.g. `'home.hero.sub'`, `'home.svc.s2.p'`, `'about.partner.p'`) — not a nested object.
 - Every translatable element in the markup carries `data-i18n="some.key"`. `setLang(lang)` walks `[data-i18n]` and replaces `el.innerHTML` (so HTML tags like `<br>`, `<strong>`, `<sup>` inside translation values are intentional and must be preserved in both languages).
-- Choice persists in `localStorage.getItem('marineLang')`; `setLang` also flips `document.documentElement.lang` to `en` or `pt-BR`.
+- Choice persists in `localStorage` and `setLang` flips `document.documentElement.lang` to `en` or `pt-BR`.
 
-**When adding/changing user-facing copy:** add the `data-i18n` attribute, then add the key to **both** `i18n.en` and `i18n.pt`. A missing key in one language silently leaves the original markup text in place.
+**When adding/changing user-facing copy:** add the `data-i18n` attribute in the relevant HTML page, then add the key to **both** the EN and PT objects in `app.js`. A missing key in one language silently leaves the original markup text in place.
 
 ### 3. Booking and external links are hard-coded
 
@@ -68,9 +65,9 @@ All "Book" CTAs point to Acuity:
 
 WhatsApp links use `https://wa.me/61451021478?text=...`. If the phone, booking URLs, or pricing change, update them in **all** of: the visible CTAs, the JSON-LD `Service.offers` blocks, and the `DIAG` object (see below).
 
-**Booking CTA discipline:** every primary booking CTA on the page is service-specific — either "Book … Massage" or "Book … PT Lesson(s)". Do not introduce a generic "Talk to Marina" / "Book a session" duplicate next to the service-specific buttons; the dedicated `#consult` section is the canonical place for the WhatsApp consult. The mobile sticky bar (`.mobile-sticky-cta` with `.msc-massage` + `.msc-pt`) mirrors the hero buttons exactly.
+**Booking CTA discipline:** every primary booking CTA on the page is service-specific — either "Book Massage" (→ `bookmassage`) or "Book Training" (→ `BookPTlessons`). Do not introduce a generic "Talk to Marina" / "Book a session" duplicate next to the service-specific buttons; the dedicated WhatsApp consult is the canonical place for an open conversation. The mobile sticky bar mirrors the hero buttons exactly.
 
-**Nav structure:** the top-level `<nav>` is a flex row with four direct children — `.nav-logo`, `.nav-links` (desktop only), `.lang-toggle.nav-lang` (**always visible** on both desktop and mobile, sits to the right of `.nav-links` on desktop and to the left of `.hamburger` on mobile), and `.hamburger` (mobile only). The `EN` / `PT` buttons are text labels, not flag emojis, so language choice is unambiguous at small sizes. Don't move the lang toggle back inside `.nav-links` — that hides it on mobile.
+**Nav structure:** the top-level `<nav class="nav">` has a `.nav__inner` row with four logical groups — `.nav__logo`, `.nav__links` (desktop only), `.nav__right`, and the hamburger (mobile only, inside `.nav__right`). `.nav__right` contains, in order: two CTA buttons (`.nav__cta` "Book Massage" sand + `.nav__cta.nav__cta--alt` "Book Training" forest), the `.lang` toggle (**always visible** on desktop and mobile), and `.hamburger` (mobile only). The lang toggle uses **flag emojis** — 🇦🇺 for `data-lang="en"` and 🇧🇷 for `data-lang="pt"` — with `aria-label="English"` / `aria-label="Português"` for screen readers. i18n keys are `nav.bookMassage`, `nav.bookTraining`, `nav.langEn`, `nav.langPt`. Both nav CTAs hide on mobile (`@media (max-width: 900px) { .nav__cta { display: none; } }`) and the mobile drawer carries the same two buttons as `.btn--primary` + `.btn--sand`.
 
 ### 4. The diagnostic widget
 
@@ -147,9 +144,19 @@ The existing `massage.c.desc` "stop paying three therapists for the same tension
 
 If any of the above changes, update **all** of: the visible markup in the Somatic Massage Corporal service block, both `i18n.en` + `i18n.pt`, and the `Somatic Massage Corporal` `Service.description` (which also carries `alternateName: "Somatic Release Massage"`) in the JSON-LD graph.
 
-### 5d. About / Marina's biography (`#about`)
+### 5d-pre. Home services cards (`#services` / `home.svc.*`)
 
-The About section is the canonical biography. Rendered as four `<p class="about-bio">` paragraphs keyed `about.bio.p1`..`about.bio.p4` (EN + PT). Source of truth:
+The home page has **three** service cards in `.svc-grid`, in order — keep this structure when editing copy:
+
+1. **Single massage sessions** (`home.svc.s1.*`) — covers Somatic Massage Corporal/Facial (60 min · A$125) and Sensory Energetics (90 min · A$305). CTA points to `marinaribeirobodywork.as.me/bookmassage` (the Acuity hub, not a single service URL).
+2. **Memberships** (`home.svc.s2.*`) — carries the SIGNATURE badge. Weekly recurring slot, A$100/week, min 2 months. CTA is a WhatsApp deep-link (membership cannot be booked through Acuity — it's an invitation plan).
+3. **Training** (`home.svc.s3.*`) — Conscious-movement PT. CTA links to `training.html`.
+
+Pricing source of truth lives in `massage.html`'s `mas.price.*` block. If pricing changes, update both the home cards and that block (plus JSON-LD).
+
+### 5d. About / Marina's biography (`about.html`)
+
+The About section is the canonical biography. Rendered as four `<p data-i18n="about.bio.p1..p4">` paragraphs (EN + PT). Source of truth:
 
 - **Identity:** Marina Ribeiro da Silva, Physical Education professional, **18+ years** dedicated to movement, health, and women's well-being.
 - **Origin:** started through dance, teaching it from age 15. Studied Physical Education to professionalise the passion.
@@ -159,7 +166,11 @@ The About section is the canonical biography. Rendered as four `<p class="about-
 
 Credential chips (`.cred-tag`, keys `about.c0`..`about.c5`): `18+ Years Experience`, `EQF Level 4 Trained`, `Vanoni Institute · Myo Aponeurosis`, `Myofascial + TMJ + Buccal`, `Sensory Energetics`, `Founder, Mulheres Ativas`, `Bilingual EN + PT`.
 
-If any of the above changes, update **all** of: the visible markup in `#about`, both `i18n.en` + `i18n.pt`, and the `Person` `description` in the JSON-LD graph.
+If any of the above changes, update **all** of: the visible markup in `about.html`, both EN + PT entries in `app.js`, and the `Person` `description` in the JSON-LD graph.
+
+**A note from Marina** — the `.about-letter` block (between bio and credentials) holds a short signed quote, keys `about.letter.label` / `about.letter.quote` / `about.letter.sign`. Treat the quote as Marina's voice — confirm with the user before rewording.
+
+**Partner perks (`.partner-strip`)** — the partner block on `about.html` is framed as **deals Marina's partners offer her clients** (not a generic "she runs workshops here" callout). Current entry: Be Bold Sydney → 2 months free exclusive access to the Be Bold app + 10% off any Be Bold work. Keys `about.perks.label`, `about.perks.h`, `about.partner.label`, `about.partner.p`, `about.partner.link`. New partners stack as additional `.partner-strip` rows under the same heading; keep the framing on the deal/perk, not generic association copy.
 
 ### 5e. Shared `.method-paragraphs` / `.method-benefits` styles
 
