@@ -3,6 +3,8 @@
    FAQ accordion, diagnostic widget, PT plan selector.
 */
 
+document.documentElement.classList.add('js-on');
+
 (function () {
   'use strict';
 
@@ -17,7 +19,7 @@
       'nav.training': 'Training',
       'nav.about': 'About',
       'nav.bookMassage': 'Book Massage',
-      'nav.bookTraining': 'Book PT Lesson',
+      'nav.bookTraining': 'Book Training',
       'nav.menu': 'Menu',
 
       // Footer
@@ -27,29 +29,29 @@
       'footer.col.book': 'Book',
       'footer.faq': 'FAQ',
       'footer.bookMassage': 'Book Massage',
-      'footer.bookPt': 'Book PT Lesson',
+      'footer.bookPt': 'Book Training',
       'footer.address': 'Randwick, NSW',
       'footer.copy': '© 2026 Marina Bodywork. Sydney, Australia.',
 
       // Sticky CTA
       'sticky.massage': 'Book Massage',
-      'sticky.pt': 'Book PT Lesson',
+      'sticky.pt': 'Book Training',
       'wa.float': 'Message Marina on WhatsApp',
 
       // ─── Home: hero ───
-      'home.hero.label': 'Marina Ribeiro · Fascia release specialist · Sydney',
+      'home.hero.label': '<strong>Marina Ribeiro</strong> · Fascia release specialist · Sydney',
       'home.hero.h1.a': 'Release the restriction.',
       'home.hero.h1.b': 'Build the strength.',
       'home.hero.h1.c': 'One specialist.',
       'home.hero.h1.d': 'One system.',
       'home.hero.sub': 'Fascia release, Sensory Energetics, and conscious-movement personal training.',
       'home.hero.cta.massage': 'Book Massage',
-      'home.hero.cta.training': 'Book PT Lesson',
+      'home.hero.cta.training': 'Book Training',
       'home.hero.cta.talk': 'Not sure where to start? Talk to Marina first →',
 
       // ─── Home: combination ───
       'home.combo.label': 'The system',
-      'home.combo.h2': 'Most therapists treat the symptom. Most trainers work around the restriction. Marina removes it and builds on cleared ground.',
+      'home.combo.h2': 'Most therapists treat the symptom.<br>Most trainers work around the restriction.<br>Marina removes it and builds on cleared ground.',
       'home.combo.intro': 'There is a reason the tension keeps coming back after a good massage. And a reason your training hits a ceiling no matter how consistent you are. They are the same reason. And it is not your fault.',
       'home.combo.c1.label': 'Massage alone',
       'home.combo.c1.h': 'The tension releases. Then returns.',
@@ -78,7 +80,7 @@
       'home.svc.s3.name': 'Training',
       'home.svc.s3.meta': '60 min · From A$75/session on plan',
       'home.svc.s3.p': 'Conscious-movement personal training. Strength built on a body that can actually move. Snap Fitness Maroubra.',
-      'home.svc.s3.cta': 'Book PT Lesson',
+      'home.svc.s3.cta': 'Book Training',
 
       // ─── Diagnostic ───
       'diag.label': 'Diagnostic',
@@ -109,20 +111,21 @@
       'diag.training.name': 'Conscious Movement Personal Training',
       'diag.training.why': 'A training plateau that does not respond to programming changes is usually a tissue problem. Fascial restriction limits the range you can train in, which caps strength gains. Marina brings her bodywork qualifications into every PT session, addressing the restriction and training the cleared range in the same hour.',
       'diag.training.tags': 'Fascial Chain Training · Mobility · Breathwork in Session',
-      'diag.training.cta': 'Book PT Lesson',
+      'diag.training.cta': 'Book Training',
 
       // ─── Social proof ───
       'home.proof.label': 'What clients say',
-      'home.proof.h2': 'Specific outcomes. Real bodies.',
-      'home.proof.t1.h': 'Chronic neck tension gone. Three sessions.',
-      'home.proof.t1.q': '"I had seen a physio and two different remedial massage therapists. The tension always came back within a week. After three sessions with Marina it has not returned."',
-      'home.proof.t1.name': 'Sofia, 38',
-      'home.proof.t2.h': 'Deeper sleep within 24 hours.',
-      'home.proof.t2.q': '"I was sceptical about the Sensory Energetics. I slept eight hours straight that night. I had not done that in two years."',
-      'home.proof.t2.name': 'Renata, 42',
-      'home.proof.t3.h': 'Training plateau broken after six weeks.',
-      'home.proof.t3.q': '"My squat had been stuck at the same weight for eight months. Marina found the restriction in my hip flexors in the first session. We trained around it and then through it. The numbers moved the following week."',
-      'home.proof.t3.name': 'Helena, 35',
+      'home.proof.h2': 'In her clients’ own words.',
+      'home.proof.t1.h': 'She really cares.',
+      'home.proof.t1.q': 'Excellent PT. She has been integral to my journey in building confidence and strength in the gym. I love training with her and she really cares. I highly recommend Marina!',
+      'home.proof.t1.name': 'Jean',
+      'home.proof.t2.h': 'It feels like a whole experience.',
+      'home.proof.t2.q': 'Marina is honestly so thoughtful and talented at what she does. You can really tell she puts her whole heart into her work. And being at her space is always such a nice experience — the essential oils, the atmosphere, every little detail. It never feels like you’re just paying for a service, it feels like a whole experience. Highly recommend!',
+      'home.proof.t2.name': 'Yumi',
+      'home.proof.t3.h': 'She knows what works.',
+      'home.proof.t3.q': 'Really satisfied with Marina works! She knows what works the best for our body.',
+      'home.proof.t3.name': 'Alya',
+      'home.proof.viaGoogle': 'via Google',
       'home.proof.reviews': 'reviews · Sydney →',
 
       // ─── Not for everyone ───
@@ -144,6 +147,16 @@
 
       // ─── FAQ ───
       'home.faq.label': 'FAQ',
+      'faq.search.placeholder': 'Search the questions',
+      'faq.search.empty': 'No questions match. Try a different term.',
+      'a11y.skip': 'Skip to main content',
+      'about.bio.pullquote': 'Most fitness spaces are not built for the bodies and lives most women actually have.',
+      'nf.label': 'Page not found',
+      'nf.h1': 'This page took a different route.',
+      'nf.sub': 'It might have moved, or never existed. Either way, the work is still here.',
+      'nf.cta.home': 'Back to home',
+      'nf.cta.book': 'Book Massage',
+      'nf.next': 'Where to next?',
       'home.faq.h2': 'The questions Marina hears every week.',
       'home.faq.q1': 'Why does Marina combine bodywork with personal training?',
       'home.faq.a1': 'Because they work on the same system. Fascial restriction limits movement. Limited movement caps training results. Marina\'s qualifications mean she addresses both in one session, without a separate appointment for each.',
@@ -168,7 +181,7 @@
       'method.hero.sub': 'Fascia is the tissue around every muscle, organ, and nerve in your body. Think cling wrap, layered over everything. When one part of it tightens, everything attached to it tightens too. Most therapists work on the muscle and miss the fascia. That is why the tension keeps coming back.',
 
       'method.why.label': 'Why fascia matters',
-      'method.why.h2': 'Four symptoms. One source.',
+      'method.why.h2': 'Four symptoms.<br>One source.',
       'method.why.p1.label': 'Neck + Upper Back',
       'method.why.p1.h': 'Pain that returns within days.',
       'method.why.p1.p1': '<strong>What it looks like.</strong> Tightness across the trapezius, restricted neck rotation, headaches that build through the day.',
@@ -191,7 +204,7 @@
       'method.why.p4.p3': '<strong>What Marina does.</strong> Identifies the fascial chain holding the compensation. Releases it. Trains the new range under load.',
 
       'method.mod.label': 'The modalities',
-      'method.mod.h2': 'Four tools. One body. Chosen for what your tissue needs that day.',
+      'method.mod.h2': 'Four tools. One body.<br>Chosen for what your tissue needs that day.',
       'method.mod.m1.h': 'Somatic Massage',
       'method.mod.m1.meta': '60 min · A$125',
       'method.mod.m1.p': 'Marina-developed methodology combining myofascial release, Brazilian lymphatic drainage, breathwork, and deep-relaxation work. Solves: chronic muscular tension, fluid retention, fascial rigidity, accumulated physical stress.',
@@ -239,7 +252,7 @@
       'mas.hero.sub': 'Five specialist techniques. Marina chooses the combination your body responds to that day. There is no fixed protocol because no two bodies arrive in the same state. The hour is built around what she finds.',
 
       'mas.svc.label': 'The services',
-      'mas.svc.h2': 'Three sessions. Five techniques.',
+      'mas.svc.h2': 'Three sessions.<br>Five techniques.',
 
       // Service: Corporal
       'mas.c.name': 'Somatic Massage Corporal',
@@ -272,7 +285,7 @@
       'mas.combo.p': '5% off your total. Two hours. A lot less tension. Apply at checkout, or message Marina to coordinate timing.',
 
       'mas.choose.label': 'How to choose',
-      'mas.choose.h2': 'Three questions. One session.',
+      'mas.choose.h2': 'Three questions.<br>One session.',
       'mas.choose.c1.if': 'If standard remedial has not held',
       'mas.choose.c1.h': 'Somatic Corporal',
       'mas.choose.c1.p': 'Marina works the fascia under the muscle. The pattern releases at the source, not the surface.',
@@ -313,13 +326,13 @@
       'tr.hero.loc': 'Snap Fitness Maroubra · Tue + Thu 8am-6pm · Mon/Wed/Fri 8am-11am · Active Snap Fitness membership required',
 
       'tr.diff.label': 'What makes this different',
-      'tr.diff.h2': 'Most trainers cannot see what is holding you back. Marina can.',
+      'tr.diff.h2': 'Most trainers cannot see what is holding you back.<br>Marina can.',
       'tr.diff.p1': 'A standard trainer programs around a body they cannot fully assess. They see the lift. They cannot see the fascial chain that is shortening your range, capping your strength, or shifting load into the joint you are protecting without knowing it.',
       'tr.diff.p2': 'Marina trained in bodywork for ten years before she started taking PT clients. She sees restriction patterns no standard trainer sees. And she can address them inside the session, with hands-on release before the lift, mobility before the load, and breathwork before the next set.',
       'tr.diff.p3': 'The result is training that compounds. You are not lifting through restriction. You are building strength in the range your body actually has.',
 
       'tr.struct.label': 'The 60-minute session',
-      'tr.struct.h2': 'Five phases. Built around your body that day.',
+      'tr.struct.h2': 'Five phases.<br>Built around your body that day.',
       'tr.struct.s1': 'Stretching, muscle activation, myofascial release',
       'tr.struct.s2': 'Mobility fundamentals and body awareness',
       'tr.struct.s3': 'Specific training shaped to your goals',
@@ -336,7 +349,7 @@
       'tr.spec.s6': 'Mind-body well-being',
 
       'tr.plans.label': 'Plans and pricing',
-      'tr.plans.h2': 'Lock in your slot. Lock in the result.',
+      'tr.plans.h2': 'Lock in your slot.<br>Lock in the result.',
       'tr.plans.sub': 'Each plan books direct on Acuity. Once paid, your slot is held for the full cycle.',
 
       'tr.plan.basic.name': 'Basic',
@@ -365,13 +378,13 @@
       'tr.plan.diamond.f3': 'Freeze 3 weeks',
       'tr.plan.diamond.f4': 'MFIT app programming included',
 
-      'tr.plan.book': 'Book PT Lesson',
+      'tr.plan.book': 'Book Training',
       'tr.plan.note': 'After booking, Marina will reach out within 24 hours to confirm your recurring schedule for the full plan period.',
 
       'tr.single.name': 'Single session',
       'tr.single.sub': 'No commitment. Try the work, see if it is what your body has been asking for.',
       'tr.single.price': 'A$99',
-      'tr.single.cta': 'Book PT Lesson',
+      'tr.single.cta': 'Book Training',
 
       'tr.outcomes.label': 'What clients achieve',
       'tr.outcomes.h2': 'Specific, not abstract.',
@@ -422,7 +435,7 @@
       'about.cta.h': 'Ready to work with Marina?',
       'about.cta.p': 'Book a massage, book a PT lesson, or message Marina first if you want her to recommend where to start.',
       'about.cta.book': 'Book Massage',
-      'about.cta.bookPt': 'Book PT Lesson',
+      'about.cta.bookPt': 'Book Training',
       'about.cta.talk': 'Talk to Marina →'
     },
 
@@ -433,7 +446,7 @@
       'nav.training': 'Treino',
       'nav.about': 'Sobre',
       'nav.bookMassage': 'Agendar Massagem',
-      'nav.bookTraining': 'Agendar Aula de PT',
+      'nav.bookTraining': 'Agendar Treino',
       'nav.menu': 'Menu',
 
       // Footer
@@ -443,29 +456,29 @@
       'footer.col.book': 'Agendar',
       'footer.faq': 'Perguntas frequentes',
       'footer.bookMassage': 'Agendar Massagem',
-      'footer.bookPt': 'Agendar Aula de PT',
+      'footer.bookPt': 'Agendar Treino',
       'footer.address': 'Randwick, NSW',
       'footer.copy': '© 2026 Marina Bodywork. Sydney, Austrália.',
 
       // Sticky CTA
       'sticky.massage': 'Agendar Massagem',
-      'sticky.pt': 'Agendar Aula de PT',
+      'sticky.pt': 'Agendar Treino',
       'wa.float': 'Falar com a Marina no WhatsApp',
 
       // Home: hero
-      'home.hero.label': 'Marina Ribeiro · Especialista em liberação fascial · Sydney',
+      'home.hero.label': '<strong>Marina Ribeiro</strong> · Especialista em liberação fascial · Sydney',
       'home.hero.h1.a': 'Libere a restrição.',
       'home.hero.h1.b': 'Construa a força.',
       'home.hero.h1.c': 'Uma especialista.',
       'home.hero.h1.d': 'Um sistema.',
       'home.hero.sub': 'Liberação fascial, Sensory Energetics e treino de movimento consciente.',
       'home.hero.cta.massage': 'Agendar Massagem',
-      'home.hero.cta.training': 'Agendar Aula de PT',
+      'home.hero.cta.training': 'Agendar Treino',
       'home.hero.cta.talk': 'Não sabe por onde começar? Fala com a Marina primeiro →',
 
       // Home: combination
       'home.combo.label': 'O sistema',
-      'home.combo.h2': 'A maioria dos terapeutas trata o sintoma. A maioria dos trainers trabalha em volta da restrição. A Marina remove e constrói em cima do que foi liberado.',
+      'home.combo.h2': 'A maioria dos terapeutas trata o sintoma.<br>A maioria dos trainers trabalha em volta da restrição.<br>A Marina remove e constrói em cima do que foi liberado.',
       'home.combo.intro': 'Tem um motivo para a tensão voltar depois de uma boa massagem. E um motivo para o treino bater num teto, não importa a dedicação. Os dois motivos são o mesmo. E não é culpa sua.',
       'home.combo.c1.label': 'Só massagem',
       'home.combo.c1.h': 'A tensão alivia. Depois volta.',
@@ -494,7 +507,7 @@
       'home.svc.s3.name': 'Treino',
       'home.svc.s3.meta': '60 min · A partir de A$75/sessão no plano',
       'home.svc.s3.p': 'Treino personalizado de movimento consciente. Força construída num corpo que consegue realmente se mover. Snap Fitness Maroubra.',
-      'home.svc.s3.cta': 'Agendar Aula de PT',
+      'home.svc.s3.cta': 'Agendar Treino',
 
       // Diagnostic
       'diag.label': 'Diagnóstico',
@@ -525,20 +538,21 @@
       'diag.training.name': 'Treino de Movimento Consciente',
       'diag.training.why': 'Um platô que não responde a mudanças de programação geralmente é um problema de tecido. A restrição fascial limita a amplitude disponível para treinar, o que limita o ganho de força. A Marina traz suas qualificações em terapia corporal para cada sessão de PT, trabalhando a restrição e treinando a amplitude liberada na mesma hora.',
       'diag.training.tags': 'Treino em Cadeias Fasciais · Mobilidade · Respiração na Sessão',
-      'diag.training.cta': 'Agendar Aula de PT',
+      'diag.training.cta': 'Agendar Treino',
 
       // Social proof
       'home.proof.label': 'O que dizem as clientes',
-      'home.proof.h2': 'Resultados específicos. Corpos reais.',
-      'home.proof.t1.h': 'Tensão crônica no pescoço foi embora. Três sessões.',
-      'home.proof.t1.q': '"Eu já tinha passado por fisio e dois terapeutas diferentes de massagem. A tensão sempre voltava em uma semana. Depois de três sessões com a Marina ela não voltou mais."',
-      'home.proof.t1.name': 'Sofia, 38',
-      'home.proof.t2.h': 'Sono mais profundo em 24 horas.',
-      'home.proof.t2.q': '"Estava cética sobre o Sensory Energetics. Dormi oito horas direto naquela noite. Não conseguia isso há dois anos."',
-      'home.proof.t2.name': 'Renata, 42',
-      'home.proof.t3.h': 'Platô no treino resolvido em seis semanas.',
-      'home.proof.t3.q': '"Meu agachamento estava parado no mesmo peso havia oito meses. A Marina achou a restrição nos meus flexores do quadril na primeira sessão. Trabalhamos em volta e depois através dela. Os números mudaram na semana seguinte."',
-      'home.proof.t3.name': 'Helena, 35',
+      'home.proof.h2': 'Nas palavras delas.',
+      'home.proof.t1.h': 'Ela se importa de verdade.',
+      'home.proof.t1.q': 'Excelente personal trainer. Foi fundamental na minha jornada de construir confiança e força na academia. Adoro treinar com ela, e ela se importa de verdade. Recomendo muito a Marina!',
+      'home.proof.t1.name': 'Jean',
+      'home.proof.t2.h': 'Parece uma experiência completa.',
+      'home.proof.t2.q': 'A Marina é genuinamente atenciosa e talentosa no que faz. Dá pra sentir que ela coloca o coração no trabalho. Estar no espaço dela é sempre uma experiência boa — os óleos essenciais, o ambiente, cada detalhe. Nunca parece que você está só pagando por um serviço, parece uma experiência completa. Recomendo muito!',
+      'home.proof.t2.name': 'Yumi',
+      'home.proof.t3.h': 'Ela sabe o que funciona.',
+      'home.proof.t3.q': 'Muito satisfeita com o trabalho da Marina! Ela sabe o que funciona melhor para o nosso corpo.',
+      'home.proof.t3.name': 'Alya',
+      'home.proof.viaGoogle': 'via Google',
       'home.proof.reviews': 'avaliações · Sydney →',
 
       // Disqualifiers
@@ -560,6 +574,16 @@
 
       // FAQ
       'home.faq.label': 'Perguntas frequentes',
+      'faq.search.placeholder': 'Buscar nas perguntas',
+      'faq.search.empty': 'Nenhuma pergunta corresponde. Tente outro termo.',
+      'a11y.skip': 'Ir para o conteúdo principal',
+      'about.bio.pullquote': 'A maioria dos espaços de treino não foi construída para os corpos e as vidas que as mulheres realmente têm.',
+      'nf.label': 'Página não encontrada',
+      'nf.h1': 'Esta página tomou outro caminho.',
+      'nf.sub': 'Pode ter mudado de lugar, ou nunca ter existido. De qualquer forma, o trabalho continua aqui.',
+      'nf.cta.home': 'Voltar para o início',
+      'nf.cta.book': 'Agendar Massagem',
+      'nf.next': 'Para onde agora?',
       'home.faq.h2': 'As perguntas que a Marina escuta toda semana.',
       'home.faq.q1': 'Por que a Marina combina terapia corporal com treino personalizado?',
       'home.faq.a1': 'Porque os dois trabalham no mesmo sistema. A restrição fascial limita o movimento. Movimento limitado limita resultados de treino. As qualificações da Marina permitem que ela trabalhe os dois em uma sessão, sem ter que marcar dois atendimentos separados.',
@@ -584,7 +608,7 @@
       'method.hero.sub': 'Fáscia é o tecido em volta de cada músculo, órgão e nervo do corpo. Pense em filme plástico, em camadas, cobrindo tudo. Quando uma parte tensiona, tudo que está conectado tensiona junto. A maioria dos terapeutas trabalha o músculo e ignora a fáscia. Por isso a tensão volta.',
 
       'method.why.label': 'Por que a fáscia importa',
-      'method.why.h2': 'Quatro sintomas. Uma só origem.',
+      'method.why.h2': 'Quatro sintomas.<br>Uma só origem.',
       'method.why.p1.label': 'Pescoço + Costas superiores',
       'method.why.p1.h': 'Dor que volta em poucos dias.',
       'method.why.p1.p1': '<strong>Como aparece.</strong> Aperto no trapézio, rotação do pescoço limitada, dor de cabeça que sobe ao longo do dia.',
@@ -607,7 +631,7 @@
       'method.why.p4.p3': '<strong>O que a Marina faz.</strong> Identifica a cadeia fascial que segura a compensação. Libera. Treina a nova amplitude com carga.',
 
       'method.mod.label': 'As modalidades',
-      'method.mod.h2': 'Quatro ferramentas. Um corpo. Escolhidas pelo que o seu tecido precisa naquele dia.',
+      'method.mod.h2': 'Quatro ferramentas. Um corpo.<br>Escolhidas pelo que o seu tecido precisa naquele dia.',
       'method.mod.m1.h': 'Massagem Somática',
       'method.mod.m1.meta': '60 min · A$125',
       'method.mod.m1.p': 'Metodologia desenvolvida pela Marina, combinando liberação miofascial, drenagem linfática brasileira, respiração e relaxamento profundo. Resolve: tensão muscular crônica, retenção de líquidos, rigidez fascial, estresse físico acumulado.',
@@ -655,7 +679,7 @@
       'mas.hero.sub': 'Cinco técnicas especializadas. A Marina escolhe a combinação que o seu corpo responde naquele dia. Não tem protocolo fixo porque nenhum corpo chega no mesmo estado. A hora é construída a partir do que ela encontra.',
 
       'mas.svc.label': 'Os serviços',
-      'mas.svc.h2': 'Três sessões. Cinco técnicas.',
+      'mas.svc.h2': 'Três sessões.<br>Cinco técnicas.',
 
       'mas.c.name': 'Somatic Massage Corporal',
       'mas.c.meta': '60 minutos · A$125',
@@ -685,7 +709,7 @@
       'mas.combo.p': '5% de desconto no total. Duas horas. Bem menos tensão. Aplica no checkout, ou manda mensagem para a Marina coordenar o horário.',
 
       'mas.choose.label': 'Como escolher',
-      'mas.choose.h2': 'Três perguntas. Uma sessão.',
+      'mas.choose.h2': 'Três perguntas.<br>Uma sessão.',
       'mas.choose.c1.if': 'Se a massagem remedial comum não está segurando',
       'mas.choose.c1.h': 'Somatic Corporal',
       'mas.choose.c1.p': 'A Marina trabalha a fáscia por baixo do músculo. O padrão libera na origem, não na superfície.',
@@ -726,13 +750,13 @@
       'tr.hero.loc': 'Snap Fitness Maroubra · Ter + Qui 8h-18h · Seg/Qua/Sex 8h-11h · Necessário ter matrícula ativa na Snap Fitness',
 
       'tr.diff.label': 'O que muda aqui',
-      'tr.diff.h2': 'A maioria dos trainers não enxerga o que está te travando. A Marina enxerga.',
+      'tr.diff.h2': 'A maioria dos trainers não enxerga o que está te travando.<br>A Marina enxerga.',
       'tr.diff.p1': 'Um trainer comum programa em cima de um corpo que ele não consegue avaliar por completo. Ele vê o levantamento. Não vê a cadeia fascial que está encurtando a sua amplitude, limitando a força, ou jogando carga numa articulação que você protege sem perceber.',
       'tr.diff.p2': 'A Marina se formou em terapia corporal por dez anos antes de começar a atender em PT. Ela enxerga padrões de restrição que um trainer comum não vê. E consegue trabalhá-los dentro da sessão, com liberação manual antes do levantamento, mobilidade antes da carga, e respiração antes da próxima série.',
       'tr.diff.p3': 'O resultado é treino que se acumula. Você não está levantando contra a restrição. Você está construindo força na amplitude que o seu corpo realmente tem.',
 
       'tr.struct.label': 'A sessão de 60 minutos',
-      'tr.struct.h2': 'Cinco fases. Construídas em torno do seu corpo naquele dia.',
+      'tr.struct.h2': 'Cinco fases.<br>Construídas em torno do seu corpo naquele dia.',
       'tr.struct.s1': 'Alongamento, ativação muscular, liberação miofascial',
       'tr.struct.s2': 'Fundamentos de mobilidade e consciência corporal',
       'tr.struct.s3': 'Treino específico para o seu objetivo',
@@ -749,7 +773,7 @@
       'tr.spec.s6': 'Bem-estar mente-corpo',
 
       'tr.plans.label': 'Planos e preços',
-      'tr.plans.h2': 'Garante o seu horário. Garante o seu resultado.',
+      'tr.plans.h2': 'Garante o seu horário.<br>Garante o seu resultado.',
       'tr.plans.sub': 'Cada plano é agendado direto na Acuity. Após o pagamento, o seu horário fica reservado para o ciclo inteiro.',
 
       'tr.plan.basic.name': 'Basic',
@@ -778,13 +802,13 @@
       'tr.plan.diamond.f3': 'Congela 3 semanas',
       'tr.plan.diamond.f4': 'Programação no app MFIT incluída',
 
-      'tr.plan.book': 'Agendar Aula de PT',
+      'tr.plan.book': 'Agendar Treino',
       'tr.plan.note': 'Após o agendamento, a Marina entrará em contato em 24 horas para confirmar o horário recorrente durante todo o plano.',
 
       'tr.single.name': 'Sessão avulsa',
       'tr.single.sub': 'Sem compromisso. Experimente o trabalho, veja se é o que o seu corpo está pedindo.',
       'tr.single.price': 'A$99',
-      'tr.single.cta': 'Agendar Aula de PT',
+      'tr.single.cta': 'Agendar Treino',
 
       'tr.outcomes.label': 'O que as clientes conquistam',
       'tr.outcomes.h2': 'Específico, não abstrato.',
@@ -835,7 +859,7 @@
       'about.cta.h': 'Pronta para trabalhar com a Marina?',
       'about.cta.p': 'Agende uma massagem, agende uma aula de PT, ou manda mensagem primeiro se quiser que ela recomende por onde começar.',
       'about.cta.book': 'Agendar Massagem',
-      'about.cta.bookPt': 'Agendar Aula de PT',
+      'about.cta.bookPt': 'Agendar Treino',
       'about.cta.talk': 'Falar com a Marina →'
     }
   };
@@ -1040,13 +1064,76 @@
   }
 
   // ─────────────────────────────────────────────
+  // Hero parallax + service-block image reveal
+  // ─────────────────────────────────────────────
+  function initParallax() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const targets = document.querySelectorAll('.hero__media');
+    if (!targets.length) return;
+    let ticking = false;
+    function update() {
+      targets.forEach(function (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        const y = rect.top * -0.08;
+        el.style.transform = 'translate3d(0,' + y.toFixed(2) + 'px,0)';
+      });
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    update();
+  }
+
+  function initMediaReveal() {
+    if (!('IntersectionObserver' in window)) return;
+    const blocks = document.querySelectorAll('.service-block');
+    if (!blocks.length) return;
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.18 });
+    blocks.forEach(function (b) { io.observe(b); });
+  }
+
+  // ─────────────────────────────────────────────
+  // FAQ search filter
+  // ─────────────────────────────────────────────
+  function initFaqSearch() {
+    document.querySelectorAll('.faq').forEach(function (faq) {
+      const input = faq.querySelector('.faq__search input');
+      if (!input) return;
+      const items = faq.querySelectorAll('.faq__item');
+      input.addEventListener('input', function () {
+        const q = input.value.trim().toLowerCase();
+        let visible = 0;
+        items.forEach(function (item) {
+          const text = item.textContent.toLowerCase();
+          const match = !q || text.indexOf(q) !== -1;
+          item.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+        faq.classList.toggle('is-empty', visible === 0 && q.length > 0);
+      });
+    });
+  }
+
+  // ─────────────────────────────────────────────
   // Boot
   // ─────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', function () {
     initLang();
     initNav();
     initFaq();
+    initFaqSearch();
     initDiag();
     initReveal();
+    initParallax();
+    initMediaReveal();
   });
 })();
