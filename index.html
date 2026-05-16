@@ -1546,31 +1546,27 @@ a.authority-card:hover .authority-card-logo img {
 }
 #photo-grid .container { padding: 0 1.5rem; }
 .hero-photo {
-  width: 100%;
-  max-height: 640px;
-  object-fit: cover;
-  object-position: center 30%;
-  border-radius: var(--radius-lg);
   display: block;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
   box-shadow: 0 12px 40px rgba(17,56,42,0.12);
-}
-@media (max-width: 700px) {
-  .hero-photo { max-height: 520px; }
 }
 
 /* Service feature photo — top of each service block */
 .service-photo {
-  width: 100%;
-  max-height: 460px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: var(--radius-lg);
   display: block;
-  margin-bottom: 2.5rem;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto 2.5rem;
+  border-radius: var(--radius-lg);
   box-shadow: 0 8px 28px rgba(17,56,42,0.1);
 }
 @media (max-width: 768px) {
-  .service-photo { max-height: 340px; margin-bottom: 1.5rem; }
+  .service-photo { margin-bottom: 1.5rem; }
 }
 
 /* 10k. PROOF-POINTS STRIP — dark forest, gold bullets */
