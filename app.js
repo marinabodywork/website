@@ -17,8 +17,10 @@
       'nav.training': 'Training',
       'nav.about': 'About',
       'nav.book': 'Book Now',
-      'nav.langEn': 'EN',
-      'nav.langPt': 'PT',
+      'nav.bookMassage': 'Book Massage',
+      'nav.bookTraining': 'Book Training',
+      'nav.langEn': '🇦🇺',
+      'nav.langPt': '🇧🇷',
       'nav.menu': 'Menu',
 
       // Footer
@@ -427,8 +429,13 @@
       'about.cred.7': 'Bilingual EN + PT',
       'about.cred.8': 'Founder, Mulheres Ativas',
 
-      'about.partner.label': 'Partnership',
-      'about.partner.p': 'Marina runs workshops at Be Bold Sydney, a women\'s wellness collective founded by Paula Tomazetti. Somatic bodywork and nervous-system release, in person.',
+      'about.letter.label': 'A note from Marina',
+      'about.letter.quote': '"I believe every woman deserves to feel at home in her own body. That is the work I do — with my hands, with breath, and with care. Whatever brings you here, you do not have to arrive ready. You only have to arrive."',
+      'about.letter.sign': '— Marina',
+      'about.perks.label': 'Partner perks',
+      'about.perks.h': 'Deals from Marina\'s partners.',
+      'about.partner.label': 'Be Bold Sydney',
+      'about.partner.p': 'Marina\'s clients get <strong>2 months of free exclusive access to the Be Bold app</strong>, plus <strong>10% off any Be Bold work</strong>.',
       'about.partner.link': 'bebold.au →',
 
       'about.insta.h': 'Follow Marina\'s work.',
@@ -448,8 +455,10 @@
       'nav.training': 'Treino',
       'nav.about': 'Sobre',
       'nav.book': 'Agendar',
-      'nav.langEn': 'EN',
-      'nav.langPt': 'PT',
+      'nav.bookMassage': 'Agendar Massagem',
+      'nav.bookTraining': 'Agendar Treino',
+      'nav.langEn': '🇦🇺',
+      'nav.langPt': '🇧🇷',
       'nav.menu': 'Menu',
 
       // Footer
@@ -855,8 +864,13 @@
       'about.cred.7': 'Bilíngue EN + PT',
       'about.cred.8': 'Fundadora, Mulheres Ativas',
 
-      'about.partner.label': 'Parceria',
-      'about.partner.p': 'A Marina conduz workshops no Be Bold Sydney, um coletivo de bem-estar feminino fundado pela Paula Tomazetti. Terapia corporal somática e liberação do sistema nervoso, presencialmente.',
+      'about.letter.label': 'Um recado da Marina',
+      'about.letter.quote': '"Acredito que toda mulher merece se sentir em casa no próprio corpo. É esse o meu trabalho — com as minhas mãos, com a respiração e com cuidado. Seja o que for que te trouxe até aqui, você não precisa chegar pronta. Só precisa chegar."',
+      'about.letter.sign': '— Marina',
+      'about.perks.label': 'Vantagens com parceiros',
+      'about.perks.h': 'Benefícios dos parceiros da Marina.',
+      'about.partner.label': 'Be Bold Sydney',
+      'about.partner.p': 'Clientes da Marina ganham <strong>2 meses de acesso exclusivo gratuito ao app do Be Bold</strong>, mais <strong>10% de desconto em qualquer serviço do Be Bold</strong>.',
       'about.partner.link': 'bebold.au →',
 
       'about.insta.h': 'Acompanhe o trabalho da Marina.',
