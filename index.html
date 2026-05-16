@@ -3,6 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  // Pre-paint language hint: if the visitor previously chose PT, mark the
+  // document and hide <body> until app.js translates. Prevents EN flash.
+  try {
+    var __l = localStorage.getItem('marinaLang');
+    if (__l === 'pt') {
+      document.documentElement.lang = 'pt-BR';
+      document.documentElement.classList.add('lang-pending');
+      setTimeout(function () { document.documentElement.classList.remove('lang-pending'); }, 800);
+    }
+  } catch (e) {}
+</script>
 <title>Marina Bodywork · Sydney</title>
 <meta name="description" content="Marina Ribeiro · Fascia-release specialist and conscious-movement personal trainer in Sydney. Somatic massage, Sensory Energetics, training on cleared ground.">
 <meta name="theme-color" content="#1C3A2B">
@@ -294,7 +306,7 @@
   <div class="container">
     <div class="center reveal">
       <span class="eyebrow" data-i18n="home.proof.label">What clients say</span>
-      <h2 class="h2" data-i18n="home.proof.h2">Specific outcomes. Real bodies.</h2>
+      <h2 class="h2" data-i18n="home.proof.h2">In her clients' own words.</h2>
     </div>
     <div class="testimonials">
       <article class="testimonial reveal stagger-1">
