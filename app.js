@@ -19,8 +19,6 @@
       'nav.book': 'Book Now',
       'nav.bookMassage': 'Book Massage',
       'nav.bookTraining': 'Book Training',
-      'nav.langEn': '🇦🇺',
-      'nav.langPt': '🇧🇷',
       'nav.menu': 'Menu',
 
       // Footer
@@ -457,8 +455,6 @@
       'nav.book': 'Agendar',
       'nav.bookMassage': 'Agendar Massagem',
       'nav.bookTraining': 'Agendar Treino',
-      'nav.langEn': '🇦🇺',
-      'nav.langPt': '🇧🇷',
       'nav.menu': 'Menu',
 
       // Footer

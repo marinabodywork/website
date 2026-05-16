@@ -231,18 +231,22 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-size: 12px;
 }
 .lang button {
-  padding: 5px 10px;
+  padding: 4px 8px;
   border-radius: 999px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1;
-  color: var(--fog);
+  line-height: 0;
   background: transparent;
-  transition: background var(--t-fast), color var(--t-fast);
-  font-family: var(--body);
+  transition: background var(--t-fast), box-shadow var(--t-fast), opacity var(--t-fast);
+  opacity: 0.55;
 }
-.lang button.is-on { background: var(--forest); color: var(--sand); }
-.lang button:not(.is-on):hover { color: var(--forest); }
+.lang__flag {
+  display: block;
+  width: 22px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.lang button.is-on { background: var(--forest); opacity: 1; }
+.lang button:not(.is-on):hover { opacity: 1; }
 
 .hamburger {
   display: none;
