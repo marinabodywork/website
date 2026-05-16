@@ -41,10 +41,12 @@
       'home.hero.label': 'Marina Ribeiro · Fascia release specialist · Sydney',
       'home.hero.h1.a': 'Release the restriction.',
       'home.hero.h1.b': 'Build the strength.',
-      'home.hero.h1.c': 'One specialist. One system.',
+      'home.hero.h1.c': 'One specialist.',
+      'home.hero.h1.d': 'One system.',
       'home.hero.sub': 'Fascia release, Sensory Energetics, and conscious-movement personal training. Randwick + Maroubra. EN + PT.',
       'home.hero.price': 'From A$125 · First-session guarantee',
-      'home.hero.cta.book': 'Book a session',
+      'home.hero.cta.massage': 'Book Massage',
+      'home.hero.cta.training': 'Book Training',
       'home.hero.cta.talk': 'Not sure where to start? Talk to Marina first →',
 
       // ─── Home: combination ───
@@ -123,7 +125,7 @@
       'home.proof.t3.h': 'Training plateau broken after six weeks.',
       'home.proof.t3.q': '"My squat had been stuck at the same weight for eight months. Marina found the restriction in my hip flexors in the first session. We trained around it and then through it. The numbers moved the following week."',
       'home.proof.t3.name': 'Helena, 35',
-      'home.proof.reviews': '★★★★★ Google reviews · Sydney →',
+      'home.proof.reviews': 'reviews · Sydney →',
 
       // ─── Not for everyone ───
       'home.dq.label': 'Honest',
@@ -358,7 +360,7 @@
 
       'tr.plans.label': 'Plans and pricing',
       'tr.plans.h2': 'Lock in your slot. Lock in the result.',
-      'tr.plans.sub': 'Every plan reserves a recurring day and time. Choose your plan, choose your slot, and Marina will confirm availability within 24 hours.',
+      'tr.plans.sub': 'Each plan books direct on Acuity. Once paid, your slot is held for the full cycle.',
 
       'tr.plan.basic.name': 'Basic',
       'tr.plan.basic.price': 'A$570',
@@ -386,29 +388,7 @@
       'tr.plan.diamond.f3': 'Freeze 3 weeks',
       'tr.plan.diamond.f4': 'MFIT app programming included',
 
-      'tr.plan.select': 'Select this plan',
-      'tr.plan.selected': 'Plan selected',
-
-      'tr.slot.h': 'Choose your recurring slot.',
-      'tr.slot.sub': 'Every plan locks in a fixed day and time. Pick what works each week and Marina will confirm.',
-      'tr.slot.day': 'Day',
-      'tr.slot.day2': 'Second day',
-      'tr.slot.day3': 'Third day',
-      'tr.slot.time': 'Time preference',
-      'tr.slot.day.placeholder': 'Choose a day',
-      'tr.slot.time.placeholder': 'Choose a window',
-      'tr.slot.time.morning': 'Morning (8–11am)',
-      'tr.slot.time.afternoon': 'Afternoon (1–6pm, Tue/Thu only)',
-      'tr.slot.day.mon': 'Monday (mornings)',
-      'tr.slot.day.tue': 'Tuesday (8am–6pm)',
-      'tr.slot.day.wed': 'Wednesday (mornings)',
-      'tr.slot.day.thu': 'Thursday (8am–6pm)',
-      'tr.slot.day.fri': 'Friday (mornings)',
-      'tr.slot.confirm': 'Confirm and book on WhatsApp',
-      'tr.slot.note': 'Marina will confirm your slot within 24 hours. Once confirmed, she will send your payment link. Your sessions are then locked in at your chosen day and time for the full cycle.',
-      'tr.slot.duplicate': 'Please choose different days for each session.',
-      'tr.slot.missing': 'Please complete the slot selection above.',
-      'tr.slot.wa.msg': "Hi Marina, I'd like to start the {plan} plan. My preferred slot(s): {days} in the {time} range. Please confirm availability.",
+      'tr.plan.book': 'Book this plan',
 
       'tr.single.name': 'Single session',
       'tr.single.sub': 'No commitment. Try the work, see if it is what your body has been asking for.',
@@ -493,10 +473,12 @@
       'home.hero.label': 'Marina Ribeiro · Especialista em liberação fascial · Sydney',
       'home.hero.h1.a': 'Libere a restrição.',
       'home.hero.h1.b': 'Construa a força.',
-      'home.hero.h1.c': 'Uma especialista. Um sistema.',
+      'home.hero.h1.c': 'Uma especialista.',
+      'home.hero.h1.d': 'Um sistema.',
       'home.hero.sub': 'Liberação fascial, Sensory Energetics e treino de movimento consciente. Randwick + Maroubra. EN + PT.',
       'home.hero.price': 'A partir de A$125 · Garantia na primeira sessão',
-      'home.hero.cta.book': 'Agendar sessão',
+      'home.hero.cta.massage': 'Agendar Massagem',
+      'home.hero.cta.training': 'Agendar Treino',
       'home.hero.cta.talk': 'Não sabe por onde começar? Fala com a Marina primeiro →',
 
       // Home: combination
@@ -575,7 +557,7 @@
       'home.proof.t3.h': 'Platô no treino resolvido em seis semanas.',
       'home.proof.t3.q': '"Meu agachamento estava parado no mesmo peso havia oito meses. A Marina achou a restrição nos meus flexores do quadril na primeira sessão. Trabalhamos em volta e depois através dela. Os números mudaram na semana seguinte."',
       'home.proof.t3.name': 'Helena, 35',
-      'home.proof.reviews': '★★★★★ Avaliações Google · Sydney →',
+      'home.proof.reviews': 'avaliações · Sydney →',
 
       // Disqualifiers
       'home.dq.label': 'Honesto',
@@ -807,7 +789,7 @@
 
       'tr.plans.label': 'Planos e preços',
       'tr.plans.h2': 'Reserve o seu horário. Reserve o seu resultado.',
-      'tr.plans.sub': 'Cada plano reserva um dia e hora recorrentes. Escolha o plano, escolha o horário, e a Marina confirma disponibilidade em 24 horas.',
+      'tr.plans.sub': 'Cada plano é agendado direto na Acuity. Após o pagamento, o seu horário fica reservado para o ciclo inteiro.',
 
       'tr.plan.basic.name': 'Basic',
       'tr.plan.basic.price': 'A$570',
@@ -835,29 +817,7 @@
       'tr.plan.diamond.f3': 'Congela 3 semanas',
       'tr.plan.diamond.f4': 'Programação no app MFIT incluída',
 
-      'tr.plan.select': 'Selecionar plano',
-      'tr.plan.selected': 'Plano selecionado',
-
-      'tr.slot.h': 'Escolha o seu horário recorrente.',
-      'tr.slot.sub': 'Cada plano fixa um dia e hora. Escolha o que funciona toda semana e a Marina confirma.',
-      'tr.slot.day': 'Dia',
-      'tr.slot.day2': 'Segundo dia',
-      'tr.slot.day3': 'Terceiro dia',
-      'tr.slot.time': 'Faixa de horário',
-      'tr.slot.day.placeholder': 'Escolha um dia',
-      'tr.slot.time.placeholder': 'Escolha a faixa',
-      'tr.slot.time.morning': 'Manhã (8h–11h)',
-      'tr.slot.time.afternoon': 'Tarde (13h–18h, só Ter/Qui)',
-      'tr.slot.day.mon': 'Segunda (manhã)',
-      'tr.slot.day.tue': 'Terça (8h–18h)',
-      'tr.slot.day.wed': 'Quarta (manhã)',
-      'tr.slot.day.thu': 'Quinta (8h–18h)',
-      'tr.slot.day.fri': 'Sexta (manhã)',
-      'tr.slot.confirm': 'Confirmar e agendar no WhatsApp',
-      'tr.slot.note': 'A Marina confirma o seu horário em até 24 horas. Quando confirmar, ela envia o link de pagamento. As suas sessões ficam reservadas no dia e hora escolhidos durante todo o ciclo.',
-      'tr.slot.duplicate': 'Escolha dias diferentes para cada sessão.',
-      'tr.slot.missing': 'Complete a seleção de horário acima.',
-      'tr.slot.wa.msg': "Oi Marina, gostaria de começar o plano {plan}. Horários preferidos: {days} na faixa {time}. Confirma disponibilidade, por favor.",
+      'tr.plan.book': 'Agendar esse plano',
 
       'tr.single.name': 'Sessão avulsa',
       'tr.single.sub': 'Sem compromisso. Experimente o trabalho, veja se é o que o seu corpo está pedindo.',
@@ -1066,6 +1026,13 @@
   // Diagnostic widget (home + method)
   // ─────────────────────────────────────────────
   const DIAG_AREAS = ['neck', 'jaw', 'back', 'stress', 'training'];
+  const DIAG_URLS = {
+    neck: 'https://marinaribeirobodywork.as.me/SomaticMassageCorporal',
+    jaw: 'https://marinaribeirobodywork.as.me/SomaticMassageFacial',
+    back: 'https://marinaribeirobodywork.as.me/SomaticMassageCorporal',
+    stress: 'https://marinaribeirobodywork.as.me/SensoryEnergetics',
+    training: 'training.html'
+  };
 
   function renderDiag(area) {
     const result = document.getElementById('diagResult');
@@ -1075,16 +1042,15 @@
     const why = t('diag.' + area + '.why');
     const tags = (t('diag.' + area + '.tags') || '').split('·').map(function (s) { return s.trim(); }).filter(Boolean);
     const cta = t('diag.' + area + '.cta');
-    const ctaUrl = area === 'training'
-      ? 'training.html'
-      : 'https://marinaribeirobodywork.as.me/bookmassage';
+    const ctaUrl = DIAG_URLS[area];
+    const isInternal = area === 'training';
     const tagsHtml = tags.map(function (tg) { return '<span class="diag__tag">' + tg + '</span>'; }).join('');
     result.innerHTML =
       '<h3>' + name + '</h3>' +
       '<p>' + why + '</p>' +
       '<div class="diag__tags">' + tagsHtml + '</div>' +
       '<a class="btn btn--primary" href="' + ctaUrl + '"' +
-      (area === 'training' ? '' : ' target="_blank" rel="noopener"') + '>' + cta + '</a>';
+      (isInternal ? '' : ' target="_blank" rel="noopener"') + '>' + cta + '</a>';
     result.classList.add('is-open');
   }
 
@@ -1106,102 +1072,6 @@
   }
 
   // ─────────────────────────────────────────────
-  // PT plan selector + slot picker (training page)
-  // ─────────────────────────────────────────────
-  const PLAN_DAYS = { basic: 1, golden: 2, diamond: 3 };
-  const PLAN_NAMES = { basic: 'Basic', golden: 'Golden', diamond: 'Diamond' };
-
-  function initPlanFlow() {
-    const cards = document.querySelectorAll('.plan-card[data-plan]');
-    if (!cards.length) return;
-
-    function selectCard(card) {
-      const plan = card.getAttribute('data-plan');
-      cards.forEach(function (c) {
-        c.classList.toggle('is-selected', c === card);
-        c.setAttribute('aria-pressed', c === card ? 'true' : 'false');
-      });
-      showSlotPicker(plan);
-    }
-    cards.forEach(function (card) {
-      card.addEventListener('click', function () { selectCard(card); });
-      card.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          selectCard(card);
-        }
-      });
-    });
-
-    const confirm = document.getElementById('slotConfirm');
-    if (confirm) confirm.addEventListener('click', handleSlotConfirm);
-  }
-
-  function showSlotPicker(plan) {
-    const picker = document.getElementById('slotPicker');
-    if (!picker) return;
-    const need = PLAN_DAYS[plan] || 1;
-    picker.dataset.plan = plan;
-
-    // Show only the needed day rows
-    [1, 2, 3].forEach(function (n) {
-      const row = picker.querySelector('[data-day-row="' + n + '"]');
-      if (row) row.style.display = n <= need ? '' : 'none';
-    });
-    picker.classList.add('is-open');
-
-    // Reset error
-    const err = document.getElementById('slotError');
-    if (err) err.style.display = 'none';
-
-    // Smooth scroll
-    setTimeout(function () {
-      picker.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 250);
-  }
-
-  function handleSlotConfirm() {
-    const picker = document.getElementById('slotPicker');
-    if (!picker || !picker.dataset.plan) return;
-    const plan = picker.dataset.plan;
-    const need = PLAN_DAYS[plan] || 1;
-    const days = [];
-    for (let i = 1; i <= need; i += 1) {
-      const sel = picker.querySelector('[data-day="' + i + '"]');
-      if (!sel || !sel.value) {
-        return showSlotError('missing');
-      }
-      days.push(sel.value);
-    }
-    if (new Set(days).size !== days.length) {
-      return showSlotError('duplicate');
-    }
-    const timeSel = picker.querySelector('[data-time]');
-    if (!timeSel || !timeSel.value) return showSlotError('missing');
-
-    const dayLabels = days.map(function (d) {
-      return t('tr.slot.day.' + d) || d;
-    }).join(', ');
-    const timeLabel = t('tr.slot.time.' + timeSel.value) || timeSel.value;
-    const planLabel = PLAN_NAMES[plan] || plan;
-
-    const tmpl = t('tr.slot.wa.msg');
-    const msg = tmpl
-      .replace('{plan}', planLabel)
-      .replace('{days}', dayLabels)
-      .replace('{time}', timeLabel);
-    const url = 'https://wa.me/61451021478?text=' + encodeURIComponent(msg);
-    window.open(url, '_blank', 'noopener');
-  }
-
-  function showSlotError(kind) {
-    const err = document.getElementById('slotError');
-    if (!err) return;
-    err.textContent = t('tr.slot.' + kind);
-    err.style.display = 'block';
-  }
-
-  // ─────────────────────────────────────────────
   // Boot
   // ─────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', function () {
@@ -1209,7 +1079,6 @@
     initNav();
     initFaq();
     initDiag();
-    initPlanFlow();
     initReveal();
   });
 })();
