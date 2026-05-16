@@ -480,8 +480,8 @@ document.documentElement.classList.add('js-on');
 
       // Home: combination
       'home.combo.label': 'O sistema',
-      'home.combo.h2': 'A maioria dos terapeutas trata só o sintoma.<br>A maioria dos personal trainers treina por cima do que está travado.<br>A Marina solta o que está travado primeiro. Depois constrói força em cima de um corpo livre.',
-      'home.combo.intro': 'Existe um motivo pra sua tensão voltar dias depois de uma boa massagem. E existe um motivo pro seu treino parar de evoluir, por mais que você se dedique. É o mesmo motivo. E a culpa não é sua.',
+      'home.combo.h2': 'A maioria dos terapeutas trata o sintoma.<br>A maioria dos treinadores trabalha em torno da restrição.<br>Marina remove a origem e constrói sobre terreno limpo.',
+      'home.combo.intro': 'Existe um motivo para a tensão continuar voltando depois de uma boa massagem. E um motivo para o seu treino ter um teto, por mais consistente que você seja. É o mesmo motivo. E não é culpa sua.',
       'home.combo.c1.label': 'Só massagem',
       'home.combo.c1.h': 'A tensão alivia. Depois volta.',
       'home.combo.c1.p': 'A massagem comum trabalha o músculo. Mas por baixo do músculo tem a fáscia — o tecido fino que envolve tudo e segura o padrão de tensão no lugar. A massagem comum quase nunca chega lá. O corpo melhora por alguns dias. Depois trava de novo, no mesmo ponto. Porque nada mudou na forma como você se move.',
