@@ -16,11 +16,8 @@
       'nav.massage': 'Massage',
       'nav.training': 'Training',
       'nav.about': 'About',
-      'nav.book': 'Book Now',
       'nav.bookMassage': 'Book Massage',
-      'nav.bookTraining': 'Book Training',
-      'nav.langEn': '🇦🇺',
-      'nav.langPt': '🇧🇷',
+      'nav.bookTraining': 'Book PT Lesson',
       'nav.menu': 'Menu',
 
       // Footer
@@ -30,13 +27,13 @@
       'footer.col.book': 'Book',
       'footer.faq': 'FAQ',
       'footer.bookMassage': 'Book Massage',
-      'footer.bookPt': 'Book PT',
+      'footer.bookPt': 'Book PT Lesson',
       'footer.address': 'Randwick, NSW',
       'footer.copy': '© 2026 Marina Bodywork. Sydney, Australia.',
 
       // Sticky CTA
       'sticky.massage': 'Book Massage',
-      'sticky.pt': 'Book PT',
+      'sticky.pt': 'Book PT Lesson',
       'wa.float': 'Message Marina on WhatsApp',
 
       // ─── Home: hero ───
@@ -47,7 +44,7 @@
       'home.hero.h1.d': 'One system.',
       'home.hero.sub': 'Fascia release, Sensory Energetics, and conscious-movement personal training.',
       'home.hero.cta.massage': 'Book Massage',
-      'home.hero.cta.training': 'Book Training',
+      'home.hero.cta.training': 'Book PT Lesson',
       'home.hero.cta.talk': 'Not sure where to start? Talk to Marina first →',
 
       // ─── Home: combination ───
@@ -72,7 +69,7 @@
       'home.svc.s1.name': 'Single massage sessions',
       'home.svc.s1.meta': '60–90 min · From A$125',
       'home.svc.s1.p': 'Somatic Massage Corporal or Facial, or the 90-minute Sensory Energetics signature work. One-off bookings, no commitment.',
-      'home.svc.s1.cta': 'Book a session',
+      'home.svc.s1.cta': 'Book Massage',
       'home.svc.s2.name': 'Memberships',
       'home.svc.s2.meta': 'From A$100/week · Fixed weekly slot',
       'home.svc.s2.p': 'A recurring weekly slot held personally by Marina. Invitation plan confirmed after your first session. Minimum 2 months.',
@@ -96,23 +93,23 @@
       'diag.neck.name': 'Somatic Massage Corporal',
       'diag.neck.why': 'Chronic upper-body tension is almost always fascial, not muscular. Standard remedial massage works the surface. Marina reaches the connective tissue underneath it, where the pattern is held. Most clients feel the difference in the first session.',
       'diag.neck.tags': 'Myofascial Release · Somatic Release · Custom blend',
-      'diag.neck.cta': 'Book this session',
+      'diag.neck.cta': 'Book Massage',
       'diag.jaw.name': 'Somatic Massage Facial',
       'diag.jaw.why': 'TMJ tension and jaw clenching are held in the fascia of the face, neck, and throat. Marina is one of the few Sydney practitioners trained in buccal (inside-mouth) massage and TMJ Mastery. Clients typically report deeper sleep and reduced jaw tension within 24 hours.',
       'diag.jaw.tags': 'TMJ Mastery · Buccal Massage · Myofascial Release',
-      'diag.jaw.cta': 'Book this session',
+      'diag.jaw.cta': 'Book Massage',
       'diag.back.name': 'Somatic Massage Corporal',
       'diag.back.why': 'Lower-back and hip tension is usually a fascial chain problem, not an isolated muscle problem. The restriction is often in the hip flexors, the thoracolumbar fascia, or the connection between them. Marina maps the chain and releases it at the source.',
       'diag.back.tags': 'Myofascial Release · Myo Aponeurosis · Somatic Release',
-      'diag.back.cta': 'Book this session',
+      'diag.back.cta': 'Book Massage',
       'diag.stress.name': 'Sensory Energetics (90 min)',
       'diag.stress.why': 'When the body cannot switch off, the nervous system is the problem, not just the muscle. Sensory Energetics combines trigger-point work, guided breath, and somatic release to reach tension stored by the nervous system for months or years. Clients leave looser and most sleep deeper that night.',
       'diag.stress.tags': 'Nervous System Release · Breathwork · Trigger-Point',
-      'diag.stress.cta': 'Book Sensory Energetics',
+      'diag.stress.cta': 'Book Massage',
       'diag.training.name': 'Conscious Movement Personal Training',
       'diag.training.why': 'A training plateau that does not respond to programming changes is usually a tissue problem. Fascial restriction limits the range you can train in, which caps strength gains. Marina brings her bodywork qualifications into every PT session, addressing the restriction and training the cleared range in the same hour.',
       'diag.training.tags': 'Fascial Chain Training · Mobility · Breathwork in Session',
-      'diag.training.cta': 'See training plans',
+      'diag.training.cta': 'Book PT Lesson',
 
       // ─── Social proof ───
       'home.proof.label': 'What clients say',
@@ -233,7 +230,7 @@
 
       'method.cta.h2': 'Ready to feel the difference?',
       'method.cta.p': 'Start with one session. After the first hour you will know whether this is the right work.',
-      'method.cta.book': 'Book a session',
+      'method.cta.book': 'Book Massage',
       'method.cta.talk': 'Talk to Marina first →',
 
       // ─── Massage page ───
@@ -250,30 +247,16 @@
       'mas.c.p1': 'Marina-developed methodology integrating Brazilian lymphatic drainage, myofascial release, breathwork, and deep-relaxation work into one continuous hour.',
       'mas.c.p2': 'It addresses muscular tension, fluid retention, accumulated physical stress, and fascial rigidity. As the fascia releases, circulation, mobility, and body awareness improve and a sense of lightness returns.',
       'mas.c.p3': 'The breathwork and deep-relaxation layer regulates the central nervous system and lowers cortisol. This is integrative bodywork. It reconnects body and mind.',
-      'mas.c.b1': 'Release of muscular and fascial tension',
-      'mas.c.b2': 'Reduced fluid retention',
-      'mas.c.b3': 'Better circulation and mobility',
-      'mas.c.b4': 'Body awareness and sense of lightness',
-      'mas.c.b5': 'Nervous-system regulation and lower cortisol',
-      'mas.c.b6': 'Reduced accumulated physical and emotional stress',
-      'mas.c.b7': 'Deep relaxation and improved well-being',
-      'mas.c.b8': 'Integrative body-mind reconnection',
-      'mas.c.cta': 'Book this session',
+
+      'mas.c.cta': 'Book Massage',
 
       // Service: Facial
       'mas.f.name': 'Somatic Massage Facial',
       'mas.f.meta': '60 minutes · A$125',
       'mas.f.p1': 'For TMJ, jaw tension, tension headaches, and disturbed sleep. The fascia of the face, jaw, and throat is rarely reachable from the outside. Marina is one of the few Sydney practitioners trained in buccal (inside-mouth) work and TMJ Mastery.',
       'mas.f.p2': 'The session combines intraoral fascial release with external face, neck, and throat work. Clients typically report deeper sleep and reduced jaw tension within 24 hours of the first session.',
-      'mas.f.b1': 'Release of jaw and facial tension',
-      'mas.f.b2': 'Relief from tension headaches',
-      'mas.f.b3': 'Reduced bruxism and jaw clenching',
-      'mas.f.b4': 'Improved sleep quality within 24 hours',
-      'mas.f.b5': 'Better posture through neck and shoulders',
-      'mas.f.b6': 'Lifted facial tone',
-      'mas.f.b7': 'Stress and emotional load softened',
-      'mas.f.b8': 'Released TMJ patterns held for years',
-      'mas.f.cta': 'Book this session',
+
+      'mas.f.cta': 'Book Massage',
 
       // Service: Sensory Energetics
       'mas.s.name': 'Sensory Energetics',
@@ -282,15 +265,8 @@
       'mas.s.p1': 'A 90-minute integrative session focused on the deep release of physical and emotional patterns stored in the nervous system. Inspired by ancient Eastern techniques, breathwork, body stimuli, and somatic awareness. The work activates the central nervous system directly.',
       'mas.s.p2': 'Involuntary tremors and natural neuromuscular reactions are normal during the session. They help the body discharge tension, regulate stress, and lower cortisol. The technique also supports neurotransmitters tied to well-being, focus, motivation, and pleasure (including dopamine).',
       'mas.s.p3': 'More than a body experience. The work crosses the connection between body, emotion, and mind. Clients leave with lightness, mental clarity, emotional balance, and a body that finally remembers what it feels like to switch off.',
-      'mas.s.b1': 'Nervous-system regulation',
-      'mas.s.b2': 'Reduced physical and emotional stress',
-      'mas.s.b3': 'Release of fascial and muscular tension',
-      'mas.s.b4': 'Mental clarity and decision-making',
-      'mas.s.b5': 'Deeper well-being and relaxation',
-      'mas.s.b6': 'Creativity and bodily presence',
-      'mas.s.b7': 'Emotional balance and sleep quality',
-      'mas.s.b8': 'Expansion, lightness, reconnection with self',
-      'mas.s.cta': 'Book Sensory Energetics',
+
+      'mas.s.cta': 'Book Massage',
 
       'mas.combo.h': 'Book Somatic Facial and Somatic Corporal on the same day',
       'mas.combo.p': '5% off your total. Two hours. A lot less tension. Apply at checkout, or message Marina to coordinate timing.',
@@ -318,7 +294,7 @@
       'mas.price.r3.name': 'Weekly membership',
       'mas.price.r3.sub': 'Fixed slot, same day and time, every week · min 2 months · cancel with 1 week notice · auto-renews',
       'mas.price.r3.price': 'A$100/week',
-      'mas.price.book': 'Book a single session',
+      'mas.price.book': 'Book Massage',
       'mas.price.mship': 'Talk to Marina about membership',
       'mas.price.mship.note': 'Membership is an invitation plan confirmed after your first session. The recurring slot is held by Marina personally, which is why it cannot be booked through Acuity. Message her on WhatsApp and she will confirm availability and your slot.',
 
@@ -389,12 +365,13 @@
       'tr.plan.diamond.f3': 'Freeze 3 weeks',
       'tr.plan.diamond.f4': 'MFIT app programming included',
 
-      'tr.plan.book': 'Book this plan',
+      'tr.plan.book': 'Book PT Lesson',
+      'tr.plan.note': 'After booking, Marina will reach out within 24 hours to confirm your recurring schedule for the full plan period.',
 
       'tr.single.name': 'Single session',
       'tr.single.sub': 'No commitment. Try the work, see if it is what your body has been asking for.',
       'tr.single.price': 'A$99',
-      'tr.single.cta': 'Book a single session',
+      'tr.single.cta': 'Book PT Lesson',
 
       'tr.outcomes.label': 'What clients achieve',
       'tr.outcomes.h2': 'Specific, not abstract.',
@@ -430,8 +407,8 @@
       'about.cred.8': 'Founder, Mulheres Ativas',
 
       'about.letter.label': 'A note from Marina',
-      'about.letter.quote': '"I believe every woman deserves to feel at home in her own body. That is the work I do — with my hands, with breath, and with care. Whatever brings you here, you do not have to arrive ready. You only have to arrive."',
-      'about.letter.sign': '— Marina',
+      'about.letter.quote': '"I believe every woman deserves to feel at home in her own body. That is the work I do. With my hands, with breath, and with care. Whatever brings you here, you do not have to arrive ready. You only have to arrive."',
+      'about.letter.sign': 'Marina',
       'about.perks.label': 'Partner perks',
       'about.perks.h': 'Deals from Marina\'s partners.',
       'about.partner.label': 'Be Bold Sydney',
@@ -443,8 +420,9 @@
       'about.insta.cta': '@marinaribeiropersonal →',
 
       'about.cta.h': 'Ready to work with Marina?',
-      'about.cta.p': 'Book a session, or message Marina first if you want her to recommend where to start.',
-      'about.cta.book': 'Book a session',
+      'about.cta.p': 'Book a massage, book a PT lesson, or message Marina first if you want her to recommend where to start.',
+      'about.cta.book': 'Book Massage',
+      'about.cta.bookPt': 'Book PT Lesson',
       'about.cta.talk': 'Talk to Marina →'
     },
 
@@ -454,11 +432,8 @@
       'nav.massage': 'Massagem',
       'nav.training': 'Treino',
       'nav.about': 'Sobre',
-      'nav.book': 'Agendar',
       'nav.bookMassage': 'Agendar Massagem',
-      'nav.bookTraining': 'Agendar Treino',
-      'nav.langEn': '🇦🇺',
-      'nav.langPt': '🇧🇷',
+      'nav.bookTraining': 'Agendar Aula de PT',
       'nav.menu': 'Menu',
 
       // Footer
@@ -468,13 +443,13 @@
       'footer.col.book': 'Agendar',
       'footer.faq': 'Perguntas frequentes',
       'footer.bookMassage': 'Agendar Massagem',
-      'footer.bookPt': 'Agendar PT',
+      'footer.bookPt': 'Agendar Aula de PT',
       'footer.address': 'Randwick, NSW',
       'footer.copy': '© 2026 Marina Bodywork. Sydney, Austrália.',
 
       // Sticky CTA
       'sticky.massage': 'Massagem',
-      'sticky.pt': 'Treino',
+      'sticky.pt': 'Aula de PT',
       'wa.float': 'Falar com a Marina no WhatsApp',
 
       // Home: hero
@@ -485,7 +460,7 @@
       'home.hero.h1.d': 'Um sistema.',
       'home.hero.sub': 'Liberação fascial, Sensory Energetics e treino de movimento consciente.',
       'home.hero.cta.massage': 'Agendar Massagem',
-      'home.hero.cta.training': 'Agendar Treino',
+      'home.hero.cta.training': 'Agendar Aula de PT',
       'home.hero.cta.talk': 'Não sabe por onde começar? Fala com a Marina primeiro →',
 
       // Home: combination
@@ -510,7 +485,7 @@
       'home.svc.s1.name': 'Sessões avulsas de massagem',
       'home.svc.s1.meta': '60–90 min · A partir de A$125',
       'home.svc.s1.p': 'Massagem Somática Corporal ou Facial, ou a sessão assinatura Sensory Energetics de 90 min. Agendamentos avulsos, sem compromisso.',
-      'home.svc.s1.cta': 'Agendar sessão',
+      'home.svc.s1.cta': 'Agendar Massagem',
       'home.svc.s2.name': 'Membership',
       'home.svc.s2.meta': 'A partir de A$100/semana · horário fixo semanal',
       'home.svc.s2.p': 'Um horário semanal recorrente reservado pessoalmente pela Marina. Plano por convite, confirmado após a primeira sessão. Mínimo de 2 meses.',
@@ -534,23 +509,23 @@
       'diag.neck.name': 'Somatic Massage Corporal',
       'diag.neck.why': 'Tensão crônica na parte superior do corpo é quase sempre fascial, não muscular. A massagem convencional trabalha a superfície. A Marina alcança o tecido conectivo por baixo, onde o padrão está guardado. A maioria das clientes sente a diferença na primeira sessão.',
       'diag.neck.tags': 'Liberação Miofascial · Liberação Somática · Blend personalizado',
-      'diag.neck.cta': 'Agendar essa sessão',
+      'diag.neck.cta': 'Agendar Massagem',
       'diag.jaw.name': 'Somatic Massage Facial',
       'diag.jaw.why': 'A tensão na mandíbula e o bruxismo ficam guardados na fáscia do rosto, pescoço e garganta. A Marina é uma das poucas profissionais em Sydney com formação em massagem bucal e TMJ Mastery. A maioria das clientes relata sono mais profundo e menos tensão na mandíbula em 24 horas.',
       'diag.jaw.tags': 'TMJ Mastery · Massagem Bucal · Liberação Miofascial',
-      'diag.jaw.cta': 'Agendar essa sessão',
+      'diag.jaw.cta': 'Agendar Massagem',
       'diag.back.name': 'Somatic Massage Corporal',
       'diag.back.why': 'Tensão lombar e no quadril é quase sempre um problema de cadeia fascial, não de músculo isolado. A restrição costuma estar nos flexores do quadril, na fáscia toracolombar ou na conexão entre eles. A Marina mapeia a cadeia e libera na origem.',
       'diag.back.tags': 'Liberação Miofascial · Mio Aponeurose · Liberação Somática',
-      'diag.back.cta': 'Agendar essa sessão',
+      'diag.back.cta': 'Agendar Massagem',
       'diag.stress.name': 'Sensory Energetics (90 min)',
       'diag.stress.why': 'Quando o corpo não consegue desligar, o sistema nervoso é o problema, não só o músculo. O Sensory Energetics combina trigger-point, respiração guiada e liberação somática para alcançar a tensão guardada pelo sistema nervoso há meses ou anos. As clientes saem mais soltas e a maioria dorme melhor naquela noite.',
       'diag.stress.tags': 'Regulação do Sistema Nervoso · Respiração · Trigger-Point',
-      'diag.stress.cta': 'Agendar Sensory Energetics',
+      'diag.stress.cta': 'Agendar Massagem',
       'diag.training.name': 'Treino de Movimento Consciente',
       'diag.training.why': 'Um platô que não responde a mudanças de programação geralmente é um problema de tecido. A restrição fascial limita a amplitude disponível para treinar, o que limita o ganho de força. A Marina traz suas qualificações em terapia corporal para cada sessão de PT, trabalhando a restrição e treinando a amplitude liberada na mesma hora.',
       'diag.training.tags': 'Treino em Cadeias Fasciais · Mobilidade · Respiração na Sessão',
-      'diag.training.cta': 'Ver planos de treino',
+      'diag.training.cta': 'Agendar Aula de PT',
 
       // Social proof
       'home.proof.label': 'O que dizem as clientes',
@@ -671,7 +646,7 @@
 
       'method.cta.h2': 'Pronta para sentir a diferença?',
       'method.cta.p': 'Comece com uma sessão. Em uma hora você vai saber se esse é o trabalho certo.',
-      'method.cta.book': 'Agendar sessão',
+      'method.cta.book': 'Agendar Massagem',
       'method.cta.talk': 'Falar com a Marina primeiro →',
 
       // Massage page
@@ -687,29 +662,15 @@
       'mas.c.p1': 'Metodologia desenvolvida pela Marina integrando drenagem linfática brasileira, liberação miofascial, respiração e relaxamento profundo em uma hora contínua.',
       'mas.c.p2': 'Trabalha tensão muscular, retenção de líquidos, estresse físico acumulado e rigidez fascial. Conforme a fáscia libera, circulação, mobilidade e consciência corporal melhoram e volta a sensação de leveza.',
       'mas.c.p3': 'A camada de respiração e relaxamento profundo regula o sistema nervoso central e reduz o cortisol. É terapia corporal integrativa. Reconecta corpo e mente.',
-      'mas.c.b1': 'Liberação de tensão muscular e fascial',
-      'mas.c.b2': 'Redução de retenção de líquidos',
-      'mas.c.b3': 'Melhor circulação e mobilidade',
-      'mas.c.b4': 'Consciência corporal e sensação de leveza',
-      'mas.c.b5': 'Regulação do sistema nervoso e redução de cortisol',
-      'mas.c.b6': 'Redução de estresse físico e emocional acumulado',
-      'mas.c.b7': 'Relaxamento profundo e bem-estar',
-      'mas.c.b8': 'Reconexão integrativa corpo-mente',
-      'mas.c.cta': 'Agendar essa sessão',
+
+      'mas.c.cta': 'Agendar Massagem',
 
       'mas.f.name': 'Somatic Massage Facial',
       'mas.f.meta': '60 minutos · A$125',
       'mas.f.p1': 'Para ATM, tensão na mandíbula, dor de cabeça tensional e sono ruim. A fáscia do rosto, mandíbula e garganta raramente é alcançada externamente. A Marina é uma das poucas profissionais em Sydney com formação em massagem bucal (intraoral) e TMJ Mastery.',
       'mas.f.p2': 'A sessão combina liberação fascial intraoral com trabalho externo de rosto, pescoço e garganta. A maioria das clientes relata sono mais profundo e menos tensão na mandíbula em 24 horas após a primeira sessão.',
-      'mas.f.b1': 'Liberação de tensão na mandíbula e no rosto',
-      'mas.f.b2': 'Alívio de dor de cabeça tensional',
-      'mas.f.b3': 'Redução de bruxismo',
-      'mas.f.b4': 'Sono mais profundo em 24 horas',
-      'mas.f.b5': 'Postura melhor no pescoço e ombros',
-      'mas.f.b6': 'Rosto mais firme e tonificado',
-      'mas.f.b7': 'Carga emocional aliviada',
-      'mas.f.b8': 'Padrões de ATM guardados há anos finalmente liberados',
-      'mas.f.cta': 'Agendar essa sessão',
+
+      'mas.f.cta': 'Agendar Massagem',
 
       'mas.s.name': 'Sensory Energetics',
       'mas.s.meta': '90 minutos · A$305 · Assinatura',
@@ -717,15 +678,8 @@
       'mas.s.p1': 'Sessão integrativa de 90 minutos focada na liberação profunda de padrões físicos e emocionais armazenados no sistema nervoso. Inspirado em técnicas ancestrais do Oriente, respiração, estímulos corporais e consciência somática. Ativa o sistema nervoso central diretamente.',
       'mas.s.p2': 'Tremores involuntários e reações neuromusculares naturais são normais durante a sessão. Eles ajudam o corpo a descarregar a tensão, regular o estresse e reduzir o cortisol. A técnica também apoia neurotransmissores ligados ao bem-estar, foco, motivação e prazer (incluindo a dopamina).',
       'mas.s.p3': 'Mais do que uma experiência corporal. O trabalho atravessa a conexão entre corpo, emoção e mente. As clientes saem com leveza, clareza mental, equilíbrio emocional e um corpo que finalmente lembra como é desligar.',
-      'mas.s.b1': 'Regulação do sistema nervoso',
-      'mas.s.b2': 'Redução de estresse físico e emocional',
-      'mas.s.b3': 'Liberação de tensão fascial e muscular',
-      'mas.s.b4': 'Clareza mental e tomada de decisão',
-      'mas.s.b5': 'Bem-estar profundo e relaxamento',
-      'mas.s.b6': 'Criatividade e presença corporal',
-      'mas.s.b7': 'Equilíbrio emocional e qualidade do sono',
-      'mas.s.b8': 'Expansão, leveza, reconexão consigo mesma',
-      'mas.s.cta': 'Agendar Sensory Energetics',
+
+      'mas.s.cta': 'Agendar Massagem',
 
       'mas.combo.h': 'Agende Somatic Facial e Somatic Corporal no mesmo dia',
       'mas.combo.p': '5% de desconto no total. Duas horas. Bem menos tensão. Aplica no checkout, ou manda mensagem para a Marina coordenar o horário.',
@@ -753,7 +707,7 @@
       'mas.price.r3.name': 'Plano semanal',
       'mas.price.r3.sub': 'Horário fixo, mesmo dia e hora, toda semana · mínimo de 2 meses · cancela com 1 semana de aviso · renovação automática',
       'mas.price.r3.price': 'A$100/semana',
-      'mas.price.book': 'Agendar sessão avulsa',
+      'mas.price.book': 'Agendar Massagem',
       'mas.price.mship': 'Falar com a Marina sobre o plano',
       'mas.price.mship.note': 'O plano é por convite, confirmado depois da primeira sessão. O horário fixo é reservado pessoalmente pela Marina, por isso não passa pela Acuity. Manda mensagem no WhatsApp que ela confirma disponibilidade e o seu horário.',
 
@@ -795,7 +749,7 @@
       'tr.spec.s6': 'Bem-estar mente-corpo',
 
       'tr.plans.label': 'Planos e preços',
-      'tr.plans.h2': 'Reserve o seu horário. Reserve o seu resultado.',
+      'tr.plans.h2': 'Garante o seu horário. Garante o seu resultado.',
       'tr.plans.sub': 'Cada plano é agendado direto na Acuity. Após o pagamento, o seu horário fica reservado para o ciclo inteiro.',
 
       'tr.plan.basic.name': 'Basic',
@@ -824,12 +778,13 @@
       'tr.plan.diamond.f3': 'Congela 3 semanas',
       'tr.plan.diamond.f4': 'Programação no app MFIT incluída',
 
-      'tr.plan.book': 'Agendar esse plano',
+      'tr.plan.book': 'Agendar Aula de PT',
+      'tr.plan.note': 'Após o agendamento, a Marina entrará em contato em 24 horas para confirmar o horário recorrente durante todo o plano.',
 
       'tr.single.name': 'Sessão avulsa',
       'tr.single.sub': 'Sem compromisso. Experimente o trabalho, veja se é o que o seu corpo está pedindo.',
       'tr.single.price': 'A$99',
-      'tr.single.cta': 'Agendar sessão avulsa',
+      'tr.single.cta': 'Agendar Aula de PT',
 
       'tr.outcomes.label': 'O que as clientes conquistam',
       'tr.outcomes.h2': 'Específico, não abstrato.',
@@ -865,8 +820,8 @@
       'about.cred.8': 'Fundadora, Mulheres Ativas',
 
       'about.letter.label': 'Um recado da Marina',
-      'about.letter.quote': '"Acredito que toda mulher merece se sentir em casa no próprio corpo. É esse o meu trabalho — com as minhas mãos, com a respiração e com cuidado. Seja o que for que te trouxe até aqui, você não precisa chegar pronta. Só precisa chegar."',
-      'about.letter.sign': '— Marina',
+      'about.letter.quote': '"Acredito que toda mulher merece se sentir em casa no próprio corpo. É esse o meu trabalho. Com as minhas mãos, com a respiração e com cuidado. Seja o que for que te trouxe até aqui, você não precisa chegar pronta. Só precisa chegar."',
+      'about.letter.sign': 'Marina',
       'about.perks.label': 'Vantagens com parceiros',
       'about.perks.h': 'Benefícios dos parceiros da Marina.',
       'about.partner.label': 'Be Bold Sydney',
@@ -878,8 +833,9 @@
       'about.insta.cta': '@marinaribeiropersonal →',
 
       'about.cta.h': 'Pronta para trabalhar com a Marina?',
-      'about.cta.p': 'Agende uma sessão, ou manda mensagem primeiro se quiser que ela recomende por onde começar.',
-      'about.cta.book': 'Agendar sessão',
+      'about.cta.p': 'Agende uma massagem, agende uma aula de PT, ou manda mensagem primeiro se quiser que ela recomende por onde começar.',
+      'about.cta.book': 'Agendar Massagem',
+      'about.cta.bookPt': 'Agendar Aula de PT',
       'about.cta.talk': 'Falar com a Marina →'
     }
   };
