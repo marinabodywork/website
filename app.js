@@ -49,7 +49,7 @@
 
       // ─── Home: combination ───
       'home.combo.label': 'The system',
-      'home.combo.h2': 'Most therapists treat the symptom. Most trainers work around the restriction. Marina removes it and builds on cleared ground.',
+      'home.combo.h2': 'Most therapists treat the symptom.<br>Most trainers work around the restriction.<br>Marina removes it and builds on cleared ground.',
       'home.combo.intro': 'There is a reason the tension keeps coming back after a good massage. And a reason your training hits a ceiling no matter how consistent you are. They are the same reason. And it is not your fault.',
       'home.combo.c1.label': 'Massage alone',
       'home.combo.c1.h': 'The tension releases. Then returns.',
@@ -168,7 +168,7 @@
       'method.hero.sub': 'Fascia is the tissue around every muscle, organ, and nerve in your body. Think cling wrap, layered over everything. When one part of it tightens, everything attached to it tightens too. Most therapists work on the muscle and miss the fascia. That is why the tension keeps coming back.',
 
       'method.why.label': 'Why fascia matters',
-      'method.why.h2': 'Four symptoms. One source.',
+      'method.why.h2': 'Four symptoms.<br>One source.',
       'method.why.p1.label': 'Neck + Upper Back',
       'method.why.p1.h': 'Pain that returns within days.',
       'method.why.p1.p1': '<strong>What it looks like.</strong> Tightness across the trapezius, restricted neck rotation, headaches that build through the day.',
@@ -191,7 +191,7 @@
       'method.why.p4.p3': '<strong>What Marina does.</strong> Identifies the fascial chain holding the compensation. Releases it. Trains the new range under load.',
 
       'method.mod.label': 'The modalities',
-      'method.mod.h2': 'Four tools. One body. Chosen for what your tissue needs that day.',
+      'method.mod.h2': 'Four tools. One body.<br>Chosen for what your tissue needs that day.',
       'method.mod.m1.h': 'Somatic Massage',
       'method.mod.m1.meta': '60 min · A$125',
       'method.mod.m1.p': 'Marina-developed methodology combining myofascial release, Brazilian lymphatic drainage, breathwork, and deep-relaxation work. Solves: chronic muscular tension, fluid retention, fascial rigidity, accumulated physical stress.',
@@ -239,7 +239,7 @@
       'mas.hero.sub': 'Five specialist techniques. Marina chooses the combination your body responds to that day. There is no fixed protocol because no two bodies arrive in the same state. The hour is built around what she finds.',
 
       'mas.svc.label': 'The services',
-      'mas.svc.h2': 'Three sessions. Five techniques.',
+      'mas.svc.h2': 'Three sessions.<br>Five techniques.',
 
       // Service: Corporal
       'mas.c.name': 'Somatic Massage Corporal',
@@ -272,7 +272,7 @@
       'mas.combo.p': '5% off your total. Two hours. A lot less tension. Apply at checkout, or message Marina to coordinate timing.',
 
       'mas.choose.label': 'How to choose',
-      'mas.choose.h2': 'Three questions. One session.',
+      'mas.choose.h2': 'Three questions.<br>One session.',
       'mas.choose.c1.if': 'If standard remedial has not held',
       'mas.choose.c1.h': 'Somatic Corporal',
       'mas.choose.c1.p': 'Marina works the fascia under the muscle. The pattern releases at the source, not the surface.',
@@ -313,13 +313,13 @@
       'tr.hero.loc': 'Snap Fitness Maroubra · Tue + Thu 8am-6pm · Mon/Wed/Fri 8am-11am · Active Snap Fitness membership required',
 
       'tr.diff.label': 'What makes this different',
-      'tr.diff.h2': 'Most trainers cannot see what is holding you back. Marina can.',
+      'tr.diff.h2': 'Most trainers cannot see what is holding you back.<br>Marina can.',
       'tr.diff.p1': 'A standard trainer programs around a body they cannot fully assess. They see the lift. They cannot see the fascial chain that is shortening your range, capping your strength, or shifting load into the joint you are protecting without knowing it.',
       'tr.diff.p2': 'Marina trained in bodywork for ten years before she started taking PT clients. She sees restriction patterns no standard trainer sees. And she can address them inside the session, with hands-on release before the lift, mobility before the load, and breathwork before the next set.',
       'tr.diff.p3': 'The result is training that compounds. You are not lifting through restriction. You are building strength in the range your body actually has.',
 
       'tr.struct.label': 'The 60-minute session',
-      'tr.struct.h2': 'Five phases. Built around your body that day.',
+      'tr.struct.h2': 'Five phases.<br>Built around your body that day.',
       'tr.struct.s1': 'Stretching, muscle activation, myofascial release',
       'tr.struct.s2': 'Mobility fundamentals and body awareness',
       'tr.struct.s3': 'Specific training shaped to your goals',
@@ -336,7 +336,7 @@
       'tr.spec.s6': 'Mind-body well-being',
 
       'tr.plans.label': 'Plans and pricing',
-      'tr.plans.h2': 'Lock in your slot. Lock in the result.',
+      'tr.plans.h2': 'Lock in your slot.<br>Lock in the result.',
       'tr.plans.sub': 'Each plan books direct on Acuity. Once paid, your slot is held for the full cycle.',
 
       'tr.plan.basic.name': 'Basic',
@@ -465,7 +465,7 @@
 
       // Home: combination
       'home.combo.label': 'O sistema',
-      'home.combo.h2': 'A maioria dos terapeutas trata o sintoma. A maioria dos trainers trabalha em volta da restrição. A Marina remove e constrói em cima do que foi liberado.',
+      'home.combo.h2': 'A maioria dos terapeutas trata o sintoma.<br>A maioria dos trainers trabalha em volta da restrição.<br>A Marina remove e constrói em cima do que foi liberado.',
       'home.combo.intro': 'Tem um motivo para a tensão voltar depois de uma boa massagem. E um motivo para o treino bater num teto, não importa a dedicação. Os dois motivos são o mesmo. E não é culpa sua.',
       'home.combo.c1.label': 'Só massagem',
       'home.combo.c1.h': 'A tensão alivia. Depois volta.',
@@ -584,7 +584,7 @@
       'method.hero.sub': 'Fáscia é o tecido em volta de cada músculo, órgão e nervo do corpo. Pense em filme plástico, em camadas, cobrindo tudo. Quando uma parte tensiona, tudo que está conectado tensiona junto. A maioria dos terapeutas trabalha o músculo e ignora a fáscia. Por isso a tensão volta.',
 
       'method.why.label': 'Por que a fáscia importa',
-      'method.why.h2': 'Quatro sintomas. Uma só origem.',
+      'method.why.h2': 'Quatro sintomas.<br>Uma só origem.',
       'method.why.p1.label': 'Pescoço + Costas superiores',
       'method.why.p1.h': 'Dor que volta em poucos dias.',
       'method.why.p1.p1': '<strong>Como aparece.</strong> Aperto no trapézio, rotação do pescoço limitada, dor de cabeça que sobe ao longo do dia.',
@@ -607,7 +607,7 @@
       'method.why.p4.p3': '<strong>O que a Marina faz.</strong> Identifica a cadeia fascial que segura a compensação. Libera. Treina a nova amplitude com carga.',
 
       'method.mod.label': 'As modalidades',
-      'method.mod.h2': 'Quatro ferramentas. Um corpo. Escolhidas pelo que o seu tecido precisa naquele dia.',
+      'method.mod.h2': 'Quatro ferramentas. Um corpo.<br>Escolhidas pelo que o seu tecido precisa naquele dia.',
       'method.mod.m1.h': 'Massagem Somática',
       'method.mod.m1.meta': '60 min · A$125',
       'method.mod.m1.p': 'Metodologia desenvolvida pela Marina, combinando liberação miofascial, drenagem linfática brasileira, respiração e relaxamento profundo. Resolve: tensão muscular crônica, retenção de líquidos, rigidez fascial, estresse físico acumulado.',
@@ -655,7 +655,7 @@
       'mas.hero.sub': 'Cinco técnicas especializadas. A Marina escolhe a combinação que o seu corpo responde naquele dia. Não tem protocolo fixo porque nenhum corpo chega no mesmo estado. A hora é construída a partir do que ela encontra.',
 
       'mas.svc.label': 'Os serviços',
-      'mas.svc.h2': 'Três sessões. Cinco técnicas.',
+      'mas.svc.h2': 'Três sessões.<br>Cinco técnicas.',
 
       'mas.c.name': 'Somatic Massage Corporal',
       'mas.c.meta': '60 minutos · A$125',
@@ -685,7 +685,7 @@
       'mas.combo.p': '5% de desconto no total. Duas horas. Bem menos tensão. Aplica no checkout, ou manda mensagem para a Marina coordenar o horário.',
 
       'mas.choose.label': 'Como escolher',
-      'mas.choose.h2': 'Três perguntas. Uma sessão.',
+      'mas.choose.h2': 'Três perguntas.<br>Uma sessão.',
       'mas.choose.c1.if': 'Se a massagem remedial comum não está segurando',
       'mas.choose.c1.h': 'Somatic Corporal',
       'mas.choose.c1.p': 'A Marina trabalha a fáscia por baixo do músculo. O padrão libera na origem, não na superfície.',
@@ -726,13 +726,13 @@
       'tr.hero.loc': 'Snap Fitness Maroubra · Ter + Qui 8h-18h · Seg/Qua/Sex 8h-11h · Necessário ter matrícula ativa na Snap Fitness',
 
       'tr.diff.label': 'O que muda aqui',
-      'tr.diff.h2': 'A maioria dos trainers não enxerga o que está te travando. A Marina enxerga.',
+      'tr.diff.h2': 'A maioria dos trainers não enxerga o que está te travando.<br>A Marina enxerga.',
       'tr.diff.p1': 'Um trainer comum programa em cima de um corpo que ele não consegue avaliar por completo. Ele vê o levantamento. Não vê a cadeia fascial que está encurtando a sua amplitude, limitando a força, ou jogando carga numa articulação que você protege sem perceber.',
       'tr.diff.p2': 'A Marina se formou em terapia corporal por dez anos antes de começar a atender em PT. Ela enxerga padrões de restrição que um trainer comum não vê. E consegue trabalhá-los dentro da sessão, com liberação manual antes do levantamento, mobilidade antes da carga, e respiração antes da próxima série.',
       'tr.diff.p3': 'O resultado é treino que se acumula. Você não está levantando contra a restrição. Você está construindo força na amplitude que o seu corpo realmente tem.',
 
       'tr.struct.label': 'A sessão de 60 minutos',
-      'tr.struct.h2': 'Cinco fases. Construídas em torno do seu corpo naquele dia.',
+      'tr.struct.h2': 'Cinco fases.<br>Construídas em torno do seu corpo naquele dia.',
       'tr.struct.s1': 'Alongamento, ativação muscular, liberação miofascial',
       'tr.struct.s2': 'Fundamentos de mobilidade e consciência corporal',
       'tr.struct.s3': 'Treino específico para o seu objetivo',
@@ -749,7 +749,7 @@
       'tr.spec.s6': 'Bem-estar mente-corpo',
 
       'tr.plans.label': 'Planos e preços',
-      'tr.plans.h2': 'Garante o seu horário. Garante o seu resultado.',
+      'tr.plans.h2': 'Garante o seu horário.<br>Garante o seu resultado.',
       'tr.plans.sub': 'Cada plano é agendado direto na Acuity. Após o pagamento, o seu horário fica reservado para o ciclo inteiro.',
 
       'tr.plan.basic.name': 'Basic',
