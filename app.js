@@ -19,7 +19,7 @@ document.documentElement.classList.add('js-on');
       'nav.training': 'Training',
       'nav.about': 'About',
       'nav.bookMassage': 'Book Massage',
-      'nav.bookTraining': 'Book PT Lesson',
+      'nav.bookTraining': 'Book Training',
       'nav.menu': 'Menu',
 
       // Footer
@@ -29,24 +29,24 @@ document.documentElement.classList.add('js-on');
       'footer.col.book': 'Book',
       'footer.faq': 'FAQ',
       'footer.bookMassage': 'Book Massage',
-      'footer.bookPt': 'Book PT Lesson',
+      'footer.bookPt': 'Book Training',
       'footer.address': 'Randwick, NSW',
       'footer.copy': '© 2026 Marina Bodywork. Sydney, Australia.',
 
       // Sticky CTA
       'sticky.massage': 'Book Massage',
-      'sticky.pt': 'Book PT Lesson',
+      'sticky.pt': 'Book Training',
       'wa.float': 'Message Marina on WhatsApp',
 
       // ─── Home: hero ───
-      'home.hero.label': 'Marina Ribeiro · Fascia release specialist · Sydney',
+      'home.hero.label': '<strong>Marina Ribeiro</strong> · Fascia release specialist · Sydney',
       'home.hero.h1.a': 'Release the restriction.',
       'home.hero.h1.b': 'Build the strength.',
       'home.hero.h1.c': 'One specialist.',
       'home.hero.h1.d': 'One system.',
       'home.hero.sub': 'Fascia release, Sensory Energetics, and conscious-movement personal training.',
       'home.hero.cta.massage': 'Book Massage',
-      'home.hero.cta.training': 'Book PT Lesson',
+      'home.hero.cta.training': 'Book Training',
       'home.hero.cta.talk': 'Not sure where to start? Talk to Marina first →',
 
       // ─── Home: combination ───
@@ -80,7 +80,7 @@ document.documentElement.classList.add('js-on');
       'home.svc.s3.name': 'Training',
       'home.svc.s3.meta': '60 min · From A$75/session on plan',
       'home.svc.s3.p': 'Conscious-movement personal training. Strength built on a body that can actually move. Snap Fitness Maroubra.',
-      'home.svc.s3.cta': 'Book PT Lesson',
+      'home.svc.s3.cta': 'Book Training',
 
       // ─── Diagnostic ───
       'diag.label': 'Diagnostic',
@@ -111,7 +111,7 @@ document.documentElement.classList.add('js-on');
       'diag.training.name': 'Conscious Movement Personal Training',
       'diag.training.why': 'A training plateau that does not respond to programming changes is usually a tissue problem. Fascial restriction limits the range you can train in, which caps strength gains. Marina brings her bodywork qualifications into every PT session, addressing the restriction and training the cleared range in the same hour.',
       'diag.training.tags': 'Fascial Chain Training · Mobility · Breathwork in Session',
-      'diag.training.cta': 'Book PT Lesson',
+      'diag.training.cta': 'Book Training',
 
       // ─── Social proof ───
       'home.proof.label': 'What clients say',
@@ -377,13 +377,13 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.f3': 'Freeze 3 weeks',
       'tr.plan.diamond.f4': 'MFIT app programming included',
 
-      'tr.plan.book': 'Book PT Lesson',
+      'tr.plan.book': 'Book Training',
       'tr.plan.note': 'After booking, Marina will reach out within 24 hours to confirm your recurring schedule for the full plan period.',
 
       'tr.single.name': 'Single session',
       'tr.single.sub': 'No commitment. Try the work, see if it is what your body has been asking for.',
       'tr.single.price': 'A$99',
-      'tr.single.cta': 'Book PT Lesson',
+      'tr.single.cta': 'Book Training',
 
       'tr.outcomes.label': 'What clients achieve',
       'tr.outcomes.h2': 'Specific, not abstract.',
@@ -434,7 +434,7 @@ document.documentElement.classList.add('js-on');
       'about.cta.h': 'Ready to work with Marina?',
       'about.cta.p': 'Book a massage, book a PT lesson, or message Marina first if you want her to recommend where to start.',
       'about.cta.book': 'Book Massage',
-      'about.cta.bookPt': 'Book PT Lesson',
+      'about.cta.bookPt': 'Book Training',
       'about.cta.talk': 'Talk to Marina →'
     },
 
@@ -445,7 +445,7 @@ document.documentElement.classList.add('js-on');
       'nav.training': 'Treino',
       'nav.about': 'Sobre',
       'nav.bookMassage': 'Agendar Massagem',
-      'nav.bookTraining': 'Agendar Aula de PT',
+      'nav.bookTraining': 'Agendar Treino',
       'nav.menu': 'Menu',
 
       // Footer
@@ -455,24 +455,24 @@ document.documentElement.classList.add('js-on');
       'footer.col.book': 'Agendar',
       'footer.faq': 'Perguntas frequentes',
       'footer.bookMassage': 'Agendar Massagem',
-      'footer.bookPt': 'Agendar Aula de PT',
+      'footer.bookPt': 'Agendar Treino',
       'footer.address': 'Randwick, NSW',
       'footer.copy': '© 2026 Marina Bodywork. Sydney, Austrália.',
 
       // Sticky CTA
       'sticky.massage': 'Agendar Massagem',
-      'sticky.pt': 'Agendar Aula de PT',
+      'sticky.pt': 'Agendar Treino',
       'wa.float': 'Falar com a Marina no WhatsApp',
 
       // Home: hero
-      'home.hero.label': 'Marina Ribeiro · Especialista em liberação fascial · Sydney',
+      'home.hero.label': '<strong>Marina Ribeiro</strong> · Especialista em liberação fascial · Sydney',
       'home.hero.h1.a': 'Libere a restrição.',
       'home.hero.h1.b': 'Construa a força.',
       'home.hero.h1.c': 'Uma especialista.',
       'home.hero.h1.d': 'Um sistema.',
       'home.hero.sub': 'Liberação fascial, Sensory Energetics e treino de movimento consciente.',
       'home.hero.cta.massage': 'Agendar Massagem',
-      'home.hero.cta.training': 'Agendar Aula de PT',
+      'home.hero.cta.training': 'Agendar Treino',
       'home.hero.cta.talk': 'Não sabe por onde começar? Fala com a Marina primeiro →',
 
       // Home: combination
@@ -506,7 +506,7 @@ document.documentElement.classList.add('js-on');
       'home.svc.s3.name': 'Treino',
       'home.svc.s3.meta': '60 min · A partir de A$75/sessão no plano',
       'home.svc.s3.p': 'Treino personalizado de movimento consciente. Força construída num corpo que consegue realmente se mover. Snap Fitness Maroubra.',
-      'home.svc.s3.cta': 'Agendar Aula de PT',
+      'home.svc.s3.cta': 'Agendar Treino',
 
       // Diagnostic
       'diag.label': 'Diagnóstico',
@@ -537,7 +537,7 @@ document.documentElement.classList.add('js-on');
       'diag.training.name': 'Treino de Movimento Consciente',
       'diag.training.why': 'Um platô que não responde a mudanças de programação geralmente é um problema de tecido. A restrição fascial limita a amplitude disponível para treinar, o que limita o ganho de força. A Marina traz suas qualificações em terapia corporal para cada sessão de PT, trabalhando a restrição e treinando a amplitude liberada na mesma hora.',
       'diag.training.tags': 'Treino em Cadeias Fasciais · Mobilidade · Respiração na Sessão',
-      'diag.training.cta': 'Agendar Aula de PT',
+      'diag.training.cta': 'Agendar Treino',
 
       // Social proof
       'home.proof.label': 'O que dizem as clientes',
@@ -800,13 +800,13 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.f3': 'Congela 3 semanas',
       'tr.plan.diamond.f4': 'Programação no app MFIT incluída',
 
-      'tr.plan.book': 'Agendar Aula de PT',
+      'tr.plan.book': 'Agendar Treino',
       'tr.plan.note': 'Após o agendamento, a Marina entrará em contato em 24 horas para confirmar o horário recorrente durante todo o plano.',
 
       'tr.single.name': 'Sessão avulsa',
       'tr.single.sub': 'Sem compromisso. Experimente o trabalho, veja se é o que o seu corpo está pedindo.',
       'tr.single.price': 'A$99',
-      'tr.single.cta': 'Agendar Aula de PT',
+      'tr.single.cta': 'Agendar Treino',
 
       'tr.outcomes.label': 'O que as clientes conquistam',
       'tr.outcomes.h2': 'Específico, não abstrato.',
@@ -857,7 +857,7 @@ document.documentElement.classList.add('js-on');
       'about.cta.h': 'Pronta para trabalhar com a Marina?',
       'about.cta.p': 'Agende uma massagem, agende uma aula de PT, ou manda mensagem primeiro se quiser que ela recomende por onde começar.',
       'about.cta.book': 'Agendar Massagem',
-      'about.cta.bookPt': 'Agendar Aula de PT',
+      'about.cta.bookPt': 'Agendar Treino',
       'about.cta.talk': 'Falar com a Marina →'
     }
   };
