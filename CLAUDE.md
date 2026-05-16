@@ -18,7 +18,8 @@ There is **no build system, no package manager, no framework, no test suite**. E
   - `atendimento.jpeg` — Somatic Massage Corporal feature image (above the service block).
   - `facial.jpeg` — Somatic Massage Facial feature image.
   - `marina-hero.webp` — still used in the `#about` portrait slot.
-  - `marina-consult.webp`, `marina-logo.webp` — consult section and nav/footer logo.
+  - `marina-logo.png` — **transparent-background** version of the brand mark, used in the nav so the gold mark + wordmark float directly on the dark forest nav with no boxed sticker effect. Generated from `marina-logo.webp` via a luminance-based alpha mask.
+  - `marina-consult.webp`, `marina-logo.webp` — consult section, footer thumbnail, and favicon/`apple-touch-icon` (the WebP keeps a solid forest bg, which is fine because favicons need an opaque colour).
 - `robots.txt`, `sitemap.xml` — SEO files at the root. The sitemap lists the home URL plus the in-page anchors (`#massagem`, `#training`, `#diagnostic`, `#consult`, `#about`, `#faq`, `#contact`).
 
 Loose `Screenshot *.jpg` / `WhatsApp Image *.jpeg` / `Untitled (...).png` files in the root are uploads, not referenced by the site — leave them alone unless the user asks otherwise.
@@ -66,6 +67,10 @@ All "Book" CTAs point to Acuity:
 - PT lessons: `https://marinaribeirobodywork.as.me/BookPTlessons`
 
 WhatsApp links use `https://wa.me/61451021478?text=...`. If the phone, booking URLs, or pricing change, update them in **all** of: the visible CTAs, the JSON-LD `Service.offers` blocks, and the `DIAG` object (see below).
+
+**Booking CTA discipline:** every primary booking CTA on the page is service-specific — either "Book … Massage" or "Book … PT Lesson(s)". Do not introduce a generic "Talk to Marina" / "Book a session" duplicate next to the service-specific buttons; the dedicated `#consult` section is the canonical place for the WhatsApp consult. The mobile sticky bar (`.mobile-sticky-cta` with `.msc-massage` + `.msc-pt`) mirrors the hero buttons exactly.
+
+**Nav structure:** the top-level `<nav>` is a flex row with four direct children — `.nav-logo`, `.nav-links` (desktop only), `.lang-toggle.nav-lang` (**always visible** on both desktop and mobile, sits to the right of `.nav-links` on desktop and to the left of `.hamburger` on mobile), and `.hamburger` (mobile only). The `EN` / `PT` buttons are text labels, not flag emojis, so language choice is unambiguous at small sizes. Don't move the lang toggle back inside `.nav-links` — that hides it on mobile.
 
 ### 4. The diagnostic widget
 
