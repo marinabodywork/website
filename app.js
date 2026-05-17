@@ -362,7 +362,6 @@ document.documentElement.classList.add('js-on');
       'tr.plan.basic.per': 'A$95/session · 6 sessions',
       'tr.plan.basic.f1': '1x per week',
       'tr.plan.basic.f2': '45-day cycle',
-      'tr.plan.basic.f3': 'Freeze 1 week (once per cycle)',
       'tr.plan.basic.f4': 'MFIT app programming included',
 
       'tr.plan.golden.name': 'Golden',
@@ -371,7 +370,6 @@ document.documentElement.classList.add('js-on');
       'tr.plan.golden.badge': 'Most popular',
       'tr.plan.golden.f1': '2x per week',
       'tr.plan.golden.f2': '2-month cycle',
-      'tr.plan.golden.f3': 'Freeze 2 weeks',
       'tr.plan.golden.f4': 'MFIT app programming included',
 
       'tr.plan.diamond.name': 'Diamond',
@@ -380,7 +378,6 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.badge': 'Best value',
       'tr.plan.diamond.f1': '3x per week',
       'tr.plan.diamond.f2': '3-month cycle',
-      'tr.plan.diamond.f3': 'Freeze 3 weeks',
       'tr.plan.diamond.f4': 'MFIT app programming included',
 
       'tr.plan.book': 'Book Training',
@@ -392,8 +389,8 @@ document.documentElement.classList.add('js-on');
       'tr.single.cta': 'Book Training',
 
       'tr.pol.label': 'Package policy',
-      'tr.pol.h2': 'Rescheduling, renewal, and pause.',
-      'tr.pol.intro': 'Everything below runs through your Acuity client portal. You manage your slot, reschedule, freeze, or cancel renewal yourself — no message to Marina required.',
+      'tr.pol.h2': 'Rescheduling and renewal.',
+      'tr.pol.intro': 'Everything below runs through your Acuity client portal. You manage your slot, reschedule, or cancel renewal yourself — no message to Marina required.',
       'tr.pol.slot.h': 'Your weekly slot',
       'tr.pol.slot.p': 'You set your weekly slot yourself in Acuity — no message to Marina required. When you book your first session, choose <strong>Select and make recurring</strong> so the same weekday and time repeat for the full cycle. Basic = 1 weekly series. Golden = 2 weekly series (one for each training day). Diamond = 3 weekly series. To change a slot later, reschedule individual sessions through your Acuity portal (72-hour rule below).',
       'tr.pol.resched.h': 'Rescheduling',
@@ -405,10 +402,8 @@ document.documentElement.classList.add('js-on');
       'tr.pol.renew.h': 'Auto-renewal',
       'tr.pol.renew.p1': 'At the end of each cycle your plan renews automatically and your card is charged. To stop renewal, cancel through your Acuity portal at least <strong>7 days before the cycle ends</strong> — no message to Marina required.',
       'tr.pol.renew.p2': 'Unused sessions do not roll over into the next cycle. The structure is there so you actually show up.',
-      'tr.pol.freeze.h': 'Emergency freeze',
-      'tr.pol.freeze.p1': 'Life happens. You can freeze your cycle once, through the portal, with no proof needed: <strong>1 week on Basic, 2 weeks on Golden, 3 weeks on Diamond</strong>. The cycle pauses and resumes from where you stopped.',
       'tr.pol.single.h': 'Single sessions',
-      'tr.pol.single.p': 'No cycle, no fixed slot. Same 72-hour rule for rescheduling. No freeze — it would not make sense for a one-off.',
+      'tr.pol.single.p': 'No cycle, no fixed slot. Same 72-hour rule for rescheduling.',
 
       'tr.outcomes.label': 'What clients achieve',
       'tr.outcomes.h2': 'Specific, not abstract.',
@@ -810,7 +805,6 @@ document.documentElement.classList.add('js-on');
       'tr.plan.basic.per': 'A$95/sessão · 6 sessões',
       'tr.plan.basic.f1': '1x por semana',
       'tr.plan.basic.f2': 'Ciclo de 45 dias',
-      'tr.plan.basic.f3': 'Congela 1 semana (uma vez por ciclo)',
       'tr.plan.basic.f4': 'Programação no app MFIT incluída',
 
       'tr.plan.golden.name': 'Golden',
@@ -819,7 +813,6 @@ document.documentElement.classList.add('js-on');
       'tr.plan.golden.badge': 'Mais popular',
       'tr.plan.golden.f1': '2x por semana',
       'tr.plan.golden.f2': 'Ciclo de 2 meses',
-      'tr.plan.golden.f3': 'Congela 2 semanas',
       'tr.plan.golden.f4': 'Programação no app MFIT incluída',
 
       'tr.plan.diamond.name': 'Diamond',
@@ -828,7 +821,6 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.badge': 'Melhor custo-benefício',
       'tr.plan.diamond.f1': '3x por semana',
       'tr.plan.diamond.f2': 'Ciclo de 3 meses',
-      'tr.plan.diamond.f3': 'Congela 3 semanas',
       'tr.plan.diamond.f4': 'Programação no app MFIT incluída',
 
       'tr.plan.book': 'Agendar Treino',
@@ -840,8 +832,8 @@ document.documentElement.classList.add('js-on');
       'tr.single.cta': 'Agendar Treino',
 
       'tr.pol.label': 'Política dos pacotes',
-      'tr.pol.h2': 'Reagendamento, renovação e pausa.',
-      'tr.pol.intro': 'Tudo abaixo você faz sozinha pelo seu portal da Acuity. Você gerencia seu horário, reagenda, congela ou cancela a renovação — sem precisar mandar mensagem para a Marina.',
+      'tr.pol.h2': 'Reagendamento e renovação.',
+      'tr.pol.intro': 'Tudo abaixo você faz sozinha pelo seu portal da Acuity. Você gerencia seu horário, reagenda ou cancela a renovação — sem precisar mandar mensagem para a Marina.',
       'tr.pol.slot.h': 'Seu horário semanal',
       'tr.pol.slot.p': 'Você define seu horário semanal sozinha na Acuity — sem precisar mandar mensagem para a Marina. Ao agendar a primeira sessão, escolhe <strong>Select and make recurring</strong> (tornar recorrente) para o mesmo dia e horário se repetir em todo o ciclo. Basic = 1 série semanal. Golden = 2 séries semanais (uma para cada dia de treino). Diamond = 3 séries semanais. Para mudar um horário depois, reagende as sessões individualmente pelo portal da Acuity (regra das 72 horas logo abaixo).',
       'tr.pol.resched.h': 'Reagendamento',
@@ -853,10 +845,8 @@ document.documentElement.classList.add('js-on');
       'tr.pol.renew.h': 'Renovação automática',
       'tr.pol.renew.p1': 'No fim de cada ciclo o plano renova automaticamente e o seu cartão é cobrado. Para parar a renovação, cancele pelo portal da Acuity com no mínimo <strong>7 dias de antecedência</strong> antes do fim do ciclo — sem precisar avisar a Marina.',
       'tr.pol.renew.p2': 'Sessões não utilizadas não acumulam para o ciclo seguinte. A estrutura existe pra você comparecer mesmo.',
-      'tr.pol.freeze.h': 'Pausa por emergência',
-      'tr.pol.freeze.p1': 'A vida acontece. Você pode congelar o ciclo uma vez, pelo portal, sem precisar comprovar nada: <strong>1 semana no Basic, 2 semanas no Golden, 3 semanas no Diamond</strong>. O ciclo pausa e retoma do ponto onde parou.',
       'tr.pol.single.h': 'Sessão avulsa',
-      'tr.pol.single.p': 'Sem ciclo, sem horário fixo. Mesma regra de 72 horas para reagendar. Sem congelamento — não faria sentido para uma sessão única.',
+      'tr.pol.single.p': 'Sem ciclo, sem horário fixo. Mesma regra de 72 horas para reagendar.',
 
       'tr.outcomes.label': 'O que as clientes conquistam',
       'tr.outcomes.h2': 'Específico, não abstrato.',
