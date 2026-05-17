@@ -361,7 +361,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.basic.price': 'A$570',
       'tr.plan.basic.per': 'A$95/session · 6 sessions',
       'tr.plan.basic.f1': '1x per week',
-      'tr.plan.basic.f2': '45-day cycle',
+      'tr.plan.basic.f2': '6-week cycle',
       'tr.plan.basic.f3': 'Freeze 1 week (once per cycle)',
       'tr.plan.basic.f4': 'MFIT app programming included',
 
@@ -370,7 +370,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.golden.per': 'A$85/session · 12 sessions',
       'tr.plan.golden.badge': 'Most popular',
       'tr.plan.golden.f1': '2x per week',
-      'tr.plan.golden.f2': '2-month cycle',
+      'tr.plan.golden.f2': '6-week cycle',
       'tr.plan.golden.f3': 'Freeze 2 weeks',
       'tr.plan.golden.f4': 'MFIT app programming included',
 
@@ -379,7 +379,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.per': 'A$75/session · 24 sessions',
       'tr.plan.diamond.badge': 'Best value',
       'tr.plan.diamond.f1': '3x per week',
-      'tr.plan.diamond.f2': '3-month cycle',
+      'tr.plan.diamond.f2': '8-week cycle',
       'tr.plan.diamond.f3': 'Freeze 3 weeks',
       'tr.plan.diamond.f4': 'MFIT app programming included',
 
@@ -809,7 +809,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.basic.price': 'A$570',
       'tr.plan.basic.per': 'A$95/sessão · 6 sessões',
       'tr.plan.basic.f1': '1x por semana',
-      'tr.plan.basic.f2': 'Ciclo de 45 dias',
+      'tr.plan.basic.f2': 'Ciclo de 6 semanas',
       'tr.plan.basic.f3': 'Congela 1 semana (uma vez por ciclo)',
       'tr.plan.basic.f4': 'Programação no app MFIT incluída',
 
@@ -818,7 +818,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.golden.per': 'A$85/sessão · 12 sessões',
       'tr.plan.golden.badge': 'Mais popular',
       'tr.plan.golden.f1': '2x por semana',
-      'tr.plan.golden.f2': 'Ciclo de 2 meses',
+      'tr.plan.golden.f2': 'Ciclo de 6 semanas',
       'tr.plan.golden.f3': 'Congela 2 semanas',
       'tr.plan.golden.f4': 'Programação no app MFIT incluída',
 
@@ -827,7 +827,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.per': 'A$75/sessão · 24 sessões',
       'tr.plan.diamond.badge': 'Melhor custo-benefício',
       'tr.plan.diamond.f1': '3x por semana',
-      'tr.plan.diamond.f2': 'Ciclo de 3 meses',
+      'tr.plan.diamond.f2': 'Ciclo de 8 semanas',
       'tr.plan.diamond.f3': 'Congela 3 semanas',
       'tr.plan.diamond.f4': 'Programação no app MFIT incluída',
 
