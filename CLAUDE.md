@@ -92,19 +92,21 @@ Every booking CTA on the site that points to an Acuity URL carries class `acuity
 | PT Golden plan (A$1,020 · 12 sessions) | `.../PTGolden` |
 | PT Diamond plan (A$1,800 · 24 sessions) | `.../DiamondPTSession` |
 
-**Per-service membership catalog URLs** — weekly memberships are sold through Acuity's catalog (cart) endpoint with the per-service `id`:
+**Per-service membership subscription URLs** — weekly memberships are sold as Acuity **subscriptions** with auto-booking. The client buys the subscription, picks a weekday + time once at checkout, and Acuity auto-creates each weekly appointment going forward — no manual "Select and make recurring" step (unlike PT plans). Cancellation stops future auto-bookings.
 
-```
-https://app.acuityscheduling.com/catalog.php?owner=39322566&action=addCart&clear=1&id={id}
-```
+Each service has its own subscription product in Acuity admin; the public subscription URL is what the site links to. The URLs follow the pattern `https://app.acuityscheduling.com/subscribe/<subscription-slug-or-id>` — the exact slug/id is set by Marina when she creates each subscription product.
 
-| Membership | `id` |
-|---|---|
-| Weekly Corporal | `2213824` |
-| Weekly Facial | `2213848` |
-| Weekly Sensory Energetics | `2213845` |
+| Membership | Site placeholder (current code) | Acuity subscription URL |
+|---|---|---|
+| Weekly Corporal | `subscribe/TODO_CORPORAL_SUBSCRIPTION` | TBC — Marina to provide |
+| Weekly Facial | `subscribe/TODO_FACIAL_SUBSCRIPTION` | TBC — Marina to provide |
+| Weekly Sensory Energetics | `subscribe/TODO_SENSORY_SUBSCRIPTION` | TBC — Marina to provide |
 
-These appear on `massage.html`'s service blocks ("Make it weekly →" secondary CTAs, keys `mas.c.mship.cta`/`mas.f.mship.cta`/`mas.s.mship.cta`) and on the `#mas-pricing` Weekly memberships strip. The home `home.svc.s2` Memberships card links to `massage.html#mas-pricing` (not WhatsApp).
+These appear on `massage.html`'s service blocks ("Make it weekly →" secondary CTAs, keys `mas.c.mship.cta`/`mas.f.mship.cta`/`mas.s.mship.cta`) and on the `#mas-pricing` Weekly memberships strip. The home `home.svc.s2` Memberships card links to `massage.html#mas-pricing` (not Acuity directly).
+
+**Membership requires the Acuity Powerhouse plan** (or current equivalent) because auto-booked subscriptions are a Powerhouse-tier feature. If the Acuity plan ever downgrades, this flow breaks — fall back to single-session bookings or move to a "package + Select and make recurring" pattern like PT.
+
+**Membership flow copy** lives in `mas.price.mship.note` (the policy line — minimum 2 months, auto-renews, cancel with 1 week notice) and `mas.price.mship.how` (the "How it works" block — choose service, pay first cycle, pick slot, sessions auto-repeat). Both keys ship EN + PT in `app.js`. Do **not** mention "Select and make recurring" in membership copy — that instruction is for PT plans, where the recurrence is client-driven; memberships are auto-booked by Acuity itself.
 
 **WhatsApp** — open-conversation CTAs use `https://wa.me/61451021478?text=...`. The home `#consult` section and "Talk to Marina first →" links use these.
 
@@ -176,12 +178,12 @@ Section order top-to-bottom:
 
 - `<header class="page-hero">` — page label + h1/h2/sub, no image.
 - **Services section** — three `.service-block` articles in `section--cream`:
-  - **Somatic Massage Corporal** (`mas.c.*`) — Marina-developed methodology paragraphs (p1: integrating Brazilian lymphatic drainage, myofascial release, breathwork, deep relaxation; p2: addresses muscular tension, fluid retention, accumulated stress, fascial rigidity → circulation, mobility, body awareness, lightness; p3: nervous-system layer regulates cortisol → reconnects body and mind). `mas.c.cta` → SomaticMassageCorporal Acuity URL; `mas.c.mship.cta` "Make it weekly →" → catalog id=2213824.
+  - **Somatic Massage Corporal** (`mas.c.*`) — Marina-developed methodology paragraphs (p1: integrating Brazilian lymphatic drainage, myofascial release, breathwork, deep relaxation; p2: addresses muscular tension, fluid retention, accumulated stress, fascial rigidity → circulation, mobility, body awareness, lightness; p3: nervous-system layer regulates cortisol → reconnects body and mind). `mas.c.cta` → SomaticMassageCorporal Acuity URL; `mas.c.mship.cta` "Make it weekly →" → Corporal subscription URL (auto-booked weekly).
   - **Combo strip** between Corporal and Facial — `.combo-strip` advertising 5% off when both are booked the same day (`mas.combo.h`/`mas.combo.p`).
-  - **Somatic Massage Facial** (`mas.f.*`) — TMJ + intraoral (buccal) work for jaw tension, headaches, disturbed sleep. `mas.f.cta` → SomaticMassageFacial; `mas.f.mship.cta` → catalog id=2213848.
-  - **Sensory Energetics** (`mas.s.*`) — 90-min signature, `.service-block--signature` variant. Three paragraphs covering: integrative method activating CNS; involuntary tremors are normal and discharge tension/regulate stress/lower cortisol/support dopamine; mind-body-emotion reconnection. `mas.s.cta` → SensoryEnergetics; `mas.s.mship.cta` → catalog id=2213845.
+  - **Somatic Massage Facial** (`mas.f.*`) — TMJ + intraoral (buccal) work for jaw tension, headaches, disturbed sleep. `mas.f.cta` → SomaticMassageFacial; `mas.f.mship.cta` → Facial subscription URL (auto-booked weekly).
+  - **Sensory Energetics** (`mas.s.*`) — 90-min signature, `.service-block--signature` variant. Three paragraphs covering: integrative method activating CNS; involuntary tremors are normal and discharge tension/regulate stress/lower cortisol/support dopamine; mind-body-emotion reconnection. `mas.s.cta` → SensoryEnergetics; `mas.s.mship.cta` → Sensory subscription URL (auto-booked weekly).
 - **How to choose** (`mas.choose.*`) — `section--pale`, three `.choose-card` items mapping symptom → recommended service (standard remedial hasn't held → Corporal; jaw/TMJ → Facial; tension keeps coming back → Sensory Energetics).
-- **`#mas-pricing`** — `section--cream`, `container--narrow`. Pricing table (`.pricing__row` with name/sub/price) plus the Weekly memberships strip with three `acuity-embed-button` links to the catalog ids. Keys `mas.price.label`/`h2`/`r1.*`/`r2.*`/`book`/`mship.h`/`mship.note`/`mship.corporal`/`mship.facial`/`mship.sensory`.
+- **`#mas-pricing`** — `section--cream`, `container--narrow`. Pricing table (`.pricing__row` with name/sub/price) plus the Weekly memberships strip with three `acuity-embed-button` links to the per-service subscription URLs. Keys `mas.price.label`/`h2`/`r1.*`/`r2.*`/`book`/`mship.h`/`mship.note`/`mship.how`/`mship.corporal`/`mship.facial`/`mship.sensory`.
 - **FAQ** — `.faq__search` live filter + `.faq__empty` empty state. Keys `mas.faq.*`.
 - Footer + sticky bar.
 
