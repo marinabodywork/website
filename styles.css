@@ -439,13 +439,6 @@ p, .lede { text-wrap: pretty; }
   object-fit: cover; border-radius: var(--r-xl);
   box-shadow: var(--shadow-lift);
 }
-.hero__media::after {
-  content: ""; position: absolute;
-  inset: 14px -14px -14px 14px;
-  border: 1.5px solid var(--sand);
-  border-radius: var(--r-xl);
-  z-index: -1;
-}
 @media (max-width: 900px) {
   .hero__inner { grid-template-columns: 1fr; gap: var(--s-5); }
   .hero__media img { aspect-ratio: 4/5; max-height: 560px; }
