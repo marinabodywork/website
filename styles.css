@@ -805,6 +805,9 @@ p, .lede { text-wrap: pretty; }
 .pricing__price { font-family: var(--display); font-size: 28px; color: var(--forest); font-style: italic; text-align: right; }
 .pricing__cta { margin-top: var(--s-2); }
 .pricing__note { font-size: 13px; color: var(--fog); margin-top: 8px; max-width: 64ch; }
+.membership-chooser { margin-top: var(--s-4); padding-top: var(--s-4); border-top: 1px solid var(--line); }
+.membership-chooser .h3 { margin-bottom: var(--s-1); }
+.membership-chooser .btn-row { flex-wrap: wrap; gap: var(--s-2); }
 
 /* Guarantee strip */
 .guarantee {
