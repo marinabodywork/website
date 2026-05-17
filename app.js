@@ -1079,10 +1079,10 @@ document.documentElement.classList.add('js-on');
   // ─────────────────────────────────────────────
   const DIAG_AREAS = ['neck', 'jaw', 'back', 'stress', 'training'];
   const DIAG_URLS = {
-    neck: 'https://marinaribeirobodywork.as.me/SomaticMassageCorporal',
-    jaw: 'https://marinaribeirobodywork.as.me/SomaticMassageFacial',
-    back: 'https://marinaribeirobodywork.as.me/SomaticMassageCorporal',
-    stress: 'https://marinaribeirobodywork.as.me/SensoryEnergetics',
+    neck: 'https://marinaribeirobodywork.as.me/bookmassage',
+    jaw: 'https://marinaribeirobodywork.as.me/bookmassage',
+    back: 'https://marinaribeirobodywork.as.me/bookmassage',
+    stress: 'https://marinaribeirobodywork.as.me/bookmassage',
     training: 'training.html#plans'
   };
 
