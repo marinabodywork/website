@@ -355,7 +355,7 @@ document.documentElement.classList.add('js-on');
 
       'tr.plans.label': 'Plans and pricing',
       'tr.plans.h2': 'Lock in your slot.<br>Lock in the result.',
-      'tr.plans.sub': 'Each plan books direct on Acuity. The day and time of your first session become your fixed slot for the full cycle — same day, same time, every week, until the plan ends or you cancel.',
+      'tr.plans.sub': 'Each plan is self-serve on Acuity. Book your first session, choose <strong>Select and make recurring</strong>, and Acuity locks the same weekday and time for every session of the cycle. Golden runs 2 weekly series (one per training day). Diamond runs 3.',
 
       'tr.plan.basic.name': 'Basic',
       'tr.plan.basic.price': 'A$570',
@@ -384,7 +384,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.f4': 'MFIT app programming included',
 
       'tr.plan.book': 'Book Training',
-      'tr.plan.note': 'Pick your day and time at checkout. Acuity locks the same slot for every session of your plan, until the cycle ends or you cancel.',
+      'tr.plan.note': 'How it works: book your first session in Acuity and pick <strong>Select and make recurring</strong> at the confirmation step — your slot is locked for the full cycle. Golden and Diamond clients repeat this once per training day (2x for Golden, 3x for Diamond). No message to Marina needed.',
 
       'tr.single.name': 'Single session',
       'tr.single.sub': 'No commitment. Try the work, see if it is what your body has been asking for.',
@@ -395,7 +395,7 @@ document.documentElement.classList.add('js-on');
       'tr.pol.h2': 'Rescheduling, renewal, and pause.',
       'tr.pol.intro': 'Everything below runs through your Acuity client portal. You manage your slot, reschedule, freeze, or cancel renewal yourself — no message to Marina required.',
       'tr.pol.slot.h': 'Your weekly slot',
-      'tr.pol.slot.p': 'When you buy a plan you pick your fixed weekly slot(s) at checkout — same day, same time, every week of the cycle. Acuity reserves those slots automatically. Basic locks 1 slot per week, Golden locks 2, Diamond locks 3.',
+      'tr.pol.slot.p': 'You set your weekly slot yourself in Acuity — no message to Marina required. When you book your first session, choose <strong>Select and make recurring</strong> so the same weekday and time repeat for the full cycle. Basic = 1 weekly series. Golden = 2 weekly series (one for each training day). Diamond = 3 weekly series. To change a slot later, reschedule individual sessions through your Acuity portal (72-hour rule below).',
       'tr.pol.resched.h': 'Rescheduling',
       'tr.pol.resched.p1': 'Reschedule any session yourself through your Acuity portal with at least <strong>72 hours notice</strong>. Pick a new time from Marina\'s open availability.',
       'tr.pol.resched.l1': 'Reschedule with less than 72 hours notice — the session counts as used.',
@@ -803,7 +803,7 @@ document.documentElement.classList.add('js-on');
 
       'tr.plans.label': 'Planos e preços',
       'tr.plans.h2': 'Garante o seu horário.<br>Garante o seu resultado.',
-      'tr.plans.sub': 'Cada plano é agendado direto na Acuity. O dia e o horário da sua primeira sessão viram o seu horário fixo no ciclo inteiro — mesmo dia, mesma hora, toda semana, até o plano terminar ou você cancelar.',
+      'tr.plans.sub': 'Cada plano é self-service na Acuity. Você agenda a primeira sessão, escolhe <strong>Select and make recurring</strong> (tornar recorrente), e a Acuity trava o mesmo dia e horário em todas as sessões do ciclo. Golden roda 2 séries semanais (uma por dia de treino). Diamond roda 3.',
 
       'tr.plan.basic.name': 'Basic',
       'tr.plan.basic.price': 'A$570',
@@ -832,7 +832,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.f4': 'Programação no app MFIT incluída',
 
       'tr.plan.book': 'Agendar Treino',
-      'tr.plan.note': 'Você escolhe o dia e o horário no checkout. A Acuity reserva o mesmo horário em todas as sessões do plano, até o ciclo terminar ou você cancelar.',
+      'tr.plan.note': 'Como funciona: você agenda a primeira sessão na Acuity e seleciona <strong>Select and make recurring</strong> (tornar recorrente) na confirmação — pronto, seu horário fica travado pelo ciclo inteiro. Clientes Golden e Diamond repetem o processo uma vez para cada dia de treino (2x no Golden, 3x no Diamond). Sem precisar mandar mensagem para a Marina.',
 
       'tr.single.name': 'Sessão avulsa',
       'tr.single.sub': 'Sem compromisso. Experimenta o trabalho, sente se é o que o seu corpo está pedindo.',
@@ -843,7 +843,7 @@ document.documentElement.classList.add('js-on');
       'tr.pol.h2': 'Reagendamento, renovação e pausa.',
       'tr.pol.intro': 'Tudo abaixo você faz sozinha pelo seu portal da Acuity. Você gerencia seu horário, reagenda, congela ou cancela a renovação — sem precisar mandar mensagem para a Marina.',
       'tr.pol.slot.h': 'Seu horário semanal',
-      'tr.pol.slot.p': 'Ao comprar o plano, você escolhe no checkout seu(s) horário(s) fixo(s) da semana — mesmo dia, mesma hora, em todas as semanas do ciclo. A Acuity reserva esses horários automaticamente. O Basic reserva 1 horário por semana, o Golden reserva 2, o Diamond reserva 3.',
+      'tr.pol.slot.p': 'Você define seu horário semanal sozinha na Acuity — sem precisar mandar mensagem para a Marina. Ao agendar a primeira sessão, escolhe <strong>Select and make recurring</strong> (tornar recorrente) para o mesmo dia e horário se repetir em todo o ciclo. Basic = 1 série semanal. Golden = 2 séries semanais (uma para cada dia de treino). Diamond = 3 séries semanais. Para mudar um horário depois, reagende as sessões individualmente pelo portal da Acuity (regra das 72 horas logo abaixo).',
       'tr.pol.resched.h': 'Reagendamento',
       'tr.pol.resched.p1': 'Você reagenda qualquer sessão sozinha pelo portal da Acuity com no mínimo <strong>72 horas de antecedência</strong>. Escolhe um novo horário entre os que a Marina deixou disponíveis.',
       'tr.pol.resched.l1': 'Reagendou com menos de 72 horas de antecedência — a sessão conta como utilizada.',
