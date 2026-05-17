@@ -261,8 +261,6 @@ Three inline-SVG icon systems are in use (all 1.4px stroke, `currentColor`, no f
 - **Home service card icons** (`.svc-card__icon`, 34×34) — ripple / recurring loop / dumbbell above each `.svc-card` on `index.html` `#services`.
 - **Massage service block icons** (`.service-block__icon`, 38×38) — body silhouette / face profile / radiating petals above each `.service-block` h2 on `massage.html`.
 
-Section eyebrow hairline accent: `.center > .eyebrow::before` and `.page-hero .eyebrow::before` render a 24px hairline rule before section-level eyebrows. Card-internal eyebrows are deliberately not affected.
-
 ### 14. Branded 404 page
 
 `404.html` is structured exactly like an inner page (nav + page-hero + footer + WhatsApp float) so Netlify serves it on unknown routes without config. Carries `<meta name="robots" content="noindex">` and no JSON-LD by design. CTAs are service-specific per the discipline rule — "Back to home" + "Book Massage" (not generic "Book a session"). i18n keys: `nf.label`, `nf.h1`, `nf.sub`, `nf.next`, `nf.cta.home`, `nf.cta.book`.

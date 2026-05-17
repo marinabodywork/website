@@ -120,18 +120,6 @@ p, .lede { text-wrap: pretty; }
 .eyebrow strong { font-weight: 700; color: inherit; }
 .eyebrow--sand { color: var(--sand-deep); }
 .eyebrow--cream { color: var(--sand); }
-.center > .eyebrow::before,
-.page-hero .eyebrow::before {
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 1px;
-  background: currentColor;
-  vertical-align: middle;
-  margin-right: 12px;
-  margin-top: -2px;
-  opacity: 0.5;
-}
 .lede { font-size: 20px; line-height: 1.65; color: var(--fog); }
 .muted { color: var(--fog); }
 
