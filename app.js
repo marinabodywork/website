@@ -74,8 +74,8 @@ document.documentElement.classList.add('js-on');
       'home.svc.s1.cta': 'Book Massage',
       'home.svc.s2.name': 'Memberships',
       'home.svc.s2.meta': 'From A$100/week · Fixed weekly slot',
-      'home.svc.s2.p': 'A recurring weekly slot held personally by Marina. Invitation plan confirmed after your first session. Minimum 2 months.',
-      'home.svc.s2.cta': 'Talk to Marina',
+      'home.svc.s2.p': 'A weekly slot at the same day and time, locked at checkout and held for you every week until you cancel. Minimum 2 months.',
+      'home.svc.s2.cta': 'See memberships',
       'home.svc.s2.badge': 'Signature',
       'home.svc.s3.name': 'Training',
       'home.svc.s3.meta': '60 min · From A$75/session on plan',
@@ -262,6 +262,7 @@ document.documentElement.classList.add('js-on');
       'mas.c.p3': 'The breathwork and deep-relaxation layer regulates the central nervous system and lowers cortisol. This is integrative bodywork. It reconnects body and mind.',
 
       'mas.c.cta': 'Book Massage',
+      'mas.c.mship.cta': 'Make it weekly →',
 
       // Service: Facial
       'mas.f.name': 'Somatic Massage Facial',
@@ -270,6 +271,7 @@ document.documentElement.classList.add('js-on');
       'mas.f.p2': 'The session combines intraoral fascial release with external face, neck, and throat work. Clients typically report deeper sleep and reduced jaw tension within 24 hours of the first session.',
 
       'mas.f.cta': 'Book Massage',
+      'mas.f.mship.cta': 'Make it weekly →',
 
       // Service: Sensory Energetics
       'mas.s.name': 'Sensory Energetics',
@@ -280,6 +282,7 @@ document.documentElement.classList.add('js-on');
       'mas.s.p3': 'More than a body experience. The work crosses the connection between body, emotion, and mind. Clients leave with lightness, mental clarity, emotional balance, and a body that finally remembers what it feels like to switch off.',
 
       'mas.s.cta': 'Book Massage',
+      'mas.s.mship.cta': 'Make it weekly →',
 
       'mas.combo.h': 'Book Somatic Facial and Somatic Corporal on the same day',
       'mas.combo.p': '5% off your total. Two hours. A lot less tension. Apply at checkout, or message Marina to coordinate timing.',
@@ -297,19 +300,19 @@ document.documentElement.classList.add('js-on');
       'mas.choose.c3.p': 'Built for tension held by the nervous system for months or years. The 90-minute signature work.',
 
       'mas.price.label': 'Pricing',
-      'mas.price.h2': 'Single sessions and membership.',
+      'mas.price.h2': 'Single sessions and memberships.',
       'mas.price.r1.name': 'Single session',
       'mas.price.r1.sub': 'Corporal or Facial · 60 min',
       'mas.price.r1.price': 'A$125',
       'mas.price.r2.name': 'Sensory Energetics',
       'mas.price.r2.sub': 'Signature · 90 min',
       'mas.price.r2.price': 'A$305',
-      'mas.price.r3.name': 'Weekly membership',
-      'mas.price.r3.sub': 'Fixed slot, same day and time, every week · min 2 months · cancel with 1 week notice · auto-renews',
-      'mas.price.r3.price': 'A$100/week',
-      'mas.price.book': 'Book Massage',
-      'mas.price.mship': 'Talk to Marina about membership',
-      'mas.price.mship.note': 'Membership is an invitation plan confirmed after your first session. The recurring slot is held by Marina personally, which is why it cannot be booked through Acuity. Message her on WhatsApp and she will confirm availability and your slot.',
+      'mas.price.book': 'Book single session',
+      'mas.price.mship.h': 'Weekly memberships',
+      'mas.price.mship.note': 'Same day and time every week, locked at checkout and held for you until you cancel. Minimum 2 months · auto-renews · cancel with 1 week notice.',
+      'mas.price.mship.corporal': 'Weekly Corporal',
+      'mas.price.mship.facial': 'Weekly Facial',
+      'mas.price.mship.sensory': 'Weekly Sensory Energetics',
 
       'mas.faq.h2': 'Massage-specific questions.',
       'mas.faq.q1': 'What do I wear?',
@@ -352,7 +355,7 @@ document.documentElement.classList.add('js-on');
 
       'tr.plans.label': 'Plans and pricing',
       'tr.plans.h2': 'Lock in your slot.<br>Lock in the result.',
-      'tr.plans.sub': 'Each plan books direct on Acuity. Once paid, your slot is held for the full cycle.',
+      'tr.plans.sub': 'Each plan books direct on Acuity. The day and time of your first session become your fixed slot for the full cycle — same day, same time, every week, until the plan ends or you cancel.',
 
       'tr.plan.basic.name': 'Basic',
       'tr.plan.basic.price': 'A$570',
@@ -381,7 +384,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.f4': 'MFIT app programming included',
 
       'tr.plan.book': 'Book Training',
-      'tr.plan.note': 'After booking, Marina will reach out within 24 hours to confirm your recurring schedule for the full plan period.',
+      'tr.plan.note': 'Pick your day and time at checkout. Acuity locks the same slot for every session of your plan, until the cycle ends or you cancel.',
 
       'tr.single.name': 'Single session',
       'tr.single.sub': 'No commitment. Try the work, see if it is what your body has been asking for.',
@@ -503,8 +506,8 @@ document.documentElement.classList.add('js-on');
       'home.svc.s1.cta': 'Agendar Massagem',
       'home.svc.s2.name': 'Plano semanal',
       'home.svc.s2.meta': 'A partir de A$100/semana · horário fixo toda semana',
-      'home.svc.s2.p': 'O mesmo horário, toda semana, reservado direto pela Marina pra você. Plano por convite — depois da sua primeira sessão, ela confirma. Mínimo de 2 meses.',
-      'home.svc.s2.cta': 'Falar com a Marina',
+      'home.svc.s2.p': 'Um horário fixo — mesmo dia e mesma hora toda semana — reservado no checkout e mantido pra você toda semana até você cancelar. Mínimo de 2 meses.',
+      'home.svc.s2.cta': 'Ver planos',
       'home.svc.s2.badge': 'Assinatura',
       'home.svc.s3.name': 'Treino',
       'home.svc.s3.meta': '60 min · A partir de A$75/sessão no plano',
@@ -690,6 +693,7 @@ document.documentElement.classList.add('js-on');
       'mas.c.p3': 'A camada de respiração guiada e relaxamento profundo regula o seu sistema nervoso e reduz o cortisol (o hormônio do estresse). É terapia corporal integrativa. Reconecta corpo e mente.',
 
       'mas.c.cta': 'Agendar Massagem',
+      'mas.c.mship.cta': 'Tornar semanal →',
 
       'mas.f.name': 'Somatic Massage Facial',
       'mas.f.meta': '60 minutos · A$125',
@@ -697,6 +701,7 @@ document.documentElement.classList.add('js-on');
       'mas.f.p2': 'A sessão combina liberação fascial por dentro da boca com trabalho externo no rosto, pescoço e garganta. A maioria das clientes dorme melhor e sente a mandíbula bem mais solta em 24 horas depois da primeira sessão.',
 
       'mas.f.cta': 'Agendar Massagem',
+      'mas.f.mship.cta': 'Tornar semanal →',
 
       'mas.s.name': 'Sensory Energetics',
       'mas.s.meta': '90 minutos · A$305 · Assinatura',
@@ -706,6 +711,7 @@ document.documentElement.classList.add('js-on');
       'mas.s.p3': 'Mais do que uma experiência só corporal. O trabalho atravessa a conexão entre corpo, emoção e mente. As clientes saem com leveza, clareza mental, equilíbrio emocional, e um corpo que finalmente lembra como é desligar.',
 
       'mas.s.cta': 'Agendar Massagem',
+      'mas.s.mship.cta': 'Tornar semanal →',
 
       'mas.combo.h': 'Agende Somatic Facial e Somatic Corporal no mesmo dia',
       'mas.combo.p': '5% de desconto no total. Duas horas. Bem menos tensão. O desconto entra direto no checkout — ou manda mensagem pra Marina pra ela combinar os horários certinho com você.',
@@ -723,19 +729,19 @@ document.documentElement.classList.add('js-on');
       'mas.choose.c3.p': 'Feito pra tensão que o seu sistema nervoso guarda há meses ou anos. O trabalho assinatura de 90 minutos.',
 
       'mas.price.label': 'Preços',
-      'mas.price.h2': 'Sessões avulsas e plano.',
+      'mas.price.h2': 'Sessões avulsas e planos semanais.',
       'mas.price.r1.name': 'Sessão avulsa',
       'mas.price.r1.sub': 'Corporal ou Facial · 60 min',
       'mas.price.r1.price': 'A$125',
       'mas.price.r2.name': 'Sensory Energetics',
       'mas.price.r2.sub': 'Assinatura · 90 min',
       'mas.price.r2.price': 'A$305',
-      'mas.price.r3.name': 'Plano semanal',
-      'mas.price.r3.sub': 'Mesmo dia e hora, toda semana · mínimo de 2 meses · cancela com 1 semana de aviso · renovação automática',
-      'mas.price.r3.price': 'A$100/semana',
-      'mas.price.book': 'Agendar Massagem',
-      'mas.price.mship': 'Falar com a Marina sobre o plano',
-      'mas.price.mship.note': 'O plano é por convite — é confirmado depois da sua primeira sessão. O horário fixo é reservado direto pela Marina, por isso não dá pra agendar pela Acuity. Manda mensagem pra ela no WhatsApp que ela confirma a disponibilidade e o seu horário.',
+      'mas.price.book': 'Reservar sessão avulsa',
+      'mas.price.mship.h': 'Planos semanais',
+      'mas.price.mship.note': 'Mesmo dia e mesma hora toda semana, reservado no checkout e mantido pra você até você cancelar. Mínimo de 2 meses · renovação automática · cancelamento com 1 semana de aviso.',
+      'mas.price.mship.corporal': 'Corporal semanal',
+      'mas.price.mship.facial': 'Facial semanal',
+      'mas.price.mship.sensory': 'Sensory Energetics semanal',
 
       'mas.faq.h2': 'Perguntas específicas sobre massagem.',
       'mas.faq.q1': 'O que eu devo vestir?',
@@ -778,7 +784,7 @@ document.documentElement.classList.add('js-on');
 
       'tr.plans.label': 'Planos e preços',
       'tr.plans.h2': 'Garante o seu horário.<br>Garante o seu resultado.',
-      'tr.plans.sub': 'Cada plano é agendado direto na Acuity. Depois do pagamento, o seu horário fica reservado pra você pelo ciclo inteiro.',
+      'tr.plans.sub': 'Cada plano é agendado direto na Acuity. O dia e o horário da sua primeira sessão viram o seu horário fixo no ciclo inteiro — mesmo dia, mesma hora, toda semana, até o plano terminar ou você cancelar.',
 
       'tr.plan.basic.name': 'Basic',
       'tr.plan.basic.price': 'A$570',
@@ -807,7 +813,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.f4': 'Programação no app MFIT incluída',
 
       'tr.plan.book': 'Agendar Treino',
-      'tr.plan.note': 'Depois do agendamento, a Marina entra em contato em 24 horas pra confirmar o seu horário fixo durante o plano inteiro.',
+      'tr.plan.note': 'Você escolhe o dia e o horário no checkout. A Acuity reserva o mesmo horário em todas as sessões do plano, até o ciclo terminar ou você cancelar.',
 
       'tr.single.name': 'Sessão avulsa',
       'tr.single.sub': 'Sem compromisso. Experimenta o trabalho, sente se é o que o seu corpo está pedindo.',
@@ -1057,7 +1063,7 @@ document.documentElement.classList.add('js-on');
       '<h3>' + name + '</h3>' +
       '<p>' + why + '</p>' +
       '<div class="diag__tags">' + tagsHtml + '</div>' +
-      '<a class="btn btn--primary" href="' + ctaUrl + '"' +
+      '<a class="btn btn--primary' + (isInternal ? '' : ' acuity-embed-button') + '" href="' + ctaUrl + '"' +
       (isInternal ? '' : ' target="_blank" rel="noopener"') + '>' + cta + '</a>';
     result.classList.add('is-open');
   }
