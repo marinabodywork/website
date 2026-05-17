@@ -884,6 +884,34 @@ p, .lede { text-wrap: pretty; }
   margin-right: auto;
 }
 
+/* Package policies (training) */
+.policy-block { margin-top: var(--s-4); padding-top: var(--s-4); border-top: 1px solid var(--line); }
+.policy-block:first-of-type { margin-top: var(--s-5); }
+.policy-block h3 {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--forest);
+  margin: 0 0 var(--s-2);
+}
+.policy-block p { color: var(--ink-soft); line-height: 1.7; margin: 0; }
+.policy-list { list-style: none; padding: 0; margin: var(--s-3) 0 0; display: flex; flex-direction: column; gap: 10px; }
+.policy-list li {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.policy-list li::before {
+  content: "✓";
+  color: var(--sand-deep);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
 /* Outcomes (training) */
 .outcomes { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); margin-top: var(--s-4); }
 .outcome {
