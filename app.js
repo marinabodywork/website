@@ -20,7 +20,7 @@ document.documentElement.classList.add('js-on');
       'nav.about': 'About',
       'nav.bookMassage': 'Book Massage',
       'nav.bookTraining': 'Book Training',
-      'nav.menu': 'Menu',
+      'nav.menu': 'Open menu',
 
       // Footer
       'footer.tag': 'Release your body. Live an extraordinary life.',
@@ -452,7 +452,7 @@ document.documentElement.classList.add('js-on');
       'nav.about': 'Sobre',
       'nav.bookMassage': 'Agendar Massagem',
       'nav.bookTraining': 'Agendar Treino',
-      'nav.menu': 'Menu',
+      'nav.menu': 'Abrir menu',
 
       // Footer
       'footer.tag': 'Libere seu corpo. Viva uma vida extraordinária.',
