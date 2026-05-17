@@ -16,7 +16,7 @@ There is **no build system, no package manager, no framework, no test suite**. E
 - `styles.css` — single shared stylesheet for all pages.
 - `app.js` — single shared script holding the i18n table (`en` + `pt` flat key maps), `setLang`, scroll/reveal/nav behaviour, hamburger drawer, diagnostic widget, FAQ search, hero parallax, and the `js-on` class toggle. **All translations live here, not inline.** First line of the IIFE adds `js-on` to `<html>` so reveal animations are progressive-enhancement only.
 - `*.webp` / `*.jpeg` / `*.jpg` / `*.png` / `*.svg` — image assets live flat in the repo root and are referenced by bare filename (no `assets/` subfolder). Currently in-use brand imagery:
-  - `hero.png` — main brand portrait used as the home page hero image (`hero.hero__media`), `og:image` for `index.html` and `method.html`, and the `LocalBusiness.image` in JSON-LD.
+  - `hero.jpg` / `hero.webp` — main brand portrait used as the home page hero image (`hero.hero__media` ships a `<picture>` with WebP source + JPEG fallback). The JPEG is the `og:image` for `index.html` and `method.html` and the `LocalBusiness.image` in JSON-LD; the WebP is the LCP preload target.
   - `atendimento.jpeg` — Somatic Massage Corporal feature image (above the service block).
   - `facial.jpeg` — Somatic Massage Facial feature image.
   - `marina-massage-content.webp` — Sensory Energetics service block image.
@@ -247,7 +247,7 @@ Below the cards is the `.reviews-strip` outlined pill (`★★★★★ G review
 
 Every page's `<head>` ships:
 
-- `<link rel="preload" as="image" href="<hero-img>" fetchpriority="high">` for the page's LCP image (home: `hero.png`; about: `marina-hero.webp`; other inner pages: none — they don't have a hero image).
+- `<link rel="preload" as="image" href="<hero-img>" fetchpriority="high">` for the page's LCP image (home: `hero.jpg`; about: `marina-hero.webp`; other inner pages: none — they don't have a hero image).
 - `<link rel="preload" as="image" href="marina-logo.png">` for the nav logo on every page.
 - LCP images carry `fetchpriority="high" decoding="async"`; below-fold images carry `loading="lazy" decoding="async"`. Nav logos carry `decoding="async"` (not lazy — they're above-fold).
 
