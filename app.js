@@ -1057,7 +1057,7 @@ document.documentElement.classList.add('js-on');
       '<h3>' + name + '</h3>' +
       '<p>' + why + '</p>' +
       '<div class="diag__tags">' + tagsHtml + '</div>' +
-      '<a class="btn btn--primary" href="' + ctaUrl + '"' +
+      '<a class="btn btn--primary' + (isInternal ? '' : ' acuity-embed-button') + '" href="' + ctaUrl + '"' +
       (isInternal ? '' : ' target="_blank" rel="noopener"') + '>' + cta + '</a>';
     result.classList.add('is-open');
   }
