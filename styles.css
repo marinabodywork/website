@@ -995,16 +995,22 @@ p, .lede { text-wrap: pretty; }
 
 /* ─── Premium motion language ────────────────────────────────────── */
 
-/* Hero portrait — masked clip-path reveal on first paint */
+/* Hero portrait — masked clip-path reveal on first paint, then a slow breath */
 .hero__media img,
 .about-hero__bg img {
-  animation: heroReveal 1200ms cubic-bezier(0.22, 1, 0.36, 1) 200ms both;
+  animation:
+    heroReveal 1200ms cubic-bezier(0.22, 1, 0.36, 1) 200ms both,
+    heroBreath 8s ease-in-out 1600ms infinite;
   will-change: transform, clip-path, opacity;
 }
 @keyframes heroReveal {
   0%   { opacity: 0; transform: scale(1.08); clip-path: inset(0 0 100% 0); }
   55%  { opacity: 1; }
   100% { opacity: 1; transform: scale(1); clip-path: inset(0 0 0 0); }
+}
+@keyframes heroBreath {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.015); }
 }
 
 /* Service-block images — masked reveal on intersect (progressive: visible without JS) */
