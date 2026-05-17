@@ -74,8 +74,8 @@ document.documentElement.classList.add('js-on');
       'home.svc.s1.cta': 'Book Massage',
       'home.svc.s2.name': 'Memberships',
       'home.svc.s2.meta': 'From A$100/week · Fixed weekly slot',
-      'home.svc.s2.p': 'A weekly slot at the same day and time, held personally by Marina for the life of your plan. Invitation plan confirmed after your first session. Minimum 2 months, continues until you cancel.',
-      'home.svc.s2.cta': 'Talk to Marina',
+      'home.svc.s2.p': 'A weekly slot at the same day and time, locked at checkout and held for you every week until you cancel. Minimum 2 months.',
+      'home.svc.s2.cta': 'Book Membership',
       'home.svc.s2.badge': 'Signature',
       'home.svc.s3.name': 'Training',
       'home.svc.s3.meta': '60 min · From A$75/session on plan',
@@ -308,8 +308,8 @@ document.documentElement.classList.add('js-on');
       'mas.price.r3.sub': 'Fixed slot, same day and time, every week · min 2 months · cancel with 1 week notice · auto-renews',
       'mas.price.r3.price': 'A$100/week',
       'mas.price.book': 'Book Massage',
-      'mas.price.mship': 'Talk to Marina about membership',
-      'mas.price.mship.note': 'Membership is an invitation plan confirmed after your first session. The day and time you choose becomes your fixed weekly slot for the entire plan — held by Marina personally, every week, until you cancel. That is why it cannot be booked through Acuity. Message her on WhatsApp and she will confirm availability and lock in your slot.',
+      'mas.price.mship': 'Book Membership',
+      'mas.price.mship.note': 'Book on Acuity, pick your weekly day and time, and that slot is yours every week until you cancel. Minimum 2 months · auto-renews · cancel with 1 week notice.',
 
       'mas.faq.h2': 'Massage-specific questions.',
       'mas.faq.q1': 'What do I wear?',
@@ -381,7 +381,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.f4': 'MFIT app programming included',
 
       'tr.plan.book': 'Book Training',
-      'tr.plan.note': 'After booking, Marina will reach out within 24 hours to confirm your recurring schedule. The day and time you choose stay the same for every session of your plan, until you cancel.',
+      'tr.plan.note': 'Pick your day and time at checkout. Acuity locks the same slot for every session of your plan, until the cycle ends or you cancel.',
 
       'tr.single.name': 'Single session',
       'tr.single.sub': 'No commitment. Try the work, see if it is what your body has been asking for.',
@@ -503,8 +503,8 @@ document.documentElement.classList.add('js-on');
       'home.svc.s1.cta': 'Agendar Massagem',
       'home.svc.s2.name': 'Plano semanal',
       'home.svc.s2.meta': 'A partir de A$100/semana · horário fixo toda semana',
-      'home.svc.s2.p': 'Um horário fixo — mesmo dia e mesma hora toda semana — reservado direto pela Marina pra você durante todo o plano. Plano por convite — depois da sua primeira sessão, ela confirma. Mínimo de 2 meses, segue ativo até você cancelar.',
-      'home.svc.s2.cta': 'Falar com a Marina',
+      'home.svc.s2.p': 'Um horário fixo — mesmo dia e mesma hora toda semana — reservado no checkout e mantido pra você toda semana até você cancelar. Mínimo de 2 meses.',
+      'home.svc.s2.cta': 'Reservar plano',
       'home.svc.s2.badge': 'Assinatura',
       'home.svc.s3.name': 'Treino',
       'home.svc.s3.meta': '60 min · A partir de A$75/sessão no plano',
@@ -734,8 +734,8 @@ document.documentElement.classList.add('js-on');
       'mas.price.r3.sub': 'Mesmo dia e hora, toda semana · mínimo de 2 meses · cancela com 1 semana de aviso · renovação automática',
       'mas.price.r3.price': 'A$100/semana',
       'mas.price.book': 'Agendar Massagem',
-      'mas.price.mship': 'Falar com a Marina sobre o plano',
-      'mas.price.mship.note': 'O plano é por convite — é confirmado depois da sua primeira sessão. O dia e o horário que você escolher viram o seu horário fixo durante todo o plano — reservado direto pela Marina, toda semana, até você cancelar. Por isso não dá pra agendar pela Acuity. Manda mensagem pra ela no WhatsApp que ela confirma a disponibilidade e fecha o seu horário.',
+      'mas.price.mship': 'Reservar plano',
+      'mas.price.mship.note': 'Você reserva direto na Acuity, escolhe o seu dia e horário e esse horário fica seu toda semana até você cancelar. Mínimo de 2 meses · renovação automática · cancelamento com 1 semana de aviso.',
 
       'mas.faq.h2': 'Perguntas específicas sobre massagem.',
       'mas.faq.q1': 'O que eu devo vestir?',
@@ -807,7 +807,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.f4': 'Programação no app MFIT incluída',
 
       'tr.plan.book': 'Agendar Treino',
-      'tr.plan.note': 'Depois do agendamento, a Marina entra em contato em 24 horas pra confirmar o seu horário recorrente. O dia e o horário que você escolher continuam os mesmos em todas as sessões do plano, até você cancelar.',
+      'tr.plan.note': 'Você escolhe o dia e o horário no checkout. A Acuity reserva o mesmo horário em todas as sessões do plano, até o ciclo terminar ou você cancelar.',
 
       'tr.single.name': 'Sessão avulsa',
       'tr.single.sub': 'Sem compromisso. Experimenta o trabalho, sente se é o que o seu corpo está pedindo.',
