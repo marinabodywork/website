@@ -1,0 +1,21 @@
+{
+  "name": "marina-bodywork-website",
+  "private": true,
+  "description": "Static site for Marina Bodywork. The npm package only exists to host check scripts — there is no build step.",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/run-all.mjs",
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "check:jsonld": "node scripts/check-jsonld.mjs",
+    "check:acuity": "node scripts/check-acuity.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check:head": "node scripts/check-head.mjs",
+    "check:sitemap": "node scripts/check-sitemap.mjs",
+    "check:smoke": "node scripts/smoke-app.mjs",
+    "check:html": "html-validate --config .htmlvalidate.json *.html"
+  },
+  "devDependencies": {
+    "html-validate": "^9.0.0",
+    "jsdom": "^25.0.0"
+  }
+}
