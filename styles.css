@@ -913,6 +913,92 @@ p, .lede { text-wrap: pretty; }
   .ultimate-card__weeks { grid-template-columns: 1fr; }
 }
 
+/* Home Ultimate promo strip - lives under #services on index.html */
+.ultimate-promo {
+  position: relative;
+  margin-top: var(--s-5);
+  padding: var(--s-5);
+  border-radius: var(--r-lg);
+  background: var(--forest);
+  color: var(--cream);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--s-5);
+  align-items: center;
+}
+.ultimate-promo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(212, 178, 124, 0.18), transparent 60%);
+  pointer-events: none;
+}
+.ultimate-promo > * { position: relative; }
+.ultimate-promo__badge {
+  display: inline-block;
+  background: var(--sand);
+  color: var(--forest);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: var(--s-2);
+}
+.ultimate-promo__title {
+  font-family: var(--display);
+  font-size: clamp(28px, 3.2vw, 38px);
+  line-height: 1.15;
+  color: var(--sand);
+  margin: 0 0 var(--s-2);
+}
+.ultimate-promo__sub { font-size: 17px; line-height: 1.6; color: var(--cream); margin: 0 0 var(--s-3); max-width: 48ch; }
+.ultimate-promo__includes {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: rgba(244, 234, 217, 0.88);
+  margin: 0;
+  padding: var(--s-2) var(--s-3);
+  border-left: 2px solid var(--sand);
+  background: rgba(244, 234, 217, 0.06);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+.ultimate-promo__aside {
+  display: flex; flex-direction: column; gap: var(--s-3);
+  padding-left: var(--s-4);
+  border-left: 1px solid rgba(212, 178, 124, 0.28);
+}
+.ultimate-promo__price { display: flex; flex-direction: column; gap: 8px; }
+.ultimate-promo__amount { font-family: var(--display); font-style: italic; font-size: 38px; line-height: 1; color: var(--sand); }
+.ultimate-promo__worth {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--sand);
+  padding: 5px 12px;
+  border: 1px solid rgba(212, 178, 124, 0.55);
+  border-radius: 999px;
+  align-self: flex-start;
+}
+.ultimate-promo__ctas { display: flex; flex-direction: column; gap: var(--s-2); align-items: flex-start; }
+.ultimate-promo__details {
+  font-size: 14px;
+  color: rgba(244, 234, 217, 0.88);
+  border-bottom: 1px solid rgba(212, 178, 124, 0.45);
+  padding-bottom: 2px;
+  transition: color var(--t-fast), border-color var(--t-fast);
+}
+.ultimate-promo__details:hover { color: var(--sand); border-bottom-color: var(--sand); }
+
+@media (max-width: 900px) {
+  .ultimate-promo { grid-template-columns: 1fr; gap: var(--s-3); padding: var(--s-4); }
+  .ultimate-promo__aside { padding-left: 0; border-left: 0; padding-top: var(--s-3); border-top: 1px solid rgba(212, 178, 124, 0.28); }
+}
+
 /* Guarantee strip */
 .guarantee {
   background: var(--sand);
