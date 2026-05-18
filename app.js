@@ -396,7 +396,7 @@ document.documentElement.classList.add('js-on');
       'tr.assess.cta': 'Book assessment',
 
       'tr.consult.name': 'Online consultancy',
-      'tr.consult.sub': 'Online check-ins with Marina to review your progress and adjust your training program. Auto-renews every 2 months.',
+      'tr.consult.sub': 'For clients training remotely, away from Snap Fitness Maroubra. Video call with Marina every 2 months to review your body, swap exercises that have done their work, and adjust your program. Auto-renews.',
       'tr.consult.price': 'A$100',
       'tr.consult.cta': 'Start consultancy',
 
@@ -857,7 +857,7 @@ document.documentElement.classList.add('js-on');
       'tr.assess.cta': 'Agendar avaliação',
 
       'tr.consult.name': 'Consultoria on-line',
-      'tr.consult.sub': 'Acompanhamento on-line com a Marina para revisar o seu progresso e ajustar o seu programa de treino. Renovação automática a cada 2 meses.',
+      'tr.consult.sub': 'Para clientes que treinam à distância, longe da Snap Fitness Maroubra. Vídeo-chamada com a Marina a cada 2 meses para revisar o seu corpo, trocar exercícios que já cumpriram o papel e ajustar o programa. Renovação automática.',
       'tr.consult.price': 'A$100',
       'tr.consult.cta': 'Iniciar consultoria',
 
