@@ -85,7 +85,7 @@ Every booking CTA on the site that points to an Acuity URL carries class `acuity
 | Massage hub | `marinaribeirobodywork.as.me/bookmassage` |
 | Somatic Massage Corporal (60 min · A$125) | `.../SomaticMassageCorporal` |
 | Somatic Massage Facial (60 min · A$125) | `.../SomaticMassageFacial` |
-| Sensory Energetics (90 min · A$305) | `.../SensoryEnergetics` |
+| Sensory Energetics (60 min · A$305) | `.../SensoryEnergetics` |
 | PT hub | `marinaribeirobodywork.as.me/BookPTlessons` |
 | Single PT lesson (A$99) | `.../SinglePTLesson` |
 | PT Basic plan (A$570 · 6 sessions) | `.../PTBasic` |
@@ -183,7 +183,7 @@ Section order top-to-bottom:
   - **Somatic Massage Corporal** (`mas.c.*`) — Marina-developed methodology paragraphs (p1: integrating Brazilian lymphatic drainage, myofascial release, breathwork, deep relaxation; p2: addresses muscular tension, fluid retention, accumulated stress, fascial rigidity → circulation, mobility, body awareness, lightness; p3: nervous-system layer regulates cortisol → reconnects body and mind). `mas.c.cta` → SomaticMassageCorporal Acuity URL; `mas.c.mship.cta` "Make it weekly →" → catalog id=2213824.
   - **Combo strip** between Corporal and Facial — `.combo-strip` advertising 5% off when both are booked the same day (`mas.combo.h`/`mas.combo.p`).
   - **Somatic Massage Facial** (`mas.f.*`) — TMJ + intraoral (buccal) work for jaw tension, headaches, disturbed sleep. `mas.f.cta` → SomaticMassageFacial; `mas.f.mship.cta` → catalog id=2213848.
-  - **Sensory Energetics** (`mas.s.*`) — 90-min signature, `.service-block--signature` variant. Three paragraphs covering: integrative method activating CNS; involuntary tremors are normal and discharge tension/regulate stress/lower cortisol/support dopamine; mind-body-emotion reconnection. `mas.s.cta` → SensoryEnergetics; `mas.s.mship.cta` → catalog id=2213845.
+  - **Sensory Energetics** (`mas.s.*`) — 60-min signature, `.service-block--signature` variant. Three paragraphs covering: integrative method activating CNS; involuntary tremors are normal and discharge tension/regulate stress/lower cortisol/support dopamine; mind-body-emotion reconnection. `mas.s.cta` → SensoryEnergetics; `mas.s.mship.cta` → catalog id=2213845.
 - **How to choose** (`mas.choose.*`) — `section--pale`, three `.choose-card` items mapping symptom → recommended service (standard remedial hasn't held → Corporal; jaw/TMJ → Facial; tension keeps coming back → Sensory Energetics).
 - **`#mas-pricing`** — `section--cream`, `container--narrow`. Pricing table (`.pricing__row` with name/sub/price) plus the Weekly memberships strip with three `acuity-embed-button` links to the catalog ids. Keys `mas.price.label`/`h2`/`r1.*`/`r2.*`/`book`/`mship.h`/`mship.note`/`mship.corporal`/`mship.facial`/`mship.sensory`.
 - **FAQ** — `.faq__search` live filter + `.faq__empty` empty state. Keys `mas.faq.*`.
@@ -223,7 +223,7 @@ Section order top-to-bottom:
 
 - `<header class="page-hero">` — no image, page label + h1.
 - Long-form fascia explainer (`method.fascia.*`).
-- **Modalities grid** (`#mod`, no id; section is `section--cream`) — `method.mod.label`/`h2` + four cards (`.modality-card`) covering the four offerings: Somatic Massage (60 min A$125), KSE Sensory Energetics (90 min A$305 Signature), Conscious Movement (in every session — woven through bodywork and training), Personal Training (60 min from A$75/session on plan, Snap Fitness Maroubra). Each card has `method.mod.m{1..4}.{h,meta,p}` keys; the description explains what each modality solves.
+- **Modalities grid** (`#mod`, no id; section is `section--cream`) — `method.mod.label`/`h2` + four cards (`.modality-card`) covering the four offerings: Somatic Massage (60 min A$125), KSE Sensory Energetics (60 min A$305 Signature), Conscious Movement (in every session — woven through bodywork and training), Personal Training (60 min from A$75/session on plan, Snap Fitness Maroubra). Each card has `method.mod.m{1..4}.{h,meta,p}` keys; the description explains what each modality solves.
 - Diagnostic widget reuses `#diagnostic` markup + the shared `app.js` logic.
 - FAQ.
 - Footer + sticky bar.
