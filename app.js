@@ -1079,10 +1079,10 @@ document.documentElement.classList.add('js-on');
   // ─────────────────────────────────────────────
   const DIAG_AREAS = ['neck', 'jaw', 'back', 'stress', 'training'];
   const DIAG_URLS = {
-    neck: 'https://app.acuityscheduling.com/schedule.php?owner=39322566&calendarID=14080077&ref=booking_button',
-    jaw: 'https://app.acuityscheduling.com/schedule.php?owner=39322566&calendarID=14080077&ref=booking_button',
-    back: 'https://app.acuityscheduling.com/schedule.php?owner=39322566&calendarID=14080077&ref=booking_button',
-    stress: 'https://app.acuityscheduling.com/schedule.php?owner=39322566&calendarID=14080077&ref=booking_button',
+    neck: 'https://marinaribeirobodywork.as.me/SomaticMassageCorporal',
+    jaw: 'https://marinaribeirobodywork.as.me/SomaticMassageFacial',
+    back: 'https://marinaribeirobodywork.as.me/SomaticMassageCorporal',
+    stress: 'https://marinaribeirobodywork.as.me/SensoryEnergetics',
     training: 'training.html#plans'
   };
 
