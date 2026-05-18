@@ -106,7 +106,7 @@ https://app.acuityscheduling.com/catalog.php?owner=39322566&action=addCart&clear
 | Weekly Corporal | `2213824` | A$107/session |
 | Weekly Facial | `2213848` | A$107/session |
 | ~~Weekly Sensory Energetics~~ (currently disabled) | `2213845` | n/a — Sensory only sold as single during launch |
-| Ultimate (limited May + Jun 2026) | `2215320` | A$100/week (A$400/4-week cycle) |
+| Ultimate (limited May + Jun 2026) | `2215320` | A$107/week (A$428/4-week cycle) |
 
 These appear on `massage.html`'s service blocks ("Make it weekly →" secondary CTAs on Corporal + Facial only — Sensory has no membership during launch, only the single-session CTA) and on the `#mas-pricing` Weekly memberships strip (which lists Corporal and Facial only). The home `home.svc.s2` Memberships card links to `massage.html#mas-pricing` (not WhatsApp).
 
