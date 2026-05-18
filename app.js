@@ -492,7 +492,7 @@ document.documentElement.classList.add('js-on');
       // Home: hero
       'home.hero.label': '<strong>Marina Ribeiro</strong> · Especialista em liberação fascial · Sydney',
       'home.hero.h1.a': 'Solte o que trava.',
-      'home.hero.h1.b': 'Ganhe a força que fica.',
+      'home.hero.h1.b': 'Ganhe força física e equilíbrio mental.',
       'home.hero.h1.c': 'Uma especialista.',
       'home.hero.h1.d': 'Um sistema.',
       'home.hero.sub': 'Massagem somática, Sensory Energetics e personal training. Tudo conectado, com uma especialista só, pra um corpo que solta e ganha força ao mesmo tempo.',
