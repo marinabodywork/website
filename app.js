@@ -179,6 +179,7 @@ document.documentElement.classList.add('js-on');
       'method.hero.label': 'The method',
       'method.hero.h1': 'It is all fascia.',
       'method.hero.sub': 'Fascia is the thin tissue that surrounds muscles, organs, and nerves, connecting the entire body as one continuous internal network. Picture a flexible film in many layers covering everything inside. When one region tenses, other parts are affected too. What sets Marina’s approach apart is releasing fascial tension, improving mobility, circulation, neural function, and the communication between body and nervous system.',
+      'method.hero.img.alt': 'Anatomical illustration of the body’s fascial network, showing the continuous web of connective tissue across the back, shoulders, arms, and legs.',
 
       'method.why.label': 'Why fascia matters',
       'method.why.h2': 'Four symptoms.<br>One source.',
@@ -630,6 +631,7 @@ document.documentElement.classList.add('js-on');
       'method.hero.label': 'O método',
       'method.hero.h1': 'É tudo fáscia.',
       'method.hero.sub': 'A fáscia é o tecido fino que envolve músculos, órgãos e nervos, conectando todo o corpo como uma grande rede interna. Imagine um filme flexível em várias camadas cobrindo tudo por dentro. Quando uma região fica tensionada, outras partes também são afetadas. O diferencial da abordagem da Marina é destensionar a fáscia, promovendo melhora da mobilidade, circulação, funções neurais e da comunicação entre corpo e sistema nervoso.',
+      'method.hero.img.alt': 'Ilustração anatômica da rede fascial do corpo, mostrando a teia contínua de tecido conjuntivo nas costas, ombros, braços e pernas.',
 
       'method.why.label': 'Por que a fáscia importa',
       'method.why.h2': 'Quatro sintomas.<br>Uma só origem.',
