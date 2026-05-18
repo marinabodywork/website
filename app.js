@@ -432,7 +432,7 @@ document.documentElement.classList.add('js-on');
 
       // ─── About page ───
       'about.hero.title': 'Physical Education Professional · Bodywork Specialist',
-      'about.hero.meta': '18+ Years · Sydney',
+      'about.hero.meta': '18+ years of practice · Sydney',
       'about.bio.label': 'The story',
       'about.bio.h2': 'Eighteen years, two continents, one practice.',
       'about.bio.p1': 'Marina Ribeiro da Silva is a Physical Education professional with more than eighteen years dedicated to movement, health, and women\'s well-being. Movement and bodywork are not two careers. They are two sides of how a body changes.',
@@ -888,7 +888,7 @@ document.documentElement.classList.add('js-on');
 
       // About page
       'about.hero.title': 'Profissional de Educação Física · Especialista em Terapia Corporal',
-      'about.hero.meta': '18+ anos · Sydney',
+      'about.hero.meta': '18+ anos de prática · Sydney',
       'about.bio.label': 'A história',
       'about.bio.h2': 'Dezoito anos, dois continentes, uma prática.',
       'about.bio.p1': 'Marina Ribeiro da Silva é profissional de Educação Física, com mais de dezoito anos dedicados ao movimento, à saúde e ao bem-estar das mulheres. Pra ela, movimento e terapia corporal não são duas carreiras. São dois lados de como um corpo muda.',

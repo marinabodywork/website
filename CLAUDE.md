@@ -230,7 +230,7 @@ Section order top-to-bottom:
 
 ### 11. About page structure (`about.html`)
 
-- `<header class="page-hero about-hero">` — Marina's portrait (`marina-hero.webp`, 1600×1200, fetchpriority high) with overlay text.
+- `<header class="page-hero page-hero--media">` — Marina's portrait (`marina-hero.webp`, 1600×1200, fetchpriority high) sits in `.page-hero__media` next to the text block. Same side-by-side hero pattern method.html uses (text left, image right, single column under 900px).
 - **Bio** — four `<p data-i18n="about.bio.p1..p4">` paragraphs. Source of truth:
   - **Identity:** Marina Ribeiro da Silva, Physical Education professional, **18+ years** dedicated to movement, health, and women's well-being.
   - **Origin:** started through dance, teaching it from age 15; studied Physical Education to professionalise the passion.
@@ -267,7 +267,7 @@ If bio details or credentials change, update **all** of: visible markup in `abou
 
 Beyond reveal-on-scroll:
 
-- **Hero portrait first-paint reveal** — `.hero__media img` + `.about-hero__bg img` get a 1200ms `clip-path: inset(0 0 100% 0) → inset(0 0 0 0)` animation with scale `1.08 → 1` on page load (`@keyframes heroReveal`, 200ms delay).
+- **Hero portrait first-paint reveal** — `.hero__media img` gets a 1200ms `clip-path: inset(0 0 100% 0) → inset(0 0 0 0)` animation with scale `1.08 → 1` on page load (`@keyframes heroReveal`, 200ms delay). About-page hero uses the standard `.page-hero--media` layout without a clip-path reveal.
 - **Hero parallax** — `initParallax()` in `app.js` translates `.hero__media` vertically at 8% of scroll, rAF-throttled, scroll-passive. Opt-out via `prefers-reduced-motion: reduce`.
 - **Service-block image masked reveal** — `.service-block` gets `is-visible` added by `initMediaReveal()` (IntersectionObserver, 0.18 threshold) which triggers the clip-path animation.
 - **Button shine sweep** — `.btn--primary` and `.btn--sand` have a `::after` gradient that translates 120% on hover (750ms cubic-bezier).
