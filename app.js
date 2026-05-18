@@ -286,8 +286,6 @@ document.documentElement.classList.add('js-on');
       'mas.s.cta': 'Book Massage',
       'mas.s.mship.cta': 'Make it weekly →',
 
-      'mas.combo.h': 'Book Somatic Facial and Somatic Corporal on the same day',
-      'mas.combo.p': '5% off your total. Two hours. A lot less tension. Apply at checkout, or message Marina to coordinate timing.',
 
       'mas.choose.label': 'How to choose',
       'mas.choose.h2': 'Three questions.<br>One session.',
@@ -747,8 +745,6 @@ document.documentElement.classList.add('js-on');
       'mas.s.cta': 'Agendar Massagem',
       'mas.s.mship.cta': 'Tornar semanal →',
 
-      'mas.combo.h': 'Agende Somatic Facial e Somatic Corporal no mesmo dia',
-      'mas.combo.p': '5% de desconto no total. Duas horas. Bem menos tensão. O desconto entra direto no checkout. Ou manda mensagem pra Marina pra ela combinar os horários certinho com você.',
 
       'mas.choose.label': 'Como escolher',
       'mas.choose.h2': 'Três perguntas.<br>Uma sessão.',
