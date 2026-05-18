@@ -846,6 +846,68 @@ p, .lede { text-wrap: pretty; }
 .membership-chooser .h3 { margin-bottom: var(--s-1); }
 .membership-chooser .btn-row { flex-wrap: wrap; gap: var(--s-2); }
 
+.ultimate-card {
+  position: relative;
+  margin-top: var(--s-4);
+  padding: var(--s-5);
+  border-radius: var(--r-lg);
+  background: var(--forest);
+  color: var(--cream);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.ultimate-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(212, 178, 124, 0.18), transparent 55%);
+  pointer-events: none;
+}
+.ultimate-card > * { position: relative; }
+.ultimate-card__badge {
+  display: inline-block;
+  background: var(--sand);
+  color: var(--forest);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: var(--s-2);
+}
+.ultimate-card__title {
+  font-family: var(--display);
+  font-size: 34px;
+  line-height: 1.15;
+  color: var(--sand);
+  margin: 0 0 var(--s-1);
+}
+.ultimate-card__sub { font-size: 16px; line-height: 1.65; color: var(--cream); margin: 0 0 var(--s-3); max-width: 56ch; }
+.ultimate-card__price { display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--s-2) var(--s-3); margin-bottom: var(--s-3); }
+.ultimate-card__amount { font-family: var(--display); font-style: italic; font-size: 32px; color: var(--sand); }
+.ultimate-card__meta { font-size: 13px; color: rgba(244, 234, 217, 0.78); letter-spacing: 0.04em; }
+.ultimate-card__includes { background: rgba(244, 234, 217, 0.08); border: 1px solid rgba(212, 178, 124, 0.28); border-radius: var(--r); padding: var(--s-3) var(--s-4); margin-bottom: var(--s-3); }
+.ultimate-card__includes-label { display: block; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sand); font-weight: 600; margin-bottom: var(--s-2); }
+.ultimate-card__includes ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.ultimate-card__includes li { position: relative; padding-left: 22px; font-size: 15px; line-height: 1.55; color: var(--cream); }
+.ultimate-card__includes li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 8px;
+  width: 12px; height: 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--sand);
+  background: transparent;
+}
+.ultimate-card__note { font-size: 13px; color: rgba(244, 234, 217, 0.78); margin: 0 0 var(--s-3); max-width: 60ch; }
+.ultimate-card .btn--primary { background: var(--sand); color: var(--forest); }
+@media (max-width: 720px) {
+  .ultimate-card { padding: var(--s-4); }
+  .ultimate-card__title { font-size: 28px; }
+  .ultimate-card__amount { font-size: 26px; }
+}
+
 /* Guarantee strip */
 .guarantee {
   background: var(--sand);
