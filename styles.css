@@ -471,8 +471,18 @@ p, .lede { text-wrap: pretty; }
   display: block;
 }
 @media (max-width: 900px) {
+  .page-hero--media { padding-bottom: 0; overflow: hidden; }
   .page-hero--media .page-hero__inner { grid-template-columns: 1fr; gap: var(--s-4); }
-  .page-hero__media img { max-height: 520px; }
+  .page-hero--media .page-hero__media {
+    margin-inline: calc(50% - 50vw);
+    margin-bottom: 0;
+  }
+  .page-hero__media img {
+    aspect-ratio: auto;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
 
 /* Combination 3-column */
