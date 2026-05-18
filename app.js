@@ -278,7 +278,7 @@ document.documentElement.classList.add('js-on');
       'mas.s.meta': '90 minutes · A$305 · Signature',
       'mas.s.badge': 'Signature',
       'mas.s.p1': 'A 90-minute integrative session focused on the deep release of physical and emotional patterns stored in the nervous system. Inspired by ancient Eastern techniques, breathwork, body stimuli, and somatic awareness. The work activates the central nervous system directly.',
-      'mas.s.p2': 'Involuntary tremors and natural neuromuscular reactions are normal during the session. They help the body discharge tension, regulate stress, and lower cortisol. The technique also supports neurotransmitters tied to well-being, focus, motivation, and pleasure (including dopamine).',
+      'mas.s.p2': 'During the session, involuntary tremors in the body can occur and are natural responses of the nervous system. These stimuli help release accumulated tension, regulate stress, and lower cortisol levels. The technique also supports the activation of neurotransmitters tied to well-being, focus, motivation, relaxation, and pleasure, including dopamine.',
       'mas.s.p3': 'More than a body experience. The work crosses the connection between body, emotion, and mind. Clients leave with lightness, mental clarity, emotional balance, and a body that finally remembers what it feels like to switch off.',
 
       'mas.s.cta': 'Book Massage',
@@ -726,7 +726,7 @@ document.documentElement.classList.add('js-on');
       'mas.s.meta': '90 minutos · A$305 · Assinatura',
       'mas.s.badge': 'Assinatura',
       'mas.s.p1': 'Sessão integrativa de 90 minutos focada em soltar, lá no fundo, os padrões físicos e emocionais que ficam guardados no sistema nervoso. Inspirada em técnicas ancestrais do Oriente, respiração guiada, estímulos no corpo e consciência somática. Ativa o sistema nervoso central de forma direta.',
-      'mas.s.p2': 'Tremores involuntários e reações naturais no corpo podem aparecer durante a sessão. Não se assuste se isso acontecer com você. Eles ajudam o corpo a descarregar tensão, regular o estresse e reduzir o cortisol. A técnica também ativa neurotransmissores ligados a bem-estar, foco, motivação e prazer (incluindo a dopamina).',
+      'mas.s.p2': 'Durante a sessão, tremores involuntários no corpo podem acontecer e são respostas naturais do sistema nervoso. Esses estímulos auxiliam na liberação de tensões acumuladas, na regulação do estresse e na redução dos níveis de cortisol. A técnica também favorece a ativação de neurotransmissores ligados ao bem-estar, foco, motivação, relaxamento e prazer, incluindo a dopamina.',
       'mas.s.p3': 'Mais do que uma experiência só corporal. O trabalho atravessa a conexão entre corpo, emoção e mente. As clientes saem com leveza, clareza mental, equilíbrio emocional, e um corpo que finalmente lembra como é desligar.',
 
       'mas.s.cta': 'Agendar Massagem',
