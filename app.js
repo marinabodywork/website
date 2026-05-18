@@ -333,8 +333,8 @@ document.documentElement.classList.add('js-on');
       'tr.diff.label': 'What makes this different',
       'tr.diff.h2': 'Most trainers cannot see what is holding you back.<br>Marina can.',
       'tr.diff.p1': 'A standard trainer programs around a body they cannot fully assess. They see the lift. They cannot see the fascial chain that is shortening your range, capping your strength, or shifting load into the joint you are protecting without knowing it.',
-      'tr.diff.p2': 'Marina trained in bodywork for ten years before she started taking PT clients. She sees restriction patterns no standard trainer sees. And she can address them inside the session, with hands-on release before the lift, mobility before the load, and breathwork before the next set.',
-      'tr.diff.p3': 'The result is training that compounds. You are not lifting through restriction. You are building strength in the range your body actually has.',
+      'tr.diff.p2': 'With more than ten years studying and working in body therapy before she ever practiced as a personal trainer, she developed a way of seeing that goes beyond traditional training. She reads patterns of tension, compensation, and restriction that often pass unnoticed in a standard approach, and she works those patterns directly during the session.<br><br>Hands-on release before the lift, mobility before the load, and breathwork before the next set. This process stimulates the central nervous system, making more energy available to the body, sharpening focus on each movement, and deepening body awareness.',
+      'tr.diff.p3': 'The result is training that genuinely builds the body from the inside out. It is not just about lifting weight. It is about developing strength with presence, control, mobility, and bodily intelligence in every movement.',
 
       'tr.struct.label': 'The 60-minute session',
       'tr.struct.h2': 'Five phases.<br>Built around your body that day.',
