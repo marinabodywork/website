@@ -130,7 +130,7 @@ export function extractHead(html) {
 }
 
 export function extractBody(html) {
-  // Anchor on </head> first — the pre-paint script in <head> contains a "<body>" comment
+  // Anchor on </head> first - the pre-paint script in <head> contains a "<body>" comment
   // that would otherwise confuse a naive regex.
   const headEnd = html.search(/<\/head>/i);
   const fromBody = headEnd === -1 ? html : html.slice(headEnd);
@@ -149,7 +149,7 @@ export function makeReporter(name) {
       const log = (label, items) => items.forEach((m) => console.log(`  ${label} ${m}`));
       if (warnings.length) { console.log(`[${name}] warnings:`); log('!', warnings); }
       if (errors.length) {
-        console.log(`[${name}] FAIL — ${errors.length} error(s):`);
+        console.log(`[${name}] FAIL - ${errors.length} error(s):`);
         log('x', errors);
         process.exitCode = 1;
         return false;

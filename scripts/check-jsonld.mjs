@@ -28,7 +28,7 @@ for (const page of [...INDEXABLE_PAGES, '404.html']) {
   const html = readPage(page);
   let blocks;
   try { blocks = extractJsonLd(html); }
-  catch (e) { r.error(`${page}: JSON-LD parse error — ${e.message}`); continue; }
+  catch (e) { r.error(`${page}: JSON-LD parse error - ${e.message}`); continue; }
   if (page === '404.html') {
     if (blocks.length) r.error(`404.html should ship no JSON-LD (page is noindex)`);
     continue;
@@ -39,7 +39,7 @@ for (const page of [...INDEXABLE_PAGES, '404.html']) {
 
 // Canonical entities live on index.html. Normalize @ids to their fragment so
 // "https://marinabodywork.com/#business" indexes as "#business". Only entities with
-// an @type are real declarations — bare {"@id": "..."} are pointers, ignore them.
+// an @type are real declarations - bare {"@id": "..."} are pointers, ignore them.
 const toFrag = (id) => {
   if (!id) return null;
   const i = id.indexOf('#');
@@ -67,7 +67,7 @@ for (const [id, want] of Object.entries(EXPECTED_OFFERS)) {
   if (offer.priceCurrency && offer.priceCurrency !== 'AUD') r.warn(`${id}: priceCurrency is ${offer.priceCurrency} (expected AUD)`);
 }
 
-// PT service — multiple offers, prices must include the documented set.
+// PT service - multiple offers, prices must include the documented set.
 const pt = idIndex.get('#service-pt');
 if (pt) {
   const offers = Array.isArray(pt.offers) ? pt.offers : (pt.offers ? [pt.offers] : []);

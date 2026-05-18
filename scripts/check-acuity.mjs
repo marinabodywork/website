@@ -54,16 +54,16 @@ for (const id of REQUIRED_MEMBERSHIP_IDS) {
 if (!seenPtCategory) r.error(`PT memberships catalog URL (${PT_MEMBERSHIPS_CATEGORY}) is never linked`);
 
 // Anchors to Acuity SHOULD also carry target="_blank" + rel="noopener" as a fallback (CLAUDE.md §3).
-// Re-walk the raw HTML to assert that — extractAnchors discards other attrs.
+// Re-walk the raw HTML to assert that - extractAnchors discards other attrs.
 for (const page of ALL_PAGES) {
   const html = readPage(page);
   const re = /<a\b[^>]*href="([^"]*(?:acuityscheduling\.com|marinaribeirobodywork\.as\.me)[^"]*)"[^>]*>/gi;
   for (const m of html.matchAll(re)) {
     const tag = m[0];
     if (!/\btarget="_blank"/i.test(tag)) {
-      r.warn(`${page}: Acuity anchor missing target="_blank" fallback — ${m[1].slice(0, 60)}…`);
+      r.warn(`${page}: Acuity anchor missing target="_blank" fallback - ${m[1].slice(0, 60)}…`);
     } else if (!/\brel="[^"]*noopener/i.test(tag)) {
-      r.warn(`${page}: Acuity anchor has target="_blank" but no rel="noopener" — ${m[1].slice(0, 60)}…`);
+      r.warn(`${page}: Acuity anchor has target="_blank" but no rel="noopener" - ${m[1].slice(0, 60)}…`);
     }
   }
 }
