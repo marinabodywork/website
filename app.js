@@ -178,7 +178,7 @@ document.documentElement.classList.add('js-on');
       // ─── Method page ───
       'method.hero.label': 'The method',
       'method.hero.h1': 'It is all fascia.',
-      'method.hero.sub': 'Fascia is the tissue around every muscle, organ, and nerve in your body. Think cling wrap, layered over everything. When one part of it tightens, everything attached to it tightens too. Most therapists work on the muscle and miss the fascia. That is why the tension keeps coming back.',
+      'method.hero.sub': 'Fascia is the thin tissue that surrounds muscles, organs, and nerves, connecting the entire body as one continuous internal network. Picture a flexible film in many layers covering everything inside. When one region tenses, other parts are affected too. What sets Marina’s approach apart is releasing fascial tension, improving mobility, circulation, neural function, and the communication between body and nervous system.',
 
       'method.why.label': 'Why fascia matters',
       'method.why.h2': 'Four symptoms.<br>One source.',
@@ -333,8 +333,8 @@ document.documentElement.classList.add('js-on');
       'tr.diff.label': 'What makes this different',
       'tr.diff.h2': 'Most trainers cannot see what is holding you back.<br>Marina can.',
       'tr.diff.p1': 'A standard trainer programs around a body they cannot fully assess. They see the lift. They cannot see the fascial chain that is shortening your range, capping your strength, or shifting load into the joint you are protecting without knowing it.',
-      'tr.diff.p2': 'Marina trained in bodywork for ten years before she started taking PT clients. She sees restriction patterns no standard trainer sees. And she can address them inside the session, with hands-on release before the lift, mobility before the load, and breathwork before the next set.',
-      'tr.diff.p3': 'The result is training that compounds. You are not lifting through restriction. You are building strength in the range your body actually has.',
+      'tr.diff.p2': 'With more than ten years studying and working in body therapy before she ever practiced as a personal trainer, she developed a way of seeing that goes beyond traditional training. She reads patterns of tension, compensation, and restriction that often pass unnoticed in a standard approach, and she works those patterns directly during the session.<br><br>Hands-on release before the lift, mobility before the load, and breathwork before the next set. This process stimulates the central nervous system, making more energy available to the body, sharpening focus on each movement, and deepening body awareness.',
+      'tr.diff.p3': 'The result is training that genuinely builds the body from the inside out. It is not just about lifting weight. It is about developing strength with presence, control, mobility, and bodily intelligence in every movement.',
 
       'tr.struct.label': 'The 60-minute session',
       'tr.struct.h2': 'Five phases.<br>Built around your body that day.',
@@ -444,7 +444,7 @@ document.documentElement.classList.add('js-on');
       'about.cred.8': 'Founder, Mulheres Ativas',
 
       'about.letter.label': 'A note from Marina',
-      'about.letter.quote': '"I believe every woman deserves to feel at home in her own body. That is the work I do. With my hands, with breath, and with care. Whatever brings you here, you do not have to arrive ready. You only have to arrive."',
+      'about.letter.quote': '"I believe everyone deserves to feel at home in their own body. That is my work: through my hands, my breath, and conscious movement. Whatever brought you here, you do not need to arrive ready. You only need to arrive."',
       'about.letter.sign': 'Marina',
       'about.perks.label': 'Partner perks',
       'about.perks.h': 'Deals from Marina\'s partners.',
@@ -492,7 +492,7 @@ document.documentElement.classList.add('js-on');
       // Home: hero
       'home.hero.label': '<strong>Marina Ribeiro</strong> · Especialista em liberação fascial · Sydney',
       'home.hero.h1.a': 'Solte o que trava.',
-      'home.hero.h1.b': 'Ganhe a força que fica.',
+      'home.hero.h1.b': 'Ganhe força física e equilíbrio mental.',
       'home.hero.h1.c': 'Uma especialista.',
       'home.hero.h1.d': 'Um sistema.',
       'home.hero.sub': 'Massagem somática, Sensory Energetics e personal training. Tudo conectado, com uma especialista só, pra um corpo que solta e ganha força ao mesmo tempo.',
@@ -629,7 +629,7 @@ document.documentElement.classList.add('js-on');
       // Method page
       'method.hero.label': 'O método',
       'method.hero.h1': 'É tudo fáscia.',
-      'method.hero.sub': 'A fáscia é o tecido fino que envolve cada músculo, órgão e nervo do seu corpo. Imagine um filme plástico em várias camadas, cobrindo tudo por dentro. Quando uma parte aperta, tudo que está conectado aperta junto. A maioria dos terapeutas trabalha o músculo e ignora a fáscia. Por isso a tensão sempre volta.',
+      'method.hero.sub': 'A fáscia é o tecido fino que envolve músculos, órgãos e nervos, conectando todo o corpo como uma grande rede interna. Imagine um filme flexível em várias camadas cobrindo tudo por dentro. Quando uma região fica tensionada, outras partes também são afetadas. O diferencial da abordagem da Marina é destensionar a fáscia, promovendo melhora da mobilidade, circulação, funções neurais e da comunicação entre corpo e sistema nervoso.',
 
       'method.why.label': 'Por que a fáscia importa',
       'method.why.h2': 'Quatro sintomas.<br>Uma só origem.',
@@ -781,8 +781,8 @@ document.documentElement.classList.add('js-on');
       'tr.diff.label': 'O que muda aqui',
       'tr.diff.h2': 'A maioria dos personal trainers não enxerga o que está te travando.<br>A Marina enxerga.',
       'tr.diff.p1': 'Um personal comum monta o treino em cima de um corpo que ele não consegue avaliar por completo. Ele vê você levantando o peso. Mas não enxerga a corrente de fáscia que está encurtando o seu movimento, limitando a sua força, ou jogando peso numa articulação que você está protegendo sem nem perceber.',
-      'tr.diff.p2': 'A Marina passou dez anos estudando e trabalhando com terapia corporal antes de começar a atender em PT. Ela enxerga padrões de bloqueio que um personal comum não vê. E consegue trabalhar esses padrões dentro da sessão. Liberação manual antes do levantamento, mobilidade antes da carga, e respiração antes da próxima série.',
-      'tr.diff.p3': 'O resultado é treino que vai somando de verdade. Você não está levantando peso contra um bloqueio do seu corpo. Você está construindo força dentro do movimento que ele realmente tem.',
+      'tr.diff.p2': 'Há mais de dez anos estudando e trabalhando com terapia corporal antes mesmo de atuar como personal trainer, ela desenvolveu um olhar que vai além do treino tradicional. Enxerga padrões de tensão, compensação e bloqueios que muitas vezes passam despercebidos em uma abordagem comum e trabalha esses padrões diretamente durante a sessão.<br><br>Liberação manual antes do levantamento, mobilidade antes da carga e respiração antes da próxima série. Esse processo estimula o sistema nervoso central, favorecendo maior disponibilidade de energia para o corpo, mais concentração na execução dos movimentos e uma consciência corporal mais profunda.',
+      'tr.diff.p3': 'O resultado é um treino que realmente constrói o corpo de dentro para fora. Não se trata apenas de levantar peso. É sobre desenvolver força com presença, controle, mobilidade e inteligência corporal em cada movimento.',
 
       'tr.struct.label': 'A sessão de 60 minutos',
       'tr.struct.h2': 'Cinco fases.<br>Construídas em torno do seu corpo naquele dia.',
@@ -892,7 +892,7 @@ document.documentElement.classList.add('js-on');
       'about.cred.8': 'Fundadora, Mulheres Ativas',
 
       'about.letter.label': 'Um recado da Marina',
-      'about.letter.quote': '"Acredito que toda mulher merece se sentir em casa no próprio corpo. É esse o meu trabalho. Com as minhas mãos, com a respiração e com cuidado. Seja o que for que te trouxe até aqui, você não precisa chegar pronta. Só precisa chegar."',
+      'about.letter.quote': '"Acredito que todos merecem se sentir em casa no próprio corpo. É esse o meu trabalho: através das minhas mãos, da respiração e do movimento consciente. Seja o que for que te trouxe até aqui, você não precisa chegar pronto. Só precisa chegar."',
       'about.letter.sign': 'Marina',
       'about.perks.label': 'Vantagens com parceiros',
       'about.perks.h': 'Benefícios dos parceiros da Marina.',
