@@ -178,7 +178,7 @@ document.documentElement.classList.add('js-on');
       // ─── Method page ───
       'method.hero.label': 'The method',
       'method.hero.h1': 'It is all fascia.',
-      'method.hero.sub': 'Fascia is the tissue around every muscle, organ, and nerve in your body. Think cling wrap, layered over everything. When one part of it tightens, everything attached to it tightens too. Most therapists work on the muscle and miss the fascia. That is why the tension keeps coming back.',
+      'method.hero.sub': 'Fascia is the thin tissue that surrounds muscles, organs, and nerves, connecting the entire body as one continuous internal network. Picture a flexible film in many layers covering everything inside. When one region tenses, other parts are affected too. What sets Marina’s approach apart is releasing fascial tension, improving mobility, circulation, neural function, and the communication between body and nervous system.',
 
       'method.why.label': 'Why fascia matters',
       'method.why.h2': 'Four symptoms.<br>One source.',
@@ -444,7 +444,7 @@ document.documentElement.classList.add('js-on');
       'about.cred.8': 'Founder, Mulheres Ativas',
 
       'about.letter.label': 'A note from Marina',
-      'about.letter.quote': '"I believe every woman deserves to feel at home in her own body. That is the work I do. With my hands, with breath, and with care. Whatever brings you here, you do not have to arrive ready. You only have to arrive."',
+      'about.letter.quote': '"I believe everyone deserves to feel at home in their own body. That is my work: through my hands, my breath, and conscious movement. Whatever brought you here, you do not need to arrive ready. You only need to arrive."',
       'about.letter.sign': 'Marina',
       'about.perks.label': 'Partner perks',
       'about.perks.h': 'Deals from Marina\'s partners.',
@@ -629,7 +629,7 @@ document.documentElement.classList.add('js-on');
       // Method page
       'method.hero.label': 'O método',
       'method.hero.h1': 'É tudo fáscia.',
-      'method.hero.sub': 'A fáscia é o tecido fino que envolve cada músculo, órgão e nervo do seu corpo. Imagine um filme plástico em várias camadas, cobrindo tudo por dentro. Quando uma parte aperta, tudo que está conectado aperta junto. A maioria dos terapeutas trabalha o músculo e ignora a fáscia. Por isso a tensão sempre volta.',
+      'method.hero.sub': 'A fáscia é o tecido fino que envolve músculos, órgãos e nervos, conectando todo o corpo como uma grande rede interna. Imagine um filme flexível em várias camadas cobrindo tudo por dentro. Quando uma região fica tensionada, outras partes também são afetadas. O diferencial da abordagem da Marina é destensionar a fáscia, promovendo melhora da mobilidade, circulação, funções neurais e da comunicação entre corpo e sistema nervoso.',
 
       'method.why.label': 'Por que a fáscia importa',
       'method.why.h2': 'Quatro sintomas.<br>Uma só origem.',
@@ -892,7 +892,7 @@ document.documentElement.classList.add('js-on');
       'about.cred.8': 'Fundadora, Mulheres Ativas',
 
       'about.letter.label': 'Um recado da Marina',
-      'about.letter.quote': '"Acredito que toda mulher merece se sentir em casa no próprio corpo. É esse o meu trabalho. Com as minhas mãos, com a respiração e com cuidado. Seja o que for que te trouxe até aqui, você não precisa chegar pronta. Só precisa chegar."',
+      'about.letter.quote': '"Acredito que todos merecem se sentir em casa no próprio corpo. É esse o meu trabalho: através das minhas mãos, da respiração e do movimento consciente. Seja o que for que te trouxe até aqui, você não precisa chegar pronto. Só precisa chegar."',
       'about.letter.sign': 'Marina',
       'about.perks.label': 'Vantagens com parceiros',
       'about.perks.h': 'Benefícios dos parceiros da Marina.',
