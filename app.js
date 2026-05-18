@@ -295,7 +295,6 @@ document.documentElement.classList.add('js-on');
       'mas.s.p3': 'More than a body experience. The work crosses the connection between body, emotion, and mind. Clients leave with lightness, mental clarity, emotional balance, and a body that finally remembers what it feels like to switch off.',
 
       'mas.s.cta': 'Book Massage',
-      'mas.s.mship.cta': 'Make it weekly →',
 
 
       'mas.choose.label': 'How to choose',
@@ -793,7 +792,6 @@ document.documentElement.classList.add('js-on');
       'mas.s.p3': 'Mais do que uma experiência só corporal. O trabalho atravessa a conexão entre corpo, emoção e mente. As clientes saem com leveza, clareza mental, equilíbrio emocional, e um corpo que finalmente lembra como é desligar.',
 
       'mas.s.cta': 'Agendar Massagem',
-      'mas.s.mship.cta': 'Tornar semanal →',
 
 
       'mas.choose.label': 'Como escolher',

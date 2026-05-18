@@ -14,12 +14,14 @@ const r = makeReporter('check-jsonld');
 const EXPECTED_OFFERS = {
   '#service-corporal': { price: '125', slug: 'SomaticMassageCorporal' },
   '#service-facial':   { price: '125', slug: 'SomaticMassageFacial' },
-  '#service-sensory':  { price: '305', slug: 'SensoryEnergetics' },
+  // Sensory Energetics is on launch pricing (regular A$305). Keep the JSON-LD price in
+  // sync with the visible launch price, not the regular rate.
+  '#service-sensory':  { price: '224', slug: 'SensoryEnergetics' },
 };
 // PT plans: every documented monthly membership price must appear in #service-pt.offers,
 // alongside the single-session offer. Each plan offer also carries a slug now (the per-plan
 // Acuity URL) since we moved from packages to recurring monthly memberships.
-const EXPECTED_PT_PRICES = ['99', '380', '680', '900'];
+const EXPECTED_PT_PRICES = ['116', '404', '710', '1007'];
 const EXPECTED_PT_SLUG = 'SinglePTLesson';
 
 // Parse and validate per-page.

@@ -21,7 +21,9 @@ const REQUIRED_SLUGS = [
   'Assessment',
   'appointmentType=93324053',
 ];
-const REQUIRED_MEMBERSHIP_IDS = ['2213824', '2213848', '2213845'];
+// Weekly Sensory membership (id 2213845) is currently unlisted on the site during the
+// Sensory launch promo - the catalog entry stays configured in Acuity but isn't surfaced.
+const REQUIRED_MEMBERSHIP_IDS = ['2213824', '2213848'];
 const PT_MEMBERSHIPS_CATEGORY = 'category=Personal+Training+-+Memberships';
 
 const seenSlugs = new Set();
