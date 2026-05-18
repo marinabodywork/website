@@ -1,7 +1,7 @@
 {
   "name": "marina-bodywork-website",
   "private": true,
-  "description": "Static site for Marina Bodywork. The npm package only exists to host check scripts — there is no build step.",
+  "description": "Static site for Marina Bodywork. The npm package only exists to host check scripts - there is no build step.",
   "type": "module",
   "scripts": {
     "check": "node scripts/run-all.mjs",
