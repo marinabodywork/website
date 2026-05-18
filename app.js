@@ -41,7 +41,7 @@ document.documentElement.classList.add('js-on');
       // ─── Home: hero ───
       'home.hero.label': '<strong>Marina Ribeiro</strong> · Fascia release specialist · Sydney',
       'home.hero.h1.a': 'Release the restriction.',
-      'home.hero.h1.b': 'Build the strength.',
+      'home.hero.h1.b': 'Build physical strength and mental balance.',
       'home.hero.h1.c': 'One specialist.',
       'home.hero.h1.d': 'One system.',
       'home.hero.sub': 'Fascia release, Sensory Energetics, and conscious-movement personal training.',
@@ -150,7 +150,7 @@ document.documentElement.classList.add('js-on');
       'faq.search.placeholder': 'Search the questions',
       'faq.search.empty': 'No questions match. Try a different term.',
       'a11y.skip': 'Skip to main content',
-      'about.bio.pullquote': 'Most fitness spaces are not built for the bodies and lives most women actually have.',
+      'about.bio.pullquote': 'Physical exercise goes beyond aesthetics. It is the building of a strong, functional, conscious body — one that sustains autonomy, longevity, and quality of life at every stage.',
       'nf.label': 'Page not found',
       'nf.h1': 'This page took a different route.',
       'nf.sub': 'It might have moved, or never existed. Either way, the work is still here.',
@@ -278,7 +278,7 @@ document.documentElement.classList.add('js-on');
       'mas.s.meta': '90 minutes · A$305 · Signature',
       'mas.s.badge': 'Signature',
       'mas.s.p1': 'A 90-minute integrative session focused on the deep release of physical and emotional patterns stored in the nervous system. Inspired by ancient Eastern techniques, breathwork, body stimuli, and somatic awareness. The work activates the central nervous system directly.',
-      'mas.s.p2': 'Involuntary tremors and natural neuromuscular reactions are normal during the session. They help the body discharge tension, regulate stress, and lower cortisol. The technique also supports neurotransmitters tied to well-being, focus, motivation, and pleasure (including dopamine).',
+      'mas.s.p2': 'During the session, involuntary tremors in the body can occur and are natural responses of the nervous system. These stimuli help release accumulated tension, regulate stress, and lower cortisol levels. The technique also supports the activation of neurotransmitters tied to well-being, focus, motivation, relaxation, and pleasure, including dopamine.',
       'mas.s.p3': 'More than a body experience. The work crosses the connection between body, emotion, and mind. Clients leave with lightness, mental clarity, emotional balance, and a body that finally remembers what it feels like to switch off.',
 
       'mas.s.cta': 'Book Massage',
@@ -429,7 +429,7 @@ document.documentElement.classList.add('js-on');
       'about.bio.h2': 'Eighteen years, two continents, one practice.',
       'about.bio.p1': 'Marina Ribeiro da Silva is a Physical Education professional with more than eighteen years dedicated to movement, health, and women\'s well-being. Movement and bodywork are not two careers. They are two sides of how a body changes.',
       'about.bio.p2': 'She started through dance, teaching from age fifteen. She studied Physical Education to professionalise what she had been doing intuitively since childhood. In Brazil she worked with the Minas Gerais government on Movimenta Contagem, the largest free outdoor physical-activity programme in the country.',
-      'about.bio.p3': 'After the pandemic she founded Mulheres Ativas, a programme for women: particularly women over forty, mothers, and those who had never felt at home in a traditional gym. That line is the heart of her work.',
+      'about.bio.p3': 'After the pandemic she founded Mulheres Ativas, a programme for women: particularly women over forty, mothers, and those who had never felt at home in a traditional gym.',
       'about.bio.p4': 'In Sydney she specialises in women\'s training across every stage of life, including perimenopause: conditioning, hypertrophy, mobility, posture, body awareness, quality of life. Across ten plus years of bodywork she developed her own fascial-release technique combining breath, somatic awareness, and myofascial release. It is the foundation of every session she runs.',
 
       'about.creds.label': 'Credentials',
@@ -601,7 +601,7 @@ document.documentElement.classList.add('js-on');
       'faq.search.placeholder': 'Buscar nas perguntas',
       'faq.search.empty': 'Nenhuma pergunta corresponde. Tente outro termo.',
       'a11y.skip': 'Ir para o conteúdo principal',
-      'about.bio.pullquote': 'A maioria dos espaços de treino não foi feita pros corpos e pras vidas que as mulheres realmente têm.',
+      'about.bio.pullquote': 'O exercício físico vai além da estética. É a construção de um corpo forte, funcional e consciente, que sustenta autonomia, longevidade e qualidade de vida em cada fase da vida.',
       'nf.label': 'Página não encontrada',
       'nf.h1': 'Esta página foi por outro caminho.',
       'nf.sub': 'Pode ter mudado de lugar, ou pode nunca ter existido. De qualquer forma, o trabalho continua aqui.',
@@ -726,7 +726,7 @@ document.documentElement.classList.add('js-on');
       'mas.s.meta': '90 minutos · A$305 · Assinatura',
       'mas.s.badge': 'Assinatura',
       'mas.s.p1': 'Sessão integrativa de 90 minutos focada em soltar, lá no fundo, os padrões físicos e emocionais que ficam guardados no sistema nervoso. Inspirada em técnicas ancestrais do Oriente, respiração guiada, estímulos no corpo e consciência somática. Ativa o sistema nervoso central de forma direta.',
-      'mas.s.p2': 'Tremores involuntários e reações naturais no corpo podem aparecer durante a sessão. Não se assuste se isso acontecer com você. Eles ajudam o corpo a descarregar tensão, regular o estresse e reduzir o cortisol. A técnica também ativa neurotransmissores ligados a bem-estar, foco, motivação e prazer (incluindo a dopamina).',
+      'mas.s.p2': 'Durante a sessão, tremores involuntários no corpo podem acontecer e são respostas naturais do sistema nervoso. Esses estímulos auxiliam na liberação de tensões acumuladas, na regulação do estresse e na redução dos níveis de cortisol. A técnica também favorece a ativação de neurotransmissores ligados ao bem-estar, foco, motivação, relaxamento e prazer, incluindo a dopamina.',
       'mas.s.p3': 'Mais do que uma experiência só corporal. O trabalho atravessa a conexão entre corpo, emoção e mente. As clientes saem com leveza, clareza mental, equilíbrio emocional, e um corpo que finalmente lembra como é desligar.',
 
       'mas.s.cta': 'Agendar Massagem',
@@ -814,7 +814,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.basic.f4': 'Programação no app MFIT incluída',
 
       'tr.plan.golden.name': 'Golden',
-      'tr.plan.golden.price': 'A$1.020',
+      'tr.plan.golden.price': 'A$1,020',
       'tr.plan.golden.per': 'A$85/sessão · 12 sessões',
       'tr.plan.golden.badge': 'Mais popular',
       'tr.plan.golden.f1': '2x por semana',
@@ -823,7 +823,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.golden.f4': 'Programação no app MFIT incluída',
 
       'tr.plan.diamond.name': 'Diamond',
-      'tr.plan.diamond.price': 'A$1.800',
+      'tr.plan.diamond.price': 'A$1,800',
       'tr.plan.diamond.per': 'A$75/sessão · 24 sessões',
       'tr.plan.diamond.badge': 'Melhor custo-benefício',
       'tr.plan.diamond.f1': '3x por semana',
@@ -877,7 +877,7 @@ document.documentElement.classList.add('js-on');
       'about.bio.h2': 'Dezoito anos, dois continentes, uma prática.',
       'about.bio.p1': 'Marina Ribeiro da Silva é profissional de Educação Física, com mais de dezoito anos dedicados ao movimento, à saúde e ao bem-estar das mulheres. Pra ela, movimento e terapia corporal não são duas carreiras. São dois lados de como um corpo muda.',
       'about.bio.p2': 'Começou pela dança, dando aulas desde os quinze anos. Estudou Educação Física pra profissionalizar o que já fazia intuitivamente desde criança. No Brasil, trabalhou com o governo de Minas Gerais no Movimenta Contagem. O maior programa gratuito de atividade física ao ar livre do país.',
-      'about.bio.p3': 'Depois da pandemia fundou o Mulheres Ativas, um programa para mulheres. Especialmente mulheres acima dos quarenta, mães, e as que nunca se sentiram em casa numa academia tradicional. Essa ideia é o coração do trabalho dela.',
+      'about.bio.p3': 'Depois da pandemia fundou o Mulheres Ativas, um programa para mulheres. Especialmente mulheres acima dos quarenta, mães, e as que nunca se sentiram em casa numa academia tradicional.',
       'about.bio.p4': 'Em Sydney, ela é especialista em treino feminino em todas as fases da vida, incluindo perimenopausa: condicionamento, hipertrofia, mobilidade, postura, consciência corporal, qualidade de vida. Em mais de dez anos de terapia corporal, ela desenvolveu a própria técnica de liberação fascial, combinando respiração, consciência somática e liberação miofascial. É a base de cada sessão que ela conduz.',
 
       'about.creds.label': 'Credenciais',

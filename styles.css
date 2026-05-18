@@ -685,6 +685,7 @@ p, .lede { text-wrap: pretty; }
 .modality-card h3 { font-size: 24px; margin-bottom: var(--s-2); }
 .modality-card .price { font-family: var(--display); font-style: italic; color: var(--sand-deep); font-size: 18px; margin-bottom: var(--s-2); }
 .modality-card p { color: var(--ink-soft); font-size: 16px; line-height: 1.7; margin: 0; }
+.modality-card__cert { display: block; width: 100%; height: auto; margin-top: var(--s-3); border-radius: var(--r); border: 1px solid var(--line); }
 @media (max-width: 720px) { .modality-grid { grid-template-columns: 1fr; } }
 
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-3); margin-top: var(--s-5); }
