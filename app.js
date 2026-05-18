@@ -41,7 +41,7 @@ document.documentElement.classList.add('js-on');
       // ─── Home: hero ───
       'home.hero.label': '<strong>Marina Ribeiro</strong> · Fascia release specialist · Sydney',
       'home.hero.h1.a': 'Release the restriction.',
-      'home.hero.h1.b': 'Build the strength.',
+      'home.hero.h1.b': 'Build physical strength and mental balance.',
       'home.hero.h1.c': 'One specialist.',
       'home.hero.h1.d': 'One system.',
       'home.hero.sub': 'Fascia release, Sensory Energetics, and conscious-movement personal training.',
@@ -814,7 +814,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.basic.f4': 'Programação no app MFIT incluída',
 
       'tr.plan.golden.name': 'Golden',
-      'tr.plan.golden.price': 'A$1.020',
+      'tr.plan.golden.price': 'A$1,020',
       'tr.plan.golden.per': 'A$85/sessão · 12 sessões',
       'tr.plan.golden.badge': 'Mais popular',
       'tr.plan.golden.f1': '2x por semana',
@@ -823,7 +823,7 @@ document.documentElement.classList.add('js-on');
       'tr.plan.golden.f4': 'Programação no app MFIT incluída',
 
       'tr.plan.diamond.name': 'Diamond',
-      'tr.plan.diamond.price': 'A$1.800',
+      'tr.plan.diamond.price': 'A$1,800',
       'tr.plan.diamond.per': 'A$75/sessão · 24 sessões',
       'tr.plan.diamond.badge': 'Melhor custo-benefício',
       'tr.plan.diamond.f1': '3x por semana',
