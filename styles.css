@@ -834,6 +834,85 @@ p, .lede { text-wrap: pretty; }
 .membership-chooser .h3 { margin-bottom: var(--s-1); }
 .membership-chooser .btn-row { flex-wrap: wrap; gap: var(--s-2); }
 
+.ultimate-card {
+  position: relative;
+  margin-top: var(--s-4);
+  padding: var(--s-5);
+  border-radius: var(--r-lg);
+  background: var(--forest);
+  color: var(--cream);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.ultimate-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(212, 178, 124, 0.18), transparent 55%);
+  pointer-events: none;
+}
+.ultimate-card > * { position: relative; }
+.ultimate-card__badge {
+  display: inline-block;
+  background: var(--sand);
+  color: var(--forest);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: var(--s-2);
+}
+.ultimate-card__title {
+  font-family: var(--display);
+  font-size: 34px;
+  line-height: 1.15;
+  color: var(--sand);
+  margin: 0 0 var(--s-1);
+}
+.ultimate-card__sub { font-size: 17px; line-height: 1.65; color: var(--cream); margin: 0 0 var(--s-4); max-width: 58ch; }
+.ultimate-card__price {
+  display: flex; align-items: baseline; flex-wrap: wrap;
+  gap: 8px 18px;
+  padding-bottom: var(--s-3); margin-bottom: var(--s-4);
+  border-bottom: 1px solid rgba(212, 178, 124, 0.28);
+}
+.ultimate-card__amount { font-family: var(--display); font-style: italic; font-size: 36px; line-height: 1; color: var(--sand); }
+.ultimate-card__cycle { font-size: 14px; color: rgba(244, 234, 217, 0.82); letter-spacing: 0.04em; }
+.ultimate-card__worth { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--sand); padding: 4px 10px; border: 1px solid rgba(212, 178, 124, 0.55); border-radius: 999px; }
+.ultimate-card__journey { margin-bottom: var(--s-4); }
+.ultimate-card__journey-label { display: block; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sand); font-weight: 600; margin-bottom: var(--s-3); }
+.ultimate-card__weeks { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-2); }
+.ultimate-card__weeks li {
+  background: rgba(244, 234, 217, 0.06);
+  border: 1px solid rgba(212, 178, 124, 0.22);
+  border-radius: var(--r);
+  padding: var(--s-3);
+  display: flex; flex-direction: column; gap: 6px;
+  color: var(--cream);
+}
+.ultimate-card__week-num {
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--sand); font-weight: 700;
+}
+.ultimate-card__weeks li strong {
+  font-family: var(--display); font-weight: 500; font-size: 19px; line-height: 1.2; color: var(--cream); font-style: italic;
+}
+.ultimate-card__weeks li span:last-child { font-size: 14px; line-height: 1.55; color: rgba(244, 234, 217, 0.82); }
+.ultimate-card__scarcity { font-size: 14px; line-height: 1.6; color: var(--cream); margin: 0 0 var(--s-2); max-width: 64ch; font-style: italic; }
+.ultimate-card__terms { font-size: 12px; letter-spacing: 0.04em; color: rgba(244, 234, 217, 0.7); margin: 0 0 var(--s-3); }
+.ultimate-card .btn--primary { background: var(--sand); color: var(--forest); }
+@media (max-width: 900px) {
+  .ultimate-card__weeks { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .ultimate-card { padding: var(--s-4); }
+  .ultimate-card__title { font-size: 28px; }
+  .ultimate-card__amount { font-size: 28px; }
+  .ultimate-card__weeks { grid-template-columns: 1fr; }
+}
+
 /* Guarantee strip */
 .guarantee {
   background: var(--sand);
