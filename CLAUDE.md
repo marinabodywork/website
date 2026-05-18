@@ -161,7 +161,7 @@ Section order top-to-bottom:
 
 1. **`<header class="hero">` `#main`** — h1 in four lines (`home.hero.h1.a..d`), sub (`home.hero.sub`), two service-specific CTAs, "Talk to Marina first" WhatsApp link, hero `<picture>` (WebP + JPG fallback).
 2. **`#system`** — `section--dark`. Three-card combo grid (`.combo-grid > .combo-card`, with `.combo-card--winner` on the third) explaining why massage alone fails / training alone plateaus / Marina's combined system works. Keys `home.combo.label`/`h2`/`intro`/`c1.*`/`c2.*`/`c3.*`/`close`/`cta`. The CTA anchors to `#services`.
-3. **`#services`** — two service cards in `.svc-grid.svc-grid--two`, each containing two internal option rows (`.svc-options > .svc-option` × 2). Section header uses `home.svc.h2` ("Two services. Two ways to commit.") + `home.svc.sub`.
+3. **`#services`** — two service cards in `.svc-grid.svc-grid--two`, each containing two internal option rows (`.svc-options > .svc-option` × 2). Section header uses `home.svc.h2` ("Two services. Two ways to start.") + `home.svc.sub`.
    1. **Massage** (`home.svc.massage.*`) with two options:
       - Single session (`home.svc.massage.single.*`) — `acuity-embed-button` on `.svc-option` → `/bookmassage` hub.
       - Weekly membership (`home.svc.massage.mship.*`) — carries SIGNATURE badge as `.svc-option__badge`. Internal link → `massage.html#mas-pricing` (not Acuity).

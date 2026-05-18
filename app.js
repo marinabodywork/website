@@ -67,7 +67,7 @@ document.documentElement.classList.add('js-on');
 
       // ─── Home: services overview ───
       'home.svc.label': 'Services',
-      'home.svc.h2': 'Two services. Two ways to commit.',
+      'home.svc.h2': 'Two services. Two ways to start.',
       'home.svc.sub': 'Massage or personal training. Then choose between a single session or an ongoing membership.',
       'home.svc.massage.h': 'Massage',
       'home.svc.massage.p': 'Somatic Massage Corporal, Facial, or the 90-minute Sensory Energetics signature work. Marina-developed fascial release combined with breathwork and somatic awareness.',
@@ -526,7 +526,7 @@ document.documentElement.classList.add('js-on');
 
       // Home: services
       'home.svc.label': 'Serviços',
-      'home.svc.h2': 'Dois serviços. Duas formas de se comprometer.',
+      'home.svc.h2': 'Dois serviços. Duas formas de começar.',
       'home.svc.sub': 'Massagem ou personal training. Depois você escolhe entre uma sessão avulsa ou uma mensalidade contínua.',
       'home.svc.massage.h': 'Massagem',
       'home.svc.massage.p': 'Massagem Somática Corporal, Facial, ou a sessão assinatura Sensory Energetics de 90 minutos. Liberação fascial desenvolvida pela Marina, combinada com respiração e consciência somática.',
