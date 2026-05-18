@@ -391,7 +391,7 @@ document.documentElement.classList.add('js-on');
       'tr.single.cta': 'Book single session',
 
       'tr.assess.name': 'Physical assessment',
-      'tr.assess.sub': '60-minute movement, posture, and strength assessment with Marina. Included with the Diamond plan. Optional one-off for everyone else.',
+      'tr.assess.sub': 'Movement, posture, and strength assessment with Marina. Included with the Diamond plan. Optional one-off for everyone else.',
       'tr.assess.price': 'A$99',
       'tr.assess.cta': 'Book assessment',
 
@@ -847,7 +847,7 @@ document.documentElement.classList.add('js-on');
       'tr.single.cta': 'Agendar sessão avulsa',
 
       'tr.assess.name': 'Avaliação física',
-      'tr.assess.sub': 'Avaliação de movimento, postura e força de 60 minutos com a Marina. Incluída no plano Diamond. Opcional avulsa para quem está em outro plano ou ainda decidindo.',
+      'tr.assess.sub': 'Avaliação de movimento, postura e força com a Marina. Incluída no plano Diamond. Opcional avulsa para quem está em outro plano ou ainda decidindo.',
       'tr.assess.price': 'A$99',
       'tr.assess.cta': 'Agendar avaliação',
 
