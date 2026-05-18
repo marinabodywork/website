@@ -80,17 +80,20 @@ Every booking CTA on the site that points to an Acuity URL carries class `acuity
 
 **Acuity URL inventory**, every service has a dedicated URL; the hub URLs (`/bookmassage`, `/BookPTlessons`) are only used in nav/hero/drawer/sticky/footer as generic entry points.
 
+**Pricing principle: every visible total is "cabalistic"** — its digits sum to 8. Examples: 116→1+1+6=8, 107→1+0+7=8, 224→2+2+4=8, 404→4+0+4=8, 710→7+1+0=8, 1007→1+0+0+7=8, 125→1+2+5=8. Per-session display rates derived by dividing the total (e.g. A$101 / A$88.75 / A$83.92 for PT plans) don't need to sum to 8 — only the headline prices do. When changing prices, preserve this rule. Marina cares about it.
+
 | Service | URL slug |
 |---|---|
 | Massage hub | `marinaribeirobodywork.as.me/bookmassage` |
 | Somatic Massage Corporal (60 min · A$125) | `.../SomaticMassageCorporal` |
 | Somatic Massage Facial (60 min · A$125) | `.../SomaticMassageFacial` |
-| Sensory Energetics (60 min · A$305) | `.../SensoryEnergetics` |
+| Sensory Energetics (60 min · A$224 launch / A$305 regular) | `.../SensoryEnergetics` |
 | PT hub | `marinaribeirobodywork.as.me/BookPTlessons` |
-| Single PT lesson (A$99) | `.../SinglePTLesson` |
-| Physical assessment (A$99 standalone) | `.../Assessment` |
+| Single PT lesson (A$116) | `.../SinglePTLesson` |
+| Physical assessment (A$107 standalone) | `.../Assessment` |
 | Online consultancy (A$100 / 6 weeks, recurring) | `marinaribeirobodywork.as.me/?appointmentType=93324053` |
 | PT memberships (Basic / Golden / Diamond), single catalog landing | `https://app.acuityscheduling.com/catalog.php?owner=39322566&category=Personal+Training+-+Memberships` |
+| MFIT add-on for Basic clients (A$107, no Acuity URL yet) | WhatsApp deep link only |
 
 **Per-service membership catalog URLs**, weekly memberships are sold through Acuity's catalog (cart) endpoint with the per-service `id`:
 
@@ -98,14 +101,14 @@ Every booking CTA on the site that points to an Acuity URL carries class `acuity
 https://app.acuityscheduling.com/catalog.php?owner=39322566&action=addCart&clear=1&id={id}
 ```
 
-| Membership | `id` |
-|---|---|
-| Weekly Corporal | `2213824` |
-| Weekly Facial | `2213848` |
-| Weekly Sensory Energetics | `2213845` |
-| Ultimate (limited May + Jun 2026) | `2215320` |
+| Membership | `id` | Price |
+|---|---|---|
+| Weekly Corporal | `2213824` | A$107/session |
+| Weekly Facial | `2213848` | A$107/session |
+| ~~Weekly Sensory Energetics~~ (currently disabled) | `2213845` | n/a — Sensory only sold as single during launch |
+| Ultimate (limited May + Jun 2026) | `2215320` | A$100/week (A$400/4-week cycle) |
 
-These appear on `massage.html`'s service blocks ("Make it weekly →" secondary CTAs, keys `mas.c.mship.cta`/`mas.f.mship.cta`/`mas.s.mship.cta`) and on the `#mas-pricing` Weekly memberships strip. The home `home.svc.s2` Memberships card links to `massage.html#mas-pricing` (not WhatsApp).
+These appear on `massage.html`'s service blocks ("Make it weekly →" secondary CTAs on Corporal + Facial only — Sensory has no membership during launch, only the single-session CTA) and on the `#mas-pricing` Weekly memberships strip (which lists Corporal and Facial only). The home `home.svc.s2` Memberships card links to `massage.html#mas-pricing` (not WhatsApp).
 
 **WhatsApp**, open-conversation CTAs use `https://wa.me/61451021478?text=...`. The home `#consult` section and "Talk to Marina first →" links use these.
 
@@ -144,8 +147,8 @@ Non-`training` areas get the `acuity-embed-button` class on the dynamically rend
   - Four `Service` entries with explicit `@id`s and `offers`:
     - `#service-corporal` (A$125, alternateName "Somatic Release Massage")
     - `#service-facial` (A$125)
-    - `#service-sensory` (A$305)
-    - `#service-pt`, has multiple `offers` (Single A$99 with SinglePTLesson URL, plus Basic A$570 / Golden A$1,020 / Diamond A$1,800, plans listed without URLs to keep the schema simple)
+    - `#service-sensory` (A$224 launch price; offer carries a `description` noting regular A$305)
+    - `#service-pt`, has multiple `offers` (Single A$116 with SinglePTLesson URL, plus Basic A$404 / Golden A$710 / Diamond A$1,007 monthly memberships pointing to the PT memberships catalog category URL; each plan offer carries `priceSpecification` with `billingDuration: P28D`)
   - `WebSite` (`@id` `#website`) with `inLanguage: ["en","pt-BR"]`.
 - **Inner pages** ship compact `@graph`s that reference the home's canonical entities by `@id` (no duplication):
   - `method.html` → `WebPage` + `BreadcrumbList` + `Article` ("It is all fascia") with Marina as author.
@@ -183,9 +186,9 @@ Section order top-to-bottom:
 - **Services section**, three `.service-block` articles in `section--cream`:
   - **Somatic Massage Corporal** (`mas.c.*`), Marina-developed methodology paragraphs (p1: integrating Brazilian lymphatic drainage, myofascial release, breathwork, deep relaxation; p2: addresses muscular tension, fluid retention, accumulated stress, fascial rigidity → circulation, mobility, body awareness, lightness; p3: nervous-system layer regulates cortisol → reconnects body and mind). `mas.c.cta` → SomaticMassageCorporal Acuity URL; `mas.c.mship.cta` "Make it weekly →" → catalog id=2213824.
   - **Somatic Massage Facial** (`mas.f.*`), TMJ + intraoral (buccal) work for jaw tension, headaches, disturbed sleep. `mas.f.cta` → SomaticMassageFacial; `mas.f.mship.cta` → catalog id=2213848.
-  - **Sensory Energetics** (`mas.s.*`), 60-min signature, `.service-block--signature` variant. Three paragraphs covering: integrative method activating CNS; involuntary tremors are normal and discharge tension/regulate stress/lower cortisol/support dopamine; mind-body-emotion reconnection. `mas.s.cta` → SensoryEnergetics; `mas.s.mship.cta` → catalog id=2213845.
+  - **Sensory Energetics** (`mas.s.*`), 60-min signature, `.service-block--signature` variant. Three paragraphs covering: integrative method activating CNS; involuntary tremors are normal and discharge tension/regulate stress/lower cortisol/support dopamine; mind-body-emotion reconnection. **Currently on launch pricing: A$224 (regular A$305).** The service block carries two badges side-by-side inside `.service-block__badges` — `.service-block__badge` (Signature) and `.service-block__badge--launch` (Launch price · forest bg / sand text). A `service-block__launch-note` line below the meta restates the regular price. `mas.s.cta` → SensoryEnergetics. **No weekly membership during launch** — the `mas.s.mship.cta` link was removed; catalog id `2213845` is left configured in Acuity but not surfaced anywhere on the site.
 - **How to choose** (`mas.choose.*`), `section--pale`, three `.choose-card` items mapping symptom → recommended service (standard remedial hasn't held → Corporal; jaw/TMJ → Facial; tension keeps coming back → Sensory Energetics).
-- **`#mas-pricing`**, `section--cream`, `container--narrow`. Pricing table (`.pricing__row` with name/sub/price) plus the Weekly memberships strip with three `acuity-embed-button` links to the catalog ids. Keys `mas.price.label`/`h2`/`r1.*`/`r2.*`/`book`/`mship.h`/`mship.note`/`mship.corporal`/`mship.facial`/`mship.sensory`.
+- **`#mas-pricing`**, `section--cream`, `container--narrow`. Pricing table (`.pricing__row` with name/sub/price) plus the Weekly memberships strip with two `acuity-embed-button` links to the catalog ids (Corporal + Facial at A$107/session each; Sensory weekly is omitted during the launch). Sensory row carries `mas.price.r2.note` ("Limited launch rate. Returns to A$305") below the price, rendered via the new `.pricing__note--launch` style. Keys `mas.price.label`/`h2`/`r1.*`/`r2.*`/`r2.note`/`book`/`mship.h`/`mship.note`/`mship.corporal`/`mship.facial`.
 - **FAQ**, `.faq__search` live filter + `.faq__empty` empty state. Keys `mas.faq.*`.
 - Footer + sticky bar.
 
@@ -202,14 +205,15 @@ Section order top-to-bottom:
   4. Strengthening, stability, conditioning
   5. Muscle relaxation and breathwork
 - **6 specialty chips**, `section--cream`, `tr.spec.label`/`h2` + `.specialty-chips > .specialty-chip` × 6 (`tr.spec.s1..s6`): Hypertrophy / Physical conditioning / Mobility and posture / Strength and stability / Perimenopause and menopause / Mind-body well-being.
-- **`#plans`**, `section--pale`. Plans are sold as **monthly memberships, billed every 4 weeks** (per-session rate unchanged from the old cycle-based model). Three-tier `.plan-grid > .plan-card` + `.single-strip` standalone:
-  - **Basic**, A$380/month (A$95/session × 4 sessions/month) · 1x/week, same weekday + time · **2-month minimum** · freeze 1 week per minimum period. Live sessions only, no MFIT app, no physical assessment.
-  - **Golden**, `.plan-card__badge` "Most popular". A$680/month (A$85/session × 8 sessions/month) · 2x/week, same weekdays + times · **2-month minimum** · freeze 2 weeks per minimum period · MFIT app programming included (no physical assessment).
-  - **Diamond**, `.plan-card__badge--alt` "Best value". A$900/month (A$75/session × 12 sessions/month) · 3x/week, same weekdays + times · **3-month minimum** · freeze 3 weeks per minimum period · MFIT app + **physical assessment** both included.
+- **`#plans`**, `section--pale`. Plans are sold as **monthly memberships, billed every 4 weeks**. Three-tier `.plan-grid > .plan-card` + `.single-strip` standalones:
+  - **Basic**, A$404/month (A$101/session × 4 sessions/month) · 1x/week, same weekday + time · **2-month minimum** · freeze 1 week per minimum period. Live sessions only. MFIT app available as add-on (see `tr.mfit.*`).
+  - **Golden**, `.plan-card__badge` "Most popular". A$710/month (A$88.75/session × 8 sessions/month) · 2x/week, same weekdays + times · **2-month minimum** · freeze 2 weeks per minimum period · MFIT app programming included (no physical assessment).
+  - **Diamond**, `.plan-card__badge--alt` "Best value". A$1,007/month (A$83.92/session × 12 sessions/month — total is exact, per-session is rounded display) · 3x/week, same weekdays + times · **3-month minimum** · freeze 3 weeks per minimum period · MFIT app + **physical assessment** both included.
   - All three plan-card CTAs ("Start membership") point to the **PT memberships catalog category URL** (`https://app.acuityscheduling.com/catalog.php?owner=39322566&category=Personal+Training+-+Memberships`), where the client picks the plan inside Acuity's catalog UI. The legacy per-plan appointment-type URLs (`/PTBasic`, `/PTGolden`, `/DiamondPTSession`) are no longer linked from the site.
-  - **Single session**, `.single-strip`, framed as the way to **test the work before committing to monthly**. A$99, no commitment. URL `/SinglePTLesson`.
-  - **Physical assessment**, second `.single-strip` directly below the single session. A$99 standalone movement/posture/strength assessment with Marina. Included with Diamond, optional one-off for Basic/Golden clients (or anyone curious). CTA uses the Acuity URL `marinaribeirobodywork.as.me/Assessment` with `acuity-embed-button` (in-site modal). Keys `tr.assess.{name,sub,price,cta}`. Visible copy intentionally omits the session length per Marina's request.
-  - **Online consultancy**, third `.single-strip` below the assessment. A$100 every 6 weeks, auto-renewing, for online video check-ins with Marina to review progress and adjust the training program. Designed for clients training remotely (away from Snap Fitness Maroubra). CTA uses the Acuity URL `marinaribeirobodywork.as.me/?appointmentType=93324053` with `acuity-embed-button` (in-site modal). The query-string form is used here because the appointment-type lives on the default Acuity scheduler rather than at a named slug. Keys `tr.consult.{name,sub,price,cta}`.
+  - **Single session**, `.single-strip`, framed as the way to **test the work before committing to monthly**. A$116, no commitment. URL `/SinglePTLesson`.
+  - **Physical assessment**, second `.single-strip` directly below the single session. A$107 standalone movement/posture/strength assessment with Marina. Included with Diamond, optional one-off for Basic/Golden clients (or anyone curious). CTA uses the Acuity URL `marinaribeirobodywork.as.me/Assessment` with `acuity-embed-button` (in-site modal). Keys `tr.assess.{name,sub,price,cta}`. Visible copy intentionally omits the session length per Marina's request.
+  - **MFIT add-on**, third `.single-strip` below the assessment. A$107 add-on for Basic-plan clients who want app programming on top of their live sessions. Already bundled into Golden and Diamond — this strip exists only to give Basic clients an entry point. **No Acuity URL yet**; CTA is a WhatsApp deep link (`wa.me/61451021478?text=...`) so the customer messages Marina to add it manually. When Marina configures an Acuity product, swap the CTA href and add the `acuity-embed-button` class. Keys `tr.mfit.{name,sub,price,cta}`.
+  - **Online consultancy**, fourth `.single-strip` below MFIT. A$100 every 6 weeks, auto-renewing, for online video check-ins with Marina to review progress and adjust the training program. Designed for clients training remotely (away from Snap Fitness Maroubra). CTA uses the Acuity URL `marinaribeirobodywork.as.me/?appointmentType=93324053` with `acuity-embed-button` (in-site modal). The query-string form is used here because the appointment-type lives on the default Acuity scheduler rather than at a named slug. Keys `tr.consult.{name,sub,price,cta}`.
   - The transferable-membership rule lives in the `#policy` section (`tr.pol.commit.p3`), not on the plan cards.
   - All plan CTAs carry `acuity-embed-button`. CTA label is "Start membership" (`tr.plan.book`); single session CTA is "Book single session" (`tr.single.cta`). `tr.plans.sub` and `tr.plan.note` both explain the **client self-serve "Select and make recurring" flow**, clients book their first session, click that option in Acuity, and the same weekday+time repeats for the length of the membership. Golden clients repeat the action for 2 weekdays; Diamond clients repeat for 3.
 - **`#policy`**, `section--cream`, `container--reading`. "Membership policy, billing, slot, minimum, and transfer." Six `.policy-block` subsections (`tr.pol.*` keys), `stagger-1` through `stagger-6`: your weekly slot, rescheduling (with a `.policy-list` ul of the four edge cases, <72h reschedule, no-show, calendar-full-in-current-month, Marina cancels), **monthly billing** (4-week charge cycle, 7-day pre-renewal cancellation window after minimum), **minimum commitment and transfer** (2-month / 3-month floor + transfer-to-friend-not-refund rule for cancellations inside the minimum), emergency freeze (1/2/3 weeks per Basic/Golden/Diamond, once per minimum period), single sessions (no membership / no freeze / no transfer, used to test the work). Everything is self-serve through the client's Acuity portal, the rules here mirror what's actually configured in Acuity admin (recurring-billing subscription, 72h reschedule window, 7-day pre-renewal cancellation window, per-plan minimum-period freeze entitlement, transfer-membership flow). Edits to these rules need to be made in **both** the visible copy and Acuity admin so they stay in lockstep.
@@ -217,15 +221,15 @@ Section order top-to-bottom:
 - **Snap Fitness note**, `section--pale`, `tr.snap.h`/`p`: all in-person sessions at Snap Fitness Maroubra; active Snap Fitness membership required before first session; Marina is independent and the gym is not responsible for PT services.
 - Footer + sticky bar.
 
-**Source of truth for plan pricing** lives in this page's `tr.plan.*` keys and the home JSON-LD `#service-pt.offers` array (which carries the monthly `price` plus a `priceSpecification` with `billingDuration: P28D`). Update both together. The `method.html` `method.mod.m4.meta` line ("60 min · Monthly plans · From A$75/session") and the home `home.svc.s3.meta` need to stay aligned too.
+**Source of truth for plan pricing** lives in this page's `tr.plan.*` keys and the home JSON-LD `#service-pt.offers` array (which carries the monthly `price` plus a `priceSpecification` with `billingDuration: P28D`). Update both together. The `method.html` `method.mod.m4.meta` line ("60 min · Monthly plans · From A$83.92/session") and the home `home.svc.pt.{single,plan}.meta` lines need to stay aligned too.
 
-**Membership model details (kept in lockstep with Acuity).** Plans are subscription products billed every 4 weeks; the per-session rate is unchanged from the old package model (A$95 / A$85 / A$75 for Basic / Golden / Diamond). Minimum commitment is 2 months on Basic and Golden, 3 months on Diamond. Cancellation inside the minimum is **transfer-to-a-friend, no refund**, the visible copy in `tr.pol.commit.*` and `tr.plan.note` mirrors what Acuity admin enforces. After the minimum, clients cancel themselves through the Acuity portal with at least 7 days notice before the next billing date. All 3 plan-card "Start membership" CTAs point to a single **catalog category URL** (`catalog.php?owner=39322566&category=Personal+Training+-+Memberships`) where the client picks Basic / Golden / Diamond from inside Acuity's catalog. The recurring-booking wording (`Select and make recurring`) still appears verbatim in `tr.plans.sub`, `tr.plan.note`, and `tr.pol.slot.p` (EN + PT) so clients who land on Acuity after picking from the catalog see the same instruction above the calendar. Per-plan series counts stay the same (Basic 1 / Golden 2 / Diamond 3 weekly series); recurrences run for the length of the membership, not a fixed cycle.
+**Membership model details (kept in lockstep with Acuity).** Plans are subscription products billed every 4 weeks. Headline totals: A$404 / A$710 / A$1,007 for Basic / Golden / Diamond (all sum-of-digits = 8, per Marina's "cabalistic" pricing principle). Per-session display rates derived from the totals: A$101 / A$88.75 / A$83.92 (these do not need to sum to 8 — only the totals do). Minimum commitment is 2 months on Basic and Golden, 3 months on Diamond. Cancellation inside the minimum is **transfer-to-a-friend, no refund**, the visible copy in `tr.pol.commit.*` and `tr.plan.note` mirrors what Acuity admin enforces. After the minimum, clients cancel themselves through the Acuity portal with at least 7 days notice before the next billing date. All 3 plan-card "Start membership" CTAs point to a single **catalog category URL** (`catalog.php?owner=39322566&category=Personal+Training+-+Memberships`) where the client picks Basic / Golden / Diamond from inside Acuity's catalog. The recurring-booking wording (`Select and make recurring`) still appears verbatim in `tr.plans.sub`, `tr.plan.note`, and `tr.pol.slot.p` (EN + PT) so clients who land on Acuity after picking from the catalog see the same instruction above the calendar. Per-plan series counts stay the same (Basic 1 / Golden 2 / Diamond 3 weekly series); recurrences run for the length of the membership, not a fixed cycle.
 
 ### 10. Method page structure (`method.html`)
 
 - `<header class="page-hero">`, no image, page label + h1.
 - Long-form fascia explainer (`method.fascia.*`).
-- **Modalities grid** (`#mod`, no id; section is `section--cream`), `method.mod.label`/`h2` + four cards (`.modality-card`) covering the four offerings: Somatic Massage (60 min A$125), KSE Sensory Energetics (60 min A$305 Signature), Conscious Movement (in every session, woven through bodywork and training), Personal Training (60 min from A$75/session on plan, Snap Fitness Maroubra). Each card has `method.mod.m{1..4}.{h,meta,p}` keys; the description explains what each modality solves.
+- **Modalities grid** (`#mod`, no id; section is `section--cream`), `method.mod.label`/`h2` + four cards (`.modality-card`) covering the four offerings: Somatic Massage (60 min A$125), KSE Sensory Energetics (60 min A$224 Signature · Launch price; reverts to A$305 after launch window), Conscious Movement (in every session, woven through bodywork and training), Personal Training (60 min from A$83.92/session on plan, Snap Fitness Maroubra). Each card has `method.mod.m{1..4}.{h,meta,p}` keys; the description explains what each modality solves.
 - Diagnostic widget reuses `#diagnostic` markup + the shared `app.js` logic.
 - FAQ.
 - Footer + sticky bar.
