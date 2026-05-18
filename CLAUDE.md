@@ -103,6 +103,7 @@ https://app.acuityscheduling.com/catalog.php?owner=39322566&action=addCart&clear
 | Weekly Corporal | `2213824` |
 | Weekly Facial | `2213848` |
 | Weekly Sensory Energetics | `2213845` |
+| Ultimate (limited May + Jun 2026) | `2215320` |
 
 These appear on `massage.html`'s service blocks ("Make it weekly →" secondary CTAs, keys `mas.c.mship.cta`/`mas.f.mship.cta`/`mas.s.mship.cta`) and on the `#mas-pricing` Weekly memberships strip. The home `home.svc.s2` Memberships card links to `massage.html#mas-pricing` (not WhatsApp).
 
