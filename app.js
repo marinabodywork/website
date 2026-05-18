@@ -395,6 +395,11 @@ document.documentElement.classList.add('js-on');
       'tr.assess.price': 'A$99',
       'tr.assess.cta': 'Book assessment',
 
+      'tr.consult.name': 'Online consultancy',
+      'tr.consult.sub': 'Online check-ins with Marina to review your progress and adjust your training program. Auto-renews every 2 months.',
+      'tr.consult.price': 'A$100',
+      'tr.consult.cta': 'Start consultancy',
+
       'tr.pol.label': 'Membership policy',
       'tr.pol.h2': 'Billing, slot, minimum, and transfer.',
       'tr.pol.intro': 'Everything below runs through your Acuity client portal. You manage your slot, reschedule, freeze, transfer, or cancel renewal yourself. No message to Marina required.',
@@ -850,6 +855,11 @@ document.documentElement.classList.add('js-on');
       'tr.assess.sub': 'Avaliação de movimento, postura e força com a Marina. Incluída no plano Diamond. Opcional avulsa para quem está em outro plano ou ainda decidindo.',
       'tr.assess.price': 'A$99',
       'tr.assess.cta': 'Agendar avaliação',
+
+      'tr.consult.name': 'Consultoria on-line',
+      'tr.consult.sub': 'Acompanhamento on-line com a Marina para revisar o seu progresso e ajustar o seu programa de treino. Renovação automática a cada 2 meses.',
+      'tr.consult.price': 'A$100',
+      'tr.consult.cta': 'Iniciar consultoria',
 
       'tr.pol.label': 'Política da mensalidade',
       'tr.pol.h2': 'Cobrança, horário, mínimo e transferência.',
