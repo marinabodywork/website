@@ -20,7 +20,7 @@ const CHECKS = [
 
 let failed = 0;
 for (const script of CHECKS) {
-  console.log(`\n— ${script} —`);
+  console.log(`\n- ${script} -`);
   const res = spawnSync(process.execPath, [join(HERE, script)], { stdio: 'inherit' });
   if (res.status !== 0) failed++;
 }

@@ -12,7 +12,7 @@ import { makeReporter, INDEXABLE_PAGES, ROOT } from './lib/parse.mjs';
 const r = makeReporter('check-sitemap');
 const xml = readFileSync(join(ROOT, 'sitemap.xml'), 'utf8');
 
-// Crude parser — sitemap.xml here is hand-written, no namespaces beyond the default.
+// Crude parser - sitemap.xml here is hand-written, no namespaces beyond the default.
 const urls = [];
 for (const m of xml.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
   const block = m[1];

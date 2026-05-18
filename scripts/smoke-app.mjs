@@ -56,7 +56,7 @@ for (const e of jsdomErrors) r.error(`jsdom runtime error: ${e}`);
 
 // 1. js-on class is set (progressive-enhancement guard from app.js line 6).
 if (!document.documentElement.classList.contains('js-on')) {
-  r.error('html.js-on class is not set — reveal animations would never trigger');
+  r.error('html.js-on class is not set - reveal animations would never trigger');
 }
 
 // 2. i18n translated something: pick a stable key and check the resulting innerHTML matches the EN table.
@@ -80,7 +80,7 @@ else {
 const enButton = document.querySelector('.lang button[data-lang="en"]');
 if (enButton) { enButton.click(); await new Promise((resolve) => setTimeout(resolve, 20)); }
 
-// 4. Diagnostic widget — 5 tiles, click renders #diagResult with a CTA.
+// 4. Diagnostic widget - 5 tiles, click renders #diagResult with a CTA.
 const tiles = document.querySelectorAll('.diag__tile');
 if (tiles.length !== 5) r.error(`expected 5 diagnostic tiles, got ${tiles.length}`);
 const neckTile = document.querySelector('.diag__tile[data-area="neck"]');
@@ -96,11 +96,11 @@ if (!neckTile || !result) {
   else if (!cta.classList.contains('acuity-embed-button')) r.error('non-training diagnostic CTA must carry "acuity-embed-button" class');
 }
 
-// 5. FAQ search — typing into the input should hide non-matching .faq__item children.
+// 5. FAQ search - typing into the input should hide non-matching .faq__item children.
 const faq = document.querySelector('.faq');
 const search = faq && faq.querySelector('.faq__search input');
 const items = faq ? faq.querySelectorAll('.faq__item') : [];
-if (!search) r.warn('no .faq__search input on index.html — FAQ search check skipped');
+if (!search) r.warn('no .faq__search input on index.html - FAQ search check skipped');
 else if (!items.length) r.error('found .faq__search input but no .faq__item children to filter');
 else {
   search.value = 'zzzzz-no-match';
