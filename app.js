@@ -781,8 +781,8 @@ document.documentElement.classList.add('js-on');
       'tr.diff.label': 'O que muda aqui',
       'tr.diff.h2': 'A maioria dos personal trainers não enxerga o que está te travando.<br>A Marina enxerga.',
       'tr.diff.p1': 'Um personal comum monta o treino em cima de um corpo que ele não consegue avaliar por completo. Ele vê você levantando o peso. Mas não enxerga a corrente de fáscia que está encurtando o seu movimento, limitando a sua força, ou jogando peso numa articulação que você está protegendo sem nem perceber.',
-      'tr.diff.p2': 'A Marina passou dez anos estudando e trabalhando com terapia corporal antes de começar a atender em PT. Ela enxerga padrões de bloqueio que um personal comum não vê. E consegue trabalhar esses padrões dentro da sessão. Liberação manual antes do levantamento, mobilidade antes da carga, e respiração antes da próxima série.',
-      'tr.diff.p3': 'O resultado é treino que vai somando de verdade. Você não está levantando peso contra um bloqueio do seu corpo. Você está construindo força dentro do movimento que ele realmente tem.',
+      'tr.diff.p2': 'Há mais de dez anos estudando e trabalhando com terapia corporal antes mesmo de atuar como personal trainer, ela desenvolveu um olhar que vai além do treino tradicional. Enxerga padrões de tensão, compensação e bloqueios que muitas vezes passam despercebidos em uma abordagem comum e trabalha esses padrões diretamente durante a sessão.<br><br>Liberação manual antes do levantamento, mobilidade antes da carga e respiração antes da próxima série. Esse processo estimula o sistema nervoso central, favorecendo maior disponibilidade de energia para o corpo, mais concentração na execução dos movimentos e uma consciência corporal mais profunda.',
+      'tr.diff.p3': 'O resultado é um treino que realmente constrói o corpo de dentro para fora. Não se trata apenas de levantar peso. É sobre desenvolver força com presença, controle, mobilidade e inteligência corporal em cada movimento.',
 
       'tr.struct.label': 'A sessão de 60 minutos',
       'tr.struct.h2': 'Cinco fases.<br>Construídas em torno do seu corpo naquele dia.',
