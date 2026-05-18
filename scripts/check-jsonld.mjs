@@ -16,10 +16,10 @@ const EXPECTED_OFFERS = {
   '#service-facial':   { price: '125', slug: 'SomaticMassageFacial' },
   '#service-sensory':  { price: '305', slug: 'SensoryEnergetics' },
 };
-// PT plans: every documented price must appear in #service-pt.offers; the single-session offer
-// is the only one we expect to carry a slug (per the CLAUDE.md note that plan offers are listed
-// without URLs to keep the schema simple).
-const EXPECTED_PT_PRICES = ['99', '570', '1020', '1800'];
+// PT plans: every documented monthly membership price must appear in #service-pt.offers,
+// alongside the single-session offer. Each plan offer also carries a slug now (the per-plan
+// Acuity URL) since we moved from packages to recurring monthly memberships.
+const EXPECTED_PT_PRICES = ['99', '380', '680', '900'];
 const EXPECTED_PT_SLUG = 'SinglePTLesson';
 
 // Parse and validate per-page.
