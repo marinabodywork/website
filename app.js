@@ -121,7 +121,7 @@ document.documentElement.classList.add('js-on');
       'home.proof.t1.q': 'Excellent PT. She has been integral to my journey in building confidence and strength in the gym. I love training with her and she really cares. I highly recommend Marina!',
       'home.proof.t1.name': 'Jean',
       'home.proof.t2.h': 'It feels like a whole experience.',
-      'home.proof.t2.q': 'Marina is honestly so thoughtful and talented at what she does. You can really tell she puts her whole heart into her work. And being at her space is always such a nice experience — the essential oils, the atmosphere, every little detail. It never feels like you’re just paying for a service, it feels like a whole experience. Highly recommend!',
+      'home.proof.t2.q': 'Marina is honestly so thoughtful and talented at what she does. You can really tell she puts her whole heart into her work. And being at her space is always such a nice experience: the essential oils, the atmosphere, every little detail. It never feels like you’re just paying for a service, it feels like a whole experience. Highly recommend!',
       'home.proof.t2.name': 'Yumi',
       'home.proof.t3.h': 'She knows what works.',
       'home.proof.t3.q': 'Really satisfied with Marina works! She knows what works the best for our body.',
@@ -151,7 +151,7 @@ document.documentElement.classList.add('js-on');
       'faq.search.placeholder': 'Search the questions',
       'faq.search.empty': 'No questions match. Try a different term.',
       'a11y.skip': 'Skip to main content',
-      'about.bio.pullquote': 'Physical exercise goes beyond aesthetics. It is the building of a strong, functional, conscious body — one that sustains autonomy, longevity, and quality of life at every stage.',
+      'about.bio.pullquote': 'Physical exercise goes beyond aesthetics. It is the building of a strong, functional, conscious body, one that sustains autonomy, longevity, and quality of life at every stage.',
       'nf.label': 'Page not found',
       'nf.h1': 'This page took a different route.',
       'nf.sub': 'It might have moved, or never existed. Either way, the work is still here.',
@@ -580,7 +580,7 @@ document.documentElement.classList.add('js-on');
       'home.proof.t1.q': 'Excelente personal trainer. Foi fundamental na minha jornada de construir confiança e força na academia. Adoro treinar com ela, e ela se importa de verdade. Recomendo muito a Marina!',
       'home.proof.t1.name': 'Jean',
       'home.proof.t2.h': 'Parece uma experiência completa.',
-      'home.proof.t2.q': 'A Marina é genuinamente atenciosa e talentosa no que faz. Dá pra sentir que ela coloca o coração no trabalho. Estar no espaço dela é sempre uma experiência boa — os óleos essenciais, o ambiente, cada detalhe. Nunca parece que você está só pagando por um serviço, parece uma experiência completa. Recomendo muito!',
+      'home.proof.t2.q': 'A Marina é genuinamente atenciosa e talentosa no que faz. Dá pra sentir que ela coloca o coração no trabalho. Estar no espaço dela é sempre uma experiência boa: os óleos essenciais, o ambiente, cada detalhe. Nunca parece que você está só pagando por um serviço, parece uma experiência completa. Recomendo muito!',
       'home.proof.t2.name': 'Yumi',
       'home.proof.t3.h': 'Ela sabe o que funciona.',
       'home.proof.t3.q': 'Muito satisfeita com o trabalho da Marina! Ela sabe o que funciona melhor para o nosso corpo.',
@@ -975,7 +975,7 @@ document.documentElement.classList.add('js-on');
       renderDiag(result.dataset.area);
     }
 
-    // Recompute open FAQ heights — translated text may be a different length
+    // Recompute open FAQ heights since translated text may be a different length
     requestAnimationFrame(function () {
       document.querySelectorAll('.faq__item.is-open .faq__a').forEach(function (a) {
         a.style.maxHeight = a.scrollHeight + 'px';
