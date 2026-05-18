@@ -19,6 +19,7 @@ const REQUIRED_SLUGS = [
   'SensoryEnergetics',
   'SinglePTLesson',
   'Assessment',
+  'appointmentType=93324053',
 ];
 const REQUIRED_MEMBERSHIP_IDS = ['2213824', '2213848', '2213845'];
 const PT_MEMBERSHIPS_CATEGORY = 'category=Personal+Training+-+Memberships';
