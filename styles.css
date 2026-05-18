@@ -794,18 +794,6 @@ p, .lede { text-wrap: pretty; }
   .benefits { grid-template-columns: 1fr; }
 }
 
-.combo-strip {
-  background: var(--sand);
-  color: var(--forest);
-  border-radius: var(--r-lg);
-  padding: var(--s-3) var(--s-4);
-  text-align: center;
-  font-size: 17px;
-  line-height: 1.6;
-  margin: var(--s-3) 0 var(--s-4);
-}
-.combo-strip strong { font-family: var(--display); font-style: italic; font-weight: 500; font-size: 22px; display: block; margin-bottom: 4px; }
-
 /* Choose */
 .choose { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); margin-top: var(--s-4); }
 .choose-card {
