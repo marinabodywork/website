@@ -83,6 +83,15 @@ document.documentElement.classList.add('js-on');
       'home.svc.pt.plan.name': 'Monthly plan',
       'home.svc.pt.plan.meta': 'From A$380/4 weeks · 1-3x per week · 2-month minimum',
 
+      'home.ultimate.badge': 'Limited · May + June 2026 only',
+      'home.ultimate.h': 'Experience Marina\'s full method.',
+      'home.ultimate.sub': 'One weekly slot. Every modality. The membership that gives you Marina\'s whole approach inside a single rhythm.',
+      'home.ultimate.includes': 'Each 4-week cycle: 2x Somatic Corporal · 1x Somatic Facial · 1x Sensory Energetics.',
+      'home.ultimate.price': 'A$100/week',
+      'home.ultimate.worth': 'Worth A$680 at single-session rates',
+      'home.ultimate.cta.book': 'Lock your weekly slot →',
+      'home.ultimate.cta.details': 'See the full breakdown →',
+
       // ─── Diagnostic ───
       'diag.label': 'Diagnostic',
       'diag.h2': 'Where is your body asking for help?',
@@ -567,6 +576,15 @@ document.documentElement.classList.add('js-on');
       'home.svc.pt.single.meta': '60 min · A$99 · Teste o trabalho primeiro',
       'home.svc.pt.plan.name': 'Mensalidade',
       'home.svc.pt.plan.meta': 'A partir de A$380 a cada 4 semanas · 1 a 3x por semana · mínimo 2 meses',
+
+      'home.ultimate.badge': 'Edição limitada · Só maio + junho 2026',
+      'home.ultimate.h': 'Viva o método completo da Marina.',
+      'home.ultimate.sub': 'Uma vaga semanal. Todas as modalidades. O plano que te entrega o método inteiro da Marina dentro de um único ritmo.',
+      'home.ultimate.includes': 'A cada ciclo de 4 semanas: 2x Somatic Corporal · 1x Somatic Facial · 1x Sensory Energetics.',
+      'home.ultimate.price': 'A$100/semana',
+      'home.ultimate.worth': 'Equivale a A$680 em sessões avulsas',
+      'home.ultimate.cta.book': 'Reservar sua vaga semanal →',
+      'home.ultimate.cta.details': 'Ver os detalhes completos →',
 
       // Diagnostic
       'diag.label': 'Diagnóstico',
