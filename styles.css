@@ -539,6 +539,31 @@ p, .lede { text-wrap: pretty; }
 }
 @media (max-width: 900px) { .svc-grid { grid-template-columns: 1fr; } }
 
+.svc-grid--two { grid-template-columns: repeat(2, 1fr); max-width: 920px; margin-left: auto; margin-right: auto; }
+@media (max-width: 900px) { .svc-grid--two { grid-template-columns: 1fr; } }
+
+.svc-options { display: flex; flex-direction: column; gap: 10px; margin-top: var(--s-2); }
+.svc-option {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--cream-warm);
+  color: var(--forest);
+  text-decoration: none;
+  transition: border-color var(--t-fast), background var(--t-fast), transform var(--t-fast);
+}
+.svc-option:hover { border-color: var(--sand-deep); background: white; transform: translateX(2px); }
+.svc-option__body { flex: 1; min-width: 0; }
+.svc-option__name { font-weight: 600; font-size: 16px; color: var(--forest); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.svc-option__meta { font-size: 13px; color: var(--ink-soft); margin-top: 3px; line-height: 1.5; }
+.svc-option__arrow { font-size: 18px; color: var(--sand-deep); flex-shrink: 0; transition: transform var(--t-fast); }
+.svc-option:hover .svc-option__arrow { transform: translateX(3px); }
+.svc-option__badge {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  background: var(--sand); color: var(--forest); padding: 2px 8px; border-radius: 999px;
+}
+
 /* Diagnostic */
 .diag {
   background: var(--forest);
