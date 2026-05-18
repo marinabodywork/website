@@ -44,8 +44,8 @@ for (const lang of ['en', 'pt']) {
 const { byPage, all } = collectMarkupKeys(ALL_PAGES);
 for (const [page, keys] of Object.entries(byPage)) {
   for (const k of keys) {
-    if (!en.has(k)) r.error(`${page}: data-i18n="${k}" — missing in i18n.en`);
-    if (!pt.has(k)) r.error(`${page}: data-i18n="${k}" — missing in i18n.pt`);
+    if (!en.has(k)) r.error(`${page}: data-i18n="${k}" - missing in i18n.en`);
+    if (!pt.has(k)) r.error(`${page}: data-i18n="${k}" - missing in i18n.pt`);
   }
 }
 

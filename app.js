@@ -67,7 +67,7 @@ document.documentElement.classList.add('js-on');
 
       // ─── Home: services overview ───
       'home.svc.label': 'Services',
-      'home.svc.h2': 'Two services. Two ways to commit.',
+      'home.svc.h2': 'Two services. Two ways to start.',
       'home.svc.sub': 'Massage or personal training. Then choose between a single session or an ongoing membership.',
       'home.svc.massage.h': 'Massage',
       'home.svc.massage.p': 'Somatic Massage Corporal, Facial, or the 90-minute Sensory Energetics signature work. Marina-developed fascial release combined with breathwork and somatic awareness.',
@@ -391,9 +391,14 @@ document.documentElement.classList.add('js-on');
       'tr.single.cta': 'Book single session',
 
       'tr.assess.name': 'Physical assessment',
-      'tr.assess.sub': '60-minute movement, posture, and strength assessment with Marina. Included with the Diamond plan. Optional one-off for everyone else.',
+      'tr.assess.sub': 'Movement, posture, and strength assessment with Marina. Included with the Diamond plan. Optional one-off for everyone else.',
       'tr.assess.price': 'A$99',
       'tr.assess.cta': 'Book assessment',
+
+      'tr.consult.name': 'Online consultancy',
+      'tr.consult.sub': 'For clients training remotely, away from Snap Fitness Maroubra. Video call with Marina every 6 weeks to review your body, swap exercises that have done their work, and adjust your program. Auto-renews.',
+      'tr.consult.price': 'A$100',
+      'tr.consult.cta': 'Start consultancy',
 
       'tr.pol.label': 'Membership policy',
       'tr.pol.h2': 'Billing, slot, minimum, and transfer.',
@@ -432,7 +437,7 @@ document.documentElement.classList.add('js-on');
 
       // ─── About page ───
       'about.hero.title': 'Physical Education Professional · Bodywork Specialist',
-      'about.hero.meta': '18+ Years · Sydney',
+      'about.hero.meta': '18+ years of practice · Sydney',
       'about.bio.label': 'The story',
       'about.bio.h2': 'Eighteen years, two continents, one practice.',
       'about.bio.p1': 'Marina Ribeiro da Silva is a Physical Education professional with more than eighteen years dedicated to movement, health, and women\'s well-being. Movement and bodywork are not two careers. They are two sides of how a body changes.',
@@ -526,7 +531,7 @@ document.documentElement.classList.add('js-on');
 
       // Home: services
       'home.svc.label': 'Serviços',
-      'home.svc.h2': 'Dois serviços. Duas formas de se comprometer.',
+      'home.svc.h2': 'Dois serviços. Duas formas de começar.',
       'home.svc.sub': 'Massagem ou personal training. Depois você escolhe entre uma sessão avulsa ou uma mensalidade contínua.',
       'home.svc.massage.h': 'Massagem',
       'home.svc.massage.p': 'Massagem Somática Corporal, Facial, ou a sessão assinatura Sensory Energetics de 90 minutos. Liberação fascial desenvolvida pela Marina, combinada com respiração e consciência somática.',
@@ -847,9 +852,14 @@ document.documentElement.classList.add('js-on');
       'tr.single.cta': 'Agendar sessão avulsa',
 
       'tr.assess.name': 'Avaliação física',
-      'tr.assess.sub': 'Avaliação de movimento, postura e força de 60 minutos com a Marina. Incluída no plano Diamond. Opcional avulsa para quem está em outro plano ou ainda decidindo.',
+      'tr.assess.sub': 'Avaliação de movimento, postura e força com a Marina. Incluída no plano Diamond. Opcional avulsa para quem está em outro plano ou ainda decidindo.',
       'tr.assess.price': 'A$99',
       'tr.assess.cta': 'Agendar avaliação',
+
+      'tr.consult.name': 'Consultoria on-line',
+      'tr.consult.sub': 'Para clientes que treinam à distância, longe da Snap Fitness Maroubra. Vídeo-chamada com a Marina a cada 6 semanas para revisar o seu corpo, trocar exercícios que já cumpriram o papel e ajustar o programa. Renovação automática.',
+      'tr.consult.price': 'A$100',
+      'tr.consult.cta': 'Iniciar consultoria',
 
       'tr.pol.label': 'Política da mensalidade',
       'tr.pol.h2': 'Cobrança, horário, mínimo e transferência.',
@@ -888,7 +898,7 @@ document.documentElement.classList.add('js-on');
 
       // About page
       'about.hero.title': 'Profissional de Educação Física · Especialista em Terapia Corporal',
-      'about.hero.meta': '18+ anos · Sydney',
+      'about.hero.meta': '18+ anos de prática · Sydney',
       'about.bio.label': 'A história',
       'about.bio.h2': 'Dezoito anos, dois continentes, uma prática.',
       'about.bio.p1': 'Marina Ribeiro da Silva é profissional de Educação Física, com mais de dezoito anos dedicados ao movimento, à saúde e ao bem-estar das mulheres. Pra ela, movimento e terapia corporal não são duas carreiras. São dois lados de como um corpo muda.',

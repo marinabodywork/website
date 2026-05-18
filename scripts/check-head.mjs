@@ -13,7 +13,7 @@ import { readPage, extractHead, extractBody, makeReporter, ALL_PAGES, INDEXABLE_
 const r = makeReporter('check-head');
 
 // Pages with a hero image should preload it with fetchpriority="high".
-// Don't pin to a specific filename — just assert at least one such preload exists.
+// Don't pin to a specific filename - just assert at least one such preload exists.
 const NEEDS_HERO_PRELOAD = new Set(['index.html', 'about.html']);
 const HERO_PRELOAD_RE = /<link[^>]*rel="preload"[^>]*as="image"[^>]*fetchpriority="high"[^>]*>/i;
 

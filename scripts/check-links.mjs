@@ -32,15 +32,15 @@ for (const page of ALL_PAGES) {
     const [filePart, fragment] = href.split('#');
     const targetPath = join(ROOT, filePart);
     if (!existsSync(targetPath)) {
-      r.error(`${page}: href="${href}" — file ${filePart} does not exist`);
+      r.error(`${page}: href="${href}" - file ${filePart} does not exist`);
       continue;
     }
     if (fragment && filePart.endsWith('.html')) {
       const targetIds = idsByPage[filePart];
       if (!targetIds) {
-        r.warn(`${page}: href="${href}" — page exists but not in known set, skipping anchor check`);
+        r.warn(`${page}: href="${href}" - page exists but not in known set, skipping anchor check`);
       } else if (!targetIds.has(fragment)) {
-        r.error(`${page}: href="${href}" — ${filePart} has no id "${fragment}"`);
+        r.error(`${page}: href="${href}" - ${filePart} has no id "${fragment}"`);
       }
     }
   }
