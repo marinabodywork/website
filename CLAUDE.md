@@ -10,25 +10,29 @@ Bilingual: English (default) + Brazilian Portuguese, switched client-side withou
 
 ## Stack & layout
 
-There is **no build system, no package manager, no framework, no test suite**. Everything ships as static files served as-is.
+There is **no build system, no framework, and no runtime test suite**. Everything ships as static files served as-is. The repo does carry a small `package.json` whose only purpose is to host the **static-check harness** in `scripts/` (run via `npm run check` + `npm run check:html`, also auto-fired by the `.githooks/pre-commit` hook). The harness is plain Node, no bundling. See § _Static-check harness_ near the end of this doc for what each check enforces.
 
 - Six HTML pages at the root: `index.html` (home), `massage.html`, `training.html`, `method.html`, `about.html`, and `404.html` (branded not-found, `<meta name="robots" content="noindex">`). Each carries the same `<nav>` + drawer markup, its own `<head>` (meta, OG, per-page JSON-LD, Acuity embed script), and the same trailing `<script src="app.js" defer>`.
 - `styles.css`, single shared stylesheet for all pages.
 - `app.js`, single shared script holding the i18n table (`en` + `pt` flat key maps, ~730 keys total), `setLang`, scroll/reveal/nav behaviour, hamburger drawer, diagnostic widget, FAQ search, hero parallax, and the `js-on` class toggle. **All translations live here, not inline.** First line of the IIFE adds `js-on` to `<html>` so reveal animations are progressive-enhancement only.
 - Image assets live flat in the repo root (no `assets/` subfolder), referenced by bare filename. Currently in-use:
-  - `hero.jpg` + `hero.webp`, main brand portrait used as the home page hero (`hero.hero__media` ships a `<picture>` with WebP source + JPEG fallback, 1024×1536). The JPEG is the `og:image` for `index.html` and `method.html` and the `LocalBusiness.image` in JSON-LD; the WebP is the LCP preload target.
-  - `atendimento.jpeg`, Somatic Massage Corporal feature image (`massage.html` service block).
+  - `marina-headshot.webp`, main brand portrait used as the home page hero (`.hero__media > <img>`, 900×1350, LCP preload target).
+  - `hero.jpg`, the social-card / brand image. Referenced as `og:image` for `index.html` + `method.html` and as `LocalBusiness.image` in JSON-LD. Not displayed on-page; lives only in `<head>`.
+  - `massage.jpeg`, Somatic Massage Corporal feature image (`massage.html` service block).
   - `facial.jpeg`, Somatic Massage Facial feature image.
-  - `marina-massage-content.webp`, Sensory Energetics service block image.
+  - `Sensory (2).jpeg`, Sensory Energetics service block image (the parenthesised filename is intentional, the home folder also keeps a `Sensory (1).jpeg` draft that isn't wired up).
   - `marina-hero.webp`, `about.html` hero portrait + `og:image`.
+  - `marina-hero-action.webp`, `training.html` `og:image` (social-card only, not displayed on-page).
   - `marina-consult.webp`, home `#consult` section thumbnail.
+  - `ChatGPT Image May 18, 2026, 02_42_52 PM.png`, anatomical fascia illustration on `method.html` (URL-encoded in markup).
+  - `certificate.jpeg`, Marina's KSE certification image on `method.html`.
   - `marina-logo.png`, **transparent-background** version of the brand mark used in the nav and footer of every page (the gold mark + wordmark floats directly on the dark forest nav with no boxed sticker effect). Generated from `marina-logo.webp` via a luminance-based alpha mask.
   - `marina-logo.webp`, favicon + `apple-touch-icon` (solid forest bg is fine because favicons need an opaque colour).
   - `flag-au.svg`, `flag-br.svg`, flag glyphs used in the language toggle (NOT emojis; SVG so the button shape stays controllable).
   - `be-bold-logo.png`, Be Bold Sydney partner logo on `about.html`'s `.partner-strip`.
 - `robots.txt`, `sitemap.xml`, SEO files at the root. The sitemap lists all five indexable pages (home + four inner pages). `404.html` is intentionally omitted (`noindex`). Each URL carries a `<lastmod>`, bump on meaningful content changes.
 
-Loose unused image files at the root (`marina-fingers.webp`, `marina-headshot.webp`, `marina-hero-action.webp`, `marina-pointing.webp`, `marina-portrait.webp`, `ogimage.png`) are legacy/unreferenced, leave them alone unless the user asks. Same for `Screenshot *.jpg`, `WhatsApp Image *.jpeg`, `Untitled (...).png` uploads.
+Loose unused image files at the root (`atendimento.jpeg`, `hero.webp`, `marina-fingers.webp`, `marina-massage-content.webp`, `marina-pointing.webp`, `marina-portrait.webp`, `ogimage.png`, `Sensory (1).jpeg`) are legacy/unreferenced, leave them alone unless the user asks. Same for `Screenshot *.jpg`, `WhatsApp Image *.jpeg`, `Untitled (...).png` uploads. The orphan set is tracked by `scripts/check-orphan-images.mjs`; new orphan files will fail the check, so either reference them or add to that script's `KNOWN_ORPHANS` allow-list.
 
 ## Local development
 
@@ -302,7 +306,7 @@ Currently live on `index.html` and `massage.html`. To add to another FAQ block, 
 
 Every page's `<head>` ships:
 
-- `<link rel="preload" as="image" href="<hero-img>" fetchpriority="high">` for the page's LCP image (home: `hero.webp` with `type="image/webp"`; about: `marina-hero.webp`; other inner pages: none, they don't have a hero image).
+- `<link rel="preload" as="image" href="<hero-img>" fetchpriority="high">` for the page's LCP image (home: `marina-headshot.webp` with `type="image/webp"`; about: `marina-hero.webp`; other inner pages: none, they don't have a hero image).
 - `<link rel="preload" as="image" href="marina-logo.png">` for the nav logo on every page.
 - `<link rel="preconnect" href="https://fonts.googleapis.com">` + `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` for the Google Fonts handshake.
 
@@ -321,6 +325,32 @@ Three inline-SVG icon systems are in use (all 1.4px stroke, `currentColor`, no f
 ### 19. Branded 404 page
 
 `404.html` is structured exactly like an inner page (nav + page-hero + footer + WhatsApp float) so Netlify serves it on unknown routes without config. Carries `<meta name="robots" content="noindex">` and no JSON-LD by design. CTAs are service-specific per the discipline rule, "Back to home" + "Book Massage" (not generic "Book a session"). i18n keys: `nf.label`, `nf.h1`, `nf.sub`, `nf.next`, `nf.cta.home`, `nf.cta.book`. The page ships the same pre-paint language hint script, Acuity embed, skip link, and full nav/drawer/footer as the indexable pages.
+
+## Static-check harness
+
+`scripts/` holds plain-Node check scripts; `npm run check` runs all of them (and `npm run check:html` runs html-validate). The same suite fires automatically from `.githooks/pre-commit` (installed by `npm install`'s prepare step) and from CI on every push (`.github/workflows/checks.yml`).
+
+| Script | What it asserts |
+|---|---|
+| `check-i18n.mjs` | Every `data-i18n` key in markup exists in both `i18n.en` and `i18n.pt`. Empty values fail. Orphan keys defined but never used (in HTML or `t('foo')` calls) warn. Understands `t('prefix.' + var + '.suffix')`. |
+| `check-jsonld.mjs` | JSON-LD parses on every page. Canonical `@id`s (`#business`, `#marina`, `#website`, `#service-*`) exist on `index.html`. Service `offers.price` + Acuity slug match the documented table. `#service-sensory.offers.description` mentions the regular A$305 while launch pricing is active. PT plan prices (116/404/710/1007) all appear. `LocalBusiness.openingHoursSpecification` matches the documented massage / PT / PT-mornings schedule. Inner-page `@id` refs resolve. `404.html` carries no JSON-LD. |
+| `check-acuity.mjs` | Every anchor on an Acuity domain carries `acuity-embed-button`. Documented slugs + membership catalog ids all appear somewhere. No generic CTA labels ("Book a session", "Book now", bare "Talk to Marina") on `.btn` anchors. Only the canonical WhatsApp number `61451021478` is used. Warns on missing `target="_blank"` / `rel="noopener"`. |
+| `check-head.mjs` | Pre-paint `lang-pending` script + Acuity embed CSS+JS + `app.js defer` + nav-logo preload + skip-link as first `<body>` child + first `<header>` with `id="main" tabindex="-1"` + hero preload on home & about + 404 `noindex`. Plus `<title>` (unique across indexable pages), `<meta name="description">`, `<link rel="canonical">` to `marinabodywork.com`, `og:image` absolute URL. |
+| `check-links.mjs` | Every internal `href` (file + fragment) resolves on disk. In-page anchor ids exist. |
+| `check-sitemap.mjs` | Indexable pages listed, `404.html` absent, every `<loc>` has a parseable `<lastmod>`. |
+| `check-pricing.mjs` | **Cabalistic digit-sum** invariant — every headline charged price (125, 116, 107, 224, 305, 404, 710, 1007) sums to 8. Each price appears in EN + PT i18n and the expected page(s). PT per-session display rates (Basic A$101, Golden A$88.75, Diamond A$83.92) derive from monthly totals. Sensory launch double-display on `massage.html` (A$224 + A$305 + `service-block__badge--launch` + `pricing__note--launch`). PT membership minimum-commitment phrases ("2-month minimum", "3-month minimum", "7 days") + freeze entitlement phrases ("1 week", "2 weeks", "3 weeks") appear in both EN and PT. |
+| `check-a11y.mjs` | Exactly one `<h1>` per page, no heading-level skips. `aria-current="page"` only on the active nav link, with matching `data-i18n` key + `is-active` class. Lang toggle defaults: EN `aria-pressed="true"`, PT `aria-pressed="false"`. |
+| `check-assets.mjs` | Every `<img src>` / `<source src(set)?>` / `<link rel=preload as=image>` href resolves on disk. Every `<img>` has an `alt` attribute. Preload targets are referenced by an in-page image (no wasted bytes). HTML byte budget: 60 KB / page. |
+| `check-orphan-images.mjs` | Walks root-level image files. Any new file that isn't referenced from HTML/CSS/JS and isn't on the `KNOWN_ORPHANS` allow-list (or matching `Screenshot/WhatsApp Image/Untitled/IMG_` patterns) fails. Listed orphans that turn out to be referenced warn (clean up the allow-list). |
+| `check-css.mjs` | Every `var(--foo)` resolves to a declared custom property. `:root` duplicates warn. Empty rule blocks warn. |
+| `smoke-app.mjs` | Loads each indexable page in jsdom + runs `app.js`. Asserts: no jsdom runtime errors, `js-on` set, `lang-pending` cleared after boot, lang-toggle `aria-pressed` flips on click, `setLang('pt')` translates + persists in `localStorage`, returning-PT-visitor path (pre-seeded `marinaLang=pt`) clears `lang-pending` and translates. On `index.html` + `method.html`: all 5 diagnostic tiles click cleanly, non-training CTAs carry `acuity-embed-button` + a documented per-service URL, training CTA is internal (`training.html#plans`, no `acuity-embed-button`). FAQ live search on home + massage hides non-matches and toggles `is-empty`. |
+| `check:html` | html-validate recommended ruleset (several WCAG rules off, see `.htmlvalidate.json`). |
+
+Lighthouse CI runs on every push and asserts a11y ≥ 0.9 + SEO ≥ 0.9 (error), best-practices / performance ≥ 0.8 (warn). Config: `.lighthouserc.json`.
+
+**Adding a new check:** drop the file in `scripts/`, add it to the `CHECKS` array in `scripts/run-all.mjs` (cheapest-first), and add a `check:foo` alias to `package.json`. Reuse `lib/parse.mjs` helpers (`readPage`, `loadI18n`, `extractAnchors`, `flattenGraph`, `makeReporter`). The reporter pattern is `r.error(msg)` / `r.warn(msg)` then `r.done()` at the bottom — errors set process.exitCode=1, warnings don't.
+
+**Bypassing the pre-commit hook:** `git commit --no-verify`. Only for emergencies; CI runs the same suite and will still fail.
 
 ## Git workflow
 
