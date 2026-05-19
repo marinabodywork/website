@@ -5,10 +5,25 @@
 //    didn't accidentally delete a CTA).
 //  - The three weekly-massage-membership catalog ids appear on massage.html.
 //  - The PT memberships catalog category URL appears on training.html.
+//  - CTA discipline: no generic "Book a session" / "Talk to Marina" duplicates
+//    next to service-specific buttons (every primary booking CTA must be Massage/Training).
+//  - The canonical WhatsApp number (61451021478) is the only one used.
 
 import { readPage, extractAnchors, makeReporter, ALL_PAGES } from './lib/parse.mjs';
 
 const r = makeReporter('check-acuity');
+
+const CANONICAL_WA_NUMBER = '61451021478';
+
+// CTA texts that, if used as a primary button label, would be too generic
+// next to a service-specific Book Massage / Book Training pair. The dedicated
+// WhatsApp consult link ("Talk to Marina first →") is the canonical home for
+// open conversations - it gets a pass because it's styled as .btn--link, not .btn.
+const GENERIC_CTA_PHRASES = [
+  /\bbook a session\b/i,
+  /\bbook now\b/i,
+  /\btalk to marina\b(?!\s+first)/i, // "Talk to Marina" alone is generic; "Talk to Marina first" is the canonical consult phrasing
+];
 
 const ACUITY_HOSTS = ['acuityscheduling.com', 'marinaribeirobodywork.as.me'];
 const REQUIRED_SLUGS = [
@@ -71,5 +86,38 @@ for (const page of ALL_PAGES) {
   }
 }
 
-console.log(`[check-acuity] inspected ${totalChecked} Acuity anchors across ${ALL_PAGES.length} pages`);
+// ── CTA discipline: scan for generic CTA labels on .btn-styled anchors ──────
+let genericChecked = 0;
+for (const page of ALL_PAGES) {
+  const html = readPage(page);
+  // <a class="btn …">label</a>  - capture the class list and the inner text.
+  const re = /<a\b[^>]*\bclass="([^"]*\bbtn\b[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi;
+  for (const m of html.matchAll(re)) {
+    const cls = m[1];
+    // Skip the sand-styled "Talk to Marina first →" hero link (.btn--link),
+    // and skip any internal-only link without an Acuity slug + without WhatsApp.
+    if (cls.includes('btn--link')) continue;
+    const innerText = m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    genericChecked++;
+    for (const re2 of GENERIC_CTA_PHRASES) {
+      if (re2.test(innerText)) {
+        r.error(`${page}: primary CTA "${innerText}" is too generic - use "Book Massage" or "Book Training" (CLAUDE.md §3)`);
+      }
+    }
+  }
+}
+
+// ── WhatsApp number is canonical ────────────────────────────────────────────
+let waChecked = 0;
+for (const page of ALL_PAGES) {
+  const html = readPage(page);
+  for (const m of html.matchAll(/wa\.me\/(\d+)/g)) {
+    waChecked++;
+    if (m[1] !== CANONICAL_WA_NUMBER) {
+      r.error(`${page}: wa.me/${m[1]} - expected canonical number wa.me/${CANONICAL_WA_NUMBER}`);
+    }
+  }
+}
+
+console.log(`[check-acuity] inspected ${totalChecked} Acuity anchors, ${genericChecked} btn anchors, ${waChecked} wa.me links across ${ALL_PAGES.length} pages`);
 r.done();

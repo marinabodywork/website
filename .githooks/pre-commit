@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Marina Bodywork pre-commit hook.
+# Runs the full static-check suite + html-validate against the working tree.
+# To install: `npm install` runs the "prepare" script which sets
+# `git config core.hooksPath .githooks` automatically.
+# To bypass for an emergency commit: `git commit --no-verify`.
+
+set -e
+
+# Skip if there is no staged change to HTML / CSS / JS / scripts / config.
+# Other paths (image assets, .md notes) don't affect the checks.
+if git diff --cached --name-only | grep -qE '\.(html|css|js|mjs|json|xml)$'; then
+  echo "pre-commit: running npm run check"
+  npm run --silent check
+  echo "pre-commit: running npm run check:html"
+  npm run --silent check:html
+else
+  echo "pre-commit: no source files staged, skipping checks"
+fi

@@ -78,6 +78,43 @@ for (const page of ALL_PAGES) {
       r.error(`${page}: should not be noindex (it is in the indexable page set)`);
     }
   }
+
+  // ── <title> ─────────────────────────────────────────────────────────────
+  const titleMatch = head.match(/<title>([^<]*)<\/title>/i);
+  if (!titleMatch || !titleMatch[1].trim()) r.error(`${page}: missing or empty <title>`);
+
+  // ── <meta name="description"> ───────────────────────────────────────────
+  const descMatch = head.match(/<meta\s+name="description"\s+content="([^"]*)"/i);
+  if (!descMatch || !descMatch[1].trim()) r.error(`${page}: missing or empty <meta name="description">`);
+  else if (descMatch[1].length > 200) r.warn(`${page}: meta description is ${descMatch[1].length} chars (Google truncates around 160)`);
+
+  // ── <link rel="canonical"> ──────────────────────────────────────────────
+  const canonMatch = head.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i);
+  if (!canonMatch) r.error(`${page}: missing <link rel="canonical">`);
+  else if (!/^https:\/\/marinabodywork\.com\//.test(canonMatch[1])) {
+    r.error(`${page}: canonical href "${canonMatch[1]}" should start with https://marinabodywork.com/`);
+  }
+
+  // ── og:image (only required on indexable pages - 404 is noindex) ────────
+  if (INDEXABLE_PAGES.includes(page)) {
+    if (!/<meta\s+property="og:image"\s+content="https:\/\/marinabodywork\.com\/[^"]+"/i.test(head)) {
+      r.error(`${page}: missing <meta property="og:image"> with an absolute https://marinabodywork.com/… URL`);
+    }
+  }
+}
+
+// ── <title> uniqueness across indexable pages ─────────────────────────────
+const titles = new Map();
+for (const page of INDEXABLE_PAGES) {
+  const html = readPage(page);
+  const m = html.match(/<title>([^<]*)<\/title>/i);
+  if (!m) continue;
+  const title = m[1].trim();
+  if (titles.has(title)) {
+    r.error(`<title> "${title}" appears on both ${titles.get(title)} and ${page}`);
+  } else {
+    titles.set(title, page);
+  }
 }
 
 console.log(`[check-head] validated head + structural invariants on ${ALL_PAGES.length} pages`);

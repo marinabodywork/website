@@ -15,6 +15,10 @@ const CHECKS = [
   'check-sitemap.mjs',
   'check-acuity.mjs',
   'check-jsonld.mjs',
+  'check-pricing.mjs',
+  'check-a11y.mjs',
+  'check-assets.mjs',
+  'check-css.mjs',
   'smoke-app.mjs',
 ];
 

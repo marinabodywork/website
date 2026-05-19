@@ -58,6 +58,27 @@ for (const id of ['#business', '#marina', '#website', '#service-corporal', '#ser
   if (!idIndex.has(id)) r.error(`index.html: missing canonical entity ${id}`);
 }
 
+// ── LocalBusiness opening hours (CLAUDE.md §6) ────────────────────────────
+// Massage: Mon/Wed/Fri 13:00-18:00
+// PT:      Tue/Thu     08:00-18:00
+// PT AM:   Mon/Wed/Fri 08:00-11:00
+const EXPECTED_HOURS = [
+  { days: ['Monday', 'Wednesday', 'Friday'], opens: '13:00', closes: '18:00', label: 'massage afternoons' },
+  { days: ['Tuesday', 'Thursday'],           opens: '08:00', closes: '18:00', label: 'PT Tue/Thu' },
+  { days: ['Monday', 'Wednesday', 'Friday'], opens: '08:00', closes: '11:00', label: 'PT mornings' },
+];
+const sameDays = (a, b) => Array.isArray(a) && Array.isArray(b) && a.length === b.length && a.every((d) => b.includes(d));
+const business = idIndex.get('#business');
+if (business) {
+  const hours = Array.isArray(business.openingHoursSpecification) ? business.openingHoursSpecification : (business.openingHoursSpecification ? [business.openingHoursSpecification] : []);
+  for (const want of EXPECTED_HOURS) {
+    const match = hours.find((h) => h && sameDays(h.dayOfWeek, want.days) && h.opens === want.opens && h.closes === want.closes);
+    if (!match) {
+      r.error(`#business: missing openingHoursSpecification for ${want.label} (${want.days.join('/')} ${want.opens}-${want.closes})`);
+    }
+  }
+}
+
 // Service price + URL discipline.
 for (const [id, want] of Object.entries(EXPECTED_OFFERS)) {
   const node = idIndex.get(id);
