@@ -16,8 +16,7 @@ There is **no build system, no framework, and no runtime test suite**. Everythin
 - `styles.css`, single shared stylesheet for all pages.
 - `app.js`, single shared script holding the i18n table (`en` + `pt` flat key maps, ~730 keys total), `setLang`, scroll/reveal/nav behaviour, hamburger drawer, diagnostic widget, FAQ search, hero parallax, and the `js-on` class toggle. **All translations live here, not inline.** First line of the IIFE adds `js-on` to `<html>` so reveal animations are progressive-enhancement only.
 - Image assets live flat in the repo root (no `assets/` subfolder), referenced by bare filename. Currently in-use:
-  - `marina-headshot.webp`, main brand portrait used as the home page hero (`.hero__media > <img>`, 900×1350, LCP preload target).
-  - `hero.jpg`, the social-card / brand image. Referenced as `og:image` for `index.html` + `method.html` and as `LocalBusiness.image` in JSON-LD. Not displayed on-page; lives only in `<head>`.
+  - `marina-headshot.webp`, main brand portrait used as the home page hero (`.hero__media > <img>`, 900×1350, LCP preload target). Doubles as the social-card image: referenced as `og:image` for `index.html` + `method.html` and as `LocalBusiness.image` / `Article.image` / `primaryImageOfPage` in JSON-LD.
   - `massage.jpeg`, Somatic Massage Corporal feature image (`massage.html` service block).
   - `facial.jpeg`, Somatic Massage Facial feature image.
   - `Sensory (2).jpeg`, Sensory Energetics service block image (the parenthesised filename is intentional, the home folder also keeps a `Sensory (1).jpeg` draft that isn't wired up).
