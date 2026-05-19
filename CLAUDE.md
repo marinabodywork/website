@@ -14,7 +14,7 @@ There is **no build system, no framework, and no runtime test suite**. Everythin
 
 - Six HTML pages at the root: `index.html` (home), `massage.html`, `training.html`, `method.html`, `about.html`, and `404.html` (branded not-found, `<meta name="robots" content="noindex">`). Each carries the same `<nav>` + drawer markup, its own `<head>` (meta, OG, per-page JSON-LD, Acuity embed script), and the same trailing `<script src="app.js" defer>`.
 - `styles.css`, single shared stylesheet for all pages.
-- `app.js`, single shared script holding the i18n table (`en` + `pt` flat key maps, ~730 keys total), `setLang`, scroll/reveal/nav behaviour, hamburger drawer, diagnostic widget, FAQ search, hero parallax, and the `js-on` class toggle. **All translations live here, not inline.** First line of the IIFE adds `js-on` to `<html>` so reveal animations are progressive-enhancement only.
+- `app.js`, single shared script holding the i18n table (`en` + `pt` flat key maps, ~420 keys per language / ~840 total), `setLang`, scroll/reveal/nav behaviour, hamburger drawer, diagnostic widget, FAQ search, hero parallax, and the `js-on` class toggle. **All translations live here, not inline.** First line of the IIFE adds `js-on` to `<html>` so reveal animations are progressive-enhancement only.
 - Image assets live flat in the repo root (no `assets/` subfolder), referenced by bare filename. Currently in-use:
   - `marina-headshot.webp`, main brand portrait used as the home page hero (`.hero__media > <img>`, 900×1350, LCP preload target). Doubles as the social-card image: referenced as `og:image` for `index.html` + `method.html` and as `LocalBusiness.image` / `Article.image` / `primaryImageOfPage` in JSON-LD.
   - `massage.jpeg`, Somatic Massage Corporal feature image (`massage.html` service block).
@@ -176,11 +176,12 @@ Section order top-to-bottom:
       - Single session (`home.svc.pt.single.*`), `acuity-embed-button` on `.svc-option` → `/SinglePTLesson`.
       - Monthly plan (`home.svc.pt.plan.*`), internal link → `training.html#plans` (the plans section, not the page top).
    The two-up grid uses `.svc-grid--two` (max-width 920px, centered) for the 2-column layout; `.svc-option` rows are clickable card-links with name + meta + arrow indicator. Collapses to one column under 900px.
+   Below the two cards (still inside `#services`) sits an **Ultimate-promo aside** (`.ultimate-promo`, keys `home.ultimate.*` — badge / h / sub / includes / price / worth / cta.book / cta.details). Limited-window banner for the Ultimate weekly massage membership (May + Jun 2026 only, A$107/week, Acuity catalog id `2215320`). "Lock your weekly slot →" CTA is `btn--sand acuity-embed-button`; "See the full breakdown →" link points to `massage.html#mas-pricing`. The block is also surfaced as a richer `.ultimate-card` on `massage.html` — see § 8.
 4. **`#diagnostic`**, `section--dark`. Five-tile body-area picker, see section 5 above.
 5. **`#proof`** (no id, `section--cream`), three real Google reviews in `.testimonials` (Jean / Yumi / Alya). Each card has a verbatim h3 pull-quote, verbatim `<blockquote>`, `<cite>` first name + `.testimonial__source` "via Google" link to Marina's Google Business profile (`https://maps.app.goo.gl/nrZoa67hLrwqB9gm8`). Below the cards: `.reviews-strip` outlined pill (★★★★★ G reviews · Sydney →) to the same profile. Keys `home.proof.t1..t3.{h,q,name}` + `home.proof.viaGoogle` + `home.proof.reviews`. **Never fabricate testimonials**, only quotes Marina has authorized from real reviews.
 6. **Disqualifiers**, `section--dark`. Four `.disqualifier` cards (`home.dq.d1..d4`) with `×` mark + h3 + p saying who this work is *not* for (relaxation seekers, rebate seekers, fixed-protocol expectations, aesthetics-only training). h3 level keeps hierarchy aligned with footer.
 7. **`#consult`** (no id, `section--pale`), WhatsApp open-conversation block. `home.consult.h2`/`p`/`cta`. CTA is `wa.me` deep link.
-8. **`#faq`**, five Q&A items (`home.faq.q1..q5` / `a1..a5`) with `.faq__search` magnifier-glyph live filter. See section 11.
+8. **`#faq`**, eight Q&A items (`home.faq.q1..q8` / `a1..a8`) with `.faq__search` magnifier-glyph live filter. See section 15. Items in order: why combine bodywork + PT (q1), do you need a diagnosis (q2), what happens in the first session (q3), how soon you feel a difference (q4), why A$125 is more than standard remedial (q5), private-health insurance (q6, "no, not registered"), first-session guarantee (q7, 24h WhatsApp → rework / refer / refund), can you do both massage + PT (q8). `home.faq.a7` is reused verbatim on `massage.html` inside the `.guarantee` strip — keep both copies in lockstep when editing.
 9. **Footer + mobile sticky bar.**
 
 ### 8. Massage page structure (`massage.html`)
@@ -192,6 +193,8 @@ Section order top-to-bottom:
   - **Sensory Energetics** (`mas.s.*`), 60-min signature, `.service-block--signature` variant. Three paragraphs covering: integrative method activating CNS; involuntary tremors are normal and discharge tension/regulate stress/lower cortisol/support dopamine; mind-body-emotion reconnection. **Currently on launch pricing: A$224 (regular A$305).** The service block carries two badges side-by-side inside `.service-block__badges` — `.service-block__badge` (Signature) and `.service-block__badge--launch` (Launch price · forest bg / sand text). A `service-block__launch-note` line below the meta restates the regular price. `mas.s.cta` → SensoryEnergetics. **No weekly membership during launch** — the `mas.s.mship.cta` link was removed; catalog id `2213845` is left configured in Acuity but not surfaced anywhere on the site.
 - **How to choose** (`mas.choose.*`), `section--pale`, three `.choose-card` items mapping symptom → recommended service (standard remedial hasn't held → Corporal; jaw/TMJ → Facial; tension keeps coming back → Sensory Energetics).
 - **`#mas-pricing`**, `section--cream`, `container--narrow`. Pricing table (`.pricing__row` with name/sub/price) plus the Weekly memberships strip with two `acuity-embed-button` links to the catalog ids (Corporal + Facial at A$107/session each; Sensory weekly is omitted during the launch). Sensory row carries `mas.price.r2.note` ("Limited launch rate. Returns to A$305") below the price, rendered via the new `.pricing__note--launch` style. Keys `mas.price.label`/`h2`/`r1.*`/`r2.*`/`r2.note`/`book`/`mship.h`/`mship.note`/`mship.corporal`/`mship.facial`.
+  - Directly below the memberships strip sits the **Ultimate card** (`.ultimate-card`, keys `mas.price.ultimate.*`). Limited-window weekly massage membership (May + Jun 2026 only, closes to new sign-ups 30 Jun 2026; locked slots keep the rate after that). A$107/week (A$428 every 4 weeks; worth A$680 at single-session rates), Acuity catalog id `2215320`. The card renders a `<ol class="ultimate-card__weeks">` 4-week journey (Week 1 Corporal → Week 2 Facial → Week 3 Sensory Energetics → Week 4 Corporal), keys `mas.price.ultimate.w1..w4.{label,h,p}`. Other Ultimate keys: `badge`/`h`/`sub`/`price`/`cycle`/`worth`/`journey`/`scarcity`/`terms`/`cta`. CTA is `btn--primary acuity-embed-button` → catalog id `2215320`.
+  - Immediately under the Ultimate card sits the **First-session guarantee** strip (`.guarantee`), reusing the home FAQ key `home.faq.a7` (24-hour WhatsApp → rework / refer / refund). Visible label "First-session guarantee" is currently hard-coded English text in markup (no `data-i18n`), the body is translated.
 - **FAQ**, `.faq__search` live filter + `.faq__empty` empty state. Keys `mas.faq.*`.
 - Footer + sticky bar.
 
@@ -240,12 +243,12 @@ Section order top-to-bottom:
 ### 11. About page structure (`about.html`)
 
 - `<header class="page-hero page-hero--media">`, Marina's portrait (`marina-hero.webp`, 1600×1200, fetchpriority high) sits in `.page-hero__media` next to the text block. Same side-by-side hero pattern method.html uses (text left, image right, single column under 900px).
-- **Bio**, four `<p data-i18n="about.bio.p1..p4">` paragraphs. Source of truth:
-  - **Identity:** Marina Ribeiro da Silva, Physical Education professional, **18+ years** dedicated to movement, health, and women's well-being.
-  - **Origin:** started through dance, teaching it from age 15; studied Physical Education to professionalise the passion.
-  - **Brazil career:** worked with the Minas Gerais government on **Movimenta Contagem** (largest free outdoor physical-activity programme in Brazil). After the pandemic founded **Mulheres Ativas**, a programme for women, particularly over 40, mothers, and those who never felt at home in traditional gyms.
-  - **Sydney today:** specialises in women's training across all life stages including perimenopause, conditioning, hypertrophy, mobility, posture, body awareness.
-  - **Bodywork:** 10+ years in body therapies; developed her own fascial-release technique combining breath, somatic awareness, and myofascial release.
+- **Bio**, four `<p data-i18n="about.bio.p1..p4">` paragraphs with an inline `<blockquote class="pull-quote" data-i18n="about.bio.pullquote">` between p2 and p3. Section header keys: `about.bio.label` ("The story") + `about.bio.h2` ("Eighteen years of practice, two continents, one goal."). Source of truth:
+  - **Identity (p1):** Marina Ribeiro da Silva, Physical Education professional, **18+ years** dedicated to movement, health, and women's well-being.
+  - **Origin (p2):** started through dance, teaching it from age 15; studied Physical Education to professionalise the passion; Brazil career working with the Minas Gerais government on **Movimenta Contagem** (largest free outdoor physical-activity programme in Brazil).
+  - **Pull-quote (about.bio.pullquote):** "Physical exercise goes beyond aesthetics. It is the building of a strong, functional, conscious body, one that sustains autonomy, longevity, and quality of life at every stage." Marina's words — treat as voiced copy, confirm before rewording.
+  - **Mulheres Ativas (p3):** founded after the pandemic, programme for women particularly over 40, mothers, and those who never felt at home in traditional gyms.
+  - **Sydney today + bodywork (p4):** specialises in women's training across all life stages including perimenopause, conditioning, hypertrophy, mobility, posture, body awareness; 10+ years in body therapies; developed her own fascial-release technique combining breath, somatic awareness, and myofascial release.
 - **`.about-letter`**, signed Marina quote between bio and credentials. Keys `about.letter.label` / `about.letter.quote` / `about.letter.sign`. Treat the quote as Marina's voice, confirm with the user before rewording.
 - **Credentials** (`about.creds.label`/`h2` + `.cred` chips), eight items, keys `about.cred.1..8`:
   1. EQF Level 4 Personal Trainer
@@ -353,6 +356,7 @@ Lighthouse CI runs on every push and asserts a11y ≥ 0.9 + SEO ≥ 0.9 (error),
 
 ## Git workflow
 
-- Develop on the feature branch assigned for the session (currently `claude/add-claude-documentation-AzFZQ`).
-- Push with `git push -u origin <branch>` and open a draft PR against the default branch.
+- Develop on the feature branch assigned for the session (named `claude/<short-task-slug>-<random-suffix>` — the exact value is supplied per session).
+- Push with `git push -u origin <branch>` and open a draft PR against the default branch (`main`).
 - Never push directly to `main`; never amend pushed commits; never force-push.
+- `.githooks/pre-commit` runs the full static-check suite locally before every commit. CI mirrors it (`.github/workflows/checks.yml`). Treat a green local hook + green CI as the bar for merging.
