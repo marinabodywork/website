@@ -79,6 +79,17 @@ if (business) {
   }
 }
 
+// Sensory Energetics is on launch pricing - the offer.description MUST mention
+// the regular A$305 rate so the social/search snippet doesn't look like the
+// launch price is permanent (CLAUDE.md §6).
+const sensory = idIndex.get('#service-sensory');
+if (sensory) {
+  const offer = Array.isArray(sensory.offers) ? sensory.offers[0] : sensory.offers;
+  if (offer && (!offer.description || !/A\$305/.test(offer.description))) {
+    r.error(`#service-sensory: offer.description must mention "A$305" (regular price) while launch pricing is active`);
+  }
+}
+
 // Service price + URL discipline.
 for (const [id, want] of Object.entries(EXPECTED_OFFERS)) {
   const node = idIndex.get(id);

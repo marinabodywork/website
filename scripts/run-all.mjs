@@ -18,6 +18,7 @@ const CHECKS = [
   'check-pricing.mjs',
   'check-a11y.mjs',
   'check-assets.mjs',
+  'check-orphan-images.mjs',
   'check-css.mjs',
   'smoke-app.mjs',
 ];
