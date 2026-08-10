@@ -89,7 +89,8 @@ document.documentElement.classList.add('js-on');
       'home.ultimate.includes': 'Each 4-week cycle: 2x Somatic Corporal · 1x Somatic Facial · 1x Sensory Energetics.',
       'home.ultimate.price': 'A$107/week',
       'home.ultimate.worth': 'Worth A$680 at single-session rates',
-      'home.ultimate.cta.book': 'Lock your weekly slot →',
+      'home.ultimate.cta.book': 'Start your Ultimate →',
+      'home.ultimate.cta.reserve': 'Reserve your slot on WhatsApp →',
       'home.ultimate.cta.details': 'See the full breakdown →',
 
       // ─── Diagnostic ───
@@ -320,9 +321,10 @@ document.documentElement.classList.add('js-on');
       'mas.price.r2.note': 'Limited launch rate. Returns to A$305 after the launch window.',
       'mas.price.book': 'Book single session',
       'mas.price.mship.h': 'Weekly memberships',
-      'mas.price.mship.note': 'A$107 per session, billed weekly. Same day and time every week, locked at checkout and held for you until you cancel. Minimum 2 months · auto-renews · cancel with 1 week notice.',
+      'mas.price.mship.note': 'A$107 per session, billed weekly. Minimum 2 months · auto-renews · cancel with 1 week notice. After you pay, message Marina on WhatsApp to reserve your day and time — the same slot is then held for you every week.',
       'mas.price.mship.corporal': 'Weekly Corporal · A$107/session',
       'mas.price.mship.facial': 'Weekly Facial · A$107/session',
+      'mas.price.mship.reserve': 'Reserve your day on WhatsApp →',
 
       'mas.price.ultimate.badge': 'New · Released for May + June 2026 only',
       'mas.price.ultimate.h': 'Experience Marina\'s full method.',
@@ -344,8 +346,9 @@ document.documentElement.classList.add('js-on');
       'mas.price.ultimate.w4.h': 'Somatic Corporal',
       'mas.price.ultimate.w4.p': 'Integrate and deepen the work.',
       'mas.price.ultimate.scarcity': 'Marina holds a small number of Ultimate slots per cycle. After 30 June 2026 this membership closes to new sign-ups. Locked slots keep the rate.',
-      'mas.price.ultimate.terms': 'Minimum 2 months · weekly slot locked at checkout · billed every 4 weeks.',
-      'mas.price.ultimate.cta': 'Lock your weekly slot →',
+      'mas.price.ultimate.terms': 'Minimum 2 months · billed every 4 weeks. After you pay, message Marina on WhatsApp to reserve your weekly slot.',
+      'mas.price.ultimate.cta': 'Start your Ultimate →',
+      'mas.price.ultimate.reserve': 'Reserve your weekly slot on WhatsApp →',
 
       'mas.faq.h2': 'Massage-specific questions.',
       'mas.faq.q1': 'What do I wear?',
@@ -388,7 +391,7 @@ document.documentElement.classList.add('js-on');
 
       'tr.plans.label': 'Plans and memberships',
       'tr.plans.h2': 'Choose your rhythm.<br>Lock in your slot.',
-      'tr.plans.sub': 'Monthly memberships, billed every 4 weeks. Pick 1, 2, or 3 sessions a week. Your weekday and time are locked for the length of your membership. Minimum 2 months on Basic and Golden, 3 months on Diamond. The work needs that long to land.',
+      'tr.plans.sub': 'Monthly memberships, billed every 4 weeks. Pick 1, 2, or 3 sessions a week. After you join, you reserve your weekday and time with Marina on WhatsApp, then it is held for the length of your membership. Minimum 2 months on Basic and Golden, 3 months on Diamond. The work needs that long to land.',
 
       'tr.plan.basic.name': 'Basic',
       'tr.plan.basic.price': 'A$404',
@@ -414,7 +417,8 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.f3': '<strong>Physical assessment</strong> + MFIT app programming included',
 
       'tr.plan.book': 'Start membership',
-      'tr.plan.note': 'How it works: book your first session in Acuity and choose <strong>Select and make recurring</strong> so your weekday and time lock in for the membership. Golden clients repeat the action once per training day (2x). Diamond clients repeat it for each of their 3 weekdays. Your card is charged every 4 weeks. Cancel through the portal anytime after your minimum (2 months on Basic and Golden, 3 months on Diamond). Cancel inside the minimum and your remaining membership transfers to a friend of your choice. No refunds.',
+      'tr.plan.note': 'How it works: start your membership and pay through the catalog. Then message Marina on WhatsApp to reserve your weekday and time — she locks in your recurring slot for the length of the membership (Golden reserves 2 weekly slots, Diamond 3). Your card is charged every 4 weeks. Cancel through the portal anytime after your minimum (2 months on Basic and Golden, 3 months on Diamond). Cancel inside the minimum and your remaining membership transfers to a friend of your choice. No refunds.',
+      'tr.plan.reserve': 'Reserve your training slot on WhatsApp →',
 
       'tr.single.name': 'Single session: test the work first',
       'tr.single.sub': 'One 60-minute session, no membership, no commitment. The way to feel how Marina trains before locking into a monthly plan.',
@@ -438,9 +442,9 @@ document.documentElement.classList.add('js-on');
 
       'tr.pol.label': 'Membership policy',
       'tr.pol.h2': 'Billing, slot, minimum, and transfer.',
-      'tr.pol.intro': 'Everything below runs through your Acuity client portal. You manage your slot, reschedule, freeze, transfer, or cancel renewal yourself. No message to Marina required.',
+      'tr.pol.intro': 'You reserve your weekly slot with Marina on WhatsApp when you join. After that, everything below runs through your Acuity client portal: reschedule, freeze, transfer, or cancel renewal yourself.',
       'tr.pol.slot.h': 'Your weekly slot',
-      'tr.pol.slot.p': 'You set your weekly slot yourself in Acuity. When you book your first session, choose <strong>Select and make recurring</strong> so the same weekday and time repeat for the length of your membership. Basic = 1 weekly series. Golden = 2 weekly series (one for each training day). Diamond = 3 weekly series. To change a slot later, reschedule individual sessions through your Acuity portal (72-hour rule below).',
+      'tr.pol.slot.p': 'After you start your membership, message Marina on WhatsApp to reserve your weekday and time. She locks in your recurring slot for the length of the membership: Basic = 1 weekly slot, Golden = 2 (one for each training day), Diamond = 3. To change a slot later, reschedule individual sessions through your Acuity portal (72-hour rule below).',
       'tr.pol.resched.h': 'Rescheduling',
       'tr.pol.resched.p1': 'Reschedule any session yourself through your Acuity portal with at least <strong>72 hours notice</strong>. Pick a new time from Marina\'s open availability.',
       'tr.pol.resched.l1': 'Reschedule with less than 72 hours notice. The session counts as used.',
@@ -589,7 +593,8 @@ document.documentElement.classList.add('js-on');
       'home.ultimate.includes': 'A cada ciclo de 4 semanas: 2x Somatic Corporal · 1x Somatic Facial · 1x Sensory Energetics.',
       'home.ultimate.price': 'A$107/semana',
       'home.ultimate.worth': 'Equivale a A$680 em sessões avulsas',
-      'home.ultimate.cta.book': 'Reservar sua vaga semanal →',
+      'home.ultimate.cta.book': 'Iniciar o Ultimate →',
+      'home.ultimate.cta.reserve': 'Reservar sua vaga no WhatsApp →',
       'home.ultimate.cta.details': 'Ver os detalhes completos →',
 
       // Diagnostic
@@ -817,9 +822,10 @@ document.documentElement.classList.add('js-on');
       'mas.price.r2.note': 'Valor de lançamento por tempo limitado. Volta para A$305 depois.',
       'mas.price.book': 'Reservar sessão avulsa',
       'mas.price.mship.h': 'Planos semanais',
-      'mas.price.mship.note': 'A$107 por sessão, cobrado semanalmente. Mesmo dia e mesma hora toda semana, reservado no checkout e mantido pra você até você cancelar. Mínimo de 2 meses · renovação automática · cancelamento com 1 semana de aviso.',
+      'mas.price.mship.note': 'A$107 por sessão, cobrado semanalmente. Mínimo de 2 meses · renovação automática · cancelamento com 1 semana de aviso. Depois de pagar, fale com a Marina no WhatsApp para reservar seu dia e horário — o mesmo horário fica reservado pra você toda semana.',
       'mas.price.mship.corporal': 'Corporal semanal · A$107/sessão',
       'mas.price.mship.facial': 'Facial semanal · A$107/sessão',
+      'mas.price.mship.reserve': 'Reservar seu dia no WhatsApp →',
 
       'mas.price.ultimate.badge': 'Novidade · Lançamento de maio + junho 2026',
       'mas.price.ultimate.h': 'Viva o método completo da Marina.',
@@ -841,8 +847,9 @@ document.documentElement.classList.add('js-on');
       'mas.price.ultimate.w4.h': 'Somatic Corporal',
       'mas.price.ultimate.w4.p': 'Integrar e aprofundar o trabalho.',
       'mas.price.ultimate.scarcity': 'A Marina mantém um número reduzido de vagas Ultimate por ciclo. Depois de 30 de junho de 2026 o plano fecha pra novas inscrições. Quem já travou a vaga segue com o mesmo preço.',
-      'mas.price.ultimate.terms': 'Mínimo 2 meses · horário semanal travado no checkout · cobrança a cada 4 semanas.',
-      'mas.price.ultimate.cta': 'Reservar a sua vaga semanal →',
+      'mas.price.ultimate.terms': 'Mínimo 2 meses · cobrança a cada 4 semanas. Depois de pagar, fale com a Marina no WhatsApp para reservar sua vaga semanal.',
+      'mas.price.ultimate.cta': 'Iniciar o Ultimate →',
+      'mas.price.ultimate.reserve': 'Reservar sua vaga no WhatsApp →',
 
       'mas.faq.h2': 'Perguntas específicas sobre massagem.',
       'mas.faq.q1': 'O que eu devo vestir?',
@@ -885,7 +892,7 @@ document.documentElement.classList.add('js-on');
 
       'tr.plans.label': 'Planos e mensalidades',
       'tr.plans.h2': 'Escolha o seu ritmo.<br>Garante o seu horário.',
-      'tr.plans.sub': 'Mensalidades cobradas a cada 4 semanas. Você escolhe 1, 2 ou 3 sessões por semana. Seu dia e horário ficam travados durante toda a mensalidade. Mínimo de 2 meses no Basic e no Golden, 3 meses no Diamond. O trabalho precisa desse tempo pra entrar de verdade.',
+      'tr.plans.sub': 'Mensalidades cobradas a cada 4 semanas. Você escolhe 1, 2 ou 3 sessões por semana. Depois de entrar, você reserva seu dia e horário com a Marina no WhatsApp, e ele fica garantido durante toda a mensalidade. Mínimo de 2 meses no Basic e no Golden, 3 meses no Diamond. O trabalho precisa desse tempo pra entrar de verdade.',
 
       'tr.plan.basic.name': 'Basic',
       'tr.plan.basic.price': 'A$404',
@@ -911,7 +918,8 @@ document.documentElement.classList.add('js-on');
       'tr.plan.diamond.f3': '<strong>Avaliação física</strong> + programação no app MFIT incluídas',
 
       'tr.plan.book': 'Iniciar mensalidade',
-      'tr.plan.note': 'Como funciona: você agenda a primeira sessão na Acuity e seleciona <strong>Select and make recurring</strong> (tornar recorrente) para o seu dia e horário ficarem travados durante toda a mensalidade. Clientes Golden repetem o processo uma vez por dia de treino (2x). Clientes Diamond repetem para cada um dos 3 dias. O seu cartão é cobrado a cada 4 semanas. Cancele pelo portal a qualquer momento depois do período mínimo (2 meses no Basic e Golden, 3 meses no Diamond). Se cancelar dentro do mínimo, o restante da mensalidade transfere para uma amiga da sua escolha. Sem reembolso.',
+      'tr.plan.note': 'Como funciona: você inicia a mensalidade e paga pelo catálogo. Depois, fala com a Marina no WhatsApp para reservar seu dia e horário — ela deixa seu horário fixo durante toda a mensalidade (Golden reserva 2 horários semanais, Diamond 3). O seu cartão é cobrado a cada 4 semanas. Cancele pelo portal a qualquer momento depois do período mínimo (2 meses no Basic e Golden, 3 meses no Diamond). Se cancelar dentro do mínimo, o restante da mensalidade transfere para uma amiga da sua escolha. Sem reembolso.',
+      'tr.plan.reserve': 'Reservar seu horário no WhatsApp →',
 
       'tr.single.name': 'Sessão avulsa: teste o trabalho primeiro',
       'tr.single.sub': 'Uma sessão de 60 minutos, sem mensalidade, sem compromisso. A maneira de sentir como a Marina treina antes de entrar num plano mensal.',
@@ -935,9 +943,9 @@ document.documentElement.classList.add('js-on');
 
       'tr.pol.label': 'Política da mensalidade',
       'tr.pol.h2': 'Cobrança, horário, mínimo e transferência.',
-      'tr.pol.intro': 'Tudo abaixo você faz sozinha pelo seu portal da Acuity. Você gerencia seu horário, reagenda, congela, transfere ou cancela a renovação. Sem precisar mandar mensagem para a Marina.',
+      'tr.pol.intro': 'Você reserva seu horário semanal com a Marina no WhatsApp quando entra. Depois disso, tudo abaixo você faz sozinha pelo seu portal da Acuity: reagenda, congela, transfere ou cancela a renovação.',
       'tr.pol.slot.h': 'Seu horário semanal',
-      'tr.pol.slot.p': 'Você define seu horário semanal sozinha na Acuity. Ao agendar a primeira sessão, escolhe <strong>Select and make recurring</strong> (tornar recorrente) para o mesmo dia e horário se repetir durante toda a mensalidade. Basic = 1 série semanal. Golden = 2 séries semanais (uma para cada dia de treino). Diamond = 3 séries semanais. Para mudar um horário depois, reagende as sessões individualmente pelo portal da Acuity (regra das 72 horas logo abaixo).',
+      'tr.pol.slot.p': 'Depois de iniciar a mensalidade, fale com a Marina no WhatsApp para reservar seu dia e horário. Ela deixa seu horário fixo durante toda a mensalidade: Basic = 1 horário semanal, Golden = 2 (um para cada dia de treino), Diamond = 3. Para mudar um horário depois, reagende as sessões individualmente pelo portal da Acuity (regra das 72 horas logo abaixo).',
       'tr.pol.resched.h': 'Reagendamento',
       'tr.pol.resched.p1': 'Você reagenda qualquer sessão sozinha pelo portal da Acuity com no mínimo <strong>72 horas de antecedência</strong>. Escolhe um novo horário entre os que a Marina deixou disponíveis.',
       'tr.pol.resched.l1': 'Reagendou com menos de 72 horas de antecedência. A sessão conta como utilizada.',
