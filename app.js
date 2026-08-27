@@ -88,9 +88,8 @@ document.documentElement.classList.add('js-on');
       'home.hero.label': '<strong>Marina Ribeiro</strong> · Fascia release specialist · Sydney',
       'home.hero.h1.a': 'Release the restriction.',
       'home.hero.h1.b': 'Build physical strength and mental balance.',
-      'home.hero.h1.c': 'One specialist.',
-      'home.hero.h1.d': 'One system.',
-      'home.hero.sub': 'Fascia release, Sensory Energetics, and conscious-movement personal training.',
+
+      'home.hero.sub': 'Bodywork, Sensory Energetics, and conscious movement designed around what your body needs.',
       'home.hero.cta.massage': 'Book Membership',
       'home.hero.cta.training': 'Book One Session',
       'home.hero.cta.talk': 'Not sure where to start? Talk to Marina first →',
@@ -695,9 +694,8 @@ document.documentElement.classList.add('js-on');
       'home.hero.label': '<strong>Marina Ribeiro</strong> · Especialista em liberação fascial · Sydney',
       'home.hero.h1.a': 'Solte o que trava.',
       'home.hero.h1.b': 'Ganhe força física e equilíbrio mental.',
-      'home.hero.h1.c': 'Uma especialista.',
-      'home.hero.h1.d': 'Um sistema.',
-      'home.hero.sub': 'Massagem somática, Sensory Energetics e personal training. Tudo conectado, com uma especialista só, pra um corpo que solta e ganha força ao mesmo tempo.',
+
+      'home.hero.sub': 'Bodywork, Sensory Energetics e movimento consciente, desenhados em volta do que o seu corpo precisa.',
       'home.hero.cta.massage': 'Assinar Membership',
       'home.hero.cta.training': 'Sessão avulsa',
       'home.hero.cta.talk': 'Não sabe por onde começar? Fala com a Marina primeiro →',
