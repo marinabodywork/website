@@ -27,9 +27,14 @@ const HEADLINE_PRICES = [
   { price: 404,  label: 'Basic PT membership / month',         mustAppearIn: ['training.html', 'index.html'] },
   { price: 710,  label: 'Golden PT membership / month',        mustAppearIn: ['training.html'] },
   { price: 1007, label: 'Diamond PT membership / month',       mustAppearIn: ['training.html'] },
-  { price: 1700, label: 'Diamond bodywork membership (20 sessions, upfront)', mustAppearIn: ['massage.html'] },
   { price: 1070, label: 'Emerald bodywork membership (10 sessions, upfront)', mustAppearIn: ['massage.html'] },
 ];
+
+// Intentional exception to the cabalistic rule, kept at Marina's request:
+// the Diamond prepaid bodywork pack is priced A$1,960 upfront (A$98/session),
+// which does NOT sum to 8. It is deliberately NOT in HEADLINE_PRICES so the
+// cabalistic assertion does not flag it. Do not "fix" this price without
+// confirming with Marina first.
 
 // Derived totals from a cabalistic per-unit rate × N. NOT required to sum to 8 -
 // the cabalistic rule applies to the per-unit headline price, not the multiplier.
