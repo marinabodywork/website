@@ -19,8 +19,8 @@ document.documentElement.classList.add('js-on');
       'nav.membership': 'Membership',
       'nav.training': 'Smart Training',
       'nav.about': 'About Me',
-      'nav.bookMassage': 'Book Massage',
-      'nav.bookTraining': 'Book Training',
+      'nav.bookMassage': 'Book Membership',
+      'nav.bookTraining': 'Book One Session',
       'nav.menu': 'Open menu',
 
       'mem.hero.label': 'Membership',
@@ -74,14 +74,14 @@ document.documentElement.classList.add('js-on');
       'footer.col.contact': 'Contact',
       'footer.col.book': 'Book',
       'footer.faq': 'FAQ',
-      'footer.bookMassage': 'Book Massage',
-      'footer.bookPt': 'Book Training',
+      'footer.bookMassage': 'Book Membership',
+      'footer.bookPt': 'Book One Session',
       'footer.address': 'Randwick, NSW',
       'footer.copy': '© 2026 Marina Bodywork. Sydney, Australia.',
 
       // Sticky CTA
-      'sticky.massage': 'Book Massage',
-      'sticky.pt': 'Book Training',
+      'sticky.massage': 'Book Membership',
+      'sticky.pt': 'Book One Session',
       'wa.float': 'Message Marina on WhatsApp',
 
       // ─── Home: hero ───
@@ -626,8 +626,8 @@ document.documentElement.classList.add('js-on');
       'nav.membership': 'Membership',
       'nav.training': 'Smart Training',
       'nav.about': 'Sobre mim',
-      'nav.bookMassage': 'Agendar Massagem',
-      'nav.bookTraining': 'Agendar Treino',
+      'nav.bookMassage': 'Assinar Membership',
+      'nav.bookTraining': 'Sessão avulsa',
       'nav.menu': 'Abrir menu',
 
       'mem.hero.label': 'Membership',
@@ -681,14 +681,14 @@ document.documentElement.classList.add('js-on');
       'footer.col.contact': 'Contato',
       'footer.col.book': 'Agendar',
       'footer.faq': 'Perguntas frequentes',
-      'footer.bookMassage': 'Agendar Massagem',
-      'footer.bookPt': 'Agendar Treino',
+      'footer.bookMassage': 'Assinar Membership',
+      'footer.bookPt': 'Sessão avulsa',
       'footer.address': 'Randwick, NSW',
       'footer.copy': '© 2026 Marina Bodywork. Sydney, Austrália.',
 
       // Sticky CTA
-      'sticky.massage': 'Agendar Massagem',
-      'sticky.pt': 'Agendar Treino',
+      'sticky.massage': 'Assinar Membership',
+      'sticky.pt': 'Sessão avulsa',
       'wa.float': 'Falar com a Marina no WhatsApp',
 
       // Home: hero

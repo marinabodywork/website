@@ -115,7 +115,7 @@ These appear on `massage.html`'s service blocks ("Make it weekly →" secondary 
 
 **WhatsApp**, open-conversation CTAs use `https://wa.me/61451021478?text=...`. The home `#consult` section and "Talk to Marina first →" links use these.
 
-**Booking CTA discipline:** every primary booking CTA on the page is service-specific, either "Book Massage" or "Book Training". Do not introduce a generic "Talk to Marina" / "Book a session" duplicate next to the service-specific buttons; the dedicated WhatsApp consult is the canonical place for an open conversation. The mobile sticky bar mirrors the hero buttons exactly.
+**Booking CTA discipline:** the **global chrome** (nav, drawer, mobile sticky bar, footer "Book" column) now carries the two redesign CTAs — **"Book Membership"** (`nav.bookMassage` / `sticky.massage` / `footer.bookMassage`; an **internal** link to `membership.html`, so no `acuity-embed-button`) and **"Book One Session"** (`nav.bookTraining` / `sticky.pt` / `footer.bookPt`; Acuity `/bookmassage` hub, keeps `acuity-embed-button`). The nav CTAs use `.nav__cta` (sand, Membership) + `.nav__cta--alt` (forest, One Session). Page-level hero/CTA blocks still use their own service-specific keys (`home.hero.cta.*`, `about.cta.*` → "Book Massage" / "Book Training" on Acuity), which is what keeps the `BookPTlessons` slug referenced for `check-acuity`. Do not introduce a generic "Talk to Marina" / "Book a session" / "Book now" duplicate (`check-acuity` blocks those exact phrases on `.btn` anchors).
 
 If the phone, booking URLs, membership ids, or pricing change, update them in **all** of: the visible CTAs across every page, the JSON-LD `Service.offers` blocks on `index.html`, and the i18n table.
 
