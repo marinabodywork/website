@@ -28,7 +28,10 @@ const GENERIC_CTA_PHRASES = [
 const ACUITY_HOSTS = ['acuityscheduling.com', 'marinaribeirobodywork.as.me'];
 const REQUIRED_SLUGS = [
   'bookmassage',
-  'BookPTlessons',
+  // 'BookPTlessons' (the PT booking hub) is no longer surfaced: the redesign
+  // replaced the global "Book Training" CTA with "Book Membership" / "Book One
+  // Session". Smart Training booking lives on training.html via /SinglePTLesson
+  // + the memberships catalog. Re-add here if a Book Training hub CTA returns.
   'SomaticMassageCorporal',
   'SomaticMassageFacial',
   'SensoryEnergetics',

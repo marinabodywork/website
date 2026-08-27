@@ -91,8 +91,8 @@ document.documentElement.classList.add('js-on');
       'home.hero.h1.c': 'One specialist.',
       'home.hero.h1.d': 'One system.',
       'home.hero.sub': 'Fascia release, Sensory Energetics, and conscious-movement personal training.',
-      'home.hero.cta.massage': 'Book Massage',
-      'home.hero.cta.training': 'Book Training',
+      'home.hero.cta.massage': 'Book Membership',
+      'home.hero.cta.training': 'Book One Session',
       'home.hero.cta.talk': 'Not sure where to start? Talk to Marina first →',
 
       // ─── Home: combination ───
@@ -168,19 +168,19 @@ document.documentElement.classList.add('js-on');
       'diag.neck.name': 'Somatic Massage Corporal',
       'diag.neck.why': 'Chronic upper-body tension is almost always fascial, not muscular. Standard remedial massage works the surface. Marina reaches the connective tissue underneath it, where the pattern is held. Most clients feel the difference in the first session.',
       'diag.neck.tags': 'Myofascial Release · Somatic Release · Custom blend',
-      'diag.neck.cta': 'Book Massage',
+      'diag.neck.cta': 'Book One Session',
       'diag.jaw.name': 'Somatic Massage Facial',
       'diag.jaw.why': 'TMJ tension and jaw clenching are held in the fascia of the face, neck, and throat. Marina is one of the few Sydney practitioners trained in buccal (inside-mouth) massage and TMJ Mastery. Clients typically report deeper sleep and reduced jaw tension within 24 hours.',
       'diag.jaw.tags': 'TMJ Mastery · Buccal Massage · Myofascial Release',
-      'diag.jaw.cta': 'Book Massage',
+      'diag.jaw.cta': 'Book One Session',
       'diag.back.name': 'Somatic Massage Corporal',
       'diag.back.why': 'Lower-back and hip tension is usually a fascial chain problem, not an isolated muscle problem. The restriction is often in the hip flexors, the thoracolumbar fascia, or the connection between them. Marina maps the chain and releases it at the source.',
       'diag.back.tags': 'Myofascial Release · Myo Aponeurosis · Somatic Release',
-      'diag.back.cta': 'Book Massage',
+      'diag.back.cta': 'Book One Session',
       'diag.stress.name': 'Sensory Energetics (60 min)',
       'diag.stress.why': 'When the body cannot switch off, the nervous system is the problem, not just the muscle. Sensory Energetics combines trigger-point work, guided breath, and somatic release to reach tension stored by the nervous system for months or years. Clients leave looser and most sleep deeper that night.',
       'diag.stress.tags': 'Nervous System Release · Breathwork · Trigger-Point',
-      'diag.stress.cta': 'Book Massage',
+      'diag.stress.cta': 'Book One Session',
       'diag.training.name': 'Conscious Movement Personal Training',
       'diag.training.why': 'A training plateau that does not respond to programming changes is usually a tissue problem. Fascial restriction limits the range you can train in, which caps strength gains. Marina brings her bodywork qualifications into every PT session, addressing the restriction and training the cleared range in the same hour.',
       'diag.training.tags': 'Fascial Chain Training · Mobility · Breathwork in Session',
@@ -228,7 +228,7 @@ document.documentElement.classList.add('js-on');
       'nf.h1': 'This page took a different route.',
       'nf.sub': 'It might have moved, or never existed. Either way, the work is still here.',
       'nf.cta.home': 'Back to home',
-      'nf.cta.book': 'Book Massage',
+      'nf.cta.book': 'Book One Session',
       'nf.next': 'Where to next?',
       'home.faq.h2': 'The questions Marina hears every week.',
       'home.faq.q1': 'Why does Marina combine bodywork with personal training?',
@@ -317,7 +317,7 @@ document.documentElement.classList.add('js-on');
 
       'method.cta.h2': 'Ready to feel the difference?',
       'method.cta.p': 'Start with one session. After the first hour you will know whether this is the right work.',
-      'method.cta.book': 'Book Massage',
+      'method.cta.book': 'Book One Session',
       'method.cta.talk': 'Talk to Marina first →',
 
       // ─── Massage page ───
@@ -333,7 +333,7 @@ document.documentElement.classList.add('js-on');
       'mas.t.q.what': 'What is it?',
       'mas.t.q.who': 'Who is it for?',
       'mas.t.q.benefits': 'Benefits',
-      'mas.t.book': 'Book Massage',
+      'mas.t.book': 'Book One Session',
       'mas.t.disclaimer': 'A complementary wellness practice; not a substitute for medical or psychological care.',
 
       // Treatment: Myofascial Release
@@ -613,9 +613,9 @@ document.documentElement.classList.add('js-on');
       'about.insta.cta': '@marinaribeiropersonal →',
 
       'about.cta.h': 'Ready to work with Marina?',
-      'about.cta.p': 'Book a massage, book a PT lesson, or message Marina first if you want her to recommend where to start.',
-      'about.cta.book': 'Book Massage',
-      'about.cta.bookPt': 'Book Training',
+      'about.cta.p': 'Join a membership, book a single session, or message Marina first if you want her to recommend where to start.',
+      'about.cta.book': 'Book Membership',
+      'about.cta.bookPt': 'Book One Session',
       'about.cta.talk': 'Talk to Marina →'
     },
 
@@ -698,8 +698,8 @@ document.documentElement.classList.add('js-on');
       'home.hero.h1.c': 'Uma especialista.',
       'home.hero.h1.d': 'Um sistema.',
       'home.hero.sub': 'Massagem somática, Sensory Energetics e personal training. Tudo conectado, com uma especialista só, pra um corpo que solta e ganha força ao mesmo tempo.',
-      'home.hero.cta.massage': 'Agendar Massagem',
-      'home.hero.cta.training': 'Agendar Treino',
+      'home.hero.cta.massage': 'Assinar Membership',
+      'home.hero.cta.training': 'Sessão avulsa',
       'home.hero.cta.talk': 'Não sabe por onde começar? Fala com a Marina primeiro →',
 
       // Home: combination
@@ -775,19 +775,19 @@ document.documentElement.classList.add('js-on');
       'diag.neck.name': 'Somatic Massage Corporal',
       'diag.neck.why': 'A tensão crônica na parte de cima do corpo quase sempre vem da fáscia, não do músculo. A massagem comum só trabalha na superfície. A Marina chega no tecido por baixo, onde a tensão está guardada de verdade. A maioria das clientes sente a diferença já na primeira sessão.',
       'diag.neck.tags': 'Liberação Miofascial · Liberação Somática · Combinação personalizada',
-      'diag.neck.cta': 'Agendar Massagem',
+      'diag.neck.cta': 'Sessão avulsa',
       'diag.jaw.name': 'Somatic Massage Facial',
       'diag.jaw.why': 'A tensão na mandíbula e o bruxismo ficam guardados na fáscia do rosto, do pescoço e da garganta. A Marina é uma das poucas profissionais em Sydney formada em massagem bucal (por dentro da boca) e TMJ Mastery. A maioria das clientes dorme melhor e sente a mandíbula bem mais solta em 24 horas.',
       'diag.jaw.tags': 'TMJ Mastery · Massagem Bucal · Liberação Miofascial',
-      'diag.jaw.cta': 'Agendar Massagem',
+      'diag.jaw.cta': 'Sessão avulsa',
       'diag.back.name': 'Somatic Massage Corporal',
       'diag.back.why': 'Dor lombar e no quadril quase sempre é uma corrente de tensão conectada, não um músculo isolado. O bloqueio costuma estar nos flexores do quadril, na fáscia das costas, ou na conexão entre os dois. A Marina mapeia a corrente inteira e solta direto na origem.',
       'diag.back.tags': 'Liberação Miofascial · Mio Aponeurose · Liberação Somática',
-      'diag.back.cta': 'Agendar Massagem',
+      'diag.back.cta': 'Sessão avulsa',
       'diag.stress.name': 'Sensory Energetics (60 min)',
       'diag.stress.why': 'Quando o corpo não consegue desligar, o problema é o sistema nervoso. Não só o músculo. O Sensory Energetics combina pressão em pontos-gatilho, respiração guiada e liberação somática pra alcançar a tensão que o seu sistema nervoso guarda há meses ou anos. As clientes saem mais soltas. E a maioria dorme bem melhor naquela noite.',
       'diag.stress.tags': 'Regulação do Sistema Nervoso · Respiração · Pontos-Gatilho',
-      'diag.stress.cta': 'Agendar Massagem',
+      'diag.stress.cta': 'Sessão avulsa',
       'diag.training.name': 'Treino de Movimento Consciente',
       'diag.training.why': 'Quando o platô não muda nem mudando o treino, geralmente é problema de tecido. A fáscia travada reduz a amplitude que o seu corpo tem disponível, e isso trava o ganho de força. A Marina traz toda a formação dela em terapia corporal pra cada sessão de PT. Solta o que está travado e já treina a amplitude liberada, na mesma hora.',
       'diag.training.tags': 'Treino em Cadeias Fasciais · Mobilidade · Respiração na Sessão',
@@ -835,7 +835,7 @@ document.documentElement.classList.add('js-on');
       'nf.h1': 'Esta página foi por outro caminho.',
       'nf.sub': 'Pode ter mudado de lugar, ou pode nunca ter existido. De qualquer forma, o trabalho continua aqui.',
       'nf.cta.home': 'Voltar para o início',
-      'nf.cta.book': 'Agendar Massagem',
+      'nf.cta.book': 'Sessão avulsa',
       'nf.next': 'Para onde agora?',
       'home.faq.h2': 'As perguntas que a Marina escuta toda semana.',
       'home.faq.q1': 'Por que a Marina combina terapia corporal com personal training?',
@@ -924,7 +924,7 @@ document.documentElement.classList.add('js-on');
 
       'method.cta.h2': 'Pronta pra sentir a diferença?',
       'method.cta.p': 'Comece com uma sessão. Em uma hora você já vai saber se esse é o trabalho certo pra você.',
-      'method.cta.book': 'Agendar Massagem',
+      'method.cta.book': 'Sessão avulsa',
       'method.cta.talk': 'Falar com a Marina primeiro →',
 
       // Massage page
@@ -940,7 +940,7 @@ document.documentElement.classList.add('js-on');
       'mas.t.q.what': 'O que é?',
       'mas.t.q.who': 'Pra quem é?',
       'mas.t.q.benefits': 'Benefícios',
-      'mas.t.book': 'Agendar Massagem',
+      'mas.t.book': 'Sessão avulsa',
       'mas.t.disclaimer': 'Uma prática complementar de bem-estar; não substitui cuidado médico ou psicológico.',
 
       // Tratamento: Liberação Miofascial
@@ -1220,9 +1220,9 @@ document.documentElement.classList.add('js-on');
       'about.insta.cta': '@marinaribeiropersonal →',
 
       'about.cta.h': 'Pronta pra trabalhar com a Marina?',
-      'about.cta.p': 'Agenda uma massagem, agenda uma aula de PT, ou manda uma mensagem primeiro se quiser que ela te indique por onde começar.',
-      'about.cta.book': 'Agendar Massagem',
-      'about.cta.bookPt': 'Agendar Treino',
+      'about.cta.p': 'Assine um membership, agende uma sessão avulsa, ou manda uma mensagem primeiro se quiser que ela te indique por onde começar.',
+      'about.cta.book': 'Assinar Membership',
+      'about.cta.bookPt': 'Sessão avulsa',
       'about.cta.talk': 'Falar com a Marina →'
     }
   };
