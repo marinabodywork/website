@@ -12,7 +12,7 @@ Bilingual: English (default) + Brazilian Portuguese, switched client-side withou
 
 There is **no build system, no framework, and no runtime test suite**. Everything ships as static files served as-is. The repo does carry a small `package.json` whose only purpose is to host the **static-check harness** in `scripts/` (run via `npm run check` + `npm run check:html`, also auto-fired by the `.githooks/pre-commit` hook). The harness is plain Node, no bundling. See § _Static-check harness_ near the end of this doc for what each check enforces.
 
-- Six HTML pages at the root: `index.html` (home), `massage.html`, `training.html`, `method.html`, `about.html`, and `404.html` (branded not-found, `<meta name="robots" content="noindex">`). Each carries the same `<nav>` + drawer markup, its own `<head>` (meta, OG, per-page JSON-LD, Acuity embed script), and the same trailing `<script src="app.js" defer>`.
+- Seven HTML pages at the root: `index.html` (home), `massage.html` (nav label "Services"), `membership.html` (the dedicated Membership page — top commercial focus), `training.html` (nav label "Smart Training"), `method.html`, `about.html` (nav label "About Me"), and `404.html` (branded not-found, `<meta name="robots" content="noindex">`). Each carries the same `<nav>` + drawer markup, its own `<head>` (meta, OG, per-page JSON-LD, Acuity embed script), and the same trailing `<script src="app.js" defer>`. **In-progress redesign (see the mockup brief):** the target nav is `Services | Membership | Smart Training | About Me` with Membership highlighted (`.nav__link--member`). `method.html` is slated to merge into `About Me` and be removed; it currently keeps its old self-referencing nav and is no longer linked from the other pages' nav/footer.
 - `styles.css`, single shared stylesheet for all pages.
 - `app.js`, single shared script holding the i18n table (`en` + `pt` flat key maps, ~420 keys per language / ~840 total), `setLang`, scroll/reveal/nav behaviour, hamburger drawer, diagnostic widget, FAQ search, hero parallax, and the `js-on` class toggle. **All translations live here, not inline.** First line of the IIFE adds `js-on` to `<html>` so reveal animations are progressive-enhancement only.
 - Image assets live flat in the repo root (no `assets/` subfolder), referenced by bare filename. Currently in-use:
@@ -124,7 +124,7 @@ If the phone, booking URLs, membership ids, or pricing change, update them in **
 The top-level `<nav class="nav">` has a `.nav__inner` row with four logical groups:
 
 1. `.nav__logo`, `marina-logo.png` (88×88 desktop / 80×80 mobile)
-2. `.nav__links`, desktop only, anchors to inner pages (Method / Massage / Training / About). `aria-current="page"` on the active page.
+2. `.nav__links`, desktop only, anchors to inner pages (Services / Membership / Smart Training / About Me). The Membership link carries `.nav__link--member` (subtle gold outline) on every page. `aria-current="page"` + `is-active` on the active page (see `NAV_KEY_FOR_PAGE` in `check-a11y.mjs`; `membership.html` → `nav.membership`). Labels come from `nav.massage` ("Services"), `nav.membership`, `nav.training` ("Smart Training"), `nav.about` ("About Me").
 3. `.nav__right`, in order: two CTA buttons (`.nav__cta` "Book Massage" sand + `.nav__cta.nav__cta--alt` "Book Training" forest, both `acuity-embed-button`), the `.lang` toggle (**always visible** on desktop and mobile), and the hamburger (mobile only).
 4. `.hamburger`, mobile-only, lives inside `.nav__right`. `aria-label` is localized via `data-i18n-attr="aria-label:nav.menu"`.
 

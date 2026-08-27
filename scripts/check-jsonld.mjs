@@ -114,7 +114,7 @@ if (pt) {
 }
 
 // Inner-page @id references should resolve against the home graph.
-for (const page of ['method.html', 'massage.html', 'training.html', 'about.html']) {
+for (const page of ['method.html', 'massage.html', 'membership.html', 'training.html', 'about.html']) {
   const nodes = flattenGraph(graphs[page] || []);
   const refs = new Set();
   const collectRefs = (node) => {

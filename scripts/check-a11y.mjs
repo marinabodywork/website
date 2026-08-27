@@ -13,10 +13,11 @@ const r = makeReporter('check-a11y');
 // Map each indexable page to the data-i18n key its nav link should carry.
 // (Home doesn't have a nav link to itself - users get back to home via the logo.)
 const NAV_KEY_FOR_PAGE = {
-  'massage.html':  'nav.massage',
-  'training.html': 'nav.training',
-  'method.html':   'nav.method',
-  'about.html':    'nav.about',
+  'massage.html':    'nav.massage',
+  'membership.html': 'nav.membership',
+  'training.html':   'nav.training',
+  'method.html':     'nav.method',
+  'about.html':      'nav.about',
 };
 
 for (const page of ALL_PAGES) {
