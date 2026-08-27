@@ -32,11 +32,10 @@ const HEADLINE_PRICES = [
 
 // Intentional exceptions to the cabalistic rule, kept at Marina's request.
 // The Diamond prepaid bodywork pack is priced A$89/session · A$178/week ·
-// A$1,780 full · A$1,691 upfront (5% off); Emerald's upfront-with-discount
-// figure is A$1,016.50. None of these sum to 8, so they are deliberately
-// NOT in HEADLINE_PRICES and the cabalistic assertion does not flag them.
-// Only Emerald's A$1,070 full price (above) obeys the rule. Do not "fix"
-// the Diamond figures without confirming with Marina first.
+// A$1,780 total. None of these sum to 8, so they are deliberately NOT in
+// HEADLINE_PRICES and the cabalistic assertion does not flag them. Only
+// Emerald's A$1,070 total (above) obeys the rule. Do not "fix" the Diamond
+// figures without confirming with Marina first.
 
 // Derived totals from a cabalistic per-unit rate × N. NOT required to sum to 8 -
 // the cabalistic rule applies to the per-unit headline price, not the multiplier.
