@@ -30,11 +30,13 @@ const HEADLINE_PRICES = [
   { price: 1070, label: 'Emerald bodywork membership (10 sessions, upfront)', mustAppearIn: ['massage.html'] },
 ];
 
-// Intentional exception to the cabalistic rule, kept at Marina's request:
-// the Diamond prepaid bodywork pack is priced A$1,960 upfront (A$98/session),
-// which does NOT sum to 8. It is deliberately NOT in HEADLINE_PRICES so the
-// cabalistic assertion does not flag it. Do not "fix" this price without
-// confirming with Marina first.
+// Intentional exceptions to the cabalistic rule, kept at Marina's request.
+// The Diamond prepaid bodywork pack is priced A$89/session · A$178/week ·
+// A$1,780 full · A$1,691 upfront (5% off); Emerald's upfront-with-discount
+// figure is A$1,016.50. None of these sum to 8, so they are deliberately
+// NOT in HEADLINE_PRICES and the cabalistic assertion does not flag them.
+// Only Emerald's A$1,070 full price (above) obeys the rule. Do not "fix"
+// the Diamond figures without confirming with Marina first.
 
 // Derived totals from a cabalistic per-unit rate × N. NOT required to sum to 8 -
 // the cabalistic rule applies to the per-unit headline price, not the multiplier.

@@ -947,7 +947,30 @@ p, .lede { text-wrap: pretty; }
 .gem-pay { text-align: center; margin: var(--s-5) 0 0; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(244, 234, 217, 0.7); }
 .gem-scarcity { text-align: center; margin: var(--s-2) 0 0; font-family: var(--display); font-style: italic; font-size: 22px; color: var(--sand); }
 .gem-cta-row { justify-content: center; }
+.gem-card__tagline { font-family: var(--display); font-style: italic; font-size: 18px; color: var(--cream); margin: 0 0 var(--s-3); }
+.gem-card__pay { display: flex; flex-direction: column; gap: 4px; margin-bottom: var(--s-3); }
+.gem-card__weekly { font-size: 15px; letter-spacing: 0.03em; color: rgba(244, 234, 217, 0.9); }
+.gem-card__full { font-size: 13px; color: rgba(244, 234, 217, 0.6); }
+.gem-card__feats { list-style: none; margin: var(--s-2) 0 0; padding: 0; display: inline-flex; flex-direction: column; gap: 7px; text-align: left; }
+.gem-card__feats li { font-size: 14px; line-height: 1.45; color: rgba(244, 234, 217, 0.86); display: flex; gap: 8px; align-items: flex-start; }
+.gem-card__feats li::before { content: "✦"; color: var(--sand); flex-shrink: 0; font-size: 12px; }
+.gem-card--emerald .gem-card__feats li::before { color: #7fc79b; }
+.gem-note { max-width: 60ch; margin: var(--s-5) auto 0; padding: var(--s-3) var(--s-4); border: 1px solid rgba(212, 178, 124, 0.3); border-radius: var(--r); }
+.gem-note__label { display: block; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--sand); margin-bottom: var(--s-2); }
+.gem-note ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.gem-note li { font-size: 14px; line-height: 1.55; color: rgba(244, 234, 217, 0.82); }
 @media (max-width: 640px) { .gem-grid { grid-template-columns: 1fr; } }
+
+/* Home memberships highlight (links to massage.html#mas-memberships) */
+.home-gem-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-3); margin-top: var(--s-4); }
+.home-gem-card { position: relative; display: flex; flex-direction: column; gap: 6px; padding: var(--s-4) var(--s-5); background: var(--cream-warm); border: 1px solid var(--line); border-radius: var(--r-lg); text-decoration: none; color: var(--ink); transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease; }
+.home-gem-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: var(--sand-deep); }
+.home-gem-card__name { font-family: var(--display); font-size: 26px; color: var(--forest); }
+.home-gem-card--diamond .home-gem-card__name { color: var(--sand-deep); }
+.home-gem-card__meta { font-size: 14px; color: var(--fog); }
+.home-gem-card__price { font-family: var(--display); font-style: italic; font-size: 20px; color: var(--sand-deep); margin-top: 4px; }
+.home-gem-card .svc-option__arrow { position: absolute; top: var(--s-4); right: var(--s-4); }
+@media (max-width: 640px) { .home-gem-grid { grid-template-columns: 1fr; } }
 
 /* Home Ultimate promo strip - lives under #services on index.html */
 .ultimate-promo {
