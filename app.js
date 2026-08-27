@@ -333,7 +333,14 @@ document.documentElement.classList.add('js-on');
       'mas.t.q.who': 'Who is it for?',
       'mas.t.q.benefits': 'Benefits',
       'mas.t.book': 'Book One Session',
+      'mas.t.more': 'Learn more',
       'mas.t.disclaimer': 'A complementary wellness practice; not a substitute for medical or psychological care.',
+      'mas.t.lymph.short': 'Reduce fluid retention, swelling, and feel lighter.',
+      'mas.t.myo.short': 'Release fascial restrictions and improve mobility.',
+      'mas.t.somatic.short': 'Relax, reset, and reconnect with your body.',
+      'mas.t.facial.sub': 'Natural Facial Botox',
+      'mas.t.facial.short': 'Release facial tension and enhance your natural glow.',
+      'mas.t.sensory.short': 'Regulate your nervous system and restore balance.',
 
       // Treatment: Myofascial Release
       'mas.t.myo.name': 'Myofascial Release',
@@ -939,7 +946,14 @@ document.documentElement.classList.add('js-on');
       'mas.t.q.who': 'Pra quem é?',
       'mas.t.q.benefits': 'Benefícios',
       'mas.t.book': 'Sessão avulsa',
+      'mas.t.more': 'Saiba mais',
       'mas.t.disclaimer': 'Uma prática complementar de bem-estar; não substitui cuidado médico ou psicológico.',
+      'mas.t.lymph.short': 'Reduz retenção de líquidos, inchaço, e traz leveza.',
+      'mas.t.myo.short': 'Solta as restrições da fáscia e melhora a mobilidade.',
+      'mas.t.somatic.short': 'Relaxa, reseta e reconecta com o seu corpo.',
+      'mas.t.facial.sub': 'Natural Facial Botox',
+      'mas.t.facial.short': 'Solta a tensão do rosto e realça o seu glow natural.',
+      'mas.t.sensory.short': 'Regula o sistema nervoso e restaura o equilíbrio.',
 
       // Tratamento: Liberação Miofascial
       'mas.t.myo.name': 'Liberação Miofascial',

@@ -779,22 +779,32 @@ p, .lede { text-wrap: pretty; }
 .service-block p { color: var(--ink-soft); font-size: 17px; line-height: 1.75; margin-bottom: var(--s-2); }
 
 /* Treatment cards (massage.html "Choose your treatment") + home tag chips */
-.treatments { display: flex; flex-direction: column; gap: var(--s-3); margin-top: var(--s-4); }
-.treatment-card { display: grid; grid-template-columns: auto 1fr; gap: var(--s-3); align-items: start; padding: var(--s-4) var(--s-5); background: var(--cream-warm); border: 1px solid var(--line); border-radius: var(--r-lg); }
+/* Compact treatment cards: title + one line + book, full detail behind Learn more */
+.treatments { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: var(--s-3); margin-top: var(--s-4); align-items: start; }
+.treatment-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: var(--s-4) var(--s-3); background: var(--cream-warm); border: 1px solid var(--line); border-radius: var(--r-lg); }
 .treatment-card--signature { border-color: var(--sand-deep); box-shadow: var(--shadow-lift); }
-.treatment-card__icon { display: inline-flex; color: var(--sand-deep); }
-.treatment-card__icon svg { width: 40px; height: 40px; display: block; }
-.treatment-card__name { font-family: var(--display); font-size: clamp(24px, 3vw, 30px); line-height: 1.2; color: var(--forest); margin: 0; }
-.treatment-card__meta { font-family: var(--display); font-style: italic; color: var(--sand-deep); font-size: 18px; margin: 2px 0 var(--s-3); }
-.treatment-card__block { margin-bottom: var(--s-3); }
-.treatment-card__block:last-of-type { margin-bottom: var(--s-2); }
-.treatment-card__q { display: block; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--sand-deep); margin-bottom: 4px; }
-.treatment-card__block p { color: var(--ink-soft); font-size: 16px; line-height: 1.7; margin: 0; }
+.treatment-card__icon { display: inline-flex; color: var(--sand-deep); margin-bottom: var(--s-2); }
+.treatment-card__icon svg { width: 36px; height: 36px; display: block; }
+.treatment-card__name { font-family: var(--display); font-size: 22px; line-height: 1.2; color: var(--forest); margin: 0; }
+.treatment-card__sub { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sand-deep); margin: 3px 0 0; }
+.treatment-card__meta { font-family: var(--display); font-style: italic; color: var(--sand-deep); font-size: 15px; margin: 4px 0 var(--s-2); }
+.treatment-card__short { color: var(--ink-soft); font-size: 15px; line-height: 1.55; margin: 0 0 var(--s-3); }
+.treatment-card__book { margin-top: auto; width: 100%; }
+.treatment-card .service-block__badges { justify-content: center; margin-bottom: 6px; }
+.treatment-card .service-block__launch-note { font-size: 12px; text-align: center; margin: 6px 0 var(--s-2); }
+.treatment-card__more { width: 100%; margin-top: var(--s-2); text-align: left; }
+.treatment-card__more summary { cursor: pointer; list-style: none; text-align: center; font-size: 13px; letter-spacing: 0.06em; color: var(--sand-deep); font-weight: 600; padding: 6px 0; }
+.treatment-card__more summary::-webkit-details-marker { display: none; }
+.treatment-card__more summary::after { content: " +"; }
+.treatment-card__more[open] summary::after { content: " \2212"; }
+.treatment-card__block { margin-top: var(--s-2); }
+.treatment-card__q { display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--sand-deep); margin-bottom: 3px; }
+.treatment-card__block p { color: var(--ink-soft); font-size: 14px; line-height: 1.6; margin: 0; }
 .treatment-disclaimer { color: var(--fog); font-size: 13px; font-style: italic; margin-top: var(--s-4); }
 .svc-card__tags { list-style: none; margin: 0 0 var(--s-3); padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .svc-card__tags li { font-size: 12px; letter-spacing: 0.02em; color: var(--forest); background: rgba(212, 178, 124, 0.16); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; }
-@media (max-width: 640px) {
-  .treatment-card { grid-template-columns: 1fr; gap: var(--s-2); }
+@media (max-width: 520px) {
+  .treatments { grid-template-columns: 1fr; }
 }
 .benefits {
   display: grid; grid-template-columns: 1fr 1fr; gap: 10px var(--s-3);
