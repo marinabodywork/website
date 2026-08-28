@@ -19,7 +19,7 @@ document.documentElement.classList.add('js-on');
       'nav.membership': 'Membership',
       'nav.training': 'Smart Training',
       'nav.about': 'About Me',
-      'nav.borders': 'Personal Trainer Without Borders',
+      'nav.borders': 'Trainer Without Borders',
       'nav.bookMassage': 'Book Membership',
       'nav.bookTraining': 'Book One Session',
       'nav.menu': 'Open menu',
@@ -411,9 +411,7 @@ document.documentElement.classList.add('js-on');
       'mas.gem.note.label': 'Important',
       'mas.gem.note.1': 'The 2-week freeze does not add extra sessions, it only extends your window to complete the 10 or 20 sessions.',
       'mas.gem.note.2': 'Each plan is valid for up to 12 weeks.',
-      'mas.gem.pay': 'Payment by bank transfer or cash',
       'mas.gem.scarcity': 'Limited memberships available.',
-      'mas.gem.cta': 'Secure your place →',
 
       'mas.faq.h2': 'Massage-specific questions.',
       'mas.faq.q1': 'What do I wear?',
@@ -428,11 +426,6 @@ document.documentElement.classList.add('js-on');
       'tr.hero.h1': 'Smart Training.',
       'tr.hero.sub': 'Smart Training is an individualised training method that assesses body composition, posture, movement patterns and breathing to develop a personalised protocol for each person. The program combines mobility, strength, balance, endurance and exercises that support fascial mobility and hydration, promoting better body function, movement awareness and long term autonomy.',
 
-      'tr.pillar.1': 'Movement',
-      'tr.pillar.2': 'Strength',
-      'tr.pillar.3': 'Breath',
-      'tr.pillar.4': 'Balance',
-      'tr.pillar.5': 'Mobility',
 
       'tr.photo.alt': 'Smart Training infographic: balance, breath, strength, and mobility for autonomy and quality of life.',
       'tr.impact': 'Most personal trainers still do not see what is holding your body back. Marina does.',
@@ -535,7 +528,7 @@ document.documentElement.classList.add('js-on');
       'nav.membership': 'Membership',
       'nav.training': 'Smart Training',
       'nav.about': 'Sobre mim',
-      'nav.borders': 'Se Torne um Personal sem Fronteiras',
+      'nav.borders': 'Personal sem Fronteiras',
       'nav.bookMassage': 'Assinar Membership',
       'nav.bookTraining': 'Sessão avulsa',
       'nav.menu': 'Abrir menu',
@@ -927,9 +920,7 @@ document.documentElement.classList.add('js-on');
       'mas.gem.note.label': 'Importante',
       'mas.gem.note.1': 'O congelamento de 2 semanas não adiciona sessões extras, ele só estende o prazo pra você completar as 10 ou 20 sessões.',
       'mas.gem.note.2': 'Cada plano é válido por até 12 semanas.',
-      'mas.gem.pay': 'Pagamento por transferência bancária ou dinheiro',
       'mas.gem.scarcity': 'Vagas limitadas.',
-      'mas.gem.cta': 'Garanta sua vaga →',
 
       'mas.faq.h2': 'Perguntas específicas sobre massagem.',
       'mas.faq.q1': 'O que eu devo vestir?',
@@ -944,11 +935,6 @@ document.documentElement.classList.add('js-on');
       'tr.hero.h1': 'Smart Training.',
       'tr.hero.sub': 'Smart Training é um método de treino individualizado que avalia composição corporal, postura, padrões de movimento e respiração para desenvolver um protocolo personalizado para cada pessoa. O programa combina mobilidade, força, equilíbrio, resistência e exercícios que favorecem a mobilidade e a hidratação da fáscia, promovendo melhor funcionamento do corpo, consciência de movimento e autonomia a longo prazo.',
 
-      'tr.pillar.1': 'Movimento',
-      'tr.pillar.2': 'Força',
-      'tr.pillar.3': 'Respiração',
-      'tr.pillar.4': 'Equilíbrio',
-      'tr.pillar.5': 'Mobilidade',
 
       'tr.photo.alt': 'Infográfico do Smart Training: equilíbrio, respiração, força e mobilidade para autonomia e qualidade de vida.',
       'tr.impact': 'A maioria dos personal trainers ainda não enxerga o que está travando o seu corpo. A Marina enxerga.',
