@@ -19,7 +19,6 @@ document.documentElement.classList.add('js-on');
       'nav.membership': 'Membership',
       'nav.training': 'Smart Training',
       'nav.about': 'About Me',
-      'nav.borders': 'Trainer Without Borders',
       'nav.bookMassage': 'Book Membership',
       'nav.bookTraining': 'Book One Session',
       'nav.menu': 'Open menu',
@@ -91,8 +90,6 @@ document.documentElement.classList.add('js-on');
       'home.hero.h1.b': 'Build physical strength and mental balance.',
 
       'home.hero.sub': 'Bodywork, Sensory Energetics, and conscious movement designed around what your body needs.',
-      'home.hero.borders.tag': 'For trainers',
-      'home.hero.borders.text': 'Become a Personal Trainer Without Borders →',
       'home.hero.cta.massage': 'Book Membership',
       'home.hero.cta.training': 'Book One Session',
       'home.hero.cta.talk': 'Not sure where to start? Talk to Marina first →',
@@ -528,7 +525,6 @@ document.documentElement.classList.add('js-on');
       'nav.membership': 'Membership',
       'nav.training': 'Smart Training',
       'nav.about': 'Sobre mim',
-      'nav.borders': 'Personal sem Fronteiras',
       'nav.bookMassage': 'Assinar Membership',
       'nav.bookTraining': 'Sessão avulsa',
       'nav.menu': 'Abrir menu',
@@ -600,8 +596,6 @@ document.documentElement.classList.add('js-on');
       'home.hero.h1.b': 'Ganhe força física e equilíbrio mental.',
 
       'home.hero.sub': 'Bodywork, Sensory Energetics e movimento consciente, desenhados em volta do que o seu corpo precisa.',
-      'home.hero.borders.tag': 'Para profissionais',
-      'home.hero.borders.text': 'Se torne um Personal sem Fronteiras →',
       'home.hero.cta.massage': 'Assinar Membership',
       'home.hero.cta.training': 'Sessão avulsa',
       'home.hero.cta.talk': 'Não sabe por onde começar? Fala com a Marina primeiro →',
