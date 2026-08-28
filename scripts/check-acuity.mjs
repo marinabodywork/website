@@ -30,23 +30,21 @@ const REQUIRED_SLUGS = [
   'bookmassage',
   // 'BookPTlessons' (the PT booking hub) is no longer surfaced: the redesign
   // replaced the global "Book Training" CTA with "Book Membership" / "Book One
-  // Session". Smart Training booking lives on training.html via /SinglePTLesson
-  // + the memberships catalog. Re-add here if a Book Training hub CTA returns.
+  // Session". The Smart Training page is now WhatsApp-driven (clients confirm
+  // availability with Marina directly before purchasing), so it carries no
+  // Acuity slugs. Massage treatments keep their per-service slugs below.
   'SomaticMassageCorporal',
   'SomaticMassageFacial',
   'SensoryEnergetics',
-  'SinglePTLesson',
-  'Assessment',
-  'appointmentType=93324053',
 ];
-// Weekly Sensory membership (id 2213845) is currently unlisted on the site during the
-// Sensory launch promo - the catalog entry stays configured in Acuity but isn't surfaced.
-const REQUIRED_MEMBERSHIP_IDS = ['2213824', '2213848'];
-const PT_MEMBERSHIPS_CATEGORY = 'category=Personal+Training+-+Memberships';
+// The massage weekly-membership catalog ids (2213824/2213848), the Ultimate id
+// (2215320) and the PT memberships catalog category are no longer surfaced:
+// massage memberships (Emerald/Diamond) and Smart Training plans are arranged
+// over WhatsApp, so there are no catalog/category URLs left to assert.
+const REQUIRED_MEMBERSHIP_IDS = [];
 
 const seenSlugs = new Set();
 const seenMemberships = new Set();
-let seenPtCategory = false;
 let totalChecked = 0;
 
 for (const page of ALL_PAGES) {
@@ -62,7 +60,6 @@ for (const page of ALL_PAGES) {
     }
     for (const slug of REQUIRED_SLUGS) if (a.href.includes(slug)) seenSlugs.add(slug);
     for (const id of REQUIRED_MEMBERSHIP_IDS) if (a.href.includes('id=' + id)) seenMemberships.add(id);
-    if (a.href.includes(PT_MEMBERSHIPS_CATEGORY)) seenPtCategory = true;
   }
 }
 
@@ -72,7 +69,6 @@ for (const slug of REQUIRED_SLUGS) {
 for (const id of REQUIRED_MEMBERSHIP_IDS) {
   if (!seenMemberships.has(id)) r.error(`membership catalog id ${id} is documented but never linked`);
 }
-if (!seenPtCategory) r.error(`PT memberships catalog URL (${PT_MEMBERSHIPS_CATEGORY}) is never linked`);
 
 // Anchors to Acuity SHOULD also carry target="_blank" + rel="noopener" as a fallback (CLAUDE.md §3).
 // Re-walk the raw HTML to assert that - extractAnchors discards other attrs.

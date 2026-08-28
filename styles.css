@@ -1172,6 +1172,60 @@ p, .lede { text-wrap: pretty; }
   font-weight: 500;
 }
 
+/* Smart Training pillars */
+.pillars { display: flex; flex-wrap: wrap; gap: 10px; margin-top: var(--s-4); }
+.page-hero .pillars { justify-content: flex-start; }
+.pillar {
+  background: var(--sand);
+  color: var(--forest);
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Smart Training photo band */
+.st-photo { display: block; width: 100%; border-radius: var(--r-lg); }
+.st-photo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(220px, 42vw, 440px);
+  background: linear-gradient(135deg, var(--forest) 0%, var(--forest-soft) 100%);
+  border: 1.5px dashed rgba(226, 202, 156, 0.5);
+  color: var(--sand);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  padding: var(--s-4);
+}
+.st-impact {
+  font-family: var(--display);
+  font-size: clamp(24px, 3.6vw, 34px);
+  line-height: 1.28;
+  color: var(--cream);
+  text-align: center;
+  max-width: 24ch;
+  margin: var(--s-5) auto 0;
+}
+
+/* Availability notice */
+.availability-note {
+  background: var(--cream);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: var(--s-4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-3);
+  box-shadow: var(--shadow-card);
+}
+.availability-note p { margin: 0; max-width: 56ch; color: var(--ink-soft); line-height: 1.6; }
+
 /* PT plan selector */
 .plan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); margin-top: var(--s-4); }
 .plan-card {
@@ -1292,6 +1346,24 @@ p, .lede { text-wrap: pretty; }
   display: flex; align-items: center; justify-content: center;
 }
 @media (max-width: 720px) { .creds { grid-template-columns: 1fr 1fr; } }
+
+/* Grouped qualifications (About page) */
+.cred-group { margin-top: var(--s-5); }
+.cred-group__label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sand-deep);
+  margin-bottom: var(--s-2);
+}
+.cred-group .creds { margin-top: 0; }
+.cred-group .cred { min-height: 72px; }
+
+/* Become a personal trainer without borders */
+.borders-cta { max-width: 60ch; margin: 0 auto; }
+.borders-cta p { color: var(--cream); }
 
 .about-letter {
   border-left: 3px solid var(--sand);

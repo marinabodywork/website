@@ -14,15 +14,14 @@ const r = makeReporter('check-jsonld');
 const EXPECTED_OFFERS = {
   '#service-corporal': { price: '125', slug: 'SomaticMassageCorporal' },
   '#service-facial':   { price: '125', slug: 'SomaticMassageFacial' },
-  // Sensory Energetics is on launch pricing (regular A$305). Keep the JSON-LD price in
-  // sync with the visible launch price, not the regular rate.
+  // KSE Sensory Energetics is a flat A$224 (the launch/regular double-pricing was
+  // retired). No slug requirement change.
   '#service-sensory':  { price: '224', slug: 'SensoryEnergetics' },
 };
-// PT plans: every documented monthly membership price must appear in #service-pt.offers,
-// alongside the single-session offer. Each plan offer also carries a slug now (the per-plan
-// Acuity URL) since we moved from packages to recurring monthly memberships.
-const EXPECTED_PT_PRICES = ['116', '404', '710', '1007'];
-const EXPECTED_PT_SLUG = 'SinglePTLesson';
+// Smart Training: #service-pt now carries a single session (A$125) plus the two
+// 4-weekly plan totals (Emerald A$428, Diamond A$712). Booking is arranged over
+// WhatsApp, so the offers no longer carry an Acuity slug.
+const EXPECTED_PT_PRICES = ['125', '428', '712'];
 
 // Parse and validate per-page.
 const graphs = {};
@@ -79,17 +78,6 @@ if (business) {
   }
 }
 
-// Sensory Energetics is on launch pricing - the offer.description MUST mention
-// the regular A$305 rate so the social/search snippet doesn't look like the
-// launch price is permanent (CLAUDE.md §6).
-const sensory = idIndex.get('#service-sensory');
-if (sensory) {
-  const offer = Array.isArray(sensory.offers) ? sensory.offers[0] : sensory.offers;
-  if (offer && (!offer.description || !/A\$305/.test(offer.description))) {
-    r.error(`#service-sensory: offer.description must mention "A$305" (regular price) while launch pricing is active`);
-  }
-}
-
 // Service price + URL discipline.
 for (const [id, want] of Object.entries(EXPECTED_OFFERS)) {
   const node = idIndex.get(id);
@@ -109,8 +97,6 @@ if (pt) {
   for (const p of EXPECTED_PT_PRICES) {
     if (!prices.has(p)) r.error(`#service-pt: expected an offer with price ${p} (got ${[...prices].join(', ') || 'none'})`);
   }
-  const hasSingleSlug = offers.some((o) => o.url && o.url.includes(EXPECTED_PT_SLUG));
-  if (!hasSingleSlug) r.error(`#service-pt: expected an offer.url containing "${EXPECTED_PT_SLUG}"`);
 }
 
 // Inner-page @id references should resolve against the home graph.
