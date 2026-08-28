@@ -188,16 +188,6 @@ document.documentElement.classList.add('js-on');
       'home.proof.reviews': 'reviews · Sydney →',
 
       // ─── Not for everyone ───
-      'home.dq.label': 'Honest',
-      'home.dq.h2': 'This work is not for everyone.',
-      'home.dq.d1.h': 'Looking for a relaxation massage.',
-      'home.dq.d1.p': 'Marina works on tissue that holds pattern. You will feel things shift. If you wanted a spa hour, book somewhere else and enjoy it.',
-      'home.dq.d2.h': 'Need a private health rebate.',
-      'home.dq.d2.p': 'Marina is a bodywork specialist and personal trainer, not a registered remedial therapist. No insurance claim. Book a registered therapist if that matters.',
-      'home.dq.d3.h': 'Want a fixed protocol every visit.',
-      'home.dq.d3.p': 'Each session is built around what Marina finds in your body that day. Different week, different work. That is the point.',
-      'home.dq.d4.h': 'Want a trainer who treats fitness as a goal in isolation.',
-      'home.dq.d4.p': 'Marina trains the whole body, not aesthetics in isolation. If your only metric is the mirror, this is not it.',
 
       // ─── Consult ───
       'home.consult.h2': 'Not sure which session is right for you?',
@@ -691,16 +681,6 @@ document.documentElement.classList.add('js-on');
       'home.proof.reviews': 'avaliações · Sydney →',
 
       // Disqualifiers
-      'home.dq.label': 'Honesto',
-      'home.dq.h2': 'Esse trabalho não é para todo mundo.',
-      'home.dq.d1.h': 'Você quer uma massagem só pra relaxar.',
-      'home.dq.d1.p': 'A Marina trabalha o tecido bem fundo, onde a tensão fica guardada. Você vai sentir coisas se mexendo no seu corpo. Se o que você quer é uma horinha de spa pra desligar, agenda em outro lugar e aproveita. Sem julgamento nenhum.',
-      'home.dq.d2.h': 'Você precisa de reembolso de plano de saúde.',
-      'home.dq.d2.p': 'A Marina é especialista em terapia corporal e personal trainer, mas não é terapeuta remedial registrada. Por isso o plano de saúde não cobre. Se reembolso é prioridade pra você, melhor procurar uma terapeuta registrada.',
-      'home.dq.d3.h': 'Você quer um protocolo fixo a cada visita.',
-      'home.dq.d3.p': 'Cada sessão é montada em cima do que a Marina sente no seu corpo naquele dia. Semana diferente, trabalho diferente. É exatamente esse o ponto.',
-      'home.dq.d4.h': 'Você quer uma personal que trate fitness como objetivo isolado.',
-      'home.dq.d4.p': 'A Marina treina o seu corpo inteiro, não só estética. Se a sua única medida de sucesso é o espelho, não é aqui.',
 
       // Consult
       'home.consult.h2': 'Não sabe qual sessão é certa para você?',
