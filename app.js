@@ -432,7 +432,7 @@ document.documentElement.classList.add('js-on');
       'tr.pillar.4': 'Balance',
       'tr.pillar.5': 'Mobility',
 
-      'tr.photo.placeholder': 'Smart Training photo coming soon',
+      'tr.photo.alt': 'Smart Training infographic: balance, breath, strength, and mobility for autonomy and quality of life.',
       'tr.impact': 'Most personal trainers still do not see what is holding your body back. Marina does.',
 
       'tr.avail.p': 'Before purchasing any service or plan, please contact Marina directly to confirm availability for in person sessions and other Smart Training services.',
@@ -946,7 +946,7 @@ document.documentElement.classList.add('js-on');
       'tr.pillar.4': 'Equilíbrio',
       'tr.pillar.5': 'Mobilidade',
 
-      'tr.photo.placeholder': 'Foto do Smart Training em breve',
+      'tr.photo.alt': 'Infográfico do Smart Training: equilíbrio, respiração, força e mobilidade para autonomia e qualidade de vida.',
       'tr.impact': 'A maioria dos personal trainers ainda não enxerga o que está travando o seu corpo. A Marina enxerga.',
 
       'tr.avail.p': 'Antes de comprar qualquer serviço ou plano, fale diretamente com a Marina para confirmar a disponibilidade de sessões presenciais e dos demais serviços do Smart Training.',
