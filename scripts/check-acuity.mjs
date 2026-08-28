@@ -28,20 +28,21 @@ const GENERIC_CTA_PHRASES = [
 const ACUITY_HOSTS = ['acuityscheduling.com', 'marinaribeirobodywork.as.me'];
 const REQUIRED_SLUGS = [
   'bookmassage',
-  // 'BookPTlessons' (the PT booking hub) is no longer surfaced: the redesign
-  // replaced the global "Book Training" CTA with "Book Membership" / "Book One
-  // Session". The Smart Training page is now WhatsApp-driven (clients confirm
-  // availability with Marina directly before purchasing), so it carries no
-  // Acuity slugs. Massage treatments keep their per-service slugs below.
+  // 'BookPTlessons' (the PT booking hub) is no longer surfaced. Massage
+  // treatments keep their per-service slugs; the Smart Training single session
+  // reuses SinglePTLesson (now priced A$125). The membership/plan checkouts use
+  // the catalog ids below.
   'SomaticMassageCorporal',
   'SomaticMassageFacial',
   'SensoryEnergetics',
+  'SinglePTLesson',
 ];
-// The massage weekly-membership catalog ids (2213824/2213848), the Ultimate id
-// (2215320) and the PT memberships catalog category are no longer surfaced:
-// massage memberships (Emerald/Diamond) and Smart Training plans are arranged
-// over WhatsApp, so there are no catalog/category URLs left to assert.
-const REQUIRED_MEMBERSHIP_IDS = [];
+// Acuity catalog checkout ids surfaced on the site:
+//   2215296 - Smart Training Emerald plan (A$428 / 4 weeks)
+//   2215300 - Smart Training Diamond plan (A$712 / 4 weeks)
+//   2215320 - Massage Emerald membership (A$1,070)
+//   2213845 - Massage Diamond membership (A$1,780)
+const REQUIRED_MEMBERSHIP_IDS = ['2215296', '2215300', '2215320', '2213845'];
 
 const seenSlugs = new Set();
 const seenMemberships = new Set();
