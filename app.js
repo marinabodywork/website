@@ -111,6 +111,9 @@ document.documentElement.classList.add('js-on');
       'home.combo.cta': 'See how the sessions work →',
 
       // ─── Home: services overview ───
+      'home.svc.label': 'Services',
+      'home.svc.h2': 'Two services. Two ways to start.',
+      'home.svc.sub': 'Massage or personal training. Then choose between a single session or an ongoing membership.',
       'home.svc.massage.h': 'Massage',
       'home.svc.massage.p': 'Five specialist bodywork treatments, Marina helps you choose the right one, or blends what your body responds to on the day.',
       'home.svc.massage.t1': 'Myofascial Release',
@@ -614,6 +617,9 @@ document.documentElement.classList.add('js-on');
       'home.combo.cta': 'Veja como as sessões funcionam →',
 
       // Home: services
+      'home.svc.label': 'Serviços',
+      'home.svc.h2': 'Dois serviços. Duas formas de começar.',
+      'home.svc.sub': 'Massagem ou personal training. Depois você escolhe entre uma sessão avulsa ou uma mensalidade contínua.',
       'home.svc.massage.h': 'Massagem',
       'home.svc.massage.p': 'Cinco tratamentos corporais especializados, a Marina te ajuda a escolher o certo, ou combina o que o seu corpo pede naquele dia.',
       'home.svc.massage.t1': 'Liberação Miofascial',

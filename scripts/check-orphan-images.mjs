@@ -33,8 +33,6 @@ const KNOWN_ORPHANS = new Set([
   // (massage.jpeg stays referenced as the massage.html og:image.)
   'facial.jpeg',
   'Sensory (2).jpeg',
-  // Home consult-section portrait; the section is now text-only. Kept on disk.
-  'marina-consult.webp',
 ]);
 
 // Patterns matching ad-hoc image uploads (screenshots, exports, drafts).
