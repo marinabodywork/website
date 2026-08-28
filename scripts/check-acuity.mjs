@@ -28,22 +28,24 @@ const GENERIC_CTA_PHRASES = [
 const ACUITY_HOSTS = ['acuityscheduling.com', 'marinaribeirobodywork.as.me'];
 const REQUIRED_SLUGS = [
   'bookmassage',
-  'BookPTlessons',
+  // 'BookPTlessons' (the PT booking hub) is no longer surfaced. Massage
+  // treatments keep their per-service slugs; the Smart Training single session
+  // reuses SinglePTLesson (now priced A$125). The membership/plan checkouts use
+  // the catalog ids below.
   'SomaticMassageCorporal',
   'SomaticMassageFacial',
   'SensoryEnergetics',
   'SinglePTLesson',
-  'Assessment',
-  'appointmentType=93324053',
 ];
-// Weekly Sensory membership (id 2213845) is currently unlisted on the site during the
-// Sensory launch promo - the catalog entry stays configured in Acuity but isn't surfaced.
-const REQUIRED_MEMBERSHIP_IDS = ['2213824', '2213848'];
-const PT_MEMBERSHIPS_CATEGORY = 'category=Personal+Training+-+Memberships';
+// Acuity catalog checkout ids surfaced on the site:
+//   2215296 - Smart Training Emerald plan (A$428 / 4 weeks)
+//   2215300 - Smart Training Diamond plan (A$712 / 4 weeks)
+//   2215320 - Massage Emerald membership (A$1,070)
+//   2213845 - Massage Diamond membership (A$1,780)
+const REQUIRED_MEMBERSHIP_IDS = ['2215296', '2215300', '2215320', '2213845'];
 
 const seenSlugs = new Set();
 const seenMemberships = new Set();
-let seenPtCategory = false;
 let totalChecked = 0;
 
 for (const page of ALL_PAGES) {
@@ -59,7 +61,6 @@ for (const page of ALL_PAGES) {
     }
     for (const slug of REQUIRED_SLUGS) if (a.href.includes(slug)) seenSlugs.add(slug);
     for (const id of REQUIRED_MEMBERSHIP_IDS) if (a.href.includes('id=' + id)) seenMemberships.add(id);
-    if (a.href.includes(PT_MEMBERSHIPS_CATEGORY)) seenPtCategory = true;
   }
 }
 
@@ -69,7 +70,6 @@ for (const slug of REQUIRED_SLUGS) {
 for (const id of REQUIRED_MEMBERSHIP_IDS) {
   if (!seenMemberships.has(id)) r.error(`membership catalog id ${id} is documented but never linked`);
 }
-if (!seenPtCategory) r.error(`PT memberships catalog URL (${PT_MEMBERSHIPS_CATEGORY}) is never linked`);
 
 // Anchors to Acuity SHOULD also carry target="_blank" + rel="noopener" as a fallback (CLAUDE.md §3).
 // Re-walk the raw HTML to assert that - extractAnchors discards other attrs.

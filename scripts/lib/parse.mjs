@@ -9,7 +9,7 @@ import vm from 'node:vm';
 const HERE = dirname(fileURLToPath(import.meta.url));
 export const ROOT = resolve(HERE, '..', '..');
 
-export const INDEXABLE_PAGES = ['index.html', 'massage.html', 'training.html', 'method.html', 'about.html'];
+export const INDEXABLE_PAGES = ['index.html', 'massage.html', 'membership.html', 'training.html', 'method.html', 'about.html'];
 export const ALL_PAGES = [...INDEXABLE_PAGES, '404.html'];
 
 export function readPage(name) {

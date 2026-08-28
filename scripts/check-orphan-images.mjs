@@ -28,6 +28,13 @@ const KNOWN_ORPHANS = new Set([
   'marina-massage-content.webp',
   'hero.webp',
   'Sensory (1).jpeg',
+  // Service photos freed up when massage.html moved to the icon-based
+  // 5-treatment layout. Kept on disk to re-place per treatment later.
+  // (massage.jpeg stays referenced as the massage.html og:image.)
+  'facial.jpeg',
+  'Sensory (2).jpeg',
+  // Home consult-section portrait; the section is now text-only. Kept on disk.
+  'marina-consult.webp',
 ]);
 
 // Patterns matching ad-hoc image uploads (screenshots, exports, drafts).

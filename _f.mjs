@@ -1,0 +1,13 @@
+import { chromium } from 'playwright-core';
+const exe='/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
+const out='/tmp/claude-0/-home-user-website/c77d56a1-be7a-5bbf-bcef-d02cf8d4f9d8/scratchpad';
+const b=await chromium.launch({executablePath:exe,args:['--no-sandbox']});
+const p=await b.newPage({viewport:{width:1180,height:120},deviceScaleFactor:1.2});
+await p.goto('http://localhost:8123/index.html',{waitUntil:'domcontentloaded'}).catch(()=>{});
+await p.waitForTimeout(400);
+const nav=await p.$('nav.nav'); await nav.screenshot({path:`${out}/f-nav.png`});
+const p2=await b.newPage({viewport:{width:1200,height:600},deviceScaleFactor:1.2});
+await p2.goto('http://localhost:8123/training.html',{waitUntil:'domcontentloaded'}).catch(()=>{});
+await p2.waitForTimeout(500); await p2.addStyleTag({content:'.reveal{opacity:1!important;transform:none!important;}'});await p2.waitForTimeout(150);
+const h=await p2.$('.page-hero'); await h.screenshot({path:`${out}/f-trhero.png`});
+console.log('ok'); await b.close();
