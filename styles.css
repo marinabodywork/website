@@ -809,8 +809,10 @@ p, .lede { text-wrap: pretty; }
 /* Treatment cards (massage.html "Choose your treatment") + home tag chips */
 /* Compact treatment cards: title + one line + book, full detail behind Learn more */
 .treatments { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: var(--s-3); margin-top: var(--s-4); align-items: start; }
-.treatment-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: var(--s-4) var(--s-3); background: var(--cream-warm); border: 1px solid var(--line); border-radius: var(--r-lg); }
+.treatment-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: var(--s-4) var(--s-3); background: linear-gradient(165deg, #ffffff 0%, var(--cream-warm) 100%); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease, border-color var(--t-fast); }
+.treatment-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); border-color: var(--sand-deep); }
 .treatment-card--signature { border-color: var(--sand-deep); box-shadow: var(--shadow-lift); }
+@media (prefers-reduced-motion: reduce) { .treatment-card { transition: border-color var(--t-fast); } .treatment-card:hover { transform: none; } }
 .treatment-card__icon { display: inline-flex; color: var(--sand-deep); margin-bottom: var(--s-2); }
 .treatment-card__icon svg { width: 36px; height: 36px; display: block; }
 .treatment-card__name { font-family: var(--display); font-size: 22px; line-height: 1.2; color: var(--forest); margin: 0; }
@@ -1251,17 +1253,30 @@ p, .lede { text-wrap: pretty; }
 /* PT plan selector */
 .plan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); margin-top: var(--s-4); }
 .plan-card {
-  background: white;
+  background: linear-gradient(165deg, #ffffff 0%, var(--cream-warm) 100%);
   border-radius: var(--r-lg);
   padding: var(--s-4);
   border: 1.5px solid var(--line);
   box-shadow: var(--shadow-card);
-  transition: border-color var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease, border-color var(--t-fast);
   position: relative;
   text-align: left;
   display: flex; flex-direction: column;
 }
-.plan-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: var(--sand-deep); }
+.plan-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(120% 80% at 100% 0%, rgba(212, 178, 124, 0.13), transparent 55%);
+  opacity: 0.75;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.plan-card > * { position: relative; }
+.plan-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lift); border-color: var(--sand-deep); }
+.plan-card:hover::before { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .plan-card { transition: border-color var(--t-fast); } .plan-card:hover { transform: none; } }
 .plan-card__name { font-family: var(--display); font-size: 28px; color: var(--forest); margin-bottom: 4px; }
 .plan-card__price { font-family: var(--display); font-style: italic; font-size: 32px; color: var(--sand-deep); margin-bottom: var(--s-2); }
 .plan-card__per { font-size: 14px; color: var(--fog); margin-bottom: var(--s-3); }
